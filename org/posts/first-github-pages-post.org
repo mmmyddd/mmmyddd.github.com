@@ -1,4 +1,5 @@
 # -*- org-attach-directory: "~/org-jekyll/rootdir/org/files"; -*-
+#+TITLE: First Github Pages Post
 #+STARTUP: showall
 #+STARTUP: hidestars
 #+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t

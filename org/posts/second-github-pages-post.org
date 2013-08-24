@@ -1,0 +1,22 @@
+# -*- org-attach-directory: "~/org-jekyll/rootdir/org/files"; -*-
+#+TITLE: Second Github Pages Post
+#+STARTUP: showall
+#+STARTUP: hidestars
+#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t
+#+OPTIONS: \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil
+#+OPTIONS: LaTeX:dvipng
+
+** Test Latex
+
+$$
+E=mc^2
+$$
+
+** Test Images                                                      :ATTACH:
+:PROPERTIES:
+:Attachments: ic_menu_add.png
+:ID: 54d4d2c1-28cc-482c-9cdc-402103a53b2a
+:END:
+
+[[../files/54/d4d2c1-28cc-482c-9cdc-402103a53b2a/ic_menu_add.png]]
