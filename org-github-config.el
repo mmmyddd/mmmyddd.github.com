@@ -30,7 +30,7 @@
              '("org-static-mvm"
                :base-directory "~/org-jekyll/rootdir/org/files"
                :base-extension "css\\|js\\|png\\|jpg\\|ico\\|gif\\|pdf\\|mp3\\|flac\\|ogg\\|swf\\|php\\|markdown\\|md\\|html\\|htm\\|sh\\|xml\\|gz\\|bz2\\|vcf\\|zip\\|txt\\|tex\\|otf\\|ttf\\|eot\\|rb\\|yml\\|htaccess\\|gitignore"
-               :publishing-directory "~/org-jekyll/rootdir/"
+               :publishing-directory "~/org-jekyll/rootdir/files"
                :recursive t
                :publishing-function org-publish-attachment))
 

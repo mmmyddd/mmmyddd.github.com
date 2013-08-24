@@ -20,3 +20,16 @@ $$
 :END:
 
 [[../files/54/d4d2c1-28cc-482c-9cdc-402103a53b2a/ic_menu_add.png]]
+
+** Test format
+
+#+BEGIN_EXAMPLE
+this is an example
+#+END_EXAMPLE
+
+
+#+BEGIN_SRC c
+int main(int argc, char** argv){
+    return 0;
+}
+#+END_SRC
