@@ -20,6 +20,10 @@
                :auto-sitemap t
                :sitemap-filename "index.org"
                :sitemap-title "Contents of GitHub"
+               :sitemap-sort-folders first
+               :sitemap-sort-files'  anti-chronologically
+               :sitemap-file-entry-format "%t (%d)"
+               :html-postamble "<div><a href=\"/index.html\">Home</a></div>"
                ))
 
 (add-to-list 'org-publish-project-alist
