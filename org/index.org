@@ -1,4 +1,4 @@
 #+TITLE: Contents of GitHub
 
    + posts
-     + [[file:posts/2013-08-24-firstgithubpagespost.org][2013-08-24-firstgithubpagespost]]
+     + [[file:./posts/2013-08-24-firstgithubpagespost.org][hi]]
