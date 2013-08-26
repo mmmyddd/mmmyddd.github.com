@@ -37,4 +37,4 @@
 (add-to-list 'org-publish-project-alist
              '("mvm" :components ("org-mvm" "org-static-mvm")))
 
-(provide org-github-config)
+(provide 'org-github-config)
