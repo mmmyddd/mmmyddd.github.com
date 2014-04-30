@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Linux Arm on Qemu</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/embed/index.html">Embed System</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Linux Arm on Qemu
+      </div>
+<p>Reference:</p>
+
+<ul>
+<li><a href="http://balau82.wordpress.com/2010/04/12/booting-linux-with-u-boot-on-qemu-arm/">http://balau82.wordpress.com/2010/04/12/booting-linux-with-u-boot-on-qemu-arm/</a></li>
+</ul>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Preparation</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Build Linux Kernal</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 Build Busybox file system</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 Build U-Boot</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Preparation</h2>
+
+<ul>
+<li>Install QEMU on Debian:</li>
+</ul>
+
+<pre class="example">
+sudo apt-get install qemu
+</pre>
+
+
+<ul>
+<li>Install Uboot-mkimage</li>
+</ul>
+
+<pre class="example">
+sudo apt-get install uboot-mkimage
+</pre>
+
+
+<ul>
+<li>download arm-none-eabi</li>
+</ul>
+
+<p><a href="http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite">http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite</a></p>
+
+<p>(gcc version 4.4.1 (Sourcery G++ Lite 2010q1-188)</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Build Linux Kernal</h2>
+
+<ul>
+<li>download <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> kernel:</li>
+</ul>
+
+<p><a href="http://kernel.org/">http://kernel.org/</a></p>
+
+<p>version: <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-2.6.35.tar.gz</p>
+
+<ul>
+<li>config</li>
+</ul>
+
+<pre class="example">
+make ARCH=arm versatile_defconfig
+</pre>
+
+<pre class="example">
+make ARCH=arm menuconfig
+</pre>
+
+<p>enable eabi menu options</p>
+
+<pre class="example">
+kernel Features --&gt;
+Memory split (3G/1G user/kernel split) ---&gt;
+[ ] Preemptible Kernel (EXPERIMENTAL)
+[*] Use the ARM EABI to compile the kernel
+[*] Allow old ABI binaries to run with this kernel (EXPERIMENTAL)
+[ ] High Memory Support (EXPERIMENTAL)
+      Memory model (Flat Memory) ---&gt;
+[ ] Add LRU list to track non-evictable pages
+(4096) Low address space to protect from user allocation
+</pre>
+
+<ul>
+<li>build</li>
+</ul>
+
+<p>make kernel</p>
+
+<pre class="example">
+make ARCH=arm CROSS_COMPILE=arm-linux- all
+</pre>
+
+
+<ul>
+<li>Test:</li>
+</ul>
+
+<pre class="example">
+qemu-system-arm -M versatilepb -m 128M -kernel zImage
+</pre>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Build Busybox file system</h2>
+
+
+<ul>
+<li>download busybox <a href="http://busybox.net/downloads/busybox-1.16.0.tar.bz2">http://busybox.net/downloads/busybox-1.16.0.tar.bz2</a></li>
+</ul>
+
+<p>(to be verified)</p>
+
+<p>If it can not pass build, usually it is because the version
+of crosstool (gcc/glib) is not correct.</p>
+
+<ul>
+<li>configure the build:</li>
+</ul>
+
+<pre class="example">
+make ARCH=arm CROSS_COMPILE=arm-linux- defconfig
+make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
+</pre>
+
+<pre class="example">
+Busybox Settings --&gt; Build Options --&gt;
+[*] Build BusyBox as a static binary (no shared libs)
+[ ] Force NOMMU build
+  [*] Build with Large File Support (for accessing files &gt; 2 GB)
+  ()  Cross Compiler prefix
+  ()  Additional CFLAGS
+</pre>
+
+
+<ul>
+<li>make install</li>
+</ul>
+
+<pre class="example">
+make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- install
+</pre>
+
+<p>this will generate an <code>_install</code> directory:</p>
+
+
+<ul>
+<li>add necessary file:</li>
+</ul>
+
+<pre class="example">
+cd _install
+mkdir proc sys dev etc etc/init.d
+cd ..
+</pre>
+
+<p>create the file <code>_install/etc/init.d/rcS</code></p>
+
+<pre class="example">
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+/sbin/mdev -s
+</pre>
+
+<p>and change it to executable:</p>
+
+<pre class="example">
+chmod +x _install/etc/init.d/rcS
+</pre>
+
+
+<ul>
+<li>make the root image:</li>
+</ul>
+
+<pre class="example">
+cd _install
+find . | cpio -o --format=newc &gt; ../rootfs.img
+cd ..
+gzip -c rootfs.img &gt; rootfs.img.gz
+</pre>
+
+<ul>
+<li>test our new images:</li>
+</ul>
+
+<pre class="example">
+qemu-system-arm -M versatilepb -m 128M -kernel zImage -initrd rootfs.img.gz -append &quot;root=/dev/ram rdinit=/sbin/init&quot;
+</pre>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Build U-Boot</h2>
+
+
+<ul>
+<li>download U-Boot:</li>
+</ul>
+
+<p><a href="ftp://ftp.denx.de/pub/u-boot/u-boot-2010.03.tar.bz2">ftp://ftp.denx.de/pub/u-boot/u-boot-2010.03.tar.bz2</a></p>
+
+
+<ul>
+<li>Apply Patch:</li>
+</ul>
+
+<pre class="example">
+diff -rupN u-boot-2010.03.orig/common/image.c u-boot-2010.03/common/image.c
+--- u-boot-2010.03.orig/common/image.c  2010-03-31 23:54:39.000000000 +0200
++++ u-boot-2010.03/common/image.c       2010-04-12 15:42:15.911858000 +0200
+@@ -941,7 +941,7 @@ int boot_get_ramdisk (int argc, char *ar
+                        return 1;
+                }
+
+-#if defined(CONFIG_B2) || defined(CONFIG_EVB4510) || defined(CONFIG_ARMADILLO)
++#if defined(CONFIG_B2) || defined(CONFIG_EVB4510) || defined(CONFIG_ARMADILLO) || defined(CONFIG_VERSATILE)
+                /*
+                 * We need to copy the ramdisk to SRAM to let Linux boot
+                 */
+</pre>
+
+<p>or comments out above <code>#if</code> line</p>
+
+
+<pre class="example">
+diff -rupN u-boot-2010.03.orig/include/configs/versatile.h u-boot-2010.03/include/configs/versatile.h
+--- u-boot-2010.03.orig/include/configs/versatile.h     2010-03-31 23:54:39.000000000 +0200
++++ u-boot-2010.03/include/configs/versatile.h  2010-04-12 15:43:01.514733000 +0200
+@@ -124,8 +124,11 @@
+ #define CONFIG_BOOTP_SUBNETMASK
+
+ #define CONFIG_BOOTDELAY       2
+-#define CONFIG_BOOTARGS                &quot;root=/dev/nfs mem=128M ip=dhcp &quot;\
+-                               &quot;netdev=25,0,0xf1010000,0xf1010010,eth0&quot;
++/*#define CONFIG_BOOTARGS              &quot;root=/dev/nfs mem=128M ip=dhcp &quot;\
++                               &quot;netdev=25,0,0xf1010000,0xf1010010,eth0&quot;*/
++#define CONFIG_BOOTARGS                &quot;root=/dev/ram mem=128M rdinit=/sbin/init&quot;
++#define CONFIG_BOOTCOMMAND   &quot;bootm 0x210000 0x410000&quot;
++#define CONFIG_INITRD_TAG   1
+
+ /*
+  * Static configuration when assigning fixed address
+
+</pre>
+
+<ul>
+<li>build image:</li>
+</ul>
+
+<pre class="example">
+make CROSS_COMPILE=arm-none-eabi- versatilepb_config
+make CROSS_COMPILE=arm-none-eabi- all
+</pre>
+
+<ul>
+<li>Make U-images:</li>
+</ul>
+
+<pre class="example">
+mkimage -A arm -C none -O linux -T kernel -d zImage -a 0x00010000 -e 0x00010000 zImage.uimg
+mkimage -A arm -C none -O linux -T ramdisk -d rootfs.img.gz -a 0x00800000 -e 0x00800000 rootfs.uimg
+dd if=/dev/zero of=flash.bin bs=1 count=6M
+dd if=u-boot.bin of=flash.bin conv=notrunc bs=1
+dd if=zImage.uimg of=flash.bin conv=notrunc bs=1 seek=2M
+dd if=rootfs.uimg of=flash.bin conv=notrunc bs=1 seek=4M
+</pre>
+
+<ul>
+<li>boot <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>:</li>
+</ul>
+
+<pre class="example">
+qemu-system-arm -M versatilepb -m 128M -kernel flash.bin -serial stdio
+</pre>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:embed_linuxonarmonqemu';
+    var disqus_title = "Justin's Wiki - Linux Arm on Qemu";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/embed/linuxonarmonqemu.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Thu Jan 27 21:42:41 2011
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/embed/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "embed_linuxonarmonqemu");
+  //afterload();
+  fillsearch();
+</script>
+</html>

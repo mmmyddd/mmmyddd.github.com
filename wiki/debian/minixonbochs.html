@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Setup Minix on Bochs under Debian</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/debian/index.html">Debian/GNU操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Setup Minix on Bochs under Debian
+      </div>
+<p><strong>摘要：</strong> 在Linux系统中在Bochs模拟器上安装Minix系统。</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 准备目录</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 安装Bochs</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec3">2.1 安装Bochs软件包</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">2.2 生成磁盘映像</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec5">2.2.1 硬盘映像</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">2.2.2 软盘映像</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec7">2.2.3 其他方法</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec8">2.3 配置Bochs</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">2.4 启动机器</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">3 安装Minix系统</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">3.1 制作启动软盘</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">3.2 制作数据软盘</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec13">3.3 软盘启动</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec14">3.4 启动安装程序</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec15">3.5 设置键盘映射</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec16">3.6 分区</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec17">3.7 最小安装</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec18">3.8 安装命令，程序和源代码</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec19">3.8.1 安装命令</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec20">3.8.2 安装系统源码</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec21">3.8.3 安装命令源码</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec22">3.8.4 安装补丁源码</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec23">4 编译Minix</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec24">4.1 编译系统部件</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec25">4.1.1 编译库文件</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec26">4.1.2 编译内核</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec27">4.1.3 编译管理模块</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec28">4.1.4 编译命令行工具</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec29">4.2 编译前备份内核</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec30">5 Minix网络配置</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec31">5.1 Bochs的网络配置</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec32">5.2 编译带网络支持的Minix内核</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec33">5.3 配置Minix网络</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec34">6 开发环境</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec35">6.1 Consoles</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec36">6.2 本地编辑器</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec37">6.3 编译环境</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec38">6.4 构建环境</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec39">6.5 版本控制</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec40">6.6 调试器</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec41">6.7 和宿主机交换信息</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec42">6.7.1 Raw Disk</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec43">6.7.2 磁盘</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec44">6.7.3 网络</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec45">7 Minix参考资源</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+准备目录</h2>
+
+<p class="first">首先建立安装Minix虚拟机的目录：</p>
+
+<pre class="example">
+mkdir ~/minix
+</pre>
+
+<p>将Minix 2.0.0的光盘文件放在：</p>
+
+<pre class="example">
+mkdir ~/minix/cdrom
+</pre>
+
+<p>最新的Minix2的版本是2.0.4,可以在：
+<a href="http://www.minix3.org/previous-versions/index.html">http://www.minix3.org/previous-versions/index.html</a>
+下载。</p>
+
+<p>为什么没有使用最新版本，而是2.0.0?</p>
+
+<ul>
+<li>首先，Minix3的目标是一个实用系统，Minix2可以很好的学习;</li>
+<li>其次，手头有书和源代码是2.0.0的，方便参考对照;</li>
+<li>再次，2.0.4和2.0.0的差别不是很大，安装方法一样。</li>
+</ul>
+
+<p>这里用到的安装目录有：</p>
+
+<p class="verse">
+<strong>~/minix/cdrom/MINIX:</strong><br>
+i386\ROOT	- Minix boot &amp; root floppy image (386 and better)<br>
+i386\USR	- Floppy image with programs needed for installation<br>
+i386\USR.TAZ	- All Minix programs, libraries, etc.<br>
+SYS.TAZ		- System sources and manual pages<br>
+CMD.TAZ		- Commands sources<br>
+</p>
+
+<p>在MINIX目录下还有和安装相关帮助文件。
+另外，在2.0.4的发布版本中，包含有许多html格式的
+文档和手册页，这些是很有帮助的。</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+安装Bochs</h2>
+
+<p class="first">Bochs是一个IA86(x86)硬件的模拟器(emulator), 它所有的虚拟硬件都是通过软件模拟
+完成的，和其他虚拟机(vmware, virtual box, virtual pc, qemu)相比，速度较慢，
+但是支持硬件级别的调试，适合于学习系统内核。</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+安装Bochs软件包</h3>
+
+<pre class="example">
+sudo apt-get install bochs bochs-doc bochs-wx bochs-term bochsbois bximage
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+生成磁盘映像</h3>
+
+<pre class="example">
+cd ~/minix
+</pre>
+
+
+<p>使用 <code>bximage</code>命令创建磁盘映像，</p>
+
+<pre class="example">
+bximage
+</pre>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+硬盘映像</h4>
+
+<p class="first">运行命令 <code>bximage</code>，会出现如下提示，按提示创建一个100M的硬盘，
+使用flat类型，一次性分配所有硬盘空间：</p>
+
+<p class="verse">
+========================================================================<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bximage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disk Image Creation Tool for Bochs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id: bximage.c,v 1.34 2009/04/14 09:45:22 sshwarts Exp $<br>
+========================================================================<br>
+<br>
+Do you want to create a floppy disk image or a hard disk image?<br>
+Please type hd or fd. [hd] hd<br>
+<br>
+What kind of image should I create?<br>
+Please type flat, sparse or growing. [flat]<br>
+<br>
+Enter the hard disk size in megabytes, between 1 and 129023[10]<br>
+100<br>
+<br>
+I will create a 'flat' hard disk image with<br>
+&nbsp;&nbsp;cyl=203<br>
+&nbsp;&nbsp;heads=16<br>
+&nbsp;&nbsp;sectors per track=63<br>
+&nbsp;&nbsp;total sectors=204624<br>
+&nbsp;&nbsp;total size=99.91 megabytes<br>
+<br>
+What should I name the image?<br>
+[c.img] minix-hd.img<br>
+<br>
+Writing: [] Done.<br>
+<br>
+I wrote 104767488 bytes to minix-hd.img.<br>
+<br>
+The following line should appear in your bochsrc:<br>
+&nbsp;&nbsp;ata0-master: type=disk, path=&quot;minix-hd.img&quot;, mode=flat, cylinders=203, heads=16, spt=63<br>
+</p>
+
+<p>将生成的配置命令行：</p>
+
+<pre class="example">
+ata0-master: type=disk, path=&quot;minix-hd.img&quot;, mode=flat, cylinders=203, heads=16, spt=63
+</pre>
+
+<p>保存在 <code>~/minix/.bochsrc</code>文本文件中。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+软盘映像</h4>
+
+<p class="first">再次运行命令 <code>bximage</code>， 按照提示生成1.44M软盘的映像：</p>
+
+<p class="verse">
+========================================================================<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bximage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disk Image Creation Tool for Bochs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id: bximage.c,v 1.34 2009/04/14 09:45:22 sshwarts Exp $<br>
+========================================================================<br>
+<br>
+Do you want to create a floppy disk image or a hard disk image?<br>
+Please type hd or fd. [hd] fd<br>
+<br>
+Choose the size of floppy disk image to create, in megabytes.<br>
+Please type 0.16, 0.18, 0.32, 0.36, 0.72, 1.2, 1.44, 1.68, 1.72, or 2.88.<br>
+&nbsp;&nbsp;[1.44] 1.44<br>
+I will create a floppy image with<br>
+&nbsp;&nbsp;cyl=80<br>
+&nbsp;&nbsp;heads=2<br>
+&nbsp;&nbsp;sectors per track=18<br>
+&nbsp;&nbsp;total sectors=2880<br>
+&nbsp;&nbsp;total bytes=1474560<br>
+<br>
+What should I name the image?<br>
+[a.img] minix-fd.img<br>
+<br>
+Writing: [] Done.<br>
+<br>
+I wrote 1474560 bytes to minix-fd-boot.img.<br>
+<br>
+The following line should appear in your bochsrc:<br>
+&nbsp;&nbsp;floppya: image=&quot;minix-fd.img&quot;, status=inserted<br>
+</p>
+
+<p>将生成的配置命令行：</p>
+
+<pre class="example">
+floppya: image=&quot;minix-fd.img&quot;, status=inserted
+</pre>
+
+<p>保存在 <code>~/minix/.bochsrc</code>文本文件中。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+其他方法</h4>
+
+<p class="first">磁盘映像和磁盘的没有经过文件系统格式化的绝对存储是对应的，
+因此还有一些比较便捷的方法生成磁盘映像：</p>
+
+<ul>
+<li>生成1.44M的磁盘映像：</li>
+</ul>
+
+<pre class="example">
+dd if=/dev/zero of=minix-fd.img bs=1440k count=1
+</pre>
+
+
+<ul>
+<li>生成100M的硬盘映像：</li>
+</ul>
+
+<pre class="example">
+dd if=/dev/zero of=minix-hd.img bs=1M count=100
+</pre>
+
+<p>关于磁盘的绝对读写，可以参考<code>dd</code>命令的手册页。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+配置Bochs</h3>
+
+<p class="first">现在来修改bochs的启动配置 <code>~/minix/.bochsrc</code>。</p>
+
+<p>可以参考<code>bochs-doc</code>中的样本－
+<code>/usr/share/doc/bochs/examples/bochsrc.gz
+</code></p>
+
+<p>将<code>.bochrc</code>修改为:</p>
+
+<pre class="example">
+config_interface: textconfig
+display_library: wx
+floppya: image=&quot;/home/justin/minix/minix-fd.img&quot;, status=inserted
+ata0-master: type=disk, path=&quot;/home/justin/minix-hd.img&quot;, mode=flat, cylinders=203, heads=16, spt=63
+boot: floppy, disk, cdrom
+keyboard_mapping: enabled=1, map=/usr/share/bochs/keymaps/x11-pc-us.map
+</pre>
+
+<p><strong>注意：</strong> 实际上，还有许多的默认启动参数，Bochs可以通过 <code>/etc/bochs-init/bochsrc</code>中来获得，
+在上述文件中可以覆盖默认的启动选项，这里给出一个虚拟机器的最简单配置。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+启动机器</h3>
+
+<p class="first">现在可以通过命令行：</p>
+
+<pre class="example">
+cd ~/minix
+bochs -q -f .bochsrc
+</pre>
+
+<p>启动我们的虚拟机，在屏幕上出现：</p>
+
+<p class="verse">
+Plex86/Bochs VGABios current-cvs 02 Dec 2009<br>
+This VGA/VBE Bios is released under the GNU LGPL<br>
+<br>
+Please visit :<br>
+&nbsp;&nbsp;. <a href="http://bochs.sourceforge.net">http://bochs.sourceforge.net</a><br>
+&nbsp;&nbsp;. <a href="http://www.nongnu.org/vgabios">http://www.nongnu.org/vgabios</a><br>
+<br>
+Bochs VBE Display Adapter enabled<br>
+<br>
+Bochs BIOS - build: 06/08/10<br>
+$Revision: 1.247 $ $Date: 2010/04/04 19:33:50 $<br>
+Options: apmbios pcibios pnpbios eltorito rombios32<br>
+<br>
+ata0 master: Generic 1234 ATA-6 Hard-Disk (  99 MBytes)<br>
+<br>
+Press F12 for boot menu. # &lt;F12&gt; Pressed<br>
+<br>
+Select boot device:<br>
+<br>
+1. Floppy<br>
+2. Hard Disk<br>
+3. CD-Rom<br>
+</p>
+
+<p>现在机器还是一台裸机，只能通过开机时的 <code>F12</code>键进入Bios的启动菜单。
+至此完成了一个可开机的虚拟机器。</p>
+
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+安装Minix系统</h2>
+
+<p class="first">参考资料：<a href="http://fanqiang.chinaunix.net/program/project/2005-11-03/3795.shtml">http://fanqiang.chinaunix.net/program/project/2005-11-03/3795.shtml</a></p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+制作启动软盘</h3>
+
+<p class="first">在Linux和Bochs下制作启动软盘是相当容易的：</p>
+
+<pre class="example">
+cd ~/minix
+cat cdrom/MINIX/i386/ROOT cdrom/MINIX/i386/USR &gt; minix-fd.img
+</pre>
+
+<p>这是因为ROOT和USR已经是sector-by-sector的磁盘数据，因此可以直
+接用cat写入到磁盘映像中。从名字上可以猜测到，ROOT和USR是软盘
+上的系统映像 <code>/</code> 和 <code>/usr</code>。</p>
+
+<p>上述方法对<code>minix-fd.img</code>是破坏性质的，因为
+<code>ROOT</code>与<code>USR</code>的大小之和比
+1.44M小，<code>minx-fd.img</code>会被truncate掉。因此需要在安
+装后重新用<code> bximage </code>生成该映像。</p>
+
+
+<p>比较稳妥的办法是：</p>
+
+<pre class="example">
+cat cdrom/MINIX/i386/ROOT cdrom/MINIX/i386/USR &gt; tmp.img
+dd if=tmp.img of=minix-fd.img conv=notrunc
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+制作数据软盘</h3>
+
+<p class="first">除了启动软盘，在安装过程中，需要制作一系列的数据软盘,其中：</p>
+
+<ul>
+<li><code>~/minix/cdrom/MINIX/I386/USR.TAR</code>,包含应用程序
+需要3张1.44M软盘</li>
+
+<li><code>~/minix/cdrom/MINIX/SRC.TAR</code>, 包含系统内核，库
+函数的源代码，需要2张1.44M的软盘</li>
+
+<li><code>~/minix/cdrom/MINIX/CMD.TAR</code>, 包含命令和应用程
+序的源代码，需要3张1.44M的软盘</li>
+</ul>
+
+
+<p>以USR.TAR为例子，介绍两种数据软盘映像的制作：</p>
+
+<ul>
+<li>快速制作：</li>
+</ul>
+
+<pre class="example">
+cd ~/minix
+split -b 1440k cdrom/MINIX/I386/USR.TAR
+</pre>
+
+<p>这样会将USR.TAR分割为3个文件，xaa、xab、xac，在需要的时候依次导入磁盘：</p>
+
+<pre class="example">
+cat xaa &gt; minix-fd.img
+# some ops ...
+cat xab &gt; minix-fd.img
+# some ops ...
+cat xab &gt; minix-fd.img
+</pre>
+
+<p>这样做也会出现minix-fd.img被truncate的情况，有时候会在安装的时候出现问题</p>
+
+<ul>
+<li>准确制作：</li>
+</ul>
+
+<pre class="example">
+cd ~/minix
+dd if=cdrom/MINIX/I386/USR.TAR of=minix-fd.img bs=1440k count=1 skip=0 conv=notrunc
+# some ops ...
+dd if=cdrom/MINIX/I386/USR.TAR of=minix-fd.img bs=1440k count=1 skip=1 conv=notrunc
+# some ops ...
+dd if=cdrom/MINIX/I386/USR.TAR of=minix-fd.img bs=1440k count=1 skip=2 conv=notrunc
+</pre>
+
+<p>下面介绍的时候不再说明如何制作这些，在指出需要插入USR.TAR的第
+1/2/3张软盘，分别执行上述第1/2/3条cat或者dd命令即刻。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+软盘启动</h3>
+
+<p class="first">现在就可以用这个映像来启动Bochs虚拟机器了。</p>
+
+<p>运行 <code>bochs</code>:</p>
+
+<pre class="example">
+cd ~/minix
+bochs -q -f .bochsrc
+</pre>
+
+<p>可以在启动屏幕上看到：</p>
+
+<p class="verse">
+Minix 2.0.0  Copyright 1997 Prentice-Hall, Inc.<br>
+<br>
+Executing in 32-bit protected mode<br>
+<br>
+<br>
+Memory size = 8010K   MINIX = 295K   RAM disk =  480K   Available = 7236K<br>
+<br>
+RAM disk loaded.<br>
+<br>
+Tue Oct  1 16:21:37 MET 1996<br>
+Finish the name of device to mount as /usr: <strong>/dev/fd0c</strong><br>
+</p>
+
+<p>对于1.44M的软盘来说，<code>/usr</code>已经是这张软盘了，可以输入 <code>/dev/fd0c</code>。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+启动安装程序</h3>
+
+<p class="first">现在进入登录界面：</p>
+
+<p class="verse">
+/dev/fd0c is read-write mounted on /usr<br>
+Starting standard daemons: update.<br>
+<br>
+Login as root and run 'setup' to install Minix.<br>
+<br>
+Minix  Release 2.0 Version 0<br>
+<br>
+noname login: <strong>root</strong><br>
+<br>
+</p>
+
+<p>以root用户身份登录（密码默认为空），然后执行
+<code>setup</code>,进入安装程序：</p>
+
+<p class="verse">
+# setup<br>
+<br>
+This is the Minix installation script.<br>
+<br>
+Note 1: If the screen blanks suddenly then hit F3 to select &quot;software<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrolling&quot;.<br>
+<br>
+Note 2: If things go wrong then hit DEL and start over.<br>
+<br>
+Note 3: The installation procedure is described in the manual page<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usage(8).  It will be hard without it.<br>
+<br>
+Note 4: Some questions have default answers, like this: [y]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simply hit RETURN (or ENTER) if you want to choose that answer.<br>
+<br>
+Note 5: If you see a colon (:) then you should hit RETURN to continue.<br>
+: <strong>[enter]</strong><br>
+</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec15" id="sec15"></a>
+设置键盘映射</h3>
+
+<p class="verse">
+What type of keyboard do you have?  You can choose one of:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;french  italian   latin-am  scandinavn  uk      us-swap<br>
+&nbsp;&nbsp;&nbsp;&nbsp;german  japanese  olivetti  spanish     us-std<br>
+<br>
+Keyboard type? [us-std] <strong>[enter]</strong><br>
+</p>
+
+<p>将键盘设置为 <code>use-std</code></p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec16" id="sec16"></a>
+分区</h3>
+
+<p class="first">因为采用的硬盘映像，整个磁盘都可以分给Minix，编译Minix内核需要30M的空间，所以系统分区
+必需大于30M，这里将100M硬盘分成两个50M的分区。其中一个被Minix安装程序分成4个子分区，
+前三个分别用于: <code>/</code>, <code>swap</code>, <code>/usr</code></p>
+
+
+<p>硬盘分区为：</p>
+
+<p class="verse">
+&nbsp;&nbsp;Select device       &mdash;-first&mdash;-  &mdash;geom/last&mdash;  &mdash;&mdash;sectors&mdash;&mdash;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Device             Cyl Head Sec   Cyl Head Sec      Base      Size       Kb<br>
+&nbsp;&nbsp;&nbsp;&nbsp;/dev/hd0                          203   16  63<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0    0   0   202   15  62         0    204624   102312<br>
+Num Sort   Type<br>
+&nbsp;&nbsp;1* hd1  81 MINIX        0    1   0   103   13  43        63    104624    52312<br>
+&nbsp;&nbsp;2  hd2  81 MINIX      103   13  44   202   15  45    104687     99920    49960<br>
+&nbsp;&nbsp;3  hd3  00 None         0    0   0     0    0  -1         0         0        0<br>
+&nbsp;&nbsp;4  hd4  00 None         0    0   0     0    0  -1         0         0        0<br>
+</p>
+
+<p>hd1的子分区为：</p>
+
+<p class="verse">
+&nbsp;&nbsp;Active flag         &mdash;-first&mdash;-  &mdash;geom/last&mdash;  &mdash;&mdash;sectors&mdash;&mdash;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Device             Cyl Head Sec   Cyl Head Sec      Base      Size       Kb<br>
+&nbsp;&nbsp;&nbsp;&nbsp;/dev/hd0                          203   16  63<br>
+&nbsp;&nbsp;&nbsp;&nbsp;/dev/hd0:1           0    1   0   103   13  43        63    104624    52312<br>
+Num Sort   Type<br>
+&nbsp;&nbsp;1* hd1a 81 MINIX        0    1   1     2   14  45        64      2880     1440<br>
+&nbsp;&nbsp;2  hd1b 00 None         0    0   0     0    0  -1         0         0        0<br>
+&nbsp;&nbsp;3  hd1c 81 MINIX        2   14  46   103   13  43      2944    101743    50871<br>
+&nbsp;&nbsp;4  hd1d 00 None         0    0   0     0    0  -1         0         0        0<br>
+</p>
+
+<p>具体操作参考part的手册页和联机帮助。</p>
+
+<p>联机帮助中有一些有用的提示为：</p>
+
+<p class="verse">
+*Choose a disk with '+' and '-', then hit 'r'.<br>
+*To change any value: Move to it and use '+', '-' or type the desired value.<br>
+*To make a new partition:  Move over to the Size or Kb field of an unused<br>
+&nbsp;&nbsp;partition and type the size.  Hit the 'm' key to pad the partition out to<br>
+&nbsp;&nbsp;a cylinder boundary.  Hit 'm' again to pad it out to the end of the disk.<br>
+&nbsp;&nbsp;You can hit 'm' more than once on a base or size field to see several<br>
+&nbsp;&nbsp;interesting values go by.  Note: Other Operating Systems can be picky about<br>
+&nbsp;&nbsp;partitions that are not padded to cylinder boundaries.  Look for highlighted<br>
+&nbsp;&nbsp;head or sector numbers.<br>
+*To reuse a partition:  Change the type to MINIX.<br>
+*To delete a partition:  Type a zero in the hex Type field.<br>
+*To make a partition active:  Type '+' in the Num field.<br>
+*To study the list of keys:  Type '?'.<br>
+</p>
+
+<p>还有一些键盘操作：</p>
+
+<p class="verse">
+? !                       - This help / more advice!<br>
++ - (= _ <a href="PgUp">Pg Up</a> <a href="PgDn">Pg Dn</a>)       - Select/increment/decrement/make active<br>
+0-9 (a-f)                 - Enter value<br>
+hjkl (arrow keys)         - Move around<br>
+CTRL-K CTRL-J             - Move entry up/down<br>
+CTRL-L                    - Redraw screen<br>
+&gt;                         - Start a subpartition table<br>
+&lt;                         - Back to the primary partition table<br>
+m                         - Cycle through magic values<br>
+spacebar                  - Show &quot;Size&quot; or &quot;Last&quot;<br>
+r w                       - Read/write partition table<br>
+p s q x                   - Raw dump / Shell escape / Quit / Exit<br>
+y n DEL                   - Answer &quot;yes&quot;, &quot;no&quot;, &quot;cancel&quot;<br>
+Things like this must be checked, but this is not really a problem<br>
+</p>
+
+<p>当修改完成后，按 <code>q</code>退出，按 <code>y</code>确认保存分区表。</p>
+
+<p class="verse">
+Save partition table? (y/n) <strong>y</strong><br>
+</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec17" id="sec17"></a>
+最小安装</h3>
+
+<p class="first">随后确认将minix安装至分区 <code>/dev/hd1</code>:</p>
+
+<p class="verse">
+Please finish the name of the primary partition you have created:<br>
+(Just type RETURN if you want to rerun &quot;part&quot;)        <strong>/dev/hd1</strong><br>
+<br>
+You have created a partition named:     /dev/hd3<br>
+The following subpartitions are about to be created on /dev/hd1:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Root subpartition:      /dev/hd1a       1440 kb<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usr subpartition:      /dev/hd1c       rest of hd3<br>
+<br>
+Hit return if everything looks fine, or hit DEL to bail out if you want to<br>
+think it over.  The next step will destroy /dev/hd1.<br>
+: <strong>[enter]</strong><br>
+<br>
+Migrating from floppy to disk...<br>
+<br>
+Scanning /dev/hd3c for bad blocks.  (Hit DEL to stop the scan if are absolutely<br>
+sure that there can not be any bad blocks.  Otherwise just wait.)<br>
+<br>
+cp /fd0/etc/hostname.file /mnt/etc/hostname.file<br>
+cp /fd0/etc/motd /mnt/etc/motd<br>
+<br>
+...<br>
+<br>
+mkdir /mnt/root<br>
+mkdir /mnt/tmp<br>
+cp /fd0/.ellepro.b1 /mnt/.ellepro.b1<br>
+/dev/fd0 unmounted from /fd0<br>
+/dev/hd1a unmounted from /mnt<br>
+</p>
+
+<p>系统安装完成后，会确认系统的内存大小, 默认系统物理内存为15M，大于4096, 直接回车：</p>
+
+<p class="verse">
+What is the memory size of this system in kilobytes? [4096 or more] <strong>[enter]</strong><br>
+Second level file system block cache set to 1024 kb.<br>
+</p>
+
+<p>完成后从硬盘上启动系统，验证安装：</p>
+
+<p class="verse">
+Please insert the installation ROOT floppy and type 'halt' to exit Minix.<br>
+You can type 'boot hd1' to try the newly installed Minix system.  See<br>
+&quot;TESTING&quot; in the usage manual.<br>
+# <strong>halt</strong><br>
+System Halted<br>
+fd0&gt; <strong>boot hd1</strong><br>
+<br>
+Minix 2.0.0  Copyright 1997 Prentice-Hall, Inc.<br>
+<br>
+Executing in 32-bit protected mode<br>
+<br>
+at-hd0: Conner Peripherals 240MB - CP2251<br>
+<br>
+Memory size = 15946K   MINIX = 516K   RAM disk = 1024K   Available = 14406K<br>
+<br>
+Tue Oct  1 16:39:24 MET 1996<br>
+/dev/hd1c is read-write mounted on /usr<br>
+Starting standard daemons: update.<br>
+<br>
+Login as root and run 'setup /usr' to install floppy sets.<br>
+<br>
+Minix  Release 2.0 Version 0<br>
+<br>
+noname login: <strong>root</strong><br>
+<br>
+</p>
+
+<p>至此，一个最简单的Minix系统安装成功。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec18" id="sec18"></a>
+安装命令，程序和源代码</h3>
+
+<p class="first">最小安装外，还需要安装一些实用程序，系统源代码，以便学习Minix</p>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec19" id="sec19"></a>
+安装命令</h4>
+
+<p class="first">使用USR.TAR的三张软盘，以root登录，运行：</p>
+
+<p class="verse">
+noname login: <strong>root</strong><br>
+# <strong>setup /usr</strong><br>
+<br>
+What is the size of the images on the diskettes? [all] <strong>1440</strong><br>
+What floppy drive to use? [0] <strong>[enter]</strong><br>
+Please insert input volume 1 and hit return<br>
+<br>
+created directory: local/lib<br>
+created directory: local/man<br>
+created directory: local/src<br>
+created directory: man<br>
+Can't make directory mdec: File exists <strong>ignore this</strong><br>
+...<br>
+<br>
+Please insert input volume 2 and hit return <strong>[enter]</strong><br>
+...<br>
+<br>
+Please insert input volume 3 and hit return <strong>[enter]</strong><br>
+...<br>
+<br>
+</p>
+
+<p>按照提示依次插入3张软盘，方法已在前面详细说明。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec20" id="sec20"></a>
+安装系统源码</h4>
+
+<p class="first">使用SYS.TAR的两张软盘，方法同上。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec21" id="sec21"></a>
+安装命令源码</h4>
+
+<p class="first">使用CMD.TAR的三张软盘，方法同上。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec22" id="sec22"></a>
+安装补丁源码</h4>
+
+<p class="first">2.0.4附带了一个补丁文件，FIX.TAR, 安装方法同上。
+实际上，可以通过这种方法安装任意的TAR文件到系统某个目录：</p>
+
+<pre class="example">
+setup /usr/mydir
+</pre>
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec23" id="sec23"></a>
+编译Minix</h2>
+
+<p class="first">Minix安装后的源代码在<code>/usr/src</code>:</p>
+
+<pre class="example">
+  -rw-r--r--  1 bin      operator      341 Oct  1  1996 .ashrc
+  -rw-r--r--  1 bin      operator      300 Oct  1  1996 .ellepro.b1
+  -rw-r--r--  1 bin      operator     6001 Aug  3 11:31 .ellepro.e
+  -rw-r--r--  1 bin      operator       44 Oct  1  1996 .exrc
+  -rw-r--r--  1 bin      operator      393 Oct  1  1996 .profile
+  -r--r--r--  1 bin      operator     3996 Oct  1  1996 LICENSE
+  -rw-r--r--  1 bin      operator      619 Oct  1  1996 Makefile
+  drwxr-xr-x  2 bin      operator      448 Aug  3 12:41 boot
+  drwxr-xr-x 37 bin      operator      608 Jul 29 01:38 commands
+  -rw-r--r--  1 bin      operator    68900 Oct  1  1996 crclist
+  drwxr-xr-x  2 bin      operator      192 Jul 29 01:44 etc
+  drwxr-xr-x  2 bin      operator      960 Aug  2 17:47 fs
+  drwxr-xr-x  3 bin      operator      432 Aug  6 23:18 inet
+  drwxr-xr-x  3 bin      operator     1552 Aug  6 23:08 kernel
+  drwxr-xr-x 18 bin      operator      448 Aug  2 14:55 lib
+  drwxr-xr-x  2 bin      operator      528 Aug  2 17:44 mm
+  drwxr-xr-x  2 bin      operator      800 Jul 29 01:48 test
+  drwxrwxrwx  2 bin      operator       32 Oct  1  1996 tmp
+  drwxr-xr-x  2 bin      operator      176 Aug  2 17:48 tools
+</pre>
+
+<p>Minix还有一部分可供修改的头文件在 <code>/usr/include</code>下。</p>
+
+<p>这里说明编译各个模块的步骤：</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec24" id="sec24"></a>
+编译系统部件</h3>
+Minix是用来学习和修改的。
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec25" id="sec25"></a>
+编译库文件</h4>
+
+<pre class="example">
+# update /usr/src/lib/Makefile first if necessary
+cd /usr/src/lib
+make install
+reboot
+cd /usr/src/tools
+make hdboot
+reboot
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec26" id="sec26"></a>
+编译内核</h4>
+
+<pre class="example">
+cd /usr/src/kernel
+make install
+cd /usr/src/tools
+make hdboot
+reboot
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec27" id="sec27"></a>
+编译管理模块</h4>
+
+<p class="first">编译mm、boot、inet、fs等模块，
+先进入相应目录，采用和内核相同的方式进行。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec28" id="sec28"></a>
+编译命令行工具</h4>
+
+<p><code>/usr/src/commands</code>包含了许多命令行的实用工具：</p>
+
+<p>如果想编译其中的一个，例如 <code>ping</code>:</p>
+
+<pre class="example">
+cd /usr/src/commands/simple
+make ping
+make /usr/bin/ping   #install
+</pre>
+
+<p>如果想编译所有命令行工具，步骤类似上述，但是不需要<code>reboot</code>。</p>
+
+
+
+<p><span class="note">
+<code>make hdboot</code>和 <code>make fdboot</code>
+分别制作硬盘和软盘的启动映像。
+</span></p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec29" id="sec29"></a>
+编译前备份内核</h3>
+
+<p class="first">在重新编译和使用新的内核前，需要对原有的稳定的内核备份，
+防止新的内核无法正常使用，甚至Crash。</p>
+
+<p>Minix的内核在 <code>/minix</code>目录下。
+原始的内核文件名称为 <code>/minix/2.0.0</code>, 一旦编译并执行了
+<code>make hdboot</code>，就会将该文件删除，生成文件名为
+<code>/minix/2.0.0rX</code>的新的内核（X是内核修改版本，初试值为1，递增）。
+实际上，被删除的是<code>/minix</code>目录下最新的那个文件。</p>
+
+<p>在编译安装新内核前，备份原有内核文件：</p>
+
+<pre class="example">
+cd /minix
+mkdir bak
+cp 2.0.0rX bak
+</pre>
+
+<p>一旦新的内核无法使用，需要在Boot Monitor中指定使用备份的系统
+内核：</p>
+
+<pre class="example">
+hd1a&gt; image=/minix/bak/2.0.0rX
+hd1a&gt; boot
+</pre>
+
+<p>然后删除有问题的内核，重新恢复已经备份的内核即可。</p>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec30" id="sec30"></a>
+Minix网络配置</h2>
+
+<p class="first">为了方便Minix和宿主机交换信息，利用宿主机的编译开发环境，
+我们需要在二者之间建立网络连接。</p>
+
+<p>在上述Bochs的配置中，使用的是宿主机Linux系统中的真实的网卡作
+为Bochs的网络设备，这样配置虽然在Bochs上的Minxi可以访问网络，
+但是宿主机上Linux和Bochs上Minix通过网络连接是有障碍的，这里利
+用Linux中的虚拟网卡来建立Linux和Bochs之间的一个内部网络，然后
+通过Linux的iptable的设置，使bochs可以通过宿主机来连接
+internet，或者和宿主机上的Linux交互。</p>
+
+<p><strong>目标网络地址</strong>:</p>
+
+<ul>
+<li>Linux: 192.168.1.1</li>
+
+<li>Bochs/Minix: 192.168.1.2</li>
+</ul>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec31" id="sec31"></a>
+Bochs的网络配置</h3>
+
+<p class="first">配置Linux下的虚拟网卡, 参考资料：<a href="http://bochs.sourceforge.net/doc/docbook/user/config-tuntap.html">http://bochs.sourceforge.net/doc/docbook/user/config-tuntap.html</a></p>
+
+<ul>
+<li>首先配置tuntap内核模块：</li>
+</ul>
+
+<p>在Debian文件 <code>/etc/modules</code>添加：</p>
+
+<pre class="example">
+alias char-major-10-200 tun
+</pre>
+
+<p>运行命令，自动装载内核模块所添加的内核模块：</p>
+
+<pre class="example">
+depmod -a
+</pre>
+
+<ul>
+<li>创建<code>~/local/bin/tunconfig</code>脚本，利用iptable实现network masquerade:</li>
+</ul>
+
+<pre class="example">
+   #!/bin/bash
+   /sbin/ifconfig ${1##/*/} 192.168.1.1
+   /sbin/iptables -D POSTROUTING -t nat -s 192.168.1.0/24 -d ! 192.168.1.0/24 -j MASQUERADE &gt;&amp; /dev/null
+   /sbin/iptables -t nat -s 192.168.1.0/24 -d ! 192.168.1.0/24 -A POSTROUTING -j MASQUERADE
+   echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+</pre>
+
+
+<ul>
+<li>配置Bochs的虚拟网卡，修改<code>~/minix/.bochsrc</code>中的网卡配置，使用如下配置：</li>
+</ul>
+
+<pre class="example">
+ne2k: ioaddr=0x300, irq=5, mac=fe:fd:00:00:00:01, ethmod=tuntap, ethdev=/dev/net/tun, script=/home/justin/local/bin/tunconfig
+</pre>
+
+
+<ul>
+<li>以su用户启动虚拟机：</li>
+</ul>
+
+<pre class="example">
+sudo bochs -q -f .bochsrc
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec32" id="sec32"></a>
+编译带网络支持的Minix内核</h3>
+
+<ul>
+<li>启动虚拟机器，在启动菜单处按<code>Esc </code>,进入Boot
+Monitor环境，修改Boot Monitor的启动参数配置:</li>
+</ul>
+
+<pre class="example">
+hd1a&gt; DPETH0=300:5
+hd1a&gt; save
+hd1a&gt; boot
+</pre>
+
+<ul>
+<li>在Minix中，修改内核配置头文件
+<code>/src/include/minix/config.h</code>中的下述参数值：</li>
+</ul>
+
+<pre class="example">
+#define ENABLE_NETWORKING 1 //enable networking
+#define NR_PTYS 8       //used by telnet
+#define NR_PROCS 32     //used by telnet
+</pre>
+
+<ul>
+<li>为网卡驱动打补丁：</li>
+</ul>
+
+<p>为了避免Bochs出现网络错误对话框：</p>
+
+<pre class="example">
+              +-------------------------------------------+
+              |PANIC                                   |X||
+              +-------------------------------------------+
+              |  Device  [NE2K]                           |
+              |  Message CR write - tx start, dev in reset|
+              |                                           |
+              |                                +--------+ |
+              |  Continue                      |   OK   | |
+              |  Continue and don't ask again  +--------+ |
+              |  Kill simulation               +--------+ |
+              |  Abort (dump core)             | Cancel | |
+              |                                +--------+ |
+              +-------------------------------------------+
+</pre>
+
+<p>需要在使用补丁：<a href="http://minix1.woodhull.com/pub/minix.2.0/2.0.4/fixes/dp8390fx.tar.Z">http://minix1.woodhull.com/pub/minix.2.0/2.0.4/fixes/dp8390fx.tar.Z</a>
+修改<code>/usr/src/kernel/dp8390.c</code>
+具体参考：<a href="http://minix1.woodhull.com/faq/bxmxhowto.html#netmob">http://minix1.woodhull.com/faq/bxmxhowto.html#netmob</a></p>
+
+<ul>
+<li>重新编译内核：</li>
+</ul>
+
+<pre class="example">
+cd /usr/src/kernel
+make install
+cd /usr/src/tools
+make hdboot
+reboot
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec33" id="sec33"></a>
+配置Minix网络</h3>
+
+<ul>
+<li>新建网络初始化文件<code>/etc/rc.net</code>：</li>
+</ul>
+
+<pre class="example">
+ifconfig -h 192.168.1.2 -n 255.255.255.0
+add_route -g 192.168.1.1
+</pre>
+
+<ul>
+<li>修改文件
+<code>/etc/resolv.conf</code>:</li>
+</ul>
+
+<pre class="example">
+nameserver xxx.xxx.xxx.xxx  # used by Linux
+</pre>
+
+<p>其中xxx.xxx.xxx.xxx是Linux系统所使用的DNS server。</p>
+
+<ul>
+<li>修改文件
+<code>/etc/hosts</code>:</li>
+</ul>
+
+<pre class="example">
+192.168.1.1 hostme
+192.168.1.2 minix
+</pre>
+
+<ul>
+<li>为root用户增加密码，以root登录：</li>
+</ul>
+
+<pre class="example">
+passwd
+</pre>
+
+<p>最后两步是为了使用ftp做的设置，ftp要求登录用户ip的主机名可知，
+登录用户密码不为空。</p>
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec34" id="sec34"></a>
+开发环境</h2>
+
+<p class="first">Minix下的开发环境包括编辑器，编译器，构建环境，版本控制。</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec35" id="sec35"></a>
+Consoles</h3>
+
+<p class="first">Minix默认支持2个的控制台登录， 用<code>F1</code>和 <code>F2</code>来切换。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec36" id="sec36"></a>
+本地编辑器</h3>
+
+<p class="first">Minix环境自带了vi, elle, mined编辑器，
+其中elle（Elle Looks Like Emacs)和Emacs相似，但是需要一个小小的配置：</p>
+
+<pre class="example">
+cd / #相对于root的HOME目录，cd ~
+mv .ellepro.b1 .ellepro.b1.bak
+</pre>
+
+<p>这样elle的行为就更像<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>, 但是还是有很多差别的，具体可以参考elle的manpage。
+可以通过修改编译 <code>/usr/src/.ellepro.e</code>来生成新的 <code>.ellepro.b1</code>。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec37" id="sec37"></a>
+编译环境</h3>
+
+<p><code>cc</code>是默认的编译工具链，包含下面一些东西：</p>
+
+<pre class="example">
+        Program   Input   Output   Operation performed
+        lib/ncpp  prog.c  prog.i   C preprocessor: #include, #define, #ifdef
+        lib/irrel prog.i  prog.i   Removal of unnecessary prototypes
+        lib/ncem  prog.i  prog.k   Parsing and semantic analysis
+        lib/nopt  prog.k  prog.m   Optimization of the intermediate code
+        lib/ncg   prog.m  prog.s   Code generation
+        bin/as    prog.s  prog.o   Assembly
+        lib/ld    prog.o  prog.out Linking
+        lib/cv    prog.out a.out   Conversion to MINIX a.out format
+</pre>
+
+<p>编译自己的程序，可以尝试以下步骤：</p>
+
+<pre class="example">
+cd /usr/tmp
+cc hello.c -o hello
+chmod +x hello
+./hello
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec38" id="sec38"></a>
+构建环境</h3>
+
+<p class="first">Minix安装中带有一个微型版的make工具。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec39" id="sec39"></a>
+版本控制</h3>
+
+<p class="first">Minix甚至有一个简单的版本控制工具SVC，使用方法：</p>
+
+<ul>
+<li>提交新的版本或者初始化： <code>ci -u file</code></li>
+
+<li>提交当前版本, 签出当前最新版本（解锁文件可写），目标版本增加一： <code>ci -lu file</code></li>
+
+<li>签出当前最新版本（解锁文件可写），目标版本增加一： <code>co -l file</code></li>
+
+<li>签出版本2（解锁文件可写），目标版本增加一： <code>co -l -r 2 file</code></li>
+
+<li>签出版本2（解锁文件可写），目标版本不变： <code>co -r 2 file</code></li>
+
+<li>查看日志： <code>svnlog file</code></li>
+</ul>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec40" id="sec40"></a>
+调试器</h3>
+<code>~/minix/cdrom/DEBUGGER/MDB.TAZ</code>是一个Minix下的Debugger.
+
+<p>安装方法：</p>
+
+<p class="verse">
+1) Place MDB.TAZ on a floppy with FDVOL<br>
+2) Boot Minix, login as bin and type: setup /usr/local/src<br>
+3) Move to /usr/local/src/mdb and review additional information in the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;README file.<br>
+4) Edit Makefile for Compiler and extra options as required.<br>
+5) make<br>
+6) make install<br>
+7) make install_man<br>
+</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec41" id="sec41"></a>
+和宿主机交换信息</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec42" id="sec42"></a>
+Raw Disk</h4>
+
+<p class="first">上述安装*.TAZ文件的过成就是使用的Raw Disk实现宿主机与Minix的交换。</p>
+
+<p>需要安装如下软件包：</p>
+
+<pre class="example">
+sudo apt-get install ncompress
+</pre>
+
+<p>如何得到一个.TAZ文件：</p>
+
+<pre class="example">
+tar cvf files.tar files ...
+compress files.tar
+mv files.tar.Z files.TAZ
+</pre>
+
+<p>把资料写入软盘：</p>
+
+<pre class="example">
+cat files.TAZ &gt; minix-fd.img
+</pre>
+
+<p>进入minix执行：</p>
+
+<pre class="example">
+setup /usr/local/src  # any dir you want put files
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec43" id="sec43"></a>
+磁盘</h4>
+
+<p class="first">参考资料：<a href="http://bochs.sourceforge.net/doc/docbook/user/loop-device-usage.html">http://bochs.sourceforge.net/doc/docbook/user/loop-device-usage.html</a></p>
+
+<p>首先在minix下格式化一张软盘：</p>
+
+<pre class="example">
+format /dev/fd0 1440 1440
+</pre>
+
+<p>将软盘的image通过loop虚拟设备装载：</p>
+
+<pre class="example">
+sudo losetup /dev/loop0 ~/minix/minix-fd.img
+mount -t minix /dev/loop0 -o loop /mnt/floppy
+</pre>
+
+<p>如果想转入minix下使用：</p>
+
+<pre class="example">
+umount /mnt/floppy
+sudo losetup -d /dev/loop0
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec44" id="sec44"></a>
+网络</h4>
+
+<ul>
+<li>ftp: <code>ftp 192.168.1.2</code> 或者通过<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a> tramp</li>
+
+<li>telnet:  <code>telnet 192.168.1.2</code></li>
+</ul>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec45" id="sec45"></a>
+Minix参考资源</h2>
+
+<p class="first">Minix3 Latest - <a href="http://www.minix3.org">http://www.minix3.org</a></p>
+
+<p>Minix2 and Minix1 - <a href="http://minix1.woodhull.com/">http://minix1.woodhull.com/</a></p>
+
+<p>Minix Network and Boot - <a href="http://www.os-forum.com/minix/">http://www.os-forum.com/minix/</a></p>
+
+<p>The two authors' homepages of <strong>Operating System - Design and Implementation</strong>:</p>
+
+<ul>
+<li>Andrew S. Tanenbaum - <a href="http://www.few.vu.nl/~ast/">http://www.few.vu.nl/~ast/</a></li>
+<li>Albert S. Woodhull - <a href="http://minix1.woodhull.com/asw/">http://minix1.woodhull.com/asw/</a></li>
+</ul>
+
+<p>news group - comp.os.minix</p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:debian_minixonbochs';
+    var disqus_title = "Justin's Wiki - Setup Minix on Bochs under Debian";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/debian/minixonbochs.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Aug. 10, 2010
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/debian/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "debian_minixonbochs");
+  //afterload();
+  fillsearch();
+</script>
+</html>

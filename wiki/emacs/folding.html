@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - 代码折叠</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/emacs/index.html">EMACS环境</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        代码折叠
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 outline-mode</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 概念</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 快捷键</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec4">2 folding</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">3 ouline-minor-mode</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">4 org-mode中的代码折叠</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec7">5 hs-minor-mode</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+outline-mode</h2>
+
+<p class="first">首先，在*scratch* buffer中键入下面一段文字：</p>
+
+<pre class="example">
+     * Food
+     This is the body,
+     which says something about the topic of food.
+
+     ** Delicious Food
+     This is the body of the second-level header.
+
+     ** Distasteful Food
+     This could have
+     a body too, with
+     several lines.
+
+     *** Dormitory Food
+
+     * Shelter
+     Another first-level topic with its header line.
+</pre>
+
+<p>然后将该buffer的模式转为outline-mode:</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
+        /* font-lock-function-name-face */
+        color: #87cefa;
+        font-weight: bold;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+    --></style>(<span class="keyword">defun</span> <span class="function-name">myfunc</span> ())
+</pre>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
+        /* font-lock-function-name-face */
+        color: #87cefa;
+        font-weight: bold;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+      .type {
+        /* font-lock-type-face */
+        color: #87ceeb;
+        font-weight: bold;
+      }
+      .variable-name {
+        /* font-lock-variable-name-face */
+        color: #40e0d0;
+        font-weight: bold;
+      }
+    --></style>
+<span class="type">import</span> <span class="function-name">java</span>.util.*
+
+public <span class="keyword">static</span> <span class="type">void</span> main(<span class="type">String</span> <span class="variable-name">test</span>){
+    try{
+}
+}
+</pre>
+
+
+
+<p>下面我们来实验一些操作，但在这个之前需要解释一些概念：</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+概念</h3>
+
+<p class="first">大纲模式将buffer中的行区别为：</p>
+
+<ol>
+<li>正文（Body）：除标题行外的其他行</li>
+<li>标题（Heading）：以一个或者若干星号加一个空格开始的行</li>
+</ol>
+
+<p><span class="note">
+注意： 可以定制变量<code>outline-regexp</code>来识别标题行
+</span></p>
+
+
+<p>标题和正文行的组合：</p>
+
+<ol>
+<li>记录（Entry）： 标题和其下所有的正文行组成一个记录或者条目</li>
+<li>子树（Subtree）： 标题和其下的所有子标题以及它们的正文行组成一棵子树</li>
+</ol>
+
+<p><span class="note">
+<strong>注意：</strong><br>
+1. 记录的直接正文只能在记录的开始部份<br>
+2. 如果记录的正文或者正文和所有子树被隐藏，则该标题行的末尾会出现省略号(...)<br>
+3. 如果记录仅仅子树被隐藏，那么在记录正文后面会出现省略号(...), 如果该记录没有正文，则效果同上
+</span></p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+快捷键</h3>
+
+<p class="first">outline-mode使用如下快捷键和命令：</p>
+
+<p><strong>移动命令：</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Key Binding</th>
+      <th>Function</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C-c C-n</td>
+      <td>outline-next-visible-heading</td>
+      <td>move by visible headings</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-p</td>
+      <td>outline-previous-visible-heading</td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-f</td>
+      <td>outline-forward-same-level</td>
+      <td>similar but skip subheadings</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-b</td>
+      <td>outline-backward-same-level</td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-u</td>
+      <td>outline-up-heading</td>
+      <td>move from subheading to heading</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>全局隐藏：</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Key Binding</th>
+      <th>Function</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C-c C-t</td>
+      <td>hide-body</td>
+      <td>make all text invisible (not headings).        Recursively, Body</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-a</td>
+      <td>show-body</td>
+      <td>make everything in buffer visible.             Recursively, Body</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>C-c C-q</td>
+      <td>hide-sublevels</td>
+      <td>make only the first N levels of headers visible.(C-u, M-(number) to pass the level n, Recursively, Heading</td>
+    </tr>
+    <tr>
+      <td>C-c C-o</td>
+      <td>hide-other</td>
+      <td>show current entry, and all level parent headings， hide</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>位置相关的隐藏</strong></p>
+
+<p>(如果是在标题行，则指当前标题，否则是指正文行所属的直接上级标题, 影响局限于该标题下的子树）</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Key Binding</th>
+      <th>Function</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C-c C-d</td>
+      <td>hide-subtree</td>
+      <td>Recursively, Subtree(Body, Heading)</td>
+    </tr>
+    <tr>
+      <td>C-c C-s</td>
+      <td>show-subtree</td>
+      <td>Recursively, Subtree(Body, Heading)</td>
+    </tr>
+    <tr>
+      <td>C-c TAB</td>
+      <td>show-children</td>
+      <td>Direct, Heading</td>
+    </tr>
+    <tr>
+      <td>C-c C-k</td>
+      <td>show-branches</td>
+      <td>Recursively, Heading</td>
+    </tr>
+    <tr>
+      <td>C-c C-l</td>
+      <td>hide-leaves</td>
+      <td>Recursively, Body</td>
+    </tr>
+    <tr>
+      <td>C-c C-c</td>
+      <td>hide-entry</td>
+      <td>Direct, Body</td>
+    </tr>
+    <tr>
+      <td>C-c C-e</td>
+      <td>show-entry</td>
+      <td>Direct, Body</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<p>The remaining commands are used when point is on a heading line.
+They apply to some of the body or subheadings of that heading.
+C-c C-d   hide-subtree	make body and subheadings invisible.
+C-c C-s   show-subtree	make body and subheadings visible.
+C-c TAB   show-children	make direct subheadings visible.
+<center>
+<p>No effect on body, or subheadings 2 or more levels down.
+With arg N, affects subheadings N levels down.
+C-c C-c	   make immediately following body invisible.
+C-c C-e	   make it visible.
+C-c C-l	   make body under heading and under its subheadings invisible.
+The subheadings remain visible.
+C-c C-k  make all subheadings at all levels visible.</p>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+folding</h2>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+ouline-minor-mode</h2>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+org-mode中的代码折叠</h2>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+hs-minor-mode</h2>
+
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col1</td>
+      <td>col2</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text2</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:emacs_folding';
+    var disqus_title = "Justin's Wiki - 代码折叠";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/emacs/folding.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Feb. 25, 2009
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/emacs/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "emacs_folding");
+  //afterload();
+  fillsearch();
+</script>
+</html>

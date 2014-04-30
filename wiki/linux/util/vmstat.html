@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - vmstate</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/linux/index.html">Linux Programming</a>
+&#187; 
+<a href="/wiki/linux/util/index.html">Linux Command Tools</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        vmstate
+      </div>
+<p>vmstat是Virtual Meomory Statistics（虚拟内存统计）的缩写，可
+对操作系统的虚拟内存、进程、CPU活动进行监视。它是对系统的整体
+情况进行统计，不足之处是无法对某个进程进行深入分析。可以用来
+分析系统性能瓶颈。</p>
+
+<blockquote>
+<p class="quoted">vmstat reports information about processes, memory,
+paging, block IO, traps, disks and cpu activity. These
+reports are intended to help identify system
+bottlenecks.  Linux vmstat does not count itself as a
+running process.</p>
+</blockquote>
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Options</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-V]</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>列出版本信息: -V</h4>
+
+<pre class="example">
+justin@Justin:~$ vmstat -V
+procps version 3.2.8
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-a] [-n] [delay [ count]]</h3>
+
+<p class="first">一般用法，vmstat的语法如下：</p>
+
+<p>vmstat [-V] [-n] [delay [count]]</p>
+
+<p>其中，－n表示在周期性循环输出时，输出的头部信息仅显示一
+次；delay是两次输出之间的延迟时间；count是指按照这个时间间隔
+统计的次数（默认无限）。对于vmstat输出各字段的含义，可运行
+man vmstat查看</p>
+
+<blockquote>
+<p class="quoted">delay is the delay between  updates in seconds.  If no delay
+is specified,  only one report  is printed with  the average
+values since boot.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">count is  the number of  updates.  If no count  is specified
+and delay is defined, count defaults to infinity.</p>
+</blockquote>
+
+<p>命令多数情况下输出的是一段时间内的统计值，但是也有一些累加值：</p>
+
+<ul>
+<li>The first report produced gives averages since the
+last reboot.</li>
+
+<li>Additional reports give information on a sampling
+period of length delay. （平均 AVG）</li>
+
+<li>The process and memory reports are instantaneous in
+either case. （瞬间, INS）</li>
+</ul>
+
+
+<ul>
+<li>Some Values are accumulated (ACCU)
+
+<ul>
+<li>Some values do not repeat by -n [delay [count] option</li>
+</ul></li>
+</ul>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-n</h4>
+
+<pre class="example">
+justin@Justin:~$ vmstat -n 3
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0   1376  65960  39056 376444    0    0   248    24  333 1601 12 11 72  4
+ 0  0   1376  65216  39056 376444    0    0     0     1  388 1206  2  3 95  0
+ 0  0   1376  72352  39056 376444    0    0     0     0  377 1108  7  5 89  0
+^C
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-a</h4>
+
+<blockquote>
+<p class="quoted">The  -a  switch  displays  active/inactive memory,  given  a</p>
+</blockquote>
+
+<ol>
+<li>5.41 kernel or better.</li>
+</ol>
+
+<pre class="example">
+justin@Justin:~$ vmstat -a
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free  inact active   si   so    bi    bo   in   cs us sy id wa
+ 0  0   1376  71448 452636 451496    0    0   247    24  334 1605 12 11 72
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>no options</h4>
+
+<pre class="example">
+justin@Justin:~$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0      0  22024  34488 510808    0    0  1305    45  342 1460 22 18 35 25
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-f] [-s] [-m]</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-f</h4>
+
+<blockquote>
+<p class="quoted">The -f switch displays the number of forks since boot.  This
+includes  the fork, vfork,  and clone  system calls,  and is
+equivalent  to  the  total  number of  tasks  created.  Each
+process is  represented by one  or more tasks,  depending on
+thread usage.  This display does not repeat.</p>
+</blockquote>
+
+<p>tasks  = fork, vfork (followed by exec), clone (thread)</p>
+
+<u>The display is accumulated since boot.</u>
+
+<pre class="example">
+justin@Justin:~$ vmstat -f
+         3658 forks
+justin@Justin:~$ vmstat -f
+         3659 forks
+justin@Justin:~$ vmstat -f
+         3660 forks
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-s</h4>
+
+<blockquote>
+<p class="quoted">The -s switch displays a table of various event counters and
+memory statistics.</p>
+</blockquote>
+
+<u>This display does not repeat.</u>
+
+<pre class="example">
+vmstat -v
+</pre>
+
+<pre class="example">
+justin@Justin:~$ vmstat -s
+      1010128 K total memory    ; total physical memory
+       952140 K used memory     ; used
+
+       457848 K active memory
+       458760 K inactive memory ; to be swap out
+
+        57988 K free memory     ; free used+free=total
+
+        78568 K buffer memory
+       406676 K swap cache
+
+       979956 K total swap      ; total swap space
+          524 K used swap       ; used swap space
+       979432 K free swap       ; free swap space  used+free = total
+
+        25333 non-nice user cpu ticks
+          238 nice user cpu ticks
+        25509 system cpu ticks
+       132072 idle cpu ticks
+        15898 IO-wait cpu ticks
+          404 IRQ cpu ticks
+          313 softirq cpu ticks
+            0 stolen cpu ticks
+       913509 pages paged in
+        74632 pages paged out
+           32 pages swapped in
+          142 pages swapped out
+       655728 interrupts
+      3233646 CPU context switches
+   1330667648 boot time
+         3865 forks
+</pre>
+
+
+<p>Active memory is currently being used by a process.
+Inactive memory is memory that is allocated but has not been
+used for a while. Nothing is essentially different between
+the two types of memory. When required, the Linux kernel
+takes a process’s least recently used memory pages and
+moves them from the active to the inactive list. When
+choosing which memory will be swapped to disk, the kernel
+chooses from the inactive memory list.</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-m</h4>
+
+<p class="first">FIELD DESCRIPTION FOR SLAB MODE
+<blockquote>
+<p class="quoted">cache: Cache name
+num: Number of currently active objects
+total: Total number of available objects
+size: Size of each object
+pages: Number of pages with at least one active object</p>
+</blockquote>
+
+
+<u>The display is accumulated since boot.</u>
+
+<blockquote>
+<p class="quoted">The -m displays slabinfo.</p>
+</blockquote>
+
+<pre class="example">
+cat /proc/slabinfo
+</pre>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>cat /proc/slabinfo</h5>
+
+<pre class="example">
+slabinfo - version: 2.1
+# name            &lt;active_objs&gt; &lt;num_objs&gt; &lt;objsize&gt; &lt;objperslab&gt; &lt;pagesperslab&gt; : tunables &lt;limit&gt; &lt;batchcount&gt; &lt;sharedfactor&gt; : slabdata &lt;active_slabs&gt; &lt;num_slabs&gt; &lt;sharedavail&gt;
+VMBlockInodeCache      7      7   4480    7    8 : tunables    0    0    0 : slabdata      1      1      0
+blockInfoCache         0      0   4160    7    8 : tunables    0    0    0 : slabdata      0      0      0
+fuse_request           0      0    400   10    1 : tunables    0    0    0 : slabdata      0      0      0
+fuse_inode             0      0    448    9    1 : tunables    0    0    0 : slabdata      0      0      0
+kcopyd_job             0      0    272   15    1 : tunables    0    0    0 : slabdata      0      0      0
+dm_uevent              0      0   2464   13    8 : tunables    0    0    0 : slabdata      0      0      0
+dm_rq_target_io        0      0    224   18    1 : tunables    0    0    0 : slabdata      0      0      0
+ext4_inode_cache   10073  11011    624   13    2 : tunables    0    0    0 : slabdata    847    847      0
+ext4_xattr             0      0     48   85    1 : tunables    0    0    0 : slabdata      0      0      0
+ext4_free_block_extents    102    102     40  102    1 : tunables    0    0    0 : slabdata      1      1      0
+ext4_alloc_context     36     36    112   36    1 : tunables    0    0    0 : slabdata      1      1      0
+ext4_prealloc_space     56     56     72   56    1 : tunables    0    0    0 : slabdata      1      1      0
+jbd2_journal_handle    170    170     24  170    1 : tunables    0    0    0 : slabdata      1      1      0
+jbd2_journal_head     64     64     64   64    1 : tunables    0    0    0 : slabdata      1      1      0
+jbd2_revoke_table    256    256     16  256    1 : tunables    0    0    0 : slabdata      1      1      0
+jbd2_revoke_record    128    128     32  128    1 : tunables    0    0    0 : slabdata      1      1      0
+kmalloc_dma-512        8      8    512    8    1 : tunables    0    0    0 : slabdata      1      1      0
+sgpool-128            12     12   2560   12    8 : tunables    0    0    0 : slabdata      1      1      0
+sgpool-64             12     12   1280   12    4 : tunables    0    0    0 : slabdata      1      1      0
+sgpool-32             12     12    640   12    2 : tunables    0    0    0 : slabdata      1      1      0
+RAWv6                 11     11    704   11    2 : tunables    0    0    0 : slabdata      1      1      0
+UDPLITEv6              0      0    704   11    2 : tunables    0    0    0 : slabdata      0      0      0
+UDPv6                 11     11    704   11    2 : tunables    0    0    0 : slabdata      1      1      0
+tw_sock_TCPv6          0      0    256   16    1 : tunables    0    0    0 : slabdata      0      0      0
+TCPv6                 12     12   1344   12    4 : tunables    0    0    0 : slabdata      1      1      0
+cfq_queue            168    180    112   36    1 : tunables    0    0    0 : slabdata      5      5      0
+bsg_cmd                0      0    288   14    1 : tunables    0    0    0 : slabdata      0      0      0
+mqueue_inode_cache     14     14    576   14    2 : tunables    0    0    0 : slabdata      1      1      0
+hugetlbfs_inode_cache     11     11    360   11    1 : tunables    0    0    0 : slabdata      1      1      0
+dquot                  0      0    192   21    1 : tunables    0    0    0 : slabdata      0      0      0
+posix_timers_cache      0      0    120   34    1 : tunables    0    0    0 : slabdata      0      0      0
+UDP-Lite               0      0    576   14    2 : tunables    0    0    0 : slabdata      0      0      0
+xfrm_dst_cache        12     12    320   12    1 : tunables    0    0    0 : slabdata      1      1      0
+UDP                   26     28    576   14    2 : tunables    0    0    0 : slabdata      2      2      0
+tw_sock_TCP           21     21    192   21    1 : tunables    0    0    0 : slabdata      1      1      0
+TCP                   27     39   1216   13    4 : tunables    0    0    0 : slabdata      3      3      0
+blkdev_queue          72     72   1328   12    4 : tunables    0    0    0 : slabdata      6      6      0
+blkdev_requests       48     60    200   20    1 : tunables    0    0    0 : slabdata      3      3      0
+biovec-256            20     20   3072   10    8 : tunables    0    0    0 : slabdata      2      2      0
+biovec-128             0      0   1536   10    4 : tunables    0    0    0 : slabdata      0      0      0
+biovec-64              0      0    768   10    2 : tunables    0    0    0 : slabdata      0      0      0
+bip-256               20     20   3136   10    8 : tunables    0    0    0 : slabdata      2      2      0
+bip-128                0      0   1600   10    4 : tunables    0    0    0 : slabdata      0      0      0
+bip-64                 0      0    832   19    4 : tunables    0    0    0 : slabdata      0      0      0
+sock_inode_cache     621    639    448    9    1 : tunables    0    0    0 : slabdata     71     71      0
+skbuff_fclone_cache     10     10    384   10    1 : tunables    0    0    0 : slabdata      1      1      0
+file_lock_cache       39     39    104   39    1 : tunables    0    0    0 : slabdata      1      1      0
+net_namespace          0      0   1184   13    4 : tunables    0    0    0 : slabdata      0      0      0
+shmem_inode_cache   1173   1173    456   17    2 : tunables    0    0    0 : slabdata     69     69      0
+Acpi-Operand         562    714     40  102    1 : tunables    0    0    0 : slabdata      7      7      0
+Acpi-Namespace       782    850     24  170    1 : tunables    0    0    0 : slabdata      5      5      0
+task_delay_info      302    306     80   51    1 : tunables    0    0    0 : slabdata      6      6      0
+taskstats             24     24    328   12    1 : tunables    0    0    0 : slabdata      2      2      0
+proc_inode_cache     509    510    384   10    1 : tunables    0    0    0 : slabdata     51     51      0
+sigqueue              29     56    144   28    1 : tunables    0    0    0 : slabdata      2      2      0
+radix_tree_node     6189   6617    296   13    1 : tunables    0    0    0 : slabdata    509    509      0
+bdev_cache            24     32    512    8    1 : tunables    0    0    0 : slabdata      4      4      0
+sysfs_dir_cache    12065  12070     48   85    1 : tunables    0    0    0 : slabdata    142    142      0
+inode_cache         1268   1749    360   11    1 : tunables    0    0    0 : slabdata    159    159      0
+dentry             24430  24450    136   30    1 : tunables    0    0    0 : slabdata    815    815      0
+buffer_head        22332  28544     64   64    1 : tunables    0    0    0 : slabdata    446    446      0
+vm_area_struct     14118  14398     88   46    1 : tunables    0    0    0 : slabdata    313    313      0
+mm_struct            129    135    448    9    1 : tunables    0    0    0 : slabdata     15     15      0
+signal_cache         176    182    576   14    2 : tunables    0    0    0 : slabdata     13     13      0
+sighand_cache        174    180   1344   12    4 : tunables    0    0    0 : slabdata     15     15      0
+task_struct          292    300   1088   15    4 : tunables    0    0    0 : slabdata     20     20      0
+anon_vma            5627   5632     16  256    1 : tunables    0    0    0 : slabdata     22     22      0
+idr_layer_cache      543    546    152   26    1 : tunables    0    0    0 : slabdata     21     21      0
+kmalloc-8192           4      4   8192    4    8 : tunables    0    0    0 : slabdata      1      1      0
+kmalloc-4096          69     72   4096    8    8 : tunables    0    0    0 : slabdata      9      9      0
+kmalloc-2048         121    128   2048    8    4 : tunables    0    0    0 : slabdata     16     16      0
+kmalloc-1024         224    232   1024    8    2 : tunables    0    0    0 : slabdata     29     29      0
+kmalloc-512         1669   1688    512    8    1 : tunables    0    0    0 : slabdata    211    211      0
+kmalloc-256          330    448    256   16    1 : tunables    0    0    0 : slabdata     28     28      0
+kmalloc-128         7753   8064    128   32    1 : tunables    0    0    0 : slabdata    252    252      0
+kmalloc-64          2111   2688     64   64    1 : tunables    0    0    0 : slabdata     42     42      0
+kmalloc-32          3179   3200     32  128    1 : tunables    0    0    0 : slabdata     25     25      0
+kmalloc-16          3526   3584     16  256    1 : tunables    0    0    0 : slabdata     14     14      0
+kmalloc-8           5629   5632      8  512    1 : tunables    0    0    0 : slabdata     11     11      0
+kmalloc-192          312    399    192   21    1 : tunables    0    0    0 : slabdata     19     19      0
+kmalloc-96          1082   1218     96   42    1 : tunables    0    0    0 : slabdata     29     29      0
+</pre>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstate -m</h5>
+memory usage:
+
+<pre class="example">
+justin@Justin:~$ vmstat -m
+Cache                       Num  Total   Size  Pages
+VMBlockInodeCache             7      7   4480      7
+blockInfoCache                0      0   4160      7
+fuse_request                  0      0    400     10
+fuse_inode                    0      0    448      9
+kcopyd_job                    0      0    272     15
+dm_uevent                     0      0   2464     13
+dm_rq_target_io               0      0    224     18
+ext4_inode_cache           9945  10907    624     13
+ext4_xattr                    0      0     48     85
+ext4_free_block_extents     102    102     40    102
+ext4_alloc_context           36     36    112     36
+ext4_prealloc_space          56     56     72     56
+jbd2_journal_handle         170    170     24    170
+jbd2_journal_head            64     64     64     64
+jbd2_revoke_table           256    256     16    256
+jbd2_revoke_record          128    128     32    128
+kmalloc_dma-512               8      8    512      8
+sgpool-128                   12     12   2560     12
+sgpool-64                    12     12   1280     12
+sgpool-32                    12     12    640     12
+RAWv6                        11     11    704     11
+Cache                       Num  Total   Size  Pages
+UDPLITEv6                     0      0    704     11
+UDPv6                        11     11    704     11
+tw_sock_TCPv6                 0      0    256     16
+TCPv6                        12     12   1344     12
+cfq_queue                   168    180    112     36
+bsg_cmd                       0      0    288     14
+mqueue_inode_cache           14     14    576     14
+hugetlbfs_inode_cache        11     11    360     11
+dquot                         0      0    192     21
+posix_timers_cache            0      0    120     34
+UDP-Lite                      0      0    576     14
+xfrm_dst_cache               12     12    320     12
+UDP                          26     28    576     14
+tw_sock_TCP                  21     21    192     21
+TCP                          27     39   1216     13
+blkdev_queue                 72     72   1328     12
+blkdev_requests              48     60    200     20
+biovec-256                   20     20   3072     10
+biovec-128                    0      0   1536     10
+biovec-64                     0      0    768     10
+bip-256                      20     20   3136     10
+Cache                       Num  Total   Size  Pages
+bip-128                       0      0   1600     10
+bip-64                        0      0    832     19
+sock_inode_cache            623    639    448      9
+skbuff_fclone_cache          10     10    384     10
+file_lock_cache              39     39    104     39
+net_namespace                 0      0   1184     13
+shmem_inode_cache          1173   1173    456     17
+Acpi-Operand                562    714     40    102
+Acpi-Namespace              782    850     24    170
+task_delay_info             302    306     80     51
+taskstats                    24     24    328     12
+proc_inode_cache            502    520    384     10
+sigqueue                     29     56    144     28
+radix_tree_node            5994   6474    296     13
+bdev_cache                   24     32    512      8
+sysfs_dir_cache           12065  12070     48     85
+inode_cache                1254   1694    360     11
+dentry                    23785  24480    136     30
+buffer_head               22158  28544     64     64
+vm_area_struct            14176  14444     88     46
+mm_struct                   129    135    448      9
+Cache                       Num  Total   Size  Pages
+signal_cache                177    182    576     14
+sighand_cache               175    180   1344     12
+task_struct                 292    300   1088     15
+anon_vma                   5627   5632     16    256
+idr_layer_cache             543    546    152     26
+kmalloc-8192                  4      4   8192      4
+kmalloc-4096                 70     72   4096      8
+kmalloc-2048                125    128   2048      8
+kmalloc-1024                225    232   1024      8
+kmalloc-512                1670   1688    512      8
+kmalloc-256                 336    448    256     16
+kmalloc-128                7823   8064    128     32
+kmalloc-64                 2091   2688     64     64
+kmalloc-32                 3179   3200     32    128
+kmalloc-16                 3526   3584     16    256
+kmalloc-8                  5629   5632      8    512
+kmalloc-192                 305    399    192     21
+kmalloc-96                 1082   1218     96     42
+</pre>
+
+
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-S unit]</h3>
+
+<blockquote>
+<p class="quoted">vmstat [-S unit]</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">The -S  followed by k  or K or  m or M switches  changes the
+units  of ouput from  bytes to  outputs between  1000, 1024,
+1000000,  or 1048576 bytes.</p>
+</blockquote>
+
+<p>Note this  does not  change the  swap (si/so) or block (bi/bo) fields.</p>
+
+
+<p>NOTE: default is <code>-S K</code></p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-p partition]</h3>
+
+<u>donot repeat</u>
+
+<p>FIELD DESCRIPTION FOR DISK PARTITION MODE
+<blockquote>
+<p class="quoted">reads: Total number of reads issued to this partition
+read sectors: Total read sectors for partition
+writes : Total number of writes issued to this partition
+requested writes: Total number of write requests made for partition</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">The  -p  followed  by   some  partition  name  for  detailed
+statistics (2.5.70 or above required)</p>
+</blockquote>
+
+<pre class="example">
+justin@Justin:~$ vmstat -p /dev/sda3
+sda3          reads   read sectors  writes    requested writes
+               74214    1862216      21549     497241
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>vmstat [-d]  / vmstat [-D]</h3>
+
+<blockquote>
+<p class="quoted">The -d reports disk statistics (2.5.70 or above required)</p>
+</blockquote>
+
+<u>donot repeat</u>
+
+<p>FIELD DESCRIPTION FOR DISK MODE</p>
+
+<blockquote>
+<p class="quoted">Reads
+total: Total reads completed successfully
+merged: grouped reads (resulting in one I/O)
+sectors: Sectors read successfully
+ms: milliseconds spent reading</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">Writes
+total: Total writes completed successfully
+merged: grouped writes (resulting in one I/O)
+sectors: Sectors written successfully
+ms: milliseconds spent writing</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">IO
+cur: I/O in progress
+s: seconds spent for I/O</p>
+</blockquote>
+
+<pre class="example">
+justin@Justin:~$ vmstat -d
+disk- ------------reads------------ ------------writes----------- -----IO------
+       total merged sectors      ms  total merged sectors      ms    cur    sec
+fd0        4      0      32     128      0      0       0       0      0      0
+sr0        0      0       0       0      0      0       0       0      0      0
+sda    96046  84200 2917603 1110920  49705 222158 2174193 7057256      0    745
+sdb    18642 465040  691231   79184      4     14      25      16      0     47
+sdc    15601  16090  240327   56472      3      7      17      20      0     37
+sdd    21723  29590  399857  158836      3      7      17      16      0    107
+sde    87940  42772 2586593 1581932   7159  19654  196392  256476      0    662
+dm-0  127560      0 2580698 2931840  24549      0  196392 1152800      0    661
+loop0      0      0       0       0      0      0       0       0      0      0
+loop1      0      0       0       0      0      0       0       0      0      0
+loop2      0      0       0       0      0      0       0       0      0      0
+loop3      0      0       0       0      0      0       0       0      0      0
+loop4      0      0       0       0      0      0       0       0      0      0
+loop5      0      0       0       0      0      0       0       0      0      0
+loop6      0      0       0       0      0      0       0       0      0      0
+loop7      0      0       0       0      0      0       0       0      0      0
+loop8      0      0       0       0      0      0       0       0      0      0
+loop9      0      0       0       0      0      0       0       0      0      0
+loop10      0      0       0       0      0      0       0       0      0      0
+loop11      0      0       0       0      0      0       0       0      0      0
+loop12      0      0       0       0      0      0       0       0      0      0
+disk- ------------reads------------ ------------writes----------- -----IO------
+</pre>
+
+
+<blockquote>
+<p class="quoted">The -D reports some summary statistics about disk activity.</p>
+</blockquote>
+
+<pre class="example">
+justin@Justin:~$ vmstat -D
+           72 disks
+            7 partitions
+       367882 total reads
+       637751 merged reads
+      9430861 read sectors
+      5927908 milli reading
+        81866 writes
+       242220 merged writes
+      2573500 written sectors
+      8473444 milli writing
+            0 inprogress IO
+         2265 milli spent IO
+
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Display</h2>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Procs</h4>
+
+<blockquote>
+<p class="quoted">Procs
+r: The number of processes waiting for run time.
+b: The number of processes in uninterruptible sleep.</p>
+</blockquote>
+
+<p>b: 处在非中断睡眠状态的进程数 (在等待io的进程数 ???)</p>
+
+<p>w 在Linux版本上的vmstat没有：（AIX..)
+<code>w: 被交换出去的可运行的进程数(可以进入运行队列但被替换的进程)。此数由 linux 计算得出，但 linux 并不耗尽交换空间</code></p>
+
+<p class="verse">
+<br>
+A kernel thread (or a normal process) can be in any of the following process states:<br>
+<br>
+&nbsp;&nbsp;- running<br>
+&nbsp;&nbsp;- interruptible<br>
+&nbsp;&nbsp;- uninterruptible<br>
+&nbsp;&nbsp;- zombie<br>
+&nbsp;&nbsp;- stopped<br>
+&nbsp;&nbsp;- traced<br>
+&nbsp;&nbsp;- dead<br>
+<br>
+These states are defined in include/<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>/sched.h:<br>
+<br>
+A process in the running state (TASK_RUNNING) is in the scheduler run queue and is a candidate for getting CPU time allotted by the scheduler.<br>
+<br>
+A task in the interruptible state (TASK_INTERRUPTIBLE) is waiting for an event to occur and is not in the scheduler run queue. When the task gets woken up, or if a signal is delivered to it, it re-enters the run queue.<br>
+<br>
+The uninterruptible state (TASK_UNINTERRUPTIBLE) is similar to the interruptible state except that receipt of a signal will not put the task back into the run queue.<br>
+<br>
+NOTE: 睡眠，不可中断（不可被信号唤醒）<br>
+<br>
+与TASK_INTERRUPTINLE状态的唯一区别就是该状态不可被收到的信号唤醒。这种状态很少用到，但在一些特殊的情况下（进程必须等待，直到一个不能被中断的事件发生，发送硬盘I/O要求而等待I/O完成的状态，等待TTY 终端的输入的状态等），这种状态是很有用的。例如，当进程打开一个设备文件，其相应的设备驱动程序开始探测相应的硬件设备时会用到这种状态。探测完成以前，设备驱动程序不能被中断，否则，硬件设备会处于不可预知的状态。在状态通常在进程需要不受干扰的等待或者所等待的事件会很快发生时使用。<br>
+<br>
+A stopped task (TASK_STOPPED) has stopped execution due to receipt of certain signals. (Ctrl+Z)<br>
+<br>
+If an application such as strace is using the ptrace support in the kernel to intercept a task, it'll be in the traced state (TASK_TRACED).<br>
+<br>
+A task in the zombie state (EXIT_ZOMBIE) has terminated, but its parent did not wait for the task to complete.<br>
+<br>
+An exiting task is either in the EXIT_ZOMBIE state or the dead (EXIT_DEAD) state.<br>
+<br>
+</p>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<p>r+b = cpu load &lt; num of cpu</p>
+
+<p>一般来说，cpu load长期大于cpu个数，说明cpu负载高，会影响系统性能</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Memory</h4>
+
+<blockquote>
+<p class="quoted">Memory
+swpd: the amount of virtual memory used.
+free: the amount of idle memory.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">buff: the amount of memory used as buffers.
+cache: the amount of memory used as cache.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">inact: the amount of inactive memory. (-a option)
+active: the amount of active memory. (-a option)</p>
+</blockquote>
+
+<p>Memory
+swpd: 虚拟内存使用情况，单位：KB
+free: 空闲的内存，单位KB
+buff: 被用来做为缓存的内存数，单位：KB</p>
+
+<p>Buffers and Cache (Too Much Physical Memory)
+===============================================</p>
+
+
+<p><strong>Cache</strong>:缓存
+if your system has much more physical memory than required by your applications,
+Linux will cache recently used files in physical memory so that subsequent accesses to that file do
+not require an access to the hard drive. This can greatly speed up applications that access the hard
+drive frequently, which, obviously, can prove especially useful for frequently launched applications.</p>
+
+<p>Note :  most tools that report statistics about “cache” are actually referring to
+disk cache.</p>
+
+<p>**Buffer:**缓冲</p>
+
+<p>In addition to cache, Linux also uses extra memory as buffers. To further optimize applications,
+Linux sets aside memory to use for data that needs to be written to disk. These set-asides are called
+buffers. If an application has to write something to the disk, which would usually take a long time,
+Linux lets the application continue immediately but saves the file data into a memory buffer. At some
+point in the future, the buffer is flushed to disk, but the application can continue immediately.</p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+
+<ul>
+<li>swpd, 表示交换到swap区域的内存大小，如果不为0甚至比较大，但是si、so长期为0,则不会影响系统性能</li>
+<li>cache，如果比较大，说明缓存的文件数目较多，如果io中的bi比较小，说明文件系统缓存的效率比较好</li>
+</ul>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Swap</h4>
+
+<blockquote>
+<p class="quoted">si: Amount of memory swapped in from disk (/s).
+so: Amount of memory swapped to disk (/s).</p>
+</blockquote>
+
+<p>Swap</p>
+
+<p>si: 从磁盘交换到内存的交换页数量，单位：KB/秒?
+so: 从内存交换到磁盘的交换页数量，单位：KB/秒?</p>
+
+<p>unit not in pages/s, but in KB/s</p>
+
+<pre class="example">
+getconf PAGESIZE
+4096
+</pre>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<p>si, so 的值一般都为0, 如果长期不为0,表示系统内存不足， 需要增加系统内存。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>IO</h4>
+<blockquote>
+<p class="quoted">bi: Blocks received from a block device (blocks/s).
+bo: Blocks sent to a block device (blocks/s).</p>
+</blockquote>
+
+<u>blocks differs between different devices</u>
+
+<p>oldlinux － 512B 1KB ...</p>
+
+<p>NOTES:
+<blockquote>
+<p class="quoted">All <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>  blocks are currently 1024 bytes.  Old kernels may
+report blocks as 512 bytes, 2048 bytes, or 4096 bytes.</p>
+</blockquote>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<p>bi+bo 的参考值为1000,如果超过1000, 说明块设备读写频繁，</p>
+
+<p>如果这个时候cpu的wa时间较大，表示系统磁盘I/O有问题，应该考虑提高磁盘的读写性能。</p>
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>System</h4>
+
+<p class="first">System</p>
+
+<p>in: 每秒的中断数，包括时钟中断 (interrupt)
+cs: 每秒的环境（上下文）切换次数 (context switch)</p>
+
+<blockquote>
+<p class="quoted">System
+in: The number of interrupts per second, including the clock.
+cs: The number of context switches per second.</p>
+</blockquote>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<p>这两个值越大，标明系统消耗在进程上下文切换中的cpu时间越多。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>CPU</h4>
+
+<blockquote>
+<p class="quoted">CPU
+These are percentages of total CPU time.
+us: Time spent running non-kernel code. (user time, including nice time)
+sy: Time spent running kernel code. (system time)
+id: Time spent idle. Prior to Linux 2.5.41, this includes IO-wait time.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">wa: Time spent waiting for IO. Prior to Linux 2.5.41, included in idle.
+st: Time stolen from a virtual machine. Prior to Linux 2.6.11, unknown.</p>
+</blockquote>
+
+<pre class="example">
+justin@Justin:~$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system--  ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs  us sy id wa
+ 0  0      0  22024  34488 510808    0    0  1305    45  342 1460  22 18 35 25
+</pre>
+
+<p>其中:</p>
+
+<p>如果 r 经常大于 4 ,且id经常少于40，表示cpu的负荷很重。
+<blockquote>
+<p class="quoted">b  经常大于3,wa&gt;30%         表示 io性能不好 (io性能可用iostat确认)</p>
+</blockquote>
+
+
+<p>for (every per-processor cpu_stat structure)
+do
+<center>
+<p>if (current cpu is quiesced)
+increment idle;
+else if (current cpu is on the interrupt stack)
+increment kernel;
+else if (current cpu is running this clock handler code)
+increment kernel;
+else if (current cpu is running the idle thread)
+if (wait_value from first loop is non-zero)
+increment waitio;
+else (wait_value from first loop was zero)
+increment idle;
+else if (current cpu lwp state is USER)
+increment user;
+done</p>
+</center>
+
+
+
+<p>&quot;I/O Wait&quot; is a measurement of CPU idle time. It's a common misconception that &quot;I/O Wait&quot; cycles are blocked, and can not be used by other processes. This is not the case.</p>
+
+<p>This is illustrated in the example from John Moore (below). The example starts with an idle system, then adds an I/O intensive workload (WIO = 87%). Next a CPU intensive application is added. The CPU intensive applications uses all of the &quot;Wait I/O&quot; cycles (WIO=0%),
+but does not change the I/O rate.</p>
+
+<p>The practical implications of &quot;Wait I/O&quot; not being blocked include:</p>
+
+<blockquote>
+<p class="quoted">Adding CPU's will not reduce Wait I/O.
+CPU statistics should be measured as
+Utilization = usr + sys
+Idle = wait + idle
+High CPU utilization can mask I/O bottlenecks
+You can mix I/O intensive with CPU intensive applications
+on same server and not significantly affect performance.</p>
+</blockquote>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<p>us+sy 是系统运行程序消耗的cpu比例，如果&gt;80,说明系统cpu资源不足：</p>
+
+<p>id＋wa是cpu的空闲时间，最好在40%左右，</p>
+
+<p>wa是系统cpu等待io的时间，wa超过20%，说明io等待严重，可能由于
+大量磁盘随机读写造成，或者磁盘、磁盘控制器的带宽瓶颈。（相对瓶颈）</p>
+
+<p>这个是相对瓶颈，但是如果系统cpu负载很大，则也能引起wa降低，相对来说io等待就不是瓶颈了。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>NOTES</h4>
+<blockquote>
+<p class="quoted">Since procps 3.1.9,  vmstat lets you choose units  (k, K, m,
+M) default is K (1024 bytes) in the default mode</p>
+</blockquote>
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:linux_util_vmstat';
+    var disqus_title = "Justin's Wiki - vmstate";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/linux/util/vmstat.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar.  6, 2012
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/linux/util/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "linux_util_vmstat");
+  //afterload();
+  fillsearch();
+</script>
+</html>

@@ -1,0 +1,113 @@
+/* Michael Olson's tweaked Muse stylesheet
+
+   Elements for most of my web site.
+
+   License: Modification and propagation of this document is
+            permitted.  Attribution of credit to me is optional.
+*/
+
+/* Table of Contents */
+
+
+.contents {
+/*  background-color: #F9F9F9;    /* light gray */
+  background-color: #F5F5F5;    /* white smoke */
+
+  border: 1px solid #AAAAAA !important; 
+  margin-top: 0px;
+
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+.toggle {
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0;
+  margin-bottom: 0px;
+
+}
+
+.contents dl {
+  background-color: #F5F5F5;    /* white smoke */
+  display: block; 
+/*  font-size: small;		*/
+  font-size: 95%;
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-left: 0;
+  padding-bottom: 0px;
+}
+
+.contents dt {
+  clear: right;
+  display: block;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-left:0;
+  text-align: left;
+}
+
+.contents dd dt {
+    display: block;
+    margin-left:0;
+ /* display: list-item;*/
+}
+.contents dd {
+    margin-left:1em;
+}
+
+.contents a:hover { 
+/*  background-color: #D3D3D3;    light gray */
+}
+
+/* Planner */
+
+.taskA { color: red }
+
+.taskB { color: green }
+
+.taskC { color: navy }
+
+.taskX {
+  color: #696969;               /* dim gray */
+  text-decoration: line-through;
+}
+
+/* Source coloring */
+
+.builtin {
+  /* font-lock-builtin-face */
+  color: #9370db;
+}
+
+.comment {
+  /* font-lock-comment-face */
+  color: #b22222;
+}
+
+.constant {
+  /* font-lock-constant-face */
+  color: #b8860b;
+}
+
+.doc {
+}
+
+.function-name {
+  /* font-lock-function-name-face */
+  color: #0000ff;
+}
+
+.keyword {
+  /* font-lock-keyword-face */
+  color: #a020f0;
+}
+  
+.string {
+  /* font-lock-string-face */
+  color: #228b22;
+}

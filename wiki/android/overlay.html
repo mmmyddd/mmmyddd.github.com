@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Overlay Mechanism</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/android/index.html">Android操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Overlay Mechanism
+      </div>
+<p>The Android overlay mechanism allows the framework and
+package resources to be customized without changing the base
+packages. The customizable resourses fall into the following
+categories:</p>
+
+<ul>
+<li>Configurations (string, bool, bool-array)</li>
+<li>Localization (string, string-array)</li>
+<li>UI Appearance (color, drawable, layout, style, theme, animation)</li>
+<li>Raw resources (audio, video, xml)</li>
+</ul>
+
+<p>For detailed introduction on Android application resources,
+please refer to:
+<a href="http://developer.android.com/guide/topics/resources/available-resources.html">http://developer.android.com/guide/topics/resources/available-resources.html</a></p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Add Overlay Directories for Product</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Product Overlays vs Device Overlays</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 Change the makefile to add overlays</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">1.3 Create resources under the overlay directory</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec5">2 Determine the overlays for a product</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">3 Check the resource in APK</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">3.1 Using AAPT</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">3.2 Using apktools</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">3.3 Using dumpres</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">4 More on AAPT and Overlay</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">4.1 How overlay works</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">4.2 Add extra resources in Overlay</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Add Overlay Directories for Product</h2>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Product Overlays vs Device Overlays</h3>
+
+<p class="first">There are two types of overaly directories that affect a product:</p>
+
+<ul>
+<li>PRODUCT_PACKAGE_OVERLAYS: used by a particular product</li>
+
+<li>DEVICE_PACKAGE_OVERLAYS: used several products that share
+a common device model</li>
+</ul>
+
+<p>The PRODUCT_PACKAGE_OVERLAYS will override the
+DEVICE_PACKAGE_OVERLAYS if they contain same resources, the
+behavior is defined by:</p>
+
+<p><span class="code-headline">
+<code>build/core/package.mk (Line: 93)</code>
+</span>
+
+<pre class="code-body">
+LOCAL_RESOURCE_DIR := \
+  $(wildcard $(foreach dir, $(PRODUCT_PACKAGE_OVERLAYS), \
+    $(addprefix $(dir)/, $(LOCAL_RESOURCE_DIR)))) \
+  $(wildcard $(foreach dir, $(DEVICE_PACKAGE_OVERLAYS), \
+    $(addprefix $(dir)/, $(LOCAL_RESOURCE_DIR)))) \
+  $(LOCAL_RESOURCE_DIR)
+</pre>
+</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Change the makefile to add overlays</h3>
+
+<p class="first">To add an overlay directory to a product, change the product
+configuration makefile (for example:
+<strong>device/vendor-name/device-name/product-name.mk</strong>) to add the
+following lines:</p>
+
+<pre class="example">
+PRODUCT_PACKAGE_OVERLAYS :=  device/vendor-name/device-name/product-name/overlay $(PRODUCT_PACKAGE_OVERLAYS)
+</pre>
+
+<p>or:</p>
+
+<pre class="example">
+DEVICE_PACKAGE_OVERLAYS :=  device/vendor-name/device-name/common/overlay $(DEVICE_PACKAGE_OVERLAYS)
+</pre>
+
+<p>If multiple overlay directories are required to be added,
+separate them with blank charactors. The directories defined
+first in the line will override the following directories if
+they contain the same set of resources.</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Create resources under the overlay directory</h3>
+
+<p class="first">To overlay the resources in a base package, the subdirectory
+containing the overlay resources under the overlay
+directory, must has the same path as the base package
+resource directory relative to the Android project root.</p>
+
+<p>For example, if we want to overlay the resources under the
+base package directory:</p>
+
+<pre class="example">
+packages/apps/Settings/res/
+</pre>
+
+<p>we need to create the directory:</p>
+
+<pre class="example">
+&lt;overlay-dir&gt;/packages/apps/Settings/res/
+</pre>
+
+<p>and in the directory, put the overlay resources in the files
+with the same path and file names as where they are defined in
+the base package.</p>
+
+<p>Note that:</p>
+
+<ul>
+<li>For color, bool, string, array, style/theme types,
+the resource values are identifed by their keys, so for
+these types, there is no need to put the resources in a
+file with the same name as in the original base package.</li>
+
+<li>For layout, animation, picture drawables and raw types,
+the resources are indentifed by their file name, and overlay
+for these resources should keep the file name same as in the
+base packages.</li>
+</ul>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Determine the overlays for a product</h2>
+
+<p class="first">Because there may exist multiple overlay directories for a
+product, sometimes, it is required to determine all these
+directories used by the product.</p>
+
+<p>1. First, launch a full build on the target product.</p>
+
+<p>2. Put the following 2 lines in <code>packages/apps/Settings/Android.mk</code>:</p>
+
+<pre class="example">
+$(warning product overlay $(PRODUCT_PACKAGE_OVERLAYS))
+$(error device overlay $(DEVICE_PACKAGE_OVERLAYS))
+</pre>
+
+<p>3. run the following commands:</p>
+
+<pre class="example">
+cd $ANDROID_SRC_ROOT
+. build/envsetup.sh
+lunch &lt;product-config&gt;
+cd packages/apps/Settings
+mm
+</pre>
+
+<p>4. The build system of Android will print the the two variables and exit:</p>
+
+<p class="verse">
+packages/apps/Settings/Android.mk:6: product overlay device/vendor-name/device-name/product-name/overlay vendor/vendor-name/media/common/overlay<br>
+packages/apps/Settings/Android.mk:7: *** device overlay device/vendor-name/device-name/common/overlay device/vendor-name/omap4/overlay device/vendor-name/common/overlay.  Stop.<br>
+</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Check the resource in APK</h2>
+
+<p class="first">After changed the overlay resources and built the target
+packages, sometimes we need to check if the overlay
+directory took effects and the values are changed in the
+finally generated apks.</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+Using AAPT</h3>
+
+<p class="first">Run the following aapt commands on the final APK packages:</p>
+
+<pre class="example">
+Usage:
+ aapt l[ist] [-v] [-a] file.{zip,jar,apk}
+   List contents of Zip-compatible archive.
+
+ aapt d[ump] [--values] WHAT file.{apk} [asset [asset ...]]
+   badging          Print the label and icon for the app declared in APK.
+   permissions      Print the permissions from the APK.
+   resources        Print the resource table from the APK.
+   configurations   Print the configurations in the APK.
+   xmltree          Print the compiled xmls in the given assets.
+   xmlstrings       Print the strings of the given compiled xml assets.
+</pre>
+
+<p>For example:</p>
+
+<p>1. To dump string, bool values:</p>
+
+<pre class="example">
+aapt dump resources Settings.apk
+</pre>
+
+<p>2. To dump a raw xml file:</p>
+
+<pre class="example">
+aapt dump xmltree Settings.apk res/xml/appwidget_info.xml
+</pre>
+
+<p>3. To dump the current configurations/localizations:</p>
+
+<pre class="example">
+aapt dump configurations Settings.apk
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+Using apktools</h3>
+
+<p class="first">Reference: <a href="http://code.google.com/p/android-apktool/">http://code.google.com/p/android-apktool/</a></p>
+
+<p>Usage:</p>
+
+<pre class="example">
+Apktool v1.5.0.5a056e3 - a tool for reengineering Android apk files
+Copyright 2010 Ryszard Wi??niewski &lt;brut.alll@gmail.com&gt;
+with smali v1.3.4-ibot8, and baksmali v1.3.4-ibot8
+Updated by iBotPeaches &lt;connor.tumbleson@gmail.com&gt;
+Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+Usage: apktool [-q|--quiet OR -v|--verbose] COMMAND [...]
+
+COMMANDs are:
+
+    d[ecode] [OPTS] &lt;file.apk&gt; [&lt;dir&gt;]
+        Decode &lt;file.apk&gt; to &lt;dir&gt;.
+
+        OPTS:
+
+        -s, --no-src
+            Do not decode sources.
+        -r, --no-res
+            Do not decode resources.
+        -d, --debug
+            Decode in debug mode. Check project page for more info.
+        -f, --force
+            Force delete destination directory.
+        -t &lt;tag&gt;, --frame-tag &lt;tag&gt;
+            Try to use framework files tagged by &lt;tag&gt;.
+        --keep-broken-res
+            Use if there was an error and some resources were dropped, e.g.:
+            &quot;Invalid config flags detected. Dropping resources&quot;, but you
+            want to decode them anyway, even with errors. You will have to
+            fix them manually before building.
+
+    b[uild] [OPTS] [&lt;app_path&gt;] [&lt;out_file&gt;]
+        Build an apk from already decoded application located in &lt;app_path&gt;.
+
+        It will automatically detect, whether files was changed and perform
+        needed steps only.
+
+        If you omit &lt;app_path&gt; then current directory will be used.
+        If you omit &lt;out_file&gt; then &lt;app_path&gt;/dist/&lt;name_of_original.apk&gt;
+        will be used.
+
+        OPTS:
+
+        -f, --force-all
+            Skip changes detection and build all files.
+        -d, --debug
+            Build in debug mode. Check project page for more info.
+
+    if|install-framework &lt;framework.apk&gt; [&lt;tag&gt;]
+        Install framework file to your system.
+
+For additional info, see: https://github.com/iBotPeaches/brut.apktool
+For smali/baksmali info, see: http://code.google.com/p/smali/
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+Using dumpres</h3>
+
+<p class="first">For more readable dumping messages for complex values, we
+can use some other tool, such as <code>dumpres</code> tool.</p>
+
+
+
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+More on AAPT and Overlay</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+How overlay works</h3>
+
+<p class="first">While building the package APKs, the overlay directories are
+passed to aapt command lines using <code>-S</code> options
+in the same order as they are defined in
+<code>PRODUCT_PACKAGE_OVERLAYS</code> and
+<code>DEVICE_PACKAGE_OVERLAYS</code>.</p>
+
+<p>For example, while building the <code>Settings</code> APK,
+the following command are executed:</p>
+
+<pre class="example">
+out/host/linux-x86/bin/aapt package -u  -z \
+         -M packages/apps/Settings/AndroidManifest.xml \
+         -S device/vendor-name/device-name/product-name/overlay/packages/apps/Settings/res \
+         -S vendor/vendor-name/media/common/overlay/packages/apps/Settings/res -S packages/apps/Settings/res \
+         -I out/target/common/obj/APPS/framework-res_intermediates/package-export.apk \
+         --min-sdk-version 16 --target-sdk-version 16 --product default \
+         --version-code 16 --version-name 4.1.2-eng.xxxx.20121121.152327 \
+         -F out/target/product/product-name/obj/APPS/Settings_intermediates/package.apk
+</pre>
+
+<p><strong>Note</strong>: some overlay directories that don't contain the
+Settings resources will be filtered first, and do not appear
+in the above command line.</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Add extra resources in Overlay</h3>
+
+<p class="first">Though not recommanded, we can add new resources in overlay
+directory, for example, if base package
+<code>Settings</code> doesn't define a bool value with key
+<code>no_such_key</code>, we can add it in the overlay file
+<code>bool.xml</code> like this:</p>
+
+<pre class="example">
+&lt;resources&gt;
+    ... ...
+    &lt;add-resource type=&quot;bool&quot; name=&quot;no_such_key&quot;/&gt;
+    &lt;bool name=&quot;no_such_key&quot;&gt;true&lt;/bool&gt;
+    ... ...
+&lt;/resource&gt;
+</pre>
+
+<p>If the <code>add-resource</code> line is missing,
+<code>aapt</code> tool will complain while creating the apk
+file:</p>
+
+<p class="verse">
+device/vendor-name/device-name/product-name/overlay/packages/apps/Settings/res/values/bools.xml:30: error: Resource at no_such_key appears in overlay but \<br>
+not in the base package; use &lt;add-resource&gt; to add.<br>
+</p>
+
+<p>Another way to avoid the complaint is to run <code>aapt</code> with the option:</p>
+
+<pre class="example">
+--auto-add-overlay
+    Automatically add resources that are only in overlays.
+</pre>
+
+<p><strong>Note</strong>: For picture drawables, we can always add new images in
+the overlay directory without extra work.</p>
+
+
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:android_overlay';
+    var disqus_title = "Justin's Wiki - Overlay Mechanism";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/android/overlay.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Nov. 25, 2012
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/android/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "android_overlay");
+  //afterload();
+  fillsearch();
+</script>
+</html>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Emacs光标的移动</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/emacs/index.html">EMACS环境</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Emacs光标的移动
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 概念</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 以字符布局为基础的移动</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 以语言结构为基础的移动</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 以 窗口为基础的移动</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+概念</h2>
+
+
+<ul>
+<li>插入点（Point）：光标之前是插入点</li>
+<li>光标（Cursor）：指示当前位置的，闪烁，反显的字符块</li>
+</ul>
+
+
+<p><span class="note">
+值得注意的是在文件包<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>-goodies包中包含有一个命令：
+<code>bar-cursor-mode</code>，将在插入状态的光标转换为一个 <em>bar cursor</em>，这时候插入点
+的位置和光标的位置是一致的; 但是在改写状态，光标仍然是 <em>block cursor</em>.
+</span></p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+以字符布局为基础的移动</h2>
+
+<p class="first">在基本编辑模式下，例如text-mode中</p>
+
+<pre class="example">
+光标向下移动一行 C-n
+光标向上移动一行 C-p
+
+
+光标向左移动一个字符 C-b
+光标向右移动一个字符 C-f
+（在行首和行末换行）
+
+光标向上移动一页 C-x [
+光标向下移动一页 C-x ]
+
+光标移动到行首 C-a
+光标移动的行尾 C-b
+</pre>
+
+<p><a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中页分隔符是由变量<code>page-delimiter </code>（正则串）决定，默
+认值是在行首的^L,（变量值为&quot;^\f&quot;） 也就是用C-q C-l输入的字符</p>
+
+<pre class="example">
+光标移动到第n行行首 M-g g n RET
+光标移动到第n个字符处 M-x goto-char RET n RET
+</pre>
+
+<p>如果命令越过文章边界，则会出现在文章开头或者末尾</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+以语言结构为基础的移动</h2>
+
+<pre class="example">
+光标向下移动一段 M-}
+光标向上移动一段 M-{
+
+
+光标向左移动一个单词 M-b
+光标向右移动一个单词 M-f
+（在行首和行末换行）
+
+光标向上移动至文章/buffer开头 M-&lt;
+光标向下移动至文章/buffer末尾 M-&gt;
+
+光标移动到句首 M-a
+光标移动的句尾 M-b
+</pre>
+
+
+<p class="image"><img src="./res/Emacs_note3.gif" alt=""></p>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+以 窗口为基础的移动</h2>
+
+<pre class="example">
+向下移动一屏 C-v
+向上移动一屏 M-v
+
+重画屏幕，当前行置于屏幕中 C-l
+</pre>
+
+
+<p class="image"><img src="./res/Emacs_note2.gif" alt=""></p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:emacs_moving-cursor';
+    var disqus_title = "Justin's Wiki - Emacs光标的移动";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/emacs/moving-cursor.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated May. 10, 2009
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/emacs/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "emacs_moving-cursor");
+  //afterload();
+  fillsearch();
+</script>
+</html>

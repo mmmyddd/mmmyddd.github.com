@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Graphviz作图</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/debian/index.html">Debian/GNU操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Graphviz作图
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Graphviz简介</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Graphviz的布局程序</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 Debian下的Graphviz安装</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec4">2 The Dot Language</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec5">2.1 Syntax</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec6">2.1.1 Conventions</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec7">2.1.2 Production Rules</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec8">2.1.2.1 有些终结符类需要说明：</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec9">2.1.3 Some Notes</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">2.2 Examples</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">2.2.1 Example-1: Flow Chart</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">2.2.2 Example-2: Data Structure</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec13">3 Graphviz命令</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec14">4 Emacs Dot－mode</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+<br>
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Graphviz简介</h2>
+
+<p class="first">开源项目Graphviz是一种基于文本格式的作图工具，用于展示结构化数据。</p>
+
+<p>项目主页：<a href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
+
+<p>Graphviz包含了若干布局程序，并且包含了外围的Web接口和图形化的交互接口，
+辅助工具，库以及特定语言的绑定。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Graphviz的布局程序</h3>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Debian下的Graphviz安装</h3>
+
+
+<pre class="brush:bash; gutter:false; toolbar:false; ruler:false;">
+sudo apt-get install graphviz graphviz-doc graphviz-dev
+</pre>
+
+
+<p>可以根据需要安装：</p>
+
+<ul>
+<li>graphviz: graphviz命令行工具、文档、dot文件格式说明</li>
+<li>graphviz-doc: graphviz开发的api文档</li>
+<li>graphviz－doc： graphviz的头文件和运行库</li>
+</ul>
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+The Dot Language</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Syntax</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Conventions</h4>
+
+<p class="first">The following is an abstract grammar defining the DOT language, we use the following conventions:</p>
+
+
+<ul>
+<li>Terminals are shown in <strong>bold</strong> font, and nonterminals in <em>italics</em>, and definition of nonterminals in <strong><em>bold italics.</em></strong></li>
+
+<li>Literal characters (also terminals) are given in single quotes.</li>
+
+<li>Parentheses ( and ) indicate grouping when needed.</li>
+
+<li>Square brackets [ and ] enclose optional items.</li>
+
+<li>Vertical bars <code>|</code> separate alternatives.</li>
+</ul>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+Production Rules</h4>
+
+
+<p class="verse">
+<strong><em>graph</em></strong> -&gt; [ <strong>strict</strong> ] ( <strong>graph</strong> <code>|</code> <strong>digraph</strong> ) [ <em>ID</em> ] '<strong>{</strong>' <em>stmt_list</em> '<strong>}</strong>'<br>
+<br>
+<strong><em>stmt_list</em></strong> -&gt; [ <em>stmt</em> [ '<strong>;</strong>' ] [ <em>stmt_list</em> ] ]<br>
+<br>
+<strong><em>stmt</em></strong> -&gt; <em>node_stmt</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> <em>edge_stmt</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> <em>attr_stmt</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> <em>ID</em> '<strong>=</strong>' <em>ID</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> <em>subgraph</em><br>
+<br>
+<strong><em>attr_stmt</em></strong> -&gt; (<strong>graph</strong> <code>|</code> <strong>node</strong> <code>|</code> <strong>edge</strong>) <em>attr_list</em><br>
+<br>
+<strong><em>attr_list</em></strong> -&gt; '<strong>[</strong>' [ <em>a_list</em> ] '<strong>]</strong>' [ <em>attr_list</em> ]<br>
+<br>
+<strong><em>a_list</em></strong> -&gt; <em>ID</em> [ '<strong>=</strong>' <em>ID</em> ] [ ',' ] [ <em>a_list</em> ]<br>
+<br>
+<strong><em>edge_stmt</em></strong> -&gt; (<em>node_id</em> <code>|</code> <em>subgraph</em>) <em>edgeRHS</em> [ <em>attr_list</em> ]<br>
+<br>
+<strong><em>edgeRHS</em></strong> -&gt; <em>edgeop</em> (<em>node_id</em> <code>|</code> <em>subgraph</em>) [ <em>edgeRHS</em> ]<br>
+<br>
+<strong><em>node_stmt</em></strong> -&gt; <em>node_id</em> [ <em>attr_list</em> ]<br>
+<br>
+<strong><em>node_id</em></strong> -&gt; <em>ID</em> [ <em>port</em> ]<br>
+<br>
+<strong><em>port</em></strong> -&gt; '<strong>:</strong>' <em>ID</em> [ '<strong>:</strong>' <em>compass_pt</em> ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> '<strong>:</strong>' <em>compass_pt</em><br>
+<br>
+<strong><em>subgraph</em></strong> -&gt; [ <strong>subgraph</strong> [ <em>ID</em> ] ] ' <strong>{</strong> ' <em>stmt_list</em> ' <strong>}</strong> '<br>
+<br>
+<strong><em>compass_pt</em></strong> -&gt; (<strong>n</strong> <code>|</code> <strong>ne</strong> <code>|</code> <strong>e</strong> <code>|</code> <strong>se</strong> <code>|</code> <strong>s</strong> <code>|</code> <strong>sw</strong> <code>|</code> <strong>w</strong> <code>|</code> <strong>nw</strong> <code>|</code> <strong>c</strong> <code>|</code> <strong>_</strong> )<br>
+<br>
+<strong>edgeop</strong> -&gt; <strong>&mdash;<br>
+</p>
+</strong>
+<p class="verse">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>|</code> <strong>-&gt;</strong><br>
+<br>
+</p>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+有些终结符类需要说明：</h5>
+
+<ul>
+<li>注释:</li>
+</ul>
+
+
+
+
+<ul>
+<li><strong>ID</strong>: Graphviz</li>
+
+<li><strong>edgeop</strong></li>
+</ul>
+
+
+<p><strong><em>ID</em></strong> -&gt; Any string of alphabetic ([a-zA-Z\200-\377]) characters, underscores ('_') or digits ([0-9]), not beginning with a digit</p>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td><code>|</code> [-]?(.[0-9]+</td>
+      <td>[0-9]+(.[0-9]*)?  );</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+<p class="quoted"><code>|</code> '**&quot;**' *string* '**&quot;**'</p>
+</blockquote>
+
+<p>***comments*** -&gt; // ...
+<center>
+<p><code>|</code> /*...*/
+<code>|</code> ^# ...</p>
+</center>
+
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+Some Notes</h4>
+
+<p class="first">some notes</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+Examples</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+Example-1: Flow Chart</h4>
+
+<p><a href="./res/dot-example.dot">这里</a>是Dot写的流程图：</p>
+
+<pre class="example">
+digraph G {
+	subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		a0 -&gt; a1 -&gt; a2 -&gt; a3;
+		label = &quot;process #1&quot;;
+	}
+
+	subgraph cluster_1 {
+		node [style=filled];
+		b0 -&gt; b1 -&gt; b2 -&gt; b3;
+		label = &quot;process #2&quot;;
+		color=blue
+	}
+	start -&gt; a0;
+	start -&gt; b0;
+	a1 -&gt; b3;
+	b2 -&gt; a3;
+	a3 -&gt; a0;
+	a3 -&gt; end;
+	b3 -&gt; end;
+
+	start [shape=Mdiamond];
+	end [shape=Msquare];
+}
+</pre>
+
+<p>用dot布局所生成的结果：</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/dot-example.png" alt="Flow Chart"></td></tr>
+  <tr><td align="center" class="image-caption">Flow Chart</td></tr>
+</table>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Example-2: Data Structure</h4>
+
+<p><a href="./res/dot-complex.dot">这里</a>是数据结构中的一棵树的图形表示,注意其中 <code>node port</code>的定义</p>
+
+<pre class="example">
+digraph g {
+	node [shape = record,height=.1];
+	node0[label = &quot;&lt;f0&gt; |&lt;f1&gt; G|&lt;f2&gt; &quot;];
+	node1[label = &quot;&lt;f0&gt; |&lt;f1&gt; E|&lt;f2&gt; &quot;];
+	node2[label = &quot;&lt;f0&gt; |&lt;f1&gt; B|&lt;f2&gt; &quot;];
+	node3[label = &quot;&lt;f0&gt; |&lt;f1&gt; F|&lt;f2&gt; &quot;];
+	node4[label = &quot;&lt;f0&gt; |&lt;f1&gt; R|&lt;f2&gt; &quot;];
+	node5[label = &quot;&lt;f0&gt; |&lt;f1&gt; H|&lt;f2&gt; &quot;];
+	node6[label = &quot;&lt;f0&gt; |&lt;f1&gt; Y|&lt;f2&gt; &quot;];
+	node7[label = &quot;&lt;f0&gt; |&lt;f1&gt; A|&lt;f2&gt; &quot;];
+	node8[label = &quot;&lt;f0&gt; |&lt;f1&gt; C|&lt;f2&gt; &quot;];
+	&quot;node0&quot;:f2 -&gt; &quot;node4&quot;:f1;
+	&quot;node0&quot;:f0 -&gt; &quot;node1&quot;:f1;
+	&quot;node1&quot;:f0 -&gt; &quot;node2&quot;:f1;
+	&quot;node1&quot;:f2 -&gt; &quot;node3&quot;:f1;
+	&quot;node2&quot;:f2 -&gt; &quot;node8&quot;:f1;
+	&quot;node2&quot;:f0 -&gt; &quot;node7&quot;:f1;
+	&quot;node4&quot;:f2 -&gt; &quot;node6&quot;:f1;
+	&quot;node4&quot;:f0 -&gt; &quot;node5&quot;:f1;
+}
+</pre>
+
+<p>显示如下：</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/dot-complex.png" alt="Data Structure Tree"></td></tr>
+  <tr><td align="center" class="image-caption">Data Structure Tree</td></tr>
+</table>
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+Graphviz命令</h2>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+Emacs Dot－mode</h2>
+
+
+<p>mscgen:(sequence chart) <a href="http://www.mcternan.me.uk/mscgen/">http://www.mcternan.me.uk/mscgen/</a></p>
+
+<p>artist mode</p>
+
+<p>docview mode</p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:debian_graphviz';
+    var disqus_title = "Justin's Wiki - Graphviz作图";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/debian/graphviz.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Jun. 19, 2010
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/debian/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "debian_graphviz");
+  //afterload();
+  fillsearch();
+</script>
+</html>

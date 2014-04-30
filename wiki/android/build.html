@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Build Android Platform</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/android/index.html">Android操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Build Android Platform
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Android Source Code Download</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Website</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 Create Directory</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">1.3 Donwload Tool Chain</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">1.4 下载Android平台源代码</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec6">2 编译Android平台以及SDK</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">2.1 完全编译</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">2.2 模块编译</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">2.3 增量编译的步骤</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Android Source Code Download</h2>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Website</h3>
+
+<p><a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>的最新源代码下载的官方网站是：<a href="http://source.android.com">http://source.android.com</a> <br>
+源代码的下载说明页面是：<a href="http://source.android.com/download">http://source.android.com/download</a>
+（现在貌似用还用不了）<br>
+现在的网站是<a href="http://git.android.com">http://git.android.com</a></p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Create Directory</h3>
+
+<p class="first">在HOME(/home/justin)目录下创建如下目录结构：</p>
+
+<p class="verse">
+&nbsp;&nbsp;/home/justin/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>:<br>
+&nbsp;&nbsp;总计 36<br>
+&nbsp;&nbsp;drwxr-xr-x  7 justin justin  4096 01-15 10:34 .<br>
+&nbsp;&nbsp;drwxr-xr-x 58 justin justin 12288 01-15 10:39 ..<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 10:34 applications<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 10:33 downloads<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 12:34 bin<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 10:33 sdk<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 10:33 src<br>
+&nbsp;&nbsp;drwxr-xr-x  2 justin justin  4096 01-15 10:34 tools<br>
+</p>
+
+
+<p>将该目录添加到PATH环境变量：</p>
+
+<pre class="example">
+export PATH=$HOME/android/bin:$PATH
+</pre>
+
+<p>如果需要反复使用，需要将这一行加入~/.bashrc启动脚本中</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Donwload Tool Chain</h3>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Git</h4>
+
+<p class="first">Git的版本在1.5.4之上</p>
+
+<pre class="example">
+sudo apt-get install git-core
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Proxy</h4>
+
+<p class="first">安装代理软件：</p>
+
+<pre class="example">
+apt-get install connect-proxy
+</pre>
+
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Repo</h4>
+
+<p class="first">repo是包装了git命令的<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>脚本：</p>
+
+<pre class="example">
+curl http://android.git.kernel.org/repo &gt; ~/android/bin/repo
+</pre>
+
+<p>网关内部需要设置curl代理：</p>
+
+<p>假设网段的（http）代理为：wwwgate.freeshell.net:8080</p>
+
+<pre class="example">
+curl --proxy wwwgate.freeshell.net:8080 http://android.git.kernel.org/repo &gt; ~/android/bin/repo
+</pre>
+
+<p>加上可执行权限</p>
+
+<pre class="example">
+chmod a+x ~/android/bin/repo
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Python</h4>
+
+<p class="first">Python的版本在2.4之上</p>
+
+<pre class="example">
+sudo apt-get install python
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>JDK 1.6</h4>
+
+<p class="first">在下列地址下载：
+<a href="http://java.sun.com/javase/downloads">http://java.sun.com/javase/downloads</a>
+解压得到如下文件：
+~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/downloads/jdk-6u11-<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-i586.bin</p>
+
+<pre class="example">
+cd ~/android/downloads
+chmode a+x jdk-6u11-linux-i586.bin
+</pre>
+
+<p>运行这个可执行文件， 将生成的目录jdk1.6.0_11拷贝到/usr/local/下</p>
+
+<p>将下列环境变量加入~/.bashrc:</p>
+
+<pre class="example">
+export PATH=/usr/local/jdk1.6.0_11/bin:$PATH
+export JAVA_HOME=/usr/local/jdk1.6.0_11
+export ANDROID_JAVA_HOME=$JAVA_HOME
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Other tools</h4>
+
+<pre class="example">
+sudo apt-get install gcc g++
+</pre>
+
+<pre class="example">
+sudo apt-get install flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev \
+     build-essential zip curl libncurses5-dev zlib1g-dev valgrind libreadline5-dev
+</pre>
+
+
+<p>如果因为缺少X11/Xatom.h和X11/Xlib.h导致的build失败，
+可以安装如下包：</p>
+
+<pre class="example">
+sudo apt-get install x11proto-core-dev  # provides Xatom.h
+sudo apt-get install libx11-dev         # provides Xlib.h
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>交叉编译环境</h4>
+
+<p><a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> emulator 默认的目标代码是arm7的代码。如果需要将目标代码移植到其他
+版本的arm平台上去，需要重新配置相应的交叉编译环境。</p>
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+下载Android平台源代码</h3>
+
+<p class="first">1. 初始化要下载的文件列表：</p>
+
+<pre class="example">
+cd ~/android/src
+repo init -u git://android.git.kernel.org/platform/manifest.git
+</pre>
+
+<p>如果想检出除master外其他分支上的代码可以用-b选项：</p>
+
+<pre class="example">
+cd ~/android/src
+repo init -u git://android.git.kernel.org/platform/manifest.git -b cupcake
+</pre>
+
+<p>2. 配置git帐户</p>
+
+<pre class="example">
+git config --global user.email &quot;xxxxx@xxxxxxx&quot;
+git config --global user.name &quot;xxxxxx&quot;
+</pre>
+
+
+<p>3. 同步文件列表：</p>
+
+<pre class="example">
+repo sync
+</pre>
+
+<p>在第一次下载全部代码完成后，可以按模块更新子项目的代码：</p>
+
+<pre class="example">
+repo sync project-path
+</pre>
+
+<p>其中的project-path可以在src/.repo/manifests/default.xml中找到：</p>
+
+<pre class="example">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;manifest&gt;
+  &lt;remote  name=&quot;korg&quot;
+           fetch=&quot;git://android.git.kernel.org/&quot;
+           review=&quot;review.source.android.com&quot; /&gt;
+  &lt;default revision=&quot;master&quot;
+           remote=&quot;korg&quot; /&gt;
+
+  &lt;project path=&quot;build&quot; name=&quot;platform/build&quot;&gt;
+    &lt;copyfile src=&quot;core/root.mk&quot; dest=&quot;Makefile&quot; /&gt;
+  &lt;/project&gt;
+
+  &lt;project path=&quot;kernel&quot;
+           name=&quot;kernel/common&quot;
+           revision=&quot;refs/heads/android-2.6.27&quot; /&gt;
+
+  &lt;project path=&quot;bionic&quot; name=&quot;platform/bionic&quot; /&gt;
+
+  &lt;project path=&quot;bootable/bootloader/legacy&quot; name=&quot;platform/bootable/bootloader/legacy&quot; /&gt;
+  &lt;project path=&quot;bootable/diskinstaller&quot; name=&quot;platform/bootable/diskinstaller&quot; /&gt;
+  &lt;project path=&quot;bootable/recovery&quot; name=&quot;platform/bootable/recovery&quot; /&gt;
+  ... ...
+</pre>
+
+
+
+
+
+<p>在网关内部使用需要设置代理：</p>
+
+<p>新建如下文件：</p>
+
+<pre class="example">
+#!/bin/sh
+# /home/justin/android/bin/socks-gw.sh
+# This script connects to a HTTP proxy using connect.c
+connect -H wwwgate.freeshell.net:8080 $@
+</pre>
+
+<pre class="example">
+#!/bin/sh
+# /home/justin/android/bin/socks-ssh.sh
+ssh -o ProxyCommand=&quot;/home/justin/android/bin/socks-gw.sh %h %p&quot; $@
+</pre>
+
+<p>增加这两个文件的可执行权限：</p>
+
+<pre class="example">
+chmod a+x /home/justin/android/bin/socks-ssh.sh
+chmod a+x /home/justin/android/bin/socks-gw.sh
+</pre>
+
+<p>可以将所有代理的环境变量放在：</p>
+
+<pre class="example">
+#!/bin/sh
+# /home/justin/proxy.sh
+
+# http proxy setting
+export HTTP_PROXY=http://wwwgate.freeshell.net:8080
+export http_proxy=$HTTP_PROXY
+
+# set git to use ssh over http proxy
+export GIT_SSH=&quot;/home/justin/android/bin/socks-ssh.sh&quot;
+export GIT_PROXY_COMMAND=&quot;/home/justin/android/bin/socks-gw.sh&quot;
+</pre>
+
+
+<p>需要的时候运行：</p>
+
+<pre class="example">
+. ~/proxy.sh
+</pre>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+编译Android平台以及SDK</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+完全编译</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>编译映像</h4>
+
+<pre class="example">
+cd ~/android/src
+make
+</pre>
+
+<p>映像编译成功后会在目录
+<code>
+~/android/src/out/target/product/generic
+</code>
+下产生一些image文件</p>
+
+<p>ramdisk.img
+system.img
+userdata.img
+<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>-info.txt</p>
+
+
+<p>验证，运行这些模块：</p>
+
+<pre class="example">
+export ANDROID_PRODUCT_OUT=/home/justin/android/src/out/target/product/generic
+cd out/host/linux-x86/bin
+./emulator
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>SDK编译</h4>
+
+<p><a name="SDK" id="SDK"></a>
+在做完一次完全编译后，就可以build SDK了。</p>
+
+<pre class="example">
+make sdk
+</pre>
+
+<p>注意：如果需要build SDK，需要安装sun-java5-jdk, 而不是sun-java6-jdk,否则会出现如下错误：</p>
+
+<pre class="example">
+build/core/product_config.mk:207: WARNING: adding test OTA key
+============================================
+TARGET_PRODUCT=generic
+TARGET_BUILD_VARIANT=eng
+TARGET_SIMULATOR=
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm
+HOST_ARCH=x86
+HOST_OS=linux
+HOST_BUILD_TYPE=release
+BUILD_ID=
+============================================
+Combining NOTICE files: out/target/product/generic/obj/NOTICE.txt
+Finding NOTICE files: out/host/linux-x86/obj/NOTICE_FILES/hash-timestamp
+Combining NOTICE files: out/host/linux-x86/obj/NOTICE.txt
+Package: out/target/product/generic/generic-img-eng.justin.zip
+SDK buildinfo: out/target/product/generic/sdk/sdk-build.prop
+Docs droiddoc: out/target/common/docs/dx
+javadoc: 错误 - 在 doclet 类 DroidDoc 中，方法 start 已抛出异常 java.lang.reflect.InvocationTargetException
+com.sun.tools.javac.code.Symbol$CompletionFailure: 未找到 sun.util.resources.OpenListResourceBundle 的类文件
+</pre>
+
+<p>此时，可以考虑重新安装sun jdk5, 或者直接从<a href="http://java.sun.com/javase/downloads">http://java.sun.com/javase/downloads</a>
+下载到~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/downloads/jdk-1_5_0_17-<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-i586.bin</p>
+
+<pre class="example">
+sudo apt-get install sun-java5-jdk
+</pre>
+
+<p>并设置相应的.bashrc命令。</p>
+
+<p>sdk编译成功后会在~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/src/out/host/<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-x86/sdk/
+生成sdk的文件目录和压缩包：</p>
+
+<p class="verse">
+<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>-sdk_eng.justin_<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-x86<br>
+<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>-sdk_eng.justin_<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-x86.zip<br>
+</p>
+
+<p>并在~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/src/out/target/product/generic（generic是默认的产品名）下打包所有的映像文件：</p>
+
+<p class="verse">
+generic-img-eng.justin.zip<br>
+</p>
+
+<p>生成的SDK目录结构为：</p>
+
+<pre class="example">
+  /home/justin/android/src/out/host/linux-x86/sdk/android-sdk_eng.justin_linux-x86:
+  总计 32
+  drwxrwx---  6 justin justin 4096 02-13 17:06 .
+  drwxr-x---  3 justin justin 4096 02-13 17:09 ..
+  drwxrwx---  2 justin justin 4096 02-13 17:06 add-ons
+  drwxrwx--- 14 justin justin 4096 02-13 17:06 docs
+  -rw-rw----  1 justin justin  172 02-13 17:08 documentation.html
+  drwxrwx---  3 justin justin 4096 02-13 17:06 platforms
+  -rw-rw----  1 justin justin  225 02-13 17:08 RELEASE_NOTES.txt
+  drwxrwx---  3 justin justin 4096 02-13 17:08 tools
+</pre>
+
+<p>安装生成的SDK只需要在.bashrc中增加：</p>
+
+<pre class="example">
+export PATH=$PATH:/home/justin/android/src/out/host/linux-x86/sdk/android-sdk_eng.justin_linux-x86/tools
+</pre>
+
+
+<p>为了使用方便，将生成的SDK目录链结至~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/sdk:</p>
+
+<pre class="example">
+ln -sf /home/justin/android/src/out/host/linux-x86/sdk/android-sdk_eng.justin_linux-x86/tools \
+       ~/android/sdk
+</pre>
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+模块编译</h3>
+
+<p class="first">在src目录执行：</p>
+
+<pre class="example">
+cd ~/android/src
+. build/envsetup.sh
+</pre>
+
+<p>envsetup.sh 提供了一些的bash函数定义，当运行了envsetup.sh后就可以使用help
+命令来查看：</p>
+
+<pre class="example">
+help
+</pre>
+
+<p>得到这些命令的帮助信息：</p>
+
+<pre class="example">
+Invoke &quot;. build/envsetup.sh&quot; from your shell to add the following functions to your environment:
+- croot:   Changes directory to the top of the tree.
+- m:       Makes from the top of the tree.
+- mm:      Builds all of the modules in the current directory.
+- mmm:     Builds all of the modules in the supplied directories.
+- cgrep:   Greps on all local C/C++ files.
+- jgrep:   Greps on all local Java files.
+- resgrep: Greps on all local res/*.xml files.
+
+Look at the source to view more functions. The complete list is:
+add_lunch_combo cgrep check_product check_variant choosecombo chooseproduct choosetype choosevariant croot findmakefile gd
+bclient get_abs_build_var getbugreports get_build_var getprebuilt gettop help isviewserverstarted jgrep lunch m mm mmm pid
+ printconfig print_lunch_menu resgrep runhat runtest setpaths set_sequence_number set_stuff_for_environment settitle smoke
+test startviewserver stopviewserver tapas tracedmdump
+</pre>
+
+<p>其中对模块的编译有帮助的是tapas、m、mm、mmm这几个命令。</p>
+
+<p>1.tapas - 以交互方式设置build环境，以下是运行效果：</p>
+
+<pre class="example">
+tapas
+</pre>
+
+<p>第一步，选择目标设备：</p>
+
+<pre class="example">
+Build for the simulator or the device?
+     1. Device
+     2. Simulator
+
+Which would you like? [1]
+</pre>
+
+<p>第二步，选择目标代码格式：</p>
+
+<pre class="example">
+Build type choices are:
+     1. release
+     2. debug
+
+Which would you like? [1]
+</pre>
+
+<p>第三步，选择产品平台：</p>
+
+<pre class="example">
+Product choices are:
+     1. emulator
+     2. generic
+     3. sim
+You can also type the name of a product if you know it.
+Which would you like? [generic]
+</pre>
+
+<p>第四步，在选用参数下构建平台。</p>
+
+<p>2. 独立模块的构件命令</p>
+
+<ul>
+<li>m:       Makes from the top of the tree.</li>
+<li>mm:      Builds all of the modules in the current directory.</li>
+<li>mmm:     Builds all of the modules in the supplied directories.</li>
+</ul>
+
+<p>其中mmm后面要跟模块的根目录，不是所有的目录下都有子模块，那些含有Android.mk文件目录才是
+模块的根目录，模块名可以从Android.mk的LOCAL_MODULE或者LOCAL_PACKAGE_NAME变量中得到。</p>
+
+<p>单独编译某模块，需要在mmm后面指定模块路径，例如编译application中的Contacts：</p>
+
+<pre class="example">
+mmm packages/apps/Contacts/
+</pre>
+
+
+<p>或者在src目录下直接运行make <em>module name</em>：</p>
+
+<pre class="example">
+cd ~/android/src
+make Contacts
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+增量编译的步骤</h3>
+
+<p class="first">1. 修改代码</p>
+
+<p>2. 编译所修改的代码所在模块，例如：</p>
+
+<pre class="example">
+cd ~/android/src
+mmm packages/apps/Contacts
+</pre>
+
+<p>3. 在~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/src中运行：</p>
+
+<pre class="example">
+cd ~/android/src
+make snod
+</pre>
+
+<p>该命令生成一个新的系统映像system.img</p>
+
+<p>4.将这个系统映像拷贝至sdk下：</p>
+
+<pre class="example">
+cd ~/android/src
+cp out/target/product/generic/system.img \
+   out/host/linux-x86/sdk/android-sdk_eng.justin_linux-x86/tools/lib/images/
+</pre>
+
+<p>5. 删除程序遗留的数据：</p>
+
+<pre class="example">
+out/host/linux-x86/sdk/android-sdk_eng.justin_linux-x86/tools/emulator -wipe-data
+</pre>
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:android_build';
+    var disqus_title = "Justin's Wiki - Build Android Platform";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/android/build.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated 2009-02-13
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/android/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "android_build");
+  //afterload();
+  fillsearch();
+</script>
+</html>

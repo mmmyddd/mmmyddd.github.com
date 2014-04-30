@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - MINI2440 Dev Board Emulated by QEMU</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/embed/index.html">Embed System</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        MINI2440 Dev Board Emulated by QEMU
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Introduction</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Preparation - Toolchain and Directory</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 QEMU for MINI2440</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec4">3.1 Dowload</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">3.2 Compile</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec6">4 Uboot for MINI2440</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">4.1 Download</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">4.2 Compile</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">4.3 Install</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">5 Linux Kernel 2.6 for MINI2440</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">5.1 Dowload</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">5.2 Compile</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec13">5.3 Install</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec14">6 Busy Box</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec15">6.1 Download</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec16">6.2 Compile</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec17">7 Root File system</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec18">7.1 /dev/console &amp; /dev/null 设备文件</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec19">7.2 使用 mdev机制动态建立设备文件</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec20">7.3 串口改名</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec21">7.4 禁止网卡重新配置</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec22">8 Mount NFS RootFS</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec23">8.1 Install NFS Servcie on Debian</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec24">8.2 QEMU虚拟网卡配置</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec25">9 Try it out</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<p><strong>References:</strong></p>
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> <a href="http://www.cnblogs.com/jinmu190/archive/2011/03/21/1990698.html">使用qemu 建立mini2440的模拟仿真环境</a>
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a> <a href="http://www.arm9home.net/simple/index.php?t15864.html">&lt;&lt;使用qemu 建立mini2440的模拟仿真环境&gt;&gt;补充修正说明</a>
+<p class="footnote"><a class="footnum" name="fn.3" href="#fnr.3">3.</a> <a href="http://www.chinadmd.com/file/evs3zrtrwwriotcxszvz66oc_2.html">手把手教你制作根文件系统</a>
+<p class="footnote"><a class="footnum" name="fn.4" href="#fnr.4">4.</a> <a href="http://repo.or.cz/w/qemu/mini2440.git">http://repo.or.cz/w/qemu/mini2440.git</a></p>
+
+<hr>
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Introduction</h2>
+
+<p class="first">本文基于如下开源项目：</p>
+
+<p class="verse">
+description     Samsung s3c2440 and arm920t support for the mini2440 dev board<br>
+homepage URL    <a href="http://code.google.com/p/mini2440/">http://code.google.com/p/mini2440/</a><br>
+owner   <a href="mailto:buserror@gmail.com">buserror@gmail.com</a><br>
+last change     Thu, 13 Oct 2011 11:24:48 +0000<br>
+URL     git://repo.or.cz/qemu/mini2440.git<br>
+<a href="http://repo.or.cz/r/qemu/mini2440.git">http://repo.or.cz/r/qemu/mini2440.git</a><br>
+Push URL        ssh://repo.or.cz/srv/git/qemu/mini2440.git<br>
+<br>
+readme<br>
+MINI2440 u-boot, kernel &amp; distro project<br>
+<br>
+This tree is part of a project to get up-to-date u-boot/kernel for the Samsung S3C2440 based board known as &quot;MINI2440&quot;.<br>
+You can find this great board for really cheap, with:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 400Mhz ARM9 (arm920t)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 64MB SDRAM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 64MB NAND / 2MB NOR<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ SD, USB host/device, 3 uarts, 100BaseT etc etc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 3.5 or 7&quot; TFT touch screen<br>
+<br>
+<br>
+Available git trees:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://repo.or.cz/w/u-boot-openmoko/mini2440.git">http://repo.or.cz/w/u-boot-openmoko/mini2440.git</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More modern u-boot, based on openmoko's fork, with mcc support, usb etc<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://repo.or.cz/w/linux-2.6/mini2440.git">http://repo.or.cz/w/linux-2.6/mini2440.git</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bleeding edge Modern Kernel board support (based on Linus's)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kernel is now stable, and supports pretty much all the peripherals<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://repo.or.cz/w/openembedded/mini2440.git">http://repo.or.cz/w/openembedded/mini2440.git</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Openembedded fork with support for mini2440<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contains enough to build a toolchain and a flash image.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://repo.or.cz/w/qemu/mini2440.git">http://repo.or.cz/w/qemu/mini2440.git</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A QEMU fork that emulates most of a mini2440 !<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supports booting NAND, SD, NFS etc. LCD is recognized etc..<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You need a valid u-boot.bin to start, and a kernel uImage as parameter<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://repo.or.cz/w/mini2440-tools.git">http://repo.or.cz/w/mini2440-tools.git</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Various tools &amp; Scripts for the mini.<br>
+<br>
+Feel free to email me to get push access to these trees.<br>
+</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Preparation - Toolchain and Directory</h2>
+
+<p><strong>Build Environment:</strong></p>
+
+<ol>
+<li>qemu: gcc version 4.4.5 (Debian 4.4.5-8)</li>
+
+<li><a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> kernel &amp; uboot:  gcc version 4.4.1 (Sourcery G++ Lite 2010q1-188) (系统路径默认）</li>
+
+<li>busybox: crosstool gcc-3.4.5-glibc-2.3.6 (tls) - with thread supported</li>
+</ol>
+
+<p><strong>Directory:</strong></p>
+
+<pre class="example">
+qemu-mini2440
+├── busybox-1.7.0
+├── fs_mini_mdev
+├── fs_qtopia
+├── fs_busybox
+├── gcc-3.4.5-glibc-2.3.6
+├── linux-2.6
+├── qemu
+├── uboot
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+QEMU for MINI2440</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Dowload</h3>
+
+<p class="first">首先下载qemu for mini2440</p>
+
+<pre class="example">
+git clone git://repo.or.cz/qemu/mini2440.git  qemu
+</pre>
+
+<p>如果感觉速度慢或者出错，直接打包下载 （下同）</p>
+
+<p><a href="http://repo.or.cz/w/qemu/mini2440.git/snapshot/HEAD.tar.gz">http://repo.or.cz/w/qemu/mini2440.git/snapshot/HEAD.tar.gz</a></p>
+
+<p>改名并解压后，进入源代码的主目录中</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Compile</h3>
+
+<pre class="example">
+cd qemu
+./configure --target-list=arm-softmmu
+make
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Uboot for MINI2440</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+Download</h3>
+
+<p class="first">下载u-boot for mini2440</p>
+
+<pre class="example">
+git clone  git://repo.or.cz/w/u-boot-openmoko/mini2440.git uboot
+</pre>
+
+<p>或者打包下载</p>
+
+<p><a href="http://repo.or.cz/w/u-boot-openmoko/mini2440.git/snapshot/HEAD.tar.gz">http://repo.or.cz/w/u-boot-openmoko/mini2440.git/snapshot/HEAD.tar.gz</a></p>
+
+<p>（ <strong>注意</strong>: 采用打包下载的时候这几个包的文件名可能相同，注意区分）</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+Compile</h3>
+
+<p class="first">解压后，配置Makefile文件，打开Makefile文件，CROSS_COMPILE变量赋值，即自己所使用的交叉编译工具链，比如我的是arm-none-<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-gnueabi-，保存退出，输入</p>
+
+<pre class="example">
+make CROSS_COMPILE=arm-linux- mini2440_config
+make CROSS_COMPILE=arm-linux-
+</pre>
+
+<p><span class="note">
+<strong>注意:</strong> 如果想在之后使用u-boot 的nfs下载文件功能，需要修改代码中的一部分，将net/nfs.c文件中的
+NFS_TIMEOUT = 2UL 修改为 NFS_TIMEOUT = 20000UL 否则会造成nfs文件下载失败，如果不使用nfs下载功能，不改也可。
+</span></p>
+
+<p>稍等两分钟，即在当前目录下生成名为 u-boot.bin 的文件。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+Install</h3>
+
+<p class="first">将生成的u-boot.bin拷贝到qemu/mini2440目录下</p>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+Linux Kernel 2.6 for MINI2440</h2>
+
+<p class="first">Current version is: Linux version 2.6.32-rc8</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+Dowload</h3>
+
+<p class="first">下载 <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> kernel for mini2440:</p>
+
+<pre class="example">
+git clone git://repo.or.cz/w/linux-2.6/mini2440.git linux-2.6
+</pre>
+
+<p>如果感觉速度慢或者出错，直接打包下载</p>
+
+<p><a href="http://repo.or.cz/w/linux-2.6/mini2440.git/snapshot/HEAD.tar.gz">http://repo.or.cz/w/linux-2.6/mini2440.git/snapshot/HEAD.tar.gz</a></p>
+
+<p>改名并解压后，进入源代码的主目录中</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Compile</h3>
+
+<pre class="example">
+make ARCH=arm mini2440_defconfig
+make ARCH=arm menuconfig
+</pre>
+
+<p>enable eabi menu options</p>
+
+<pre class="example">
+kernel Features --&gt;
+Memory split (3G/1G user/kernel split) ---&gt;
+[ ] Preemptible Kernel (EXPERIMENTAL)
+[*] Use the ARM EABI to compile the kernel
+[*] Allow old ABI binaries to run with this kernel (EXPERIMENTAL)
+[ ] High Memory Support (EXPERIMENTAL)
+      Memory model (Flat Memory) ---&gt;
+[ ] Add LRU list to track non-evictable pages
+(4096) Low address space to protect from user allocation
+</pre>
+
+<p><span class="note">
+<strong>注意</strong>: 如果这些选项不打开，会造成有些旧的文件系统和操作系统不兼容。
+NFS挂载这些文件系统后启动时出现问题：
+Kernel panic - not syncing: No init found.</p>
+
+<p>即使打开这些选项，也同样建议使用和kernel兼容的gcc-glibc版本去
+编译busybox和文件系统
+</span></p>
+
+<pre class="example">
+make ARCH=arm CROSS_COMPILE=arm-linux- uImage
+</pre>
+
+
+<p>如果编译uImage时出现错误：</p>
+
+<pre class="example">
+&quot;mkimage&quot; command not found - U-Boot images will not be built
+</pre>
+
+<p>是因为没有安装生成uImage的工具，运行</p>
+
+<pre class="example">
+sudo apt-get install uboot-mkimage
+</pre>
+
+<p>安装该命令，或者把上面uboot/tools中build好的工具加入到路径中。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+Install</h3>
+
+<p class="first">之后会在arch/arm/boot/目录下生成uImage 文件，将此文件复制到qemu/mini2440文件夹下，
+并将mini2440文件夹中的mini2440_start.sh作如下修改:</p>
+
+<pre class="example">
+...
+
+cmd=&quot;$base/../arm-softmmu/qemu-system-arm \
+        -M mini2440 $* \
+        -serial stdio \
+        -kernel $base/uImage \
+        -mtdblock &quot;$name_nand&quot; \
+...
+</pre>
+
+<p>输入下面命令试一下，这时应该看到qemu启动后进入了u-boot界面下：</p>
+
+<pre class="example">
+cd qemu/mini2440
+sudo mini2440/mini2440_start.sh
+</pre>
+
+<p>在uboot的提示符下输入：</p>
+
+<pre class="example">
+bootm
+</pre>
+
+<p>就会看到<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>内核启动的画面，但此时还没有根文件系统，我们稍候介绍采用nfs挂载根文件系统</p>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+Busy Box</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec15" id="sec15"></a>
+Download</h3>
+
+<p class="first">下载 <a href="http://busybox.net/downloads/busybox-1.7.0.tar.bz2">http://busybox.net/downloads/busybox-1.7.0.tar.bz2</a> 并解压缩</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec16" id="sec16"></a>
+Compile</h3>
+
+<p class="first">注意：关于如何使用crosstool构建交叉编译工具链： gcc-3.4.5-glibc-2.3.6 (tls) 不在此展开。</p>
+
+<p>修改busybox解压缩根目录的Makefile,设置CROSS_COMPILE变量为gcc-3.4.5-glibc-2.3.6所在路径：</p>
+
+<pre class="example">
+CROSS_COMPILE   ?= /home/justin/my/path/to/gcc-3.4.5-glibc-2.3.6/bin/arm-linux-
+</pre>
+
+<pre class="example">
+cd busybox-1.7.0
+make ARCH=arm defconfig
+make ARCH=arm menuconfig
+</pre>
+
+<p>这个版本的busybox用gcc/glibc来编译不能使用静态链接选项，请确定配置如下：</p>
+
+<pre class="example">
+Busybox Settings --&gt; Build Options --&gt;
+[ ] Build BusyBox as a static binary (no shared libs)
+[ ] Force NOMMU build
+  [*] Build with Large File Support (for accessing files &gt; 2 GB)
+  ()  Cross Compiler prefix
+  ()  Additional CFLAGS
+</pre>
+
+<pre class="example">
+make ARCH=arm CONFIG_PREFIX=../fs_busybox install
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec17" id="sec17"></a>
+Root File system</h2>
+
+<p class="first">Root fs 的制作不在这里详述，参考韦东山《嵌入式<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>应用开发完全手册》，
+因为后面需要从NFS挂载根文件系统，这里说明几点需要注意的地方。</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec18" id="sec18"></a>
+/dev/console &amp; /dev/null 设备文件</h3>
+
+<p class="first">需要在busybox生成的根文件系统中，手动建立这两个设备文件, 否则会出现下列错误：</p>
+
+<pre class="example">
+VFS: Mounted root (nfs filesystem).
+Freeing init memory: 112K
+Warning: unable to open an initial console.
+</pre>
+
+<p>这是因为当mdev/udev机制起作用之前系统就需要对这两个设备文件进行读写。</p>
+
+<p>只需要挂载NFS之前，在Debian主机环境中运行：</p>
+
+<pre class="example">
+cd fs_busybox/dev
+sudo mknod console c 5 1
+sudo mknod null c 1 3
+</pre>
+
+<p>然后重新启动NFS服务即可。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec19" id="sec19"></a>
+使用 mdev机制动态建立设备文件</h3>
+
+<p class="first">create the file <code>fs_busybox/etc/init.d/rcS</code></p>
+
+<pre class="example">
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+/sbin/mdev -s
+</pre>
+
+<p>and change it to executable:</p>
+
+<pre class="example">
+chmod +x fs_busybox/etc/init.d/rcS
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec20" id="sec20"></a>
+串口改名</h3>
+
+<p class="first">create the file <code>fs_busybox/etc/inittab</code></p>
+
+<pre class="example">
+# /etc/inittab
+::sysinit:/etc/init.d/rcS
+#s3c2410_serial0::askfirst:-/bin/sh
+ttySAC0::askfirst:-/bin/sh
+::ctrlaltdel:/sbin/reboot
+::shutdown:/bin/umount -a -r
+</pre>
+
+<p>在实际开发板串行口为s3c2410_serial0，但是在qemu模拟器中应为ttySAC0</p>
+
+<p>如果不更改上述名称，当kernel启动后，控制台启动login shell的信
+息不会显示在串口上，（qemu 启动选项 -serial stdio 将串口输出到主机
+console terminal窗口，如不设置，在kernel启动后不能得到mini2440上的shell提示符）
+因而不会看到下面信息 (Please press Enter to activate this console. 之后的输出)：</p>
+
+<pre class="example">
+Freeing init memory: 128K
+init started: BusyBox v1.7.0 (2008-01-22 10:04:09 EST)
+starting pid 741, tty '': '/etc/init.d/rcS'
+
+Please press Enter to activate this console.
+starting pid 746, tty '/dev/ttySAC0': '/bin/sh'
+#
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec21" id="sec21"></a>
+禁止网卡重新配置</h3>
+
+<p class="first">因为是从NFS上mount根文件系统，如果使用的是现成的根文件目录，需要禁止系统启动时重新配置网卡，需要检查</p>
+
+<p>$NFS_ROOT/etc/init.d 下文件，注释掉ifconfig相关命令:</p>
+
+<pre class="example">
+# ifconfig lo 127.0.0.1
+# route add default gw 192.168.1.2
+# ifconfig eth0 192.168.1.6 up
+</pre>
+
+<p>否则会出现找不到根文件系统的错误</p>
+
+<pre class="example">
+Kernel panic - not syncing: Attempted to kill init (???)
+</pre>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec22" id="sec22"></a>
+Mount NFS RootFS</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec23" id="sec23"></a>
+Install NFS Servcie on Debian</h3>
+
+<pre class="example">
+sudo apt-get install nfs-kernel-server
+</pre>
+
+<p>之后修改/etc/exports文件，添加如下一行</p>
+
+<pre class="example">
+/home/username/nfs *(rw,sync,no_root_squash)
+</pre>
+
+<p>注意  /home/username/nfs 为你所要共享的目录, 然后重启动NFS server:</p>
+
+<pre class="example">
+sudo /etc/init.d/nfs-kernel-server restart
+</pre>
+
+<p>忽略如下警告（或者在/etc/exports中加入no_subtree_check选项)：</p>
+
+<pre class="example">
+exportfs: /etc/exports [3]: Neither 'subtree_check' or 'no_subtree_check' specified for export &quot;*:/opt/FriendlyARM/mini2440/root_qtopia&quot;.
+
+Assuming default behaviour ('no_subtree_check').
+
+NOTE: this default has changed since nfs-utils version 1.0.x
+</pre>
+
+<p>启动 nfs服务后，测试 nfs服务是否成功启动</p>
+
+<pre class="example">
+sudo mkdir /mnt/nfs
+sudo mount -t nfs localhost:/home/username/nfs /mnt/nfs
+</pre>
+
+<p>查看/mnt/nfs文件是否于/home/username/nfs 中相同，若一样 ，OK</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec24" id="sec24"></a>
+QEMU虚拟网卡配置</h3>
+
+<p class="first">在qemu/mini2440目录下新建两个文件：</p>
+
+<ul>
+<li>qemu-ifup.sh:</li>
+</ul>
+
+<pre class="example">
+#!/bin/sh
+echo &quot;Excuting qemu-ifup&quot;
+ifconfig $1 10.0.0.1
+</pre>
+
+<ul>
+<li>qemu-down.sh</li>
+</ul>
+
+<pre class="example">
+#!/bin/sh
+echo &quot;Close tap!&quot;
+sudo ifconfig $1 10.0.0.1 down
+</pre>
+
+<p>更改可执行属性:</p>
+
+<pre class="example">
+chmod a+x qemu-*.sh
+</pre>
+
+<p>更改qemu/mini2440/mini2440_start.sh:</p>
+
+<pre class="example">
+...
+cmd=&quot;$base/../arm-softmmu/qemu-system-arm \
+        -M mini2440 $* \
+        -serial stdio \
+        -kernel $base/uImage \
+        -mtdblock &quot;$name_nand&quot; \
+        -show-cursor \
+        -usb -usbdevice keyboard -usbdevice mouse \
+        -usbdevice tablet \
+        -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup.sh,downscript=./qemu-ifdown.sh \
+        -monitor telnet::5555,server,nowait&quot;
+...
+</pre>
+
+<p>注意其中网卡配置：</p>
+
+<pre class="example">
+        -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup.sh,downscript=./qemu-ifdown.sh \
+</pre>
+
+<p>如果运行该脚本出现如下错误：</p>
+
+<pre class="example">
+&quot;warning: could not open /dev/net/tun: no virtual network emulation&quot;
+</pre>
+
+<p>需要确保主机环境正确配置了tun/tap虚拟网络，参考：</p>
+
+<p><a href="http://www.linuxdiyf.com/viewarticle.php?id=40202">http://www.linuxdiyf.com/viewarticle.php?id=40202</a> 以及 <a href="http://mmmyddd.github.io/wiki/debian/minixonbochs.html">debian: minixonbochs</a></p>
+
+<p>并且确保用sudo root 权限运行脚本qemu/mini2440/mini2440_start.sh (或者chmod 777 /dev/net/tun)</p>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec25" id="sec25"></a>
+Try it out</h2>
+
+<p class="first">输入下面命令试一下，这时应该看到qemu启动后进入了u-boot界面下：</p>
+
+<pre class="example">
+cd qemu/mini2440
+sudo mini2440_start.sh
+</pre>
+
+<p>在uboot的提示符下输入：</p>
+
+<pre class="example">
+set bootargs noinitrd root=/dev/nfs rw nfsroot=10.0.0.1:/home/justin/path/to/nfs/fs_busybox ip=10.0.0.10:10.0.0.1::255.255.255.0 console=ttySAC0,115200
+bootm
+</pre>
+
+<p><span class="note">
+<strong>注意：</strong> 上述命令行中， 10.0.0.10是qemu eth0的初始ip地址，10.0.0.1是主机虚拟网卡的ip地址。(host-only mode)
+</span></p>
+
+<p>在主机terminal窗口看到如下输出证明成功：</p>
+
+<pre class="example">
+VFS: Mounted root (nfs filesystem) on device 0:13.
+Freeing init memory: 128K
+init started: BusyBox v1.7.0 (2008-01-22 10:04:09 EST)
+starting pid 741, tty '': '/etc/init.d/rcS'
+
+Please press Enter to activate this console.
+starting pid 746, tty '/dev/ttySAC0': '/bin/sh'
+# ls
+bin      etc      linuxrc  proc     sbin     tmp
+dev      lib      mnt      root     sys      usr
+#
+</pre>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:embed_busybox-linux-mini2440-qemu';
+    var disqus_title = "Justin's Wiki - MINI2440 Dev Board Emulated by QEMU";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/embed/busybox-linux-mini2440-qemu.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Fri Jan 11 13:55:53 2013
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/embed/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "embed_busybox-linux-mini2440-qemu");
+  //afterload();
+  fillsearch();
+</script>
+</html>

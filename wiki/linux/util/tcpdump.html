@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - tcpdump</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/linux/index.html">Linux Programming</a>
+&#187; 
+<a href="/wiki/linux/util/index.html">Linux Command Tools</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        tcpdump
+      </div>
+<pre class="example">
+justin@Justin:~$ sudo apt-cache show icmpush
+Package: icmpush
+Priority: extra
+Section: net
+Installed-Size: 66
+Maintainer: Ola Lundqvist &lt;opal@debian.org&gt;
+Architecture: i386
+Version: 2.2-6
+Depends: libc6 (&gt;= 2.3.1-1)
+Filename: pool/main/i/icmpush/icmpush_2.2-6_i386.deb
+Size: 28284
+MD5sum: 5ee62cc83169d30543554657ded3700c
+SHA1: 25b0c6fcb9fde381dc3a52c25b16fd77df477a58
+SHA256: 7bf215b1c80c50284f95aac39dfb514b0252767f30ed808eaec174c7708f8e50
+Description: ICMP packet builder
+ icmpush is a tool that builds ICMP packets fully customized
+ from command line.
+ .
+ It supports the following ICMP error types: Redirect, Source
+ Quench, Time Exceeded, Destination Unreach and Parameter
+ Problem.
+ .
+ And the following ICMP information types: Address Mask Request,
+ Timestamp, Information Request, Echo Request, Router Solicitation
+ and Router Advertisement.
+Tag: interface::commandline, role::program, scope::utility, use::editing
+</pre>
+
+
+
+<p>tcpdump -nnxX -i eth0 -w file.cap -C 20 -s 0</p>
+
+
+<ul>
+<li>C   Before  writing  a  raw  packet to  a  savefile,  check
+<blockquote>
+<p class="quoted">whether  the file  is currently  larger  than file_size
+and, if so,  close the current savefile and  open a new
+one.  Savefiles after the  first savefile will have the
+name specified  with the -w  flag, with a  number after
+it, starting at 1  and continuing upward.  The units of
+file_size are  millions of bytes  (1,000,000 bytes, not
+1,048,576 bytes).</p>
+</blockquote></li>
+</ul>
+
+
+<ul>
+<li>n   Don't  convert addresses  (i.e.,  host addresses,  port
+<blockquote>
+<p class="quoted">numbers, etc.) to names.</p>
+</blockquote></li>
+
+<li>N   Don't  print domain name  qualification of  host names.
+<blockquote>
+<p class="quoted">E.g.,  if you give  this flag  then tcpdump  will print
+``nic'' instead of ``nic.ddn.mil''.</p>
+</blockquote></li>
+
+<li>x   When parsing and printing,  in addition to printing the
+<blockquote>
+<p class="quoted">headers of  each packet, print the data  of each packet
+(minus its  link level header) in hex.   The smaller of
+the  entire packet  or snaplen  bytes will  be printed.
+Note that this is  the entire link-layer packet, so for
+link layers that pad (e.g. Ethernet), the padding bytes
+will also  be printed when  the higher layer  packet is
+shorter than the required padding.</p>
+</blockquote></li>
+
+<li>s   Snarf  snaplen bytes  of data  from each  packet rather
+<blockquote>
+<p class="quoted">than  the default  of 65535  bytes.   Packets truncated
+because  of a  limited  snapshot are  indicated in  the
+output with  ``[|proto]'', where  proto is the  name of
+the  protocol   level  at  which   the  truncation  has
+occurred.   Note  that  taking  larger  snapshots  both
+increases  the  amount  of  time it  takes  to  process
+packets  and,  effectively,  decreases  the  amount  of
+packet buffering.   This may cause packets  to be lost.
+You should  limit snaplen  to the smallest  number that
+will capture the protocol information you're interested
+in.  Setting  snaplen to  0 sets it  to the  default of
+65535,  for backwards  compatibility with  recent older
+versions of tcpdump.</p>
+</blockquote></li>
+
+<li>i   Listen on interface.   If unspecified, tcpdump searches
+<blockquote>
+<p class="quoted">the  system  interface list  for  the lowest  numbered,
+configured up interface (excluding loopback).  Ties are
+broken by choosing the earliest match.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">On  Linux  systems  with   2.2  or  later  kernels,  an
+interface argument  of ``any''  can be used  to capture
+packets from all interfaces.  Note that captures on the
+``any'' device will not be done in promiscuous mode.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">If  the -D flag  is supported,  an interface  number as
+printed  by that  flag  can be  used  as the  interface
+argument.</p>
+</blockquote></li>
+</ul>
+
+<pre class="example">
+justin@Justin:~$ sudo tcpdump -D
+[sudo] password for justin:
+1.eth0
+2.any (Pseudo-device that captures on all interfaces)
+3.lo
+</pre>
+
+<p>wirshark = ethereal</p>
+
+
+<pre class="example">
+tcmpdump -e
+</pre>
+
+<ul>
+<li>e   Print the link-level header on each dump line.</li>
+</ul>
+
+
+<pre class="example">
+justin@Justin:~$ sudo ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0c:29:7f:16:b5
+          inet addr:10.194.44.124  Bcast:10.194.45.255  Mask:255.255.254.0
+          inet6 addr: fe80::20c:29ff:fe7f:16b5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:467829 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:9256 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:49207035 (46.9 MiB)  TX bytes:1656561 (1.5 MiB)
+          Interrupt:18 Base address:0x1080
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:73 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:73 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:6405 (6.2 KiB)  TX bytes:6405 (6.2 KiB)
+</pre>
+
+
+
+<pre class="example">
+justin@Justin:~$ sudo tcpdump -e
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 65535 bytes
+
+15:10:32.069226 68:b5:99:f4:7b:39 (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92:
+CFM876-01.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+
+15:10:32.093327 00:0c:db:fe:f3:00 (oui Unknown) &gt; Broadcast, ethertype ARP (0x0806), length 60: Request who-has a18250-DevStation.ap.mot.com tell 10.194.45.252, length 46
+15:10:32.093353 00:0c:db:fe:f3:00 (oui Unknown) &gt; Broadcast, ethertype ARP (0x0806), length 60: Request who-has DTB687-02.ap.mot.com tell 10.194.45.252, length 46
+15:10:32.093361 00:0c:db:fe:f3:00 (oui Unknown) &gt; Broadcast, ethertype ARP (0x0806), length 60: Request who-has DKR836-03.ap.mot.com tell 10.194.45.252, length 46
+15:10:32.124948 00:0c:db:fb:71:00 (oui Unknown) &gt; 01:00:5e:7f:ff:fa (oui Unknown), ethertype IPv4 (0x0800), length 175: BGFX63-05.ap.mot.com.58295 &gt; 239.255.255.250.1900: UDP, length 133
+15:10:32.167481 00:13:72:2f:49:8d (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: kwgj48-01.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.240044 00:0c:db:fb:71:00 (oui Unknown) &gt; 01:00:5e:00:00:02 (oui Unknown), ethertype IPv4 (0x0800), length 62: 10.216.81.253.8888 &gt; 224.0.0.2.8888: UDP, length 20
+15:10:32.240202 2c:27:d7:19:f9:78 (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: PQF643-01.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.240236 00:0c:db:fe:f3:00 (oui Unknown) &gt; 68:b5:99:ec:70:1d (oui Unknown), ethertype IPv4 (0x0800), length 98: il93win03v.am.mot.com.netbios-ns &gt; KWGJ48-04.ap.mot.com.netbios-ns: NBT UDP PACKET(137): QUERY; NEGATIVE; RESPONSE; UNICAST
+15:10:32.240239 68:b5:99:ec:70:1d (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: KWGJ48-04.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.262886 00:1e:ec:b9:aa:98 (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: RGMJ36-02.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.282807 00:15:c5:4d:80:7e (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: pqkb76-01.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.346489 00:0c:29:7f:16:b5 (oui Unknown) &gt; 02:e0:52:b0:78:07 (oui Unknown), ethertype IPv4 (0x0800), length 86: null-000c297f16b5.ap.mot.com.43755 &gt; 8.8.8.8.domain: 51743+ PTR? 255.45.194.10.in-addr.arpa. (44)
+15:10:32.408853 b4:99:ba:e7:d7:4b (oui Unknown) &gt; 01:00:5e:7f:ff:fa (oui Unknown), ethertype IPv4 (0x0800), length 174: hdrp38-01.ap.mot.com.gpsd &gt; 239.255.255.250.1900: UDP, length 132
+15:10:32.408868 00:0c:db:fb:71:00 (oui Unknown) &gt; 01:00:5e:7f:ff:fa (oui Unknown), ethertype IPv4 (0x0800), length 174: hdrp38-01.ap.mot.com.gpsd &gt; 239.255.255.250.1900: UDP, length 132
+15:10:32.408871 b4:99:ba:e7:d7:2c (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 82: A22255-05.ap.mot.com.53227 &gt; 255.255.255.255.1947: UDP, length 40
+15:10:32.479626 00:0c:db:fb:71:00 (oui Unknown) &gt; 68:b5:99:ec:70:1d (oui Unknown), ethertype IPv4 (0x0800), length 1304: zch68lnxdroid47.ap.mot.com.5902 &gt; KWGJ48-04.ap.mot.com.61094: Flags [P.], seq 1869168054:1869169304, ack 3367002208, win 159, length 1250
+15:10:32.479636 68:b5:99:ec:70:1d (oui Unknown) &gt; 02:e0:52:b0:78:07 (oui Unknown), ethertype IPv4 (0x0800), length 64: KWGJ48-04.ap.mot.com.61094 &gt; zch68lnxdroid47.ap.mot.com.5902: Flags [P.], seq 1:11, ack 1250, win 16071, length 10
+15:10:32.479637 00:0c:db:fb:71:00 (oui Unknown) &gt; 68:b5:99:ec:70:1d (oui Unknown), ethertype IPv4 (0x0800), length 60: zch68lnxdroid47.ap.mot.com.5902 &gt; KWGJ48-04.ap.mot.com.61094: Flags [.], ack 11, win 159, length 0
+15:10:32.571904 00:1f:29:a2:6a:fc (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: PVTH68-03.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+15:10:32.604438 68:b5:99:ec:70:1d (oui Unknown) &gt; 02:e0:52:b0:78:07 (oui Unknown), ethertype ARP (0x0806), length 60: Request who-has gateway10-194-45.ap.mot.com (02:e0:52:b0:78:07 (oui Unknown)) tell KWGJ48-04.ap.mot.com, length 46
+15:10:32.604452 02:e0:52:b0:78:07 (oui Unknown) &gt; 68:b5:99:ec:70:1d (oui Unknown), ethertype ARP (0x0806), length 90: Reply gateway10-194-45.ap.mot.com is-at 02:e0:52:b0:78:07 (oui Unknown), length 76
+15:10:32.618259 00:13:72:2f:49:8d (oui Unknown) &gt; Broadcast, ethertype ARP (0x0806), length 60: Request who-has e12932-01.ap.mot.com tell kwgj48-01.ap.mot.com, length 46
+15:10:32.618279 00:18:8b:b4:a7:23 (oui Unknown) &gt; Broadcast, ethertype IPv4 (0x0800), length 92: pvnr46-02.ap.mot.com.netbios-ns &gt; 10.194.45.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+^C^C^C^C^C^C15:10:32.631390 00:0c:db:fb:71:00 (oui Unknown) &gt; Broadcast, ethertype ARP (0x0806), length 60: Request who-has dcg467-01.ap.mot.com tell 10.194.45.253, length 46
+
+25 packets captured
+7749 packets received by filter
+7563 packets dropped by kernel
+</pre>
+
+
+<p>icmp</p>
+
+
+<p>ping localhost</p>
+
+<pre class="example">
+justin@Justin:~$ sudo tcpdump -i lo -nnvXSs 0 icmp
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 65535 bytes
+16:04:28.218360 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo request, id 64627, seq 1, length 64
+        0x0000:  4500 0054 0000 4000 4001 3ca7 7f00 0001  E..T..@.@.&lt;.....
+        0x0010:  7f00 0001 0800 d235 fc73 0001 0cae 5d4f  .......5.s....]O
+        0x0020:  d154 0300 0809 0a0b 0c0d 0e0f 1011 1213  .T..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+16:04:28.241460 IP (tos 0x0, ttl 64, id 37379, offset 0, flags [none], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo reply, id 64627, seq 1, length 64
+        0x0000:  4500 0054 9203 0000 4001 eaa3 7f00 0001  E..T....@.......
+        0x0010:  7f00 0001 0000 da35 fc73 0001 0cae 5d4f  .......5.s....]O
+        0x0020:  d154 0300 0809 0a0b 0c0d 0e0f 1011 1213  .T..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+16:04:29.220569 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo request, id 64627, seq 2, length 64
+        0x0000:  4500 0054 0000 4000 4001 3ca7 7f00 0001  E..T..@.@.&lt;.....
+        0x0010:  7f00 0001 0800 3e2c fc73 0002 0dae 5d4f  ......&gt;,.s....]O
+        0x0020:  645d 0300 0809 0a0b 0c0d 0e0f 1011 1213  d]..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+16:04:29.220618 IP (tos 0x0, ttl 64, id 37380, offset 0, flags [none], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo reply, id 64627, seq 2, length 64
+        0x0000:  4500 0054 9204 0000 4001 eaa2 7f00 0001  E..T....@.......
+        0x0010:  7f00 0001 0000 462c fc73 0002 0dae 5d4f  ......F,.s....]O
+        0x0020:  645d 0300 0809 0a0b 0c0d 0e0f 1011 1213  d]..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+16:04:30.221446 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo request, id 64627, seq 3, length 64
+        0x0000:  4500 0054 0000 4000 4001 3ca7 7f00 0001  E..T..@.@.&lt;.....
+        0x0010:  7f00 0001 0800 bf27 fc73 0003 0eae 5d4f  .......'.s....]O
+        0x0020:  e260 0300 0809 0a0b 0c0d 0e0f 1011 1213  .`..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+16:04:30.221491 IP (tos 0x0, ttl 64, id 37381, offset 0, flags [none], proto ICMP (1), length 84)
+    127.0.0.1 &gt; 127.0.0.1: ICMP echo reply, id 64627, seq 3, length 64
+        0x0000:  4500 0054 9205 0000 4001 eaa1 7f00 0001  E..T....@.......
+        0x0010:  7f00 0001 0000 c727 fc73 0003 0eae 5d4f  .......'.s....]O
+        0x0020:  e260 0300 0809 0a0b 0c0d 0e0f 1011 1213  .`..............
+        0x0030:  1415 1617 1819 1a1b 1c1d 1e1f 2021 2223  .............!&quot;#
+        0x0040:  2425 2627 2829 2a2b 2c2d 2e2f 3031 3233  $%&amp;'()*+,-./0123
+        0x0050:  3435 3637                                4567
+</pre>
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:linux_util_tcpdump';
+    var disqus_title = "Justin's Wiki - tcpdump";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/linux/util/tcpdump.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar. 12, 2012
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/linux/util/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "linux_util_tcpdump");
+  //afterload();
+  fillsearch();
+</script>
+</html>

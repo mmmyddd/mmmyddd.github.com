@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Route</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/linux/index.html">Linux Programming</a>
+&#187; 
+<a href="/wiki/linux/util/index.html">Linux Command Tools</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Route
+      </div>
+<p>netstat -r</p>
+
+
+<p>or</p>
+
+<p>sudo route</p>
+
+<pre class="example">
+justin@Justin:~$ sudo route
+[sudo] password for justin:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.0.0     *               255.255.255.0   U     1      0        0 eth0
+default         192.168.0.1     0.0.0.0         UG    0      0        0 eth0
+</pre>
+
+
+<p><strong>routing table</strong></p>
+
+<p>Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.0.0     *               255.255.255.0   U     1      0        0 eth0
+default         192.168.0.1     0.0.0.0         UG    0      0        0 eth0</p>
+
+
+<blockquote>
+<p class="quoted">Metric
+The  'distance'  to  the  target  (usually  counted  in
+hops). It  is not  used by recent  kernels, but  may be
+needed by routing daemons.
+Flags
+Possible flags include
+U (route is up)
+H (target is a host)
+G (use gateway)
+R (reinstate route for dynamic routing)
+D (dynamically installed by daemon or redirect)
+M (modified from routing daemon or redirect)
+A (installed by addrconf)
+C (cache entry)
+!  (reject route)</p>
+</blockquote>
+
+
+<pre class="example">
+justin@Justin:~/doc/network$ traceroute www.sohu.com
+traceroute to www.sohu.com (183.60.194.10), 30 hops max, 60 byte packets
+ 1  192.168.0.1 (192.168.0.1)  92.057 ms  91.494 ms  91.370 ms
+ 2  114.240.80.1 (114.240.80.1)  91.260 ms  91.157 ms  126.372 ms
+ 3  61.148.44.1 (61.148.44.1)  126.150 ms  32.863 ms  34.669 ms
+ 4  61.148.154.241 (61.148.154.241)  35.818 ms * *
+ 5  61.148.154.17 (61.148.154.17)  38.797 ms *  62.849 ms
+ 6  * * *
+ 7  219.158.11.66 (219.158.11.66)  104.166 ms  116.188 ms *
+ 8  202.97.15.29 (202.97.15.29)  136.969 ms  179.630 ms *
+ 9  202.97.46.21 (202.97.46.21)  179.360 ms  179.217 ms  179.082 ms
+10  113.98.166.1 (113.98.166.1)  178.982 ms *  176.783 ms
+11  * * *
+12  113.98.159.38 (113.98.159.38)  198.758 ms  198.650 ms  198.542 ms
+13  * * *
+14  59.39.57.234 (59.39.57.234)  142.275 ms * *
+15  183.60.194.122 (183.60.194.122)  144.580 ms *  148.963 ms
+16  183.60.194.10 (183.60.194.10)  154.218 ms * *
+</pre>
+
+<pre class="example">
+justin@Justin:~/doc/network$ sudo ifconfig -a
+[sudo] password for justin:
+eth0      Link encap:Ethernet  HWaddr 00:0c:29:7f:16:b5
+          inet addr:192.168.0.170  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fe7f:16b5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:8095 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7537 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:7967502 (7.5 MiB)  TX bytes:1031985 (1007.7 KiB)
+          Interrupt:18 Base address:0x10a4
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:560 (560.0 B)  TX bytes:560 (560.0 B)
+
+pan0      Link encap:Ethernet  HWaddr de:e4:48:33:6f:bb
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+</pre>
+
+<pre class="example">
+justin@Justin:~/doc/network$ netstat -in
+Kernel Interface table
+Iface   MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0       1500 0      8142      0      0 0          7576      0      0      0 BMRU
+lo        16436 0         8      0      0 0             8      0      0      0 LRU
+</pre>
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:linux_util_route';
+    var disqus_title = "Justin's Wiki - Route";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/linux/util/route.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar. 10, 2012
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/linux/util/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "linux_util_route");
+  //afterload();
+  fillsearch();
+</script>
+</html>

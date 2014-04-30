@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Java开发环境配置</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/emacs/index.html">EMACS环境</a>
+&#187; 
+<a href="/wiki/emacs/java/index.html">Java开发环境</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Java开发环境配置
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 JDE</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Edit Jave Source Code</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+JDE</h2>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Install JDE</h4>
+
+<p class="first">JDEE开发环境 － Java Development Environment for Emac的简称:</p>
+
+<p>首先，在Debian下安装JDE</p>
+
+<pre class="example">
+sudo apt-get install jde
+</pre>
+
+<p>在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中添加一行：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .constant {
+        /* font-lock-constant-face */
+        color: #98fb98;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+    --></style>(<span class="keyword">require</span> '<span class="constant">jde</span>)
+</pre>
+
+<p>其他系统安装可以参考：<a href="http://jdee.sunsite.dk/install.html">JDEE Install Guide</a></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Register JDKs</h4>
+
+<p class="first">首先要建立本机器上可用的JRE/JDE的列表：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+    --></style>(setq jde-jdk-registry
+      '(
+        (<span class="string">"1.6.0.11"</span> . <span class="string">"/usr/local/jdk1.6.0_11"</span>)
+        (<span class="string">"1.5.0.17"</span> . <span class="string">"/usr/local/jdk1.5.0_17"</span>)))
+</pre>
+
+<p>然后选择一个上述列表中已安装的JDK版本，作为全体项目的默认版本：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+    --></style>(setq jde-jdk '(<span class="string">"1.5.0.17"</span>))
+</pre>
+
+<p><strong>Note:</strong><br></p>
+
+<p><span class="note">
+1. <code>jde-jdk</code> 中指定的版本必需在 <code>jde-jdk-registry</code> 中声明<br>
+2. 如果该变量不设置，则默认为 <code>nil</code>, 这时候JDE会寻找系统指定的版本或路径。
+系统变量的列表在变量 <code>jde-java-environment-variable</code> 中指定，默认是
+<code>(&quot;JAVA_VERSION&quot; &quot;JAVA_HOME&quot;)</code><br>
+3. 如果上述系统变量不存在，则JDE将 <code>jde-jdk</code> 列表中第一个版本的JDK作为默认版本。
+4. 对于单个的项目，可以在该项目的配置文件中设置其使用的JDK版本。
+</span></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Java Document Path</h4>
+
+<p class="first">可以显式指定Java Document的路径：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+    --></style>(setq jde-jdk-doc-url <span class="string">"file:///usr/local/jdk1.6.0_11/docs/index.html"</span>)
+</pre>
+
+<p>如果没有显示指定，则系统自动在当前的JDK路径下的 <code>docs</code> 目录下寻找。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Edit Jave Source Code</h3>
+
+<p class="first">编辑的时候经常会需要用到缩写词：</p>
+
+<ul>
+<li>关键字（break、continue）</li>
+<li>控制块（if－else）模版</li>
+</ul>
+
+<p>如果需要打开缩写词和模版的功能，在<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>或者项目的配置文件中添加一行：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq jde-enable-abbrev-mode t)
+</pre>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Keyword Abbreviation Mode</h4>
+
+<p class="first">关键字的缩写词汇表在 <code>jde-mode-abbreviations</code> 给出，
+可以在配置文件中修改该列表：</p>
+
+<pre class="example">
+((&quot;ab&quot; . &quot;abstract&quot;)
+ (&quot;bo&quot; . &quot;boolean&quot;)
+ (&quot;br&quot; . &quot;break&quot;)
+ (&quot;by&quot; . &quot;byte&quot;)
+ (&quot;byv&quot; . &quot;byvalue&quot;)
+ (&quot;cas&quot; . &quot;cast&quot;)
+ (&quot;ca&quot; . &quot;catch&quot;)
+ (&quot;ch&quot; . &quot;char&quot;)
+ (&quot;cl&quot; . &quot;class&quot;)
+ (&quot;co&quot; . &quot;const&quot;)
+ (&quot;con&quot; . &quot;continue&quot;)
+ (&quot;de&quot; . &quot;default&quot;)
+ (&quot;dou&quot; . &quot;double&quot;)
+ (&quot;el&quot; . &quot;else&quot;)
+ (&quot;ex&quot; . &quot;extends&quot;)
+ (&quot;fa&quot; . &quot;false&quot;)
+ (&quot;fi&quot; . &quot;final&quot;)
+ (&quot;fin&quot; . &quot;finally&quot;)
+ (&quot;fl&quot; . &quot;float&quot;)
+ (&quot;fo&quot; . &quot;for&quot;)
+ (&quot;fu&quot; . &quot;future&quot;)
+ (&quot;ge&quot; . &quot;generic&quot;)
+ (&quot;go&quot; . &quot;goto&quot;)
+ (&quot;impl&quot; . &quot;implements&quot;)
+ (&quot;impo&quot; . &quot;import&quot;)
+ (&quot;ins&quot; . &quot;instanceof&quot;)
+ (&quot;in&quot; . &quot;int&quot;)
+ (&quot;inte&quot; . &quot;interface&quot;)
+ (&quot;lo&quot; . &quot;long&quot;)
+ (&quot;na&quot; . &quot;native&quot;)
+ (&quot;ne&quot; . &quot;new&quot;)
+ (&quot;nu&quot; . &quot;null&quot;)
+ (&quot;pa&quot; . &quot;package&quot;)
+ (&quot;pri&quot; . &quot;private&quot;)
+ (&quot;pro&quot; . &quot;protected&quot;)
+ (&quot;pu&quot; . &quot;public&quot;)
+ (&quot;re&quot; . &quot;return&quot;)
+ (&quot;sh&quot; . &quot;short&quot;)
+ (&quot;st&quot; . &quot;static&quot;)
+ (&quot;su&quot; . &quot;super&quot;)
+ (&quot;sw&quot; . &quot;switch&quot;)
+ (&quot;sy&quot; . &quot;synchronized&quot;)
+ (&quot;th&quot; . &quot;this&quot;)
+ (&quot;thr&quot; . &quot;throw&quot;)
+ (&quot;thro&quot; . &quot;throws&quot;)
+ (&quot;tra&quot; . &quot;transient&quot;)
+ (&quot;tr&quot; . &quot;true&quot;)
+ (&quot;vo&quot; . &quot;void&quot;)
+ (&quot;vol&quot; . &quot;volatile&quot;)
+ (&quot;wh&quot; . &quot;while&quot;))
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>控制块的模版</h4>
+
+<p class="first">该模版在</p>
+
+<p>┌──────────────────────────────────────────────┬────────────┐
+│                  Statement                   │Abbreviation│
+├──────────────────────────────────────────────┼────────────┤
+│if-then                                       │if          │
+├──────────────────────────────────────────────┼────────────┤
+│else                                          │else        │
+├──────────────────────────────────────────────┼────────────┤
+│if-then-else                                  │ife         │
+├──────────────────────────────────────────────┼────────────┤
+│else-if                                       │eif         │
+├──────────────────────────────────────────────┼────────────┤
+│while                                         │while       │
+├──────────────────────────────────────────────┼────────────┤
+│for                                           │for         │
+├──────────────────────────────────────────────┼────────────┤
+│for (int I=0;I&lt;UL;I++)                        │fori        │
+├──────────────────────────────────────────────┼────────────┤
+│for (Iterator i = c.iterator(); i.hasNext();) │foriter     │
+├──────────────────────────────────────────────┼────────────┤
+│main method                                   │main        │
+├──────────────────────────────────────────────┼────────────┤
+│switch                                        │switch      │
+├──────────────────────────────────────────────┼────────────┤
+│case                                          │case        │
+├──────────────────────────────────────────────┼────────────┤
+│try                                           │try         │
+├──────────────────────────────────────────────┼────────────┤
+│catch                                         │catch       │
+├──────────────────────────────────────────────┼────────────┤
+│try finally                                   │tryf        │
+├──────────────────────────────────────────────┼────────────┤
+│finally                                       │finally     │
+└──────────────────────────────────────────────┴────────────┘</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Select a JDK</h4>
+
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:emacs_java_basic';
+    var disqus_title = "Justin's Wiki - Java开发环境配置";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/emacs/java/basic.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar.  4, 2009
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/emacs/java/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "emacs_java_basic");
+  //afterload();
+  fillsearch();
+</script>
+</html>

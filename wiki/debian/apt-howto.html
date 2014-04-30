@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - apt-howto</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/debian/index.html">Debian/GNU操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        apt-howto
+      </div>
+<p><a name="desc　Debian生存手册系列" id="desc　Debian生存手册系列"></a>
+<a name="title" id="title"></a>
+APT-HOWTO</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Debian Policy Manual</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 安装</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 简介</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec4">2 APT HOWTO</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec5">2.1 更新列表管理</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec6">3 APT-GET命令</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">3.1 apt-get 帮助信息</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">3.2 安装软件包 apt-get install</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">3.3 删除软件包 apt-get remove</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec10">3.4 Apt-get update</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec11">3.5 apt-get</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Debian Policy Manual</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+安装</h3>
+
+<pre class="example">
+sudo apt-get install debian-policy
+</pre>
+
+
+<p>See -  <strong>Debian Policy Manual:</strong>
+<code>/usr/share/doc/debian-policy/policy.html/index.html</code>
+(use dwww to see the manual)</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+简介</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>软件包的命名</h4>
+
+<p class="first">1. Package Name:</p>
+
+<blockquote>
+<p class="quoted">deb包 解决dependency hell：
+<em>package-name</em>_*version*.deb</p>
+</blockquote>
+
+
+<p>2. Priority:</p>
+
+
+<ul>
+<li>reqired</li>
+<li>important</li>
+<li>standard</li>
+<li>optional</li>
+<li>extra</li>
+</ul>
+
+<p>3. Dependency:</p>
+
+<ul>
+<li>pre-depends</li>
+<li>depends</li>
+<li>recommends</li>
+<li>suggests</li>
+<li>enhances</li>
+<li>conflicts</li>
+<li>provide</li>
+<li>replace</li>
+<li>breaks</li>
+</ul>
+
+<p class="verse">
+Package: libc6 (Installed)<br>
+Priority: required<br>
+Section: libs<br>
+Installed-Size: 9356<br>
+Maintainer: GNU Libc Maintainers &lt;<a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a>-glibc@lists.<a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a>.org&gt;<br>
+Architecture: i386<br>
+Source: eglibc<br>
+Version: 2.11.2-7<br>
+Provides: glibc-2.11-1<br>
+Depends: libc-bin (= 2.11.2-7), libgcc1<br>
+Recommends: libc6-i686<br>
+</p>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td>&gt; Suggests: glibc-doc, debconf</td>
+      <td>debconf-2.0, locales</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="verse">
+Conflicts: prelink (&lt;= 0.0.20090311-1), tzdata (&lt;&lt; 2007k-1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tzdata-etch<br>
+Breaks: locales (&lt;&lt; 2.11), locales-all (&lt;&lt; 2.11), nscd (&lt;&lt; 2.11)<br>
+Filename: pool/main/e/eglibc/libc6_2.11.2-7_i386.deb<br>
+Size: 3880868<br>
+MD5sum: c48fd2854fc62125824267d086600793<br>
+SHA1: b437c121f646c4f0b6060ee1d266387ccf3abb12<br>
+SHA256: dc04b264ed43c368f2a3b7515ac5879ae44bac9756b7687a05987908ea0e3996<br>
+Description: Embedded GNU C Library: Shared libraries<br>
+&nbsp;&nbsp;Contains the standard libraries that are used by nearly all programs on<br>
+&nbsp;&nbsp;the system. This package includes shared versions of the standard C library<br>
+&nbsp;&nbsp;and the standard math library, as well as many others.<br>
+Homepage: <a href="http://www.eglibc.org">http://www.eglibc.org</a><br>
+Tag: devel::lang:c, devel::library, implemented-in::c, protocol::ipv6, role::shared-lib, suite::gnu<br>
+</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Debian package</h4>
+
+<p class="first">dpkg-deb -x package-name temp-folder
+dpkg-dep -z ...</p>
+
+
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+APT HOWTO</h2>
+
+<p class="first">Debian中的包管理机制是前端是用apt系列软件来管理的</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+更新列表管理</h3>
+
+<p class="first">配置文件：/etc/apt/sources.list</p>
+
+<p>更新文件中列出了可以使用的更新站点的列表，以下是我的配置文件的范例：
+<hr></p>
+
+<pre class="example">
+# deb cdrom:[Debian GNU/Linux 4.0 r3 _Etch_ - Official i386 NETINST Binary-1 20080218-14:15]/ etch contrib main
+# deb cdrom:[Debian GNU/Linux 4.0 r3 _Etch_ - Official i386 NETINST Binary-1 20080218-14:15]/ etch contrib main
+
+#deb http://debian.cn99.com/debian/ testing main
+#deb-src http://debian.cn99.com/debian/ testing main
+#deb http://debian.geekbone.com/debian testing main contrib
+#deb-src http://debian.geekbone.com/debian testing main contrib
+deb http://ftp.tw.debian.org/debian testing main contrib
+deb-src http://ftp.tw.debian.org/debian testing main contrib
+
+deb http://security.debian.org/ etch/updates main contrib
+deb-src http://security.debian.org/ etch/updates main contrib
+</pre>
+
+<hr>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+APT-GET命令</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+apt-get 帮助信息</h3>
+
+<p class="verse">
+# <strong>apt-get -h</strong><br>
+</p>
+
+
+<p>以下是我用的版本的apt-get的帮助信息，其中常用的命令被高亮显示：</p>
+
+<p class="verse">
+apt 0.7.19 for i386 编译于 Nov 25 2008 08:49:49<br>
+用法：  apt-get [选项] 命令<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apt-get [选项] install|remove 软件包1 [软件包2 ...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apt-get [选项] source 软件包1 [软件包2 ...]<br>
+<br>
+apt-get 提供了一个用于下载和安装软件包的简易命令行界面最常用命令<br>
+是 update 和 install。<br>
+<br>
+命令：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>update - 取回更新的软件包列表信息</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>upgrade - 进行一次升级</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>install - 安装新的软件包(注：包名是 libc6 而非 libc6.deb)</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;remove - 卸载软件包<br>
+&nbsp;&nbsp;&nbsp;&nbsp;autoremove - 卸载所有自动安装且不再使用的软件包<br>
+&nbsp;&nbsp;&nbsp;&nbsp;purge - 卸载并清除软件包的配置<br>
+&nbsp;&nbsp;&nbsp;&nbsp;source - 下载源码包文件<br>
+&nbsp;&nbsp;&nbsp;&nbsp;build-dep - 为源码包配置所需的构建依赖关系<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>dist-upgrade - 发布版升级，见 apt-get(8)</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;dselect-upgrade - 根据 dselect 的选择来进行升级<br>
+&nbsp;&nbsp;&nbsp;&nbsp;clean - 删除所有已下载的包文件<br>
+&nbsp;&nbsp;&nbsp;&nbsp;autoclean - 删除老版本的已下载的包文件<br>
+&nbsp;&nbsp;&nbsp;&nbsp;check - 核对以确认系统的依赖关系的完整性<br>
+<br>
+选项：<br>
+&nbsp;&nbsp;<strong>-h  本帮助文档。</strong><br>
+&nbsp;&nbsp;-q  让输出可作为日志 - 不显示进度<br>
+&nbsp;&nbsp;-qq 除了错误外，什么都不输出<br>
+&nbsp;&nbsp;<strong>-d  仅仅下载 - 【不】安装或解开包文件</strong><br>
+&nbsp;&nbsp;<strong>-s  不作实际操作。只是依次模拟执行命令</strong><br>
+&nbsp;&nbsp;-y  对所有询问都回答是(Yes)，同时不作任何提示<br>
+&nbsp;&nbsp;-f  当出现破损的依赖关系时，程序将试图修正系统<br>
+&nbsp;&nbsp;<strong>-m  当有包文件无法找到时，程序仍试图继续执行</strong><br>
+&nbsp;&nbsp;<strong>-u  显示已升级的软件包列表</strong><br>
+&nbsp;&nbsp;-b  在下载完源码包后，编译生成相应的软件包<br>
+&nbsp;&nbsp;-V  显示详尽的版本号<br>
+&nbsp;&nbsp;-c=? 读取指定配置文件<br>
+&nbsp;&nbsp;-o=? 设置任意指定的配置选项，例如 -o dir::cache=/tmp<br>
+请查阅 apt-get(8)、sources.list(5) 和 apt.conf(5)的参考手册<br>
+以获取更多信息和选项。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本 APT 有着超级牛力。<br>
+</p>
+
+
+<p>当然，使用man、info命令也可以查询各种命令的</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+安装软件包 apt-get install</h3>
+
+<p class="first">安装指定软件包，以及所依赖的软件包：</p>
+
+<p class="verse">
+# <strong>apt-get install</strong> <u>package-name</u><br>
+</p>
+
+<p>删除指定软件包：</p>
+
+<p class="verse">
+# <strong>apt-get install</strong> <u>package-name</u> <strong><em>-</em></strong><br>
+</p>
+
+<p>包文件从网络上下载到本地 /var/cache/apt/archives
+目录，稍后再安装。</p>
+
+<p class="verse">
+acpid_1.0.8-1_i386.deb<br>
+apache2_2.2.9-10+lenny1_all.deb<br>
+apache2.2-common_2.2.9-10+lenny1_i386.deb<br>
+apache2-mpm-worker_2.2.9-10+lenny1_i386.deb<br>
+apache2-threaded-dev_2.2.9-10+lenny1_i386.deb<br>
+apache2-utils_2.2.9-10+lenny1_i386.deb<br>
+app-install-data_2008.11.27_all.deb<br>
+apt_0.7.19+b1_i386.deb<br>
+aptitude_0.4.11.11-1~lenny1_i386.deb<br>
+apt-utils_0.7.19+b1_i386.deb<br>
+</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+删除软件包 apt-get remove</h3>
+
+<p class="verse">
+# <strong>apt-get remove</strong> <u>package-name</u><br>
+</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+Apt-get update</h3>
+
+<p class="first">获取最新版本的软件列表,更新软件包依赖库。
+&lt;src &gt;
+sudo apt-get update
+&lt;/src&gt;</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+apt-get</h3>
+
+
+<p>apt-get用来更新</p>
+
+
+
+<p>apt-file</p>
+
+<p>apt-find</p>
+
+
+
+<p>apt-g fsaf</p>
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:debian_apt-howto';
+    var disqus_title = "Justin's Wiki - apt-howto";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/debian/apt-howto.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated 2008-12-26
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/debian/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "debian_apt-howto");
+  //afterload();
+  fillsearch();
+</script>
+</html>

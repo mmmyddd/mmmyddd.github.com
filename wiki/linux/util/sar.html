@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - sar</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/linux/index.html">Linux Programming</a>
+&#187; 
+<a href="/wiki/linux/util/index.html">Linux Command Tools</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        sar
+      </div>
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>To Enable SAR</h3>
+
+<p class="first">1.
+/etc/default/sysstat</p>
+
+<p>ENABLED=&quot;true&quot;</p>
+
+<p>2. /etc/init.d/sysstat start</p>
+
+<p>2.14. The sar command complains with the following message:
+Requested activities not available in file [...]</p>
+
+<p>This error message means that you are trying to extract
+non-existent activities from the data file. Usually sadc
+reads all the available activities from the system and
+stores them in the data file. However, to prevent data files
+from taking too much space on disk, some activities must be
+explicitly set on the command line to be read by sadc.</p>
+
+<p>To tell sadc that an optional activity should be collected,
+use switch -S followed by the keyword corresponding to that
+activity</p>
+
+<p><strong><em>(see sadc(8) manual page).</em></strong></p>
+
+<p>/etc/default/sysstat</p>
+
+<pre class="example">
+     -S { INT | DISK | SNMP | IPV6 | POWER | XDISK | ALL | XALL }
+          Specify which  optional activities should  be collected
+          by sadc.  Some activities  are optional to prevent data
+          files  from   growing  too  large.    The  INT  keyword
+          indicates  that  sadc should  collect  data for  system
+          interrupts.   The  DISK  keyword  indicates  that  sadc
+          should collect  data for  block devices.  The  SNMP and
+          IPV6 keywords indicate  respectively that SNMP and IPv6
+          statistics  should  be collected  by  sadc.  The  POWER
+          keyword  indicates  that   sadc  should  collect  power
+          management statistics.   The ALL keyword  is equivalent
+          to specifying all the  keywords above and therefore all
+          previous activities are collected.
+
+          The XDISK keyword  is an extension to the  DISK one and
+          indicates that partition statistics should be collected
+          by  sadc in  addition to  disk statistics.  This option
+          works  only with  kernels 2.6.25  and later.   The XALL
+          keyword  is equivalent to  specifying all  the keywords
+          above (including keyword  extensions) and therefore all
+          possible activities are collected.
+
+          Important  note:  The  activities  (including  optional
+          ones) saved in an existing data file prevail over those
+          selected with  option -S.  As  a consequence, appending
+          data to an existing data  file will result in option -S
+          being ignored.
+
+</pre>
+
+
+
+<p>As of this writing, optional activities are: interrupts,
+disks, SNMP, IPv6 and power management statistics.</p>
+
+
+<p>IMPORTANT NOTES: 1) The list of activities that are saved in
+a file can no longer be modified once the file has been
+created. So it is important to use the proper options the
+first time sadc is called (whether via a crontab, a script
+like sa1(8) or even the script used to insert a RESTART
+message when the machine is rebooted).  2) With versions of
+sysstat older than 8.1.3, multiple switches (eg. -I and -d)
+had to be used with sadc to indicate which activities had to
+be collected. Other activities could not be saved into a
+file at all even if you specified the relevant options on
+the command line. Process statistics (-x and -X options in
+old sysstat versions) were such activities.  3) If the sar
+command complains with the error message: &quot;Requested
+activities not available&quot; (without mentioning &quot;in file&quot;), it
+means that you are trying to display activities that the
+kernel itself is unable to provide (please see question 2.18
+below).</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>options</h3>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Common Options</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -V: show version</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -V
+sysstat 版本 9.0.6.1
+(C) Sebastien Godard (sysstat &lt;at&gt; orange.fr)
+</pre>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar [interverl [count]]</h5>
+
+<p>interval: 采样频率</p>
+
+
+<blockquote>
+<p class="quoted">两种模式：</p>
+</blockquote>
+
+<ul>
+<li>sar [options]: 读sysstat daemon 产生的log信息（默认10分钟的采样间隔，有些数据没有产生，需要配置sysstat）</li>
+<li>sar [options] [interval [count]]: 实时产生数据, 总是能产生数据</li>
+</ul>
+
+<pre class="example">
+justin@Justin:~$ sar 3
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时16分55秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+14时16分58秒     all      2.68      0.00      5.03      2.01      0.00     90.27
+14时17分01秒     all      1.99      0.00      2.99      0.00      0.00     95.02
+14时17分04秒     all      4.41      0.00      8.47      1.02      0.00     86.10
+14时17分07秒     all      1.34      0.00      4.03      0.00      0.00     94.63
+</pre>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-o: output in binary</h5>
+
+<ul>
+<li>o [ filename ]
+<blockquote>
+<p class="quoted">Save  the readings  in the  file in  binary  form. Each
+reading is  in a separate record. The  default value of
+the filename parameter is  the current daily data file,
+the  /var/log/sysstat/sadd  file.   The  -o  option  is
+exclusive  of the  -f option.   All the  data available
+from the  kernel are  saved in the  file (in  fact, sar
+calls  its  data collector  sadc  with  the option  &quot;-S
+ALL&quot;. See sadc(8) manual page).</p>
+</blockquote></li>
+</ul>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-f: extract from file</h5>
+
+<ul>
+<li>f [ filename ]
+<blockquote>
+<p class="quoted">Extract  records  from  filename  (created  by  the  -o
+filename  flag).  The  default  value of  the  filename
+parameter   is  the  current   daily  data   file,  the
+若 %iowait 的值过高，表示硬盘存在I/O瓶颈
+若 %idle 的值高但系统响应慢时，有可能是 CPU 等待分配内存，此时应加大内存容量
+若 %idle 的值持续低于 10，则系统的 CPU 处理能力相对较低，表明系统中最需要解决的资源是 CPU。
+/var/log/sysstat/sadd file. The  -f option is exclusive
+of the -o option.</p>
+</blockquote></li>
+</ul>
+
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-h   Display a short help message then exit.</h5>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-e [ hh:mm:ss ] / -s [ hh:mm:ss ]</h5>
+
+<center>
+<p>Set the  ending time of the report.  The default ending
+time  is  18:00:00.  Hours  must be  given  in  24-hour
+format.   This option can  be used  when data  are read
+from or written to a file (options -f or -o ).</p>
+</center>
+
+<p>查看各个时间段的日志</p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-c: comment included</h5>
+
+<ul>
+<li>C   When  reading data  from a  file, tell  sar  to display
+<blockquote>
+<p class="quoted">comments that have been inserted by sadc.</p>
+</blockquote></li>
+</ul>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>汇总输出：</h4>
+
+<p class="first">-A      等价于 -bBcdqrRuvwWy -I SUM -I XALL -n ALL -P ALL</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Power</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-m Power management</h5>
+
+<ul>
+<li>m   Report  power management  statistics.  Note  that these
+<blockquote>
+<p class="quoted">statistics  depend  on sadc  option  &quot;-S  POWER&quot; to  be
+collected.  The following value is displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">MHz
+CPU clock frequency in MHz.</p>
+</blockquote></li>
+</ul>
+
+<pre class="example">
+justin@Justin:~$ sar -m 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时23分28秒     CPU       MHz
+15时23分31秒     all   2394.49
+15时23分34秒     all   2394.49
+平均时间:     all   2394.49
+</pre>
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>CPU</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -u</h5>
+
+<p>查看系统cpu整体负载情况</p>
+
+<pre class="example">
+justin@Justin:~$ sar -u 3
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时17分52秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+14时17分55秒     all      1.68      0.00      4.03      0.00      0.00     94.30
+14时17分58秒     all      1.99      0.00      2.66      0.00      0.00     95.35
+14时18分01秒     all      2.33      0.00      5.00      0.00      0.00     92.67
+14时18分04秒     all      5.35      0.00      7.02      0.00      0.00     87.63
+</pre>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Metrics:</h5>
+
+<blockquote>
+<p class="quoted">若 %iowait 的值过高，表示硬盘存在I/O瓶颈
+若 %idle 的值高但系统响应慢时，有可能是 CPU 等待分配内存，此时应加大内存容量
+若 %idle 的值持续低于 10，则系统的 CPU 处理能力相对较低，表明系统中最需要解决的资源是 CPU。</p>
+</blockquote>
+
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -P</h5>
+
+<ul>
+<li>P { cpu [,...] | ALL }
+<blockquote>
+<p class="quoted">Report  per-processor   statistics  for  the  specified
+processor  or processors.   Specifying the  ALL keyword
+reports statistics  for each individual  processor, and
+globally for all processors.   Note that processor 0 is
+the first processor.</p>
+</blockquote></li>
+</ul>
+
+<pre class="example">
+justin@Justin:~$ sar -P 0 3
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时20分44秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+14时20分47秒       0      2.00      0.00      7.33      0.00      0.00     90.67
+14时20分50秒       0      2.68      0.00      5.69      0.00      0.00     91.64
+</pre>
+
+
+
+<p>如果一个单线程应用，反应迟缓，但是系统整体的cpu使用率不高，可以针对单个CPU查看信息： <code>-P 0</code></p>
+
+<p>cpu的计数从零开始。</p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -q 运行队列</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -q 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时47分59秒   runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15
+14时48分02秒         1       292      0.00      0.03      0.06
+14时48分05秒         0       292      0.00      0.03      0.06
+平均时间:         0       292      0.00      0.03      0.06
+</pre>
+
+<ul>
+<li>q   Report  queue length and  load averages.  The following
+<blockquote>
+<p class="quoted">values are displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">runq-sz
+Run queue length (number  of tasks waiting for run
+time).  <strong>running tasks</strong></p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">plist-sz
+Number of tasks in the task list. <strong>number of task</strong></p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">ldavg-1
+System load average for the last minute.  The load
+average  is calculated  as the  average  number of
+runnable  or  running  tasks  (R state),  and  the
+number of tasks in uninterruptible sleep (D state)
+over the specified interval.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">ldavg-5
+System load average for the past 5 minutes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">ldavg-15
+System load average for the past 15 minutes.</p>
+</blockquote></li>
+</ul>
+
+<p>类似uptime:</p>
+
+<pre class="example">
+justin@Justin:~$ uptime
+ 14:46:15 up  2:40,  3 users,  load average: 0.00, 0.05, 0.07
+</pre>
+
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -w: context switch and process</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -w 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时09分29秒    proc/s   cswch/s
+15时09分32秒      0.00    933.78
+15时09分35秒      0.00   1282.61
+平均时间:      0.00   1108.19
+</pre>
+
+
+<ul>
+<li>w   Report task creation and system switching activity.
+
+<blockquote>
+<p class="quoted">proc/s
+Total number of tasks created per second.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">cswch/s
+Total number of context switches per second.</p>
+</blockquote></li>
+</ul>
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Disk</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>sar -p -d</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -p -d 3
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+justin@Justin:~$ sar -p -d 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时26分48秒       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+14时26分51秒       sda      0.33      0.00      2.67      8.00      0.00      0.00      0.00      0.00
+14时26分51秒       sdb      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分51秒       sdc      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分51秒       sdd      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分51秒       sde      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分51秒  dev254-0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+14时26分51秒       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+14时26分54秒       sda      1.68      0.00     21.48     12.80      0.00      0.00      0.00      0.00
+14时26分54秒       sdb      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分54秒       sdc      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分54秒       sdd      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分54秒       sde      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+14时26分54秒  dev254-0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+平均时间:       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+平均时间:       sda      1.00      0.00     12.04     12.00      0.00      0.00      0.00      0.00
+平均时间:       sdb      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:       sdc      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:       sdd      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:       sde      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:  dev254-0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+</pre>
+
+<p>avarage: 汇总时间</p>
+
+<ul>
+<li>p   Pretty-print   device  names.   Use   this  option   in
+<blockquote>
+<p class="quoted">conjunction  with  option  -d.   By default  names  are
+printed  as dev m-n  where m  and n  are the  major and
+minor  numbers  for the  device.   Use  of this  option
+displays  the names  of  the devices  as they  (should)
+appear  in  /dev.   Name  mappings  are  controlled  by
+/etc/sysstat/sysstat.ioconf.</p>
+</blockquote></li>
+
+<li>d   Report activity for each  block device (kernels 2.4 and
+<blockquote>
+<p class="quoted">newer  only).   When  data  is  displayed,  the  device
+specification dev m-n is  generally used ( DEV column).
+m  is the  major  number of  the  device.  With  recent
+kernels  (post  2.5), n  is  the  minor  number of  the
+device,  but is  only a  sequence number  with  pre 2.5
+kernels.  Device names  may also  be  pretty-printed if
+option  -p  is  used  (see below).  Values  for  fields
+avgqu-sz, await, svctm and %util may be unavailable and
+displayed  as 0.00  with some  2.4 kernels.   Note that
+disk activity depends on sadc options &quot;-S DISK&quot; and &quot;-S
+XDISK&quot;  to  be  collected.  The  following  values  are
+displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">tps
+Indicate the  number of transfers  per second that
+were  issued  to  the  device.   Multiple  logical
+requests can be combined into a single I/O request
+to  the  device. A  transfer  is of  indeterminate
+size.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">rd_sec/s
+Number of  sectors read from the  device. The size
+of a sector is 512 bytes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">wr_sec/s
+Number of sectors written  to the device. The size
+of a sector is 512 bytes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">avgrq-sz
+The average size (in sectors) of the requests that
+were issued to the device.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">avgqu-sz
+The average queue length of the requests that were
+issued to the device.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">await
+The  average   time  (in  milliseconds)   for  I/O
+requests issued  to the device to  be served. This
+includes the  time spent by the  requests in queue
+and the time spent servicing them.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">svctm
+The average service time (in milliseconds) for I/O
+requests that were issued to the device.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">%util
+Percentage of  CPU time during  which I/O requests
+were issued  to the device  (bandwidth utilization
+for  the device).  Device  saturation occurs  when
+this value is close to 100%.</p>
+</blockquote></li>
+</ul>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Memory</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-r: Report memory utilization</h5>
+
+<pre class="example">
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时31分56秒 kbmemfree kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit
+14时31分59秒     58584    951544     94.20     52116    484240   1202524     60.43
+14时32分02秒     58584    951544     94.20     52132    484232   1202676     60.43
+平均时间:     58584    951544     94.20     52124    484236   1202600     60.43
+</pre>
+
+
+<ul>
+<li>r   Report  memory utilization  statistics.   The following
+<blockquote>
+<p class="quoted">values are displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">kbmemfree
+Amount of free memory available in kilobytes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">kbmemused
+Amount of used memory  in kilobytes. This does not
+take  into  account  memory  used  by  the  kernel
+itself.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">%memused
+Percentage of used memory.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">kbbuffers
+Amount of memory used  as buffers by the kernel in
+kilobytes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">kbcached
+Amount of memory used  to cache data by the kernel
+in kilobytes.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">kbcommit
+Amount of  memory in kilobytes  needed for current
+workload. This is an estimate of how much RAM/swap
+is needed to guarantee  that there never is out of
+memory.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">%commit
+Percentage of  memory needed for  current workload
+in  relation   to  the  total   amount  of  memory
+(RAM+swap).  This number  may be greater than 100%
+because the kernel usually overcommits memory.</p>
+</blockquote></li>
+</ul>
+
+<p><strong>%commit</strong> = kbcommit / (swap + memory)</p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-R: memory statistics</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -R 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时40分10秒   frmpg/s   bufpg/s   campg/s
+14时40分13秒    832.51      0.00     -0.35
+14时40分16秒    -20.67      2.00     -2.00
+平均时间:    393.48      1.03     -1.20
+</pre>
+
+<ul>
+<li>R   Report  memory  statistics.  The following  values  are
+<blockquote>
+<p class="quoted">displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">frmpg/s
+Number  of memory  pages freed  by the  system per
+second.  A  negative value represents  a number of
+pages allocated  by the system.  Note  that a page
+has  a size  of  4 kB  or  8 kB  according to  the
+machine architecture.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">bufpg/s
+Number of additional  memory pages used as buffers
+by the system per  second.  A negative value means
+fewer pages used as buffers by the system.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">campg/s
+Number  of additional memory  pages cached  by the
+system per  second.  A negative  value means fewer
+pages in the cache.</p>
+</blockquote></li>
+</ul>
+
+
+
+
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-W: swap</h5>
+
+<pre class="example">
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时48分13秒  pswpin/s pswpout/s
+15时48分16秒      0.00      0.00
+15时48分19秒      0.00      0.00
+平均时间:      0.00      0.00
+</pre>
+
+<center>
+<p>pswpin/s
+Total number  of swap pages the  system brought in
+per second.</p>
+</center>
+
+<center>
+<p>pswpout/s
+Total number of swap  pages the system brought out
+per second.</p>
+</center>
+
+<p>pswpin/s        每秒系统换入的交换页面（swap page）数量
+pswpout/s       每秒系统换出的交换页面（swap page）数量</p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-B: Page/swap</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -B  3
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时40分38秒  pgpgin/s pgpgout/s   fault/s  majflt/s  pgfree/s pgscank/s pgscand/s pgsteal/s    %vmeff
+15时40分41秒      0.00      7.97     30.23      0.00     67.44      0.00      0.00      0.00      0.00
+</pre>
+
+
+<center>
+<p>pgpgin/s
+Total number of kilobytes the system paged in from
+disk per  second.  Note: With  old kernels (2.2.x)
+this value  is a number of blocks  per second (and
+not kilobytes).</p>
+</center>
+
+<center>
+<p>pgpgout/s
+Total number of kilobytes  the system paged out to
+disk per  second.  Note: With  old kernels (2.2.x)
+this value  is a number of blocks  per second (and
+not kilobytes).</p>
+</center>
+
+<center>
+<p>fault/s
+Number of page faults  (major + minor) made by the
+system per  second.  This is  not a count  of page
+faults that generate I/O, because some page faults
+can be resolved without I/O.</p>
+</center>
+
+<center>
+<p>majflt/s
+Number  of major  faults the  system has  made per
+second, those which have required loading a memory
+page from disk.</p>
+</center>
+
+<center>
+<p>pgfree/s
+Number  of pages placed  on the  free list  by the
+system per second.</p>
+</center>
+
+<center>
+<p>pgscank/s
+Number of  pages scanned by the  kswapd daemon per
+second.</p>
+</center>
+
+<center>
+<p>pgscand/s
+Number of pages scanned directly per second.</p>
+</center>
+
+<center>
+<p>pgsteal/s
+Number  of  pages the  system  has reclaimed  from
+cache  (pagecache  and  swapcache) per  second  to
+satisfy its memory demands.</p>
+</center>
+
+<center>
+<p>%vmeff
+Calculated as  pgsteal / pgscan, this  is a metric
+of the  efficiency of page reclaim. If  it is near
+100% then almost every page coming off the tail of
+the inactive list is  being reaped. If it gets too
+low (e.g.  less than 30%) then  the virtual memory
+is   having  some   difficulty.   This   field  is
+displayed as  zero if  no pages have  been scanned
+during the interval of time.</p>
+</center>
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>IO</h4>
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-b:  block io</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -b 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+14时42分58秒       tps      rtps      wtps   bread/s   bwrtn/s
+14时43分01秒      0.34      0.00      0.34      0.00      5.39
+14时43分04秒      0.67      0.00      0.67      0.00      8.03
+平均时间:      0.50      0.00      0.50      0.00      6.71
+</pre>
+
+<p>输出项说明：
+tps     每秒钟物理设备的 I/O 传输总量
+rtps    每秒钟从物理设备读入的数据总量
+wtps    每秒钟向物理设备写入的数据总量
+bread/s         每秒钟从物理设备读入的数据量，单位为 块/s
+bwrtn/s         每秒钟向物理设备写入的数据量，单位为 块/s</p>
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>File System</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-v: file system stat</h5>
+
+<ul>
+<li>v   Report status  of inode, file and  other kernel tables.
+<blockquote>
+<p class="quoted">The following values are displayed:</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">dentunusd
+Number  of unused cache  entries in  the directory
+cache.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">file-nr
+Number of file handles used by the system.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">inode-nr
+Number of inode handlers used by the system.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">pty-nr
+Number of pseudo-terminals used by the system.</p>
+</blockquote></li>
+</ul>
+
+<pre class="example">
+justin@Justin:~$ sar -v 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时55分02秒 dentunusd   file-nr  inode-nr    pty-nr
+15时55分05秒     17535      6304     10335         6
+15时55分08秒     17535      6304     10335         6
+平均时间:     17535      6304     10335         6
+</pre>
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Interrupt</h4>
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-I {irq|SUM|ALL|XALL}      输出指定中断的统计信息。</h5>
+irq     指定中断号
+SUM     指定输出每秒接收到的中断总数
+ALL     指定输出前16个中断
+XALL    指定输出全部的中断信息
+
+<pre class="example">
+justin@Justin:~$ sar -I ALL 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+16时01分24秒      INTR    intr/s
+16时01分27秒         0      0.00
+16时01分27秒         1      0.45
+16时01分27秒         2      0.00
+16时01分27秒         3      0.00
+16时01分27秒         4      0.00
+16时01分27秒         5      0.00
+16时01分27秒         6      0.00
+16时01分27秒         7      0.00
+16时01分27秒         8      0.00
+16时01分27秒         9      0.00
+16时01分27秒        10      0.00
+16时01分27秒        11      0.00
+16时01分27秒        12      0.00
+16时01分27秒        13      0.00
+16时01分27秒        14      0.00
+16时01分27秒        15     18.83
+
+justin@Justin:~$ sar -I SUM 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+16时02分11秒      INTR    intr/s
+16时02分14秒       sum    271.00
+16时02分17秒       sum    302.72
+平均时间:       sum    286.70
+</pre>
+
+
+<p>查看所有中断： cat /proc/interrupts</p>
+
+<pre class="example">
+            CPU0
+   0:         67   IO-APIC-edge      timer
+   1:      29270   IO-APIC-edge      i8042
+   3:          1   IO-APIC-edge
+   4:          1   IO-APIC-edge
+   6:          5   IO-APIC-edge      floppy
+   7:          0   IO-APIC-edge      parport0
+   8:          4   IO-APIC-edge      rtc0
+   9:          0   IO-APIC-fasteoi   acpi
+  12:      56164   IO-APIC-edge      i8042
+  14:          0   IO-APIC-edge      ata_piix
+  15:     145327   IO-APIC-edge      ata_piix
+  17:      82939   IO-APIC-fasteoi   BusLogic BT-958
+  18:     359583   IO-APIC-fasteoi   eth0
+  19:        232   IO-APIC-fasteoi   uhci_hcd:usb1, Ensoniq AudioPCI
+ NMI:          0   Non-maskable interrupts
+ LOC:    2821563   Local timer interrupts
+ SPU:          0   Spurious interrupts
+ PMI:          0   Performance monitoring interrupts
+ PND:          0   Performance pending work
+ RES:          0   Rescheduling interrupts
+ CAL:          0   Function call interrupts
+ TLB:          0   TLB shootdowns
+ TRM:          0   Thermal event interrupts
+ THR:          0   Threshold APIC interrupts
+ MCE:          0   Machine check exceptions
+ MCP:         48   Machine check polls
+ ERR:          0
+ MIS:          0
+</pre>
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Network</h4>
+
+<p class="first">-n {DEV|EDEV|NFS|NFSD|SOCK|ALL}         分析输出网络设备状态统计信息。
+DEV     报告网络设备的统计信息
+EDEV    报告网络设备的错误统计信息
+NFS     报告 NFS 客户端的活动统计信息
+NFSD    报告 NFS 服务器的活动统计信息
+SOCK    报告网络套接字（sockets）的使用统计信息
+ALL     报告所有类型的网络活动统计信</p>
+
+
+<p>-n {DEV|EDEV|NFS|NFSD|SOCK|ALL}         分析输出网络设备状态统计信息。
+DEV     报告网络设备的统计信息
+EDEV    报告网络设备的错误统计信息
+NFS     报告 NFS 客户端的活动统计信息
+NFSD    报告 NFS 服务器的活动统计信息
+SOCK    报告网络套接字（sockets）的使用统计信息
+ALL     报告所有类型的网络活动统计信息</p>
+
+<p><strong>详细见netstat</strong></p>
+
+<ul>
+<li>n { keyword [,...] | ALL }
+<blockquote>
+<p class="quoted">Report network statistics.</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">Possible keywords  are DEV, EDEV, NFS,  NFSD, SOCK, IP,
+EIP,  ICMP, EICMP,  TCP, ETCP,  UDP, SOCK6,  IP6, EIP6,
+ICMP6, EICMP6 and UDP6.</p>
+</blockquote></li>
+</ul>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-n DEV</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -n DEV 3 1
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+15时33分06秒     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+15时33分09秒        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+15时33分09秒      eth0     24.75      0.00      2.33      0.00      0.00      0.00      0.00
+15时33分09秒      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+</pre>
+
+<center>
+<p>With  the  DEV  keyword,  statistics from  the  network
+devices  are   reported.   The  following   values  are
+displayed:</p>
+</center>
+
+<center>
+<p>IFACE
+Name of the network interface for which statistics
+are reported.</p>
+</center>
+
+<center>
+<p>rxpck/s
+Total number of packets received per second.</p>
+</center>
+
+<center>
+<p>txpck/s
+Total number of packets transmitted per second.</p>
+</center>
+
+<center>
+<p>rxkB/s
+Total number of kilobytes received per second.</p>
+</center>
+
+<center>
+<p>txkB/s
+Total number of kilobytes transmitted per second.</p>
+</center>
+
+<center>
+<p>rxcmp/s
+Number of  compressed packets received  per second
+(for cslip etc.).</p>
+</center>
+
+<center>
+<p>txcmp/s
+Number  of   compressed  packets  transmitted  per
+second.</p>
+</center>
+
+<center>
+<p>rxmcst/s
+Number of multicast packets received per second.</p>
+</center>
+
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-n EDEV</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -n EDEV 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+16时12分19秒     IFACE   rxerr/s   txerr/s    coll/s  rxdrop/s  txdrop/s  txcarr/s  rxfram/s  rxfifo/s  txfifo/s
+16时12分22秒        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分22秒      eth0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分22秒      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分22秒     IFACE   rxerr/s   txerr/s    coll/s  rxdrop/s  txdrop/s  txcarr/s  rxfram/s  rxfifo/s  txfifo/s
+16时12分25秒        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分25秒      eth0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分25秒      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+平均时间:     IFACE   rxerr/s   txerr/s    coll/s  rxdrop/s  txdrop/s  txcarr/s  rxfram/s  rxfifo/s  txfifo/s
+平均时间:        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:      eth0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+平均时间:      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+</pre>
+
+<center>
+<p>With the EDEV  keyword, statistics on failures (errors)
+from the  network devices are  reported.  The following
+values are displayed:</p>
+</center>
+
+<center>
+<p>IFACE
+Name of the network interface for which statistics
+are reported.</p>
+</center>
+
+<center>
+<p>rxerr/s
+Total number of bad packets received per second.</p>
+</center>
+
+<center>
+<p>txerr/s
+Total  number of errors  that happened  per second
+while transmitting packets.</p>
+</center>
+
+<center>
+<p>coll/s
+Number  of  collisions  that happened  per  second
+while transmitting packets.</p>
+</center>
+
+<center>
+<p>rxdrop/s
+Number  of  received  packets dropped  per  second
+because of a lack of space in <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> buffers.</p>
+</center>
+
+<center>
+<p>txdrop/s
+Number of  transmitted packets dropped  per second
+because of a lack of space in <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> buffers.</p>
+</center>
+
+<center>
+<p>txcarr/s
+Number of carrier-errors  that happened per second
+while transmitting packets.</p>
+</center>
+
+<center>
+<p>rxfram/s
+Number of frame alignment errors that happened per
+second on received packets.</p>
+</center>
+
+<center>
+<p>rxfifo/s
+Number  of FIFO overrun  errors that  happened per
+second on received packets.</p>
+</center>
+
+<center>
+<p>txfifo/s
+Number  of FIFO overrun  errors that  happened per
+second on transmitted packets.</p>
+</center>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>-n ALL</h5>
+
+<pre class="example">
+justin@Justin:~$ sar -n ALL 3 2
+Linux 2.6.32-justin-1 (Justin)  2012年03月07日  _i686_  (1 CPU)
+
+16时12分49秒     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+16时12分52秒        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分52秒      eth0     23.41      0.00      2.20      0.00      0.00      0.00      0.00
+16时12分52秒      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒     IFACE   rxerr/s   txerr/s    coll/s  rxdrop/s  txdrop/s  txcarr/s  rxfram/s  rxfifo/s  txfifo/s
+16时12分52秒        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分52秒      eth0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+16时12分52秒      pan0      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒    call/s retrans/s    read/s   write/s  access/s  getatt/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒   scall/s badcall/s  packet/s     udp/s     tcp/s     hit/s    miss/s   sread/s  swrite/s saccess/s sgetatt/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒    totsck    tcpsck    udpsck    rawsck   ip-frag    tcp-tw
+16时12分52秒       630        14        12         0         0         0
+
+16时12分49秒    irec/s  fwddgm/s    idel/s     orq/s   asmrq/s   asmok/s  fragok/s fragcrt/s
+16时12分52秒     18.73      0.00     18.73      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒 ihdrerr/s iadrerr/s iukwnpr/s   idisc/s   odisc/s   onort/s    asmf/s   fragf/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒    imsg/s    omsg/s    iech/s   iechr/s    oech/s   oechr/s     itm/s    itmr/s     otm/s    otmr/s  iadrmk/s iadrmkr/s  oadrmk/s oadrmkr/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒    ierr/s    oerr/s idstunr/s odstunr/s   itmex/s   otmex/s iparmpb/s oparmpb/s   isrcq/s   osrcq/s  iredir/s  oredir/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒  active/s passive/s    iseg/s    oseg/s
+16时12分52秒      0.00      0.00      0.00      0.00
+
+16时12分49秒  atmptf/s  estres/s retrans/s isegerr/s   orsts/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒    idgm/s    odgm/s  noport/s idgmerr/s
+16时12分52秒     17.39      0.00      0.00      0.00
+
+16时12分49秒   tcp6sck   udp6sck   raw6sck  ip6-frag
+16时12分52秒         7         2         0         0
+
+16时12分49秒   irec6/s fwddgm6/s   idel6/s    orq6/s  asmrq6/s  asmok6/s imcpck6/s omcpck6/s fragok6/s fragcr6/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒 ihdrer6/s iadrer6/s iukwnp6/s  i2big6/s  idisc6/s  odisc6/s  inort6/s  onort6/s   asmf6/s  fragf6/s itrpck6/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒   imsg6/s   omsg6/s   iech6/s  iechr6/s  oechr6/s  igmbq6/s  igmbr6/s  ogmbr6/s igmbrd6/s ogmbrd6/s irtsol6/s ortsol6/s  irtad6/s inbsol6/s onbsol6/s  inbad6/s  onbad6/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒   ierr6/s idtunr6/s odtunr6/s  itmex6/s  otmex6/s iprmpb6/s oprmpb6/s iredir6/s oredir6/s ipck2b6/s opck2b6/s
+16时12分52秒      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+
+16时12分49秒   idgm6/s   odgm6/s noport6/s idgmer6/s
+16时12分52秒      0.00      0.00      0.00      0.00
+
+</pre>
+
+
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>TTY</h4>
+
+<pre class="example">
+[root@cnetos5 ~]# sar -y
+Linux 2.6.18-53.el5 (cnetos5)   01/22/2008
+
+12:00:01 AM       TTY   rcvin/s   xmtin/s framerr/s prtyerr/s     brk/s   ovrun/s
+12:10:01 AM         0      0.00      0.00      0.00      0.00      0.00      0.00
+12:10:01 AM         1      0.00      0.00      0.00      0.00      0.00      0.00
+12:20:01 AM         0      0.00      0.00      0.00      0.00      0.00      0.00
+12:20:01 AM         1      0.00      0.00      0.00      0.00      0.00      0.00
+12:30:01 AM         0      0.00      0.00      0.00      0.00      0.00      0.00
+12:30:01 AM         1      0.00      0.00      0.00      0.00      0.00      0.00
+………………
+Average:            0      0.00      0.00      0.00      0.00      0.00      0.00
+Average:            1      0.00      0.00      0.00      0.00      0.00      0.00
+
+输出项说明：
+TTY     TTY 串行设备号
+rcvin/s         每秒接收的中断数量
+xmtin/s         每秒传送的中断数量
+framerr/s       每秒发生的帧错误数（frame error）量
+prtyerr/s       每秒发生的奇偶校验错误（parity error）数量
+brk/s   每秒发生的暂停（break）数量
+ovrun/s         每秒发生的溢出错误（overrun error）数量
+</pre>
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Note</h3>
+
+<p class="first">要判断一个系统瓶颈问题，有时需要几个 sar 命令选项结合起来使用，例如：</p>
+
+<blockquote>
+<p class="quoted">怀疑CPU存在瓶颈，可用 sar -u 和 sar -q 等来查看
+怀疑内存存在瓶颈，可用 sar -B、sar -r 和 sar -W 等来查看
+怀疑I/O存在瓶颈，可用 sar -b、sar -u 和 sar -d 等来查看</p>
+</blockquote>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:linux_util_sar';
+    var disqus_title = "Justin's Wiki - sar";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/linux/util/sar.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar.  7, 2012
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/linux/util/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "linux_util_sar");
+  //afterload();
+  fillsearch();
+</script>
+</html>

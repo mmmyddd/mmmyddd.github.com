@@ -1,0 +1,16 @@
+/* patches for ie6 */
+
+.muse-content * {
+    zoom: 1;
+}
+
+.muse-content .syntaxhighlighter{
+    margin-left: 5% !important;
+    margin-right: 0 !important;
+    width: 95% !important;
+}
+
+.muse-content pre {
+    width: 100%;
+}
+

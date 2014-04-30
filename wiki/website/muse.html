@@ -1,0 +1,1805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Muse 使用指南</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="emacs muse" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/website/index.html">本站制作</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Muse 使用指南
+      </div>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Muse Introduction</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Muse Principles</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 Muse Tags</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">1.3 Muse中的快捷键</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">1.4 Muse 注释行</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">1.5 Muse 列表项</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">1.5.1 无序列表</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">1.5.2 有序表</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">1.5.3 定义列表</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec10">1.5.4 多级列表</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec11">1.6 Muse段落分级</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">1.7 Muse 水平分隔线</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec13">1.8 Muse 中的字体设置</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec14">1.8.1 下划线(专有名词)：</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec15">1.8.2 等宽字体：</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec16">1.8.3 强调：</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec17">1.9 Muse 中的行分隔符</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec18">1.10 Muse 中的段落分隔符</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec19">1.11 Muse 文本居中设置</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec20">1.12 Muse中的特定风格</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec21">1.12.1 引用</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec22">1.12.2 示例</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec23">1.12.3 代码</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec24">1.12.4 诗章</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec25">1.12.5 抄录</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec26">1.12.6 超级链结</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec27">1.12.6.1 显式的带有描述的超级链接（或者邮件地址）</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec28">1.12.6.2 隐式的嵌入超级链结</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec29">1.12.7 图片</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec30">1.12.8 锚点</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec31">1.12.9 项目内部的页面链结</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec32">1.12.10 项目内部的文件链结</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec33">1.12.11 项目间页面链结</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec34">1.12.12 Muse 支持多级目录？</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec35">1.12.13 脚注</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec36">1.12.14 表格</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec37">1.12.15 Muse中语法高亮显示源代码</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec38">1.12.16 Muse中支持Latex公式编辑</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec39">1.12.17 Muse中HTML相关的嵌入对象</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec40">1.13 Muse的头部指令</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec41">2 创建和管理Muse项目</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Muse Introduction</h2>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Muse Principles</h3>
+
+<p class="first">Muse应该看作是一种排版系统，具有一下特点：</p>
+
+<ol>
+<li>大多数的空白字符都被忽略(在特殊标签中可以不忽略）</li>
+
+<li>有一些排版标签来控制格式（在特殊标签中可以不解释）</li>
+
+<li>可以输出为多种格式, 当输出文本包含输出格式中的特殊字符时，
+所有的特殊字符都会换成特定格式中的转义序列（在特殊标签中可以不转意）</li>
+</ol>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Muse Tags</h3>
+
+<p class="first">这些tags是可以嵌套的（例如本文中的例子）</p>
+
+<dl>
+<dt><strong>&lt;contents&gt;</strong></dt>
+<dd>生成本文档的TOC,
+生成的大纲深度由<code>muse-publish-contents-depth</code>控制</dd>
+
+<dt><strong>&lt;comments&gt;</strong></dt>
+<dd>以注释格式发布下级文本</dd>
+
+<dt><strong>&lt;cite&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;quote&gt;</strong></dt><dd>
+发布一个引用块，发布的格式根据输出格式的不同会有差异</dd>
+
+<dt><strong>&lt;markup&gt;</strong></dt>
+<dd>用来决定下级文本如何标记，可以用来在muse文档中的一部分应用自己的标记
+自定义的标记方法用&lt;markup&gt;的function属性决定。
+如果function属性被省略，则采用muse默认的markup标记</dd>
+</dl>
+
+<pre class="example">
+&lt;markup function=&quot;markup_func&quot;&gt;...&lt;/markup&gt;
+</pre>
+
+<dl>
+<dt><strong>&lt;literal&gt;</strong></dt>
+<dd>将生成文档格式中（例如html)中的原生标签嵌入muse文档中，
+更加灵活，但缺乏可移植性</dd>
+
+<dt><strong>&lt;class&gt;</strong></dt>
+<dd>在生成html文档的时候,用一个&lt;span&gt;标签包围下级文本，
+&lt;span&gt;标签的class属性值由&lt;class&gt;标签的name属性值决定。</dd>
+</dl>
+
+<pre class="example">
+&lt;class name=&quot;myclass&quot;&gt;my text&lt;/class&gt;
+</pre>
+
+
+<dl>
+<dt><strong>&lt;example&gt;</strong></dt>
+<dd>以等宽形式发布一个区域，保留区域中的新行;禁止在下级文本块中解释
+muse标签。</dd>
+</dl>
+
+
+<dl>
+<dt><strong>&lt;verbatim&gt;</strong></dt>
+<dd>不解释下级文本中的muse标签</dd>
+</dl>
+
+
+<dl>
+<dt><strong>&lt;verse&gt;</strong></dt>
+<dd>保留区域中空白和新行</dd>
+</dl>
+
+
+<dl>
+<dt><strong>&lt;command&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;lisp&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;ruby&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;perl&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;python&gt;</strong></dt><dd></dd>
+<dt><strong>&lt;php&gt;</strong></dt><dd>
+下级文本是嵌入的脚本，通过传递给特殊的解释器来工作。
+&lt;command&gt;带有一个interp的参数来指定解释
+器，如果该属性被忽略,则直接下级文本传递给shell
+而其他四个标签已经给出了脚本的类型。这些标签都可以用
+markup来指定标记方法,预先定义的一些标记方法:
+- verse 不省略空行
+- example 不省略空行,不解释标记
+- nil 不解释标记, verbatim模式
+- 如果被省略,则像正常的muse原文件一样标记文本。
+其他可以自定义标记函数(带有被限定在这个区域的buffer的参数)</dd>
+</dl>
+
+<p class="verse">
+script ==(interpreter)==&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;muse source ==(markup function)==&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;published document<br>
+</p>
+
+<dl>
+<dt><strong>&lt;include&gt;</strong></dt><dd>
+包含给定文件的内容, 包含的内容被&lt;markup&gt;
+决定如何标记</dd>
+</dl>
+
+<pre class="example">
+&lt;include file=&quot;include_file&quot; markup=&quot;markup_fun&quot;/&gt;
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Muse中的快捷键</h3>
+
+<p class="first">Muse 模式中使用的快捷键</p>
+
+<p>这是在每一个 Muse buffer 中可用的快捷键概要。</p>
+
+<p class="verse">
+C-c C-a (`muse-index')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;显示所有已知 Muse 页面的索引。<br>
+C-c C-b (`muse-find-backlinks')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;找出所有引用了当前页的页面。<br>
+C-c C-c (`muse-follow-name-at-point')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;访问当前位置处的链接。<br>
+C-c C-e (`muse-edit-link-at-point')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;编辑当前位置处的链接。<br>
+C-c C-f (`muse-project-find-file')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打开另一个 Muse 页面。提示输入文件名。<br>
+C-c C-i (`muse-insert-tag')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;交互地插入一个标签。<br>
+C-c C-l (`font-lock-mode')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;对当前 buffer 触发 font lock / highlighting（语法高亮）。<br>
+C-c C-p (`muse-project-publish')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;发布所有更改了的 Muse 页面。<br>
+C-c C-s (`muse-search')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在当前项目的所有文件中查找文本。<br>
+C-c C-t (`muse-project-publish-this-file')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;发布当前访问的文件。如果当前文件可以被使用不止一种风格发布，提示输入风格。<br>
+C-c C-T (`muse-publish-this-file')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;发布当前访问的文件。提示风格和输出目录。<br>
+C-c C-v (`muse-browse-result')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;显示当前页面的发布结果。<br>
+C-c = (`muse-what-changed')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;将当前页面与最近备份版本比较。<br>
+C-c TAB l (`muse-insert-relative-link-to-file')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;交互地插入一个链接到一个文件中。<br>
+C-c TAB t (`muse-insert-tag')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;交互地插入一个标签。<br>
+C-c TAB u (`muse-insert-url')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;交互地插入一个 URL。<br>
+TAB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;移动光标到下一个 Wiki 链接。<br>
+S-TAB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;移动光标到上一个 Wiki 链接。<br>
+M-TAB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;补齐当前位置来自当前项目的一个页面的名字。<br>
+M-RET<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在当前位置插入一个新的列表项，同时正确缩进。<br>
+C-&lt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;减少当前位置列表项的缩进。<br>
+C-&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;增加当前位置列表项的缩进。<br>
+</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Muse 注释行</h3>
+
+<p class="first">注释行由一个分号加空白字符起始：</p>
+
+<pre class="example">
+ ; comment line (you won't see)
+</pre>
+
+
+<p>以下应该看不到：</p>
+
+
+
+<p>TIP: M-;可以用来给muse原代码加注释，注释行会在代码中首先被删除
+然后整个muse文件才会被处理，因此muse任何标记对注释行不起作用。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Muse 列表项</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+无序列表</h4>
+
+<p class="first">无序列表由空白字符加连字符起始:</p>
+
+<pre class="example">
+ - unorder list item 1
+nextline resume
+ - unorder list item 2
+ - unorder list item 3
+</pre>
+
+<p>效果如下:</p>
+
+<ul>
+<li>unorder list item 1
+nextline is ignored</li>
+<li>unorder list item 2</li>
+<li>unorder list item 3</li>
+</ul>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+有序表</h4>
+
+<p class="first">有序表由空白字符加数字加句号起始:</p>
+
+<pre class="example">
+ 1. order list item 1
+ 2. order list item 2
+ 3. order list item 3
+</pre>
+
+<p>效果如下:</p>
+
+<ol>
+<li>order list item 1</li>
+<li>order list item 2</li>
+<li>order list item 3</li>
+</ol>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+定义列表</h4>
+
+<p class="first">定义类表由空格加定义相加空格加两个冒号加空格(或换行)起始:</p>
+
+<pre class="example">
+ Term1 ::
+ This is a first definition
+ And it has two lines;
+ no, make that three.
+
+       This is a second definition
+ Term2 ::
+ Term3 :: This is the second style
+</pre>
+
+
+<dl>
+<dt><strong>Term1</strong></dt><dd>
+This is a first definition
+And it has two lines;
+no, make that three.</dd>
+<dt><strong>Term2</strong></dt><dd>
+This is a second definitionr</dd>
+<dt><strong>Term3</strong></dt>
+<dd>This is the second style</dd>
+</dl>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+多级列表</h4>
+
+<ul>
+<li>level 1</li>
+<li>level 1
+
+<ul>
+<li>level 2</li>
+<li>level 2
+
+<ol>
+<li>level 3</li>
+<li>level 3
+
+<ul>
+<li>level 4</li>
+<li>level 4</li>
+</ul></li>
+</ol></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+Muse段落分级</h3>
+
+<p class="first">Muse中的大纲级别是以1－9个星号加一个空格开始的：</p>
+
+<pre class="example">
+* 一级大纲
+** 二级标题
+*** 三级标题
+....
+********* 九级标题
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Muse 水平分隔线</h3>
+
+<p class="first">四个连续的连字符</p>
+
+<pre class="example">
+----
+</pre>
+
+<p>效果如下</p>
+
+<hr>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+Muse 中的字体设置</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+下划线(专有名词)：</h4>
+
+<pre class="example">
+ _underline_
+</pre>
+
+<p>效果如下：<br>
+<u>underline</u></p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec15" id="sec15"></a>
+等宽字体：</h4>
+
+<pre class="example">
+ =deleted=
+</pre>
+
+<p>效果如下：<br>
+<code>deleted</code></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec16" id="sec16"></a>
+强调：</h4>
+
+<pre class="example">
+ *emphasized*&lt;br/&gt;
+ **strong emphasized**&lt;br/&gt;
+ ***very strong emphasized***&lt;br/&gt;
+</pre>
+
+<p>效果如下：<br>
+<em>emphasized</em> <br>
+<strong>strong emphasized</strong> <br>
+<strong><em>very strong emphasized</em></strong> <br></p>
+
+<p>注意：在muse-mode中这些标记范围可以跨越多行，但是开始部份不能在行首出现，
+至少和行首之间有一个空白，但是这个bug不影响发布。这几种标记的两端必需和文本的其他部份
+以空白分割开，而且包含的文本中不能有类似标记，否则结果不可预料。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec17" id="sec17"></a>
+Muse 中的行分隔符</h3>
+
+<p class="first">分隔符示例：</p>
+
+<pre class="example">
+one line&lt;br/&gt;
+next line
+</pre>
+
+<p>效果：</p>
+
+<p>one line<br>
+next line</p>
+
+<p>去掉分割符的效果</p>
+
+<p>one line
+next line</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec18" id="sec18"></a>
+Muse 中的段落分隔符</h3>
+
+<p class="first">用一个或多个空行（两个以上相连的换行符号）来分隔段落</p>
+
+<pre class="example">
+paragraph1
+
+paragraph2
+</pre>
+
+<p>效果如下：</p>
+
+<p>paragraph1</p>
+
+<p>paragraph2</p>
+
+<p>注意：
+有的muse标记默认下级文本为段落结构，
+那么标记和前面文本之间可以没有空行。
+但后边必需有。muse源文件中各个内容间推荐至少要有一个空行，
+例如标题，水平线，标签等，甚至嵌套的标签中也尽量使用空行（除非空行会被显示）</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec19" id="sec19"></a>
+Muse 文本居中设置</h3>
+
+<p class="first">居中文本以六个或者更多的空白字符开始：</p>
+
+<pre class="example">
+      centered text
+</pre>
+
+<p>效果如下：</p>
+
+<center>
+<p>centered text</p>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec20" id="sec20"></a>
+Muse中的特定风格</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec21" id="sec21"></a>
+引用</h4>
+
+<p class="first">&lt;cite&gt;
+&lt;quote&gt;
+标签可以用来标记引用段落, 它们之间的不同是前
+者标识嵌入在文本中的引用，后者是单独的引用段落：</p>
+
+<pre class="example">
+before cite
+&lt;cite&gt;
+cited text
+&lt;/cite&gt;
+after cite
+</pre>
+
+<p>效果如下：</p>
+
+<p>before cite
+<span class="citation">
+cited text
+</span>
+after cite</p>
+
+
+<pre class="example">
+before quote
+
+&lt;quote&gt;
+quoted text
+&lt;/quote&gt;
+
+after quote
+</pre>
+
+<p>效果如下：</p>
+
+<p>before quote</p>
+
+<blockquote>
+<p class="quoted">
+quoted text</p>
+
+</blockquote>
+
+<p>after quote</p>
+
+<p>另外，以空格开头（不足4个空格）的一段文字也被翻译成段落引用：</p>
+
+<pre class="example">
+ quoted text
+quoted text2&lt;br/&gt;
+quoted text
+</pre>
+
+<p>效果如下：</p>
+
+<blockquote>
+<p class="quoted">quoted text
+quoted text2<br>
+quoted text</p>
+</blockquote>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec22" id="sec22"></a>
+示例</h4>
+
+<p class="first">&lt;example&gt;
+标签用来标记示例，默认采用等宽间距，保留空白和muse标记</p>
+
+<pre class="example">
+&lt;example&gt;
+#!env perl
+print &quot;hello world!&quot;;
+... /example&gt;  ;avoid embed example tag
+</pre>
+
+
+<p>效果如下：</p>
+
+<pre class="example">
+#!env perl
+print &quot;hello world!&quot;;
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec23" id="sec23"></a>
+代码</h4>
+
+
+<p>代码文本采用等宽字体，抄录格式（不解释muse标记），
+不保留空白和换行，适合嵌入段落中的代码部份：</p>
+
+<pre class="example">
+&lt;code&gt;
+# include&lt;stdio.h&gt;
+
+int main(){
+    int i=3;
+    return i;
+}
+&lt;/code&gt;
+</pre>
+
+
+<p>效果如下：</p>
+
+<p><code>
+# include&lt;stdio.h&gt;
+
+int main(){
+    int i=3;
+    return i;
+}
+</code></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec24" id="sec24"></a>
+诗章</h4>
+
+<p class="first">诗章段落保存了下级文本的空白和换行。
+诗章格式的段落以大于号和空白开头：</p>
+
+<pre class="example">
+&gt; A line of verse
+&gt;  The second line
+</pre>
+
+<p>效果如下：</p>
+
+<p class="verse">
+A line of verse<br>
+&nbsp;&nbsp;The second line<br>
+</p>
+
+
+<p>也可以用&lt;verse&gt;标记一组段落：</p>
+
+<pre class="example">
+&lt;verse&gt;
+A line of Emacs verse;
+  forgive its being so terse.
+
+In terms of terse verse,
+  you could do worse.
+&lt;/verse&gt;
+</pre>
+
+
+<p>效果如下：</p>
+
+<p class="verse">
+A line of Emacs verse;<br>
+&nbsp;&nbsp;forgive its being so terse.<br>
+<br>
+In terms of terse verse,<br>
+&nbsp;&nbsp;you could do worse.<br>
+</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec25" id="sec25"></a>
+抄录</h4>
+
+<p class="first">抄录格式保留下级文本中的muse标记，但是不保留空白和换行，
+适合嵌入段落中的文本：</p>
+
+<pre class="example">
+&lt;verbatim&gt;
+&lt;verse&gt;
+#title Title
+&lt;/verse&gt;
+one line
+another line
+&lt;/verbatim&gt;
+</pre>
+
+<p>效果如下：
+
+
+&lt;verse&gt;
+#title Title
+&lt;/verse&gt;
+one line
+another line
+</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec26" id="sec26"></a>
+超级链结</h4>
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec27" id="sec27"></a>
+显式的带有描述的超级链接（或者邮件地址）</h5>
+
+<p>超级链结按照以下方式书写</p>
+
+<pre class="example">
+[[http://www.sohu.com][sohu]]&lt;br/&gt;
+[[http://www.sohu.com]]&lt;br/&gt;
+[[mailto:mmmmyddd@freeshell.org][mail to me]]
+</pre>
+
+<p>效果如下：</p>
+
+<p><a href="http://www.sohu.com">sohu</a><br>
+<a href="http://www.sohu.com">http://www.sohu.com</a><br>
+<a href="mailto:jiangjun_jking@tom.com">mail to me</a><br></p>
+
+<p>注意：</p>
+
+<ol>
+<li>发布的超级链结可以是本地文件，也可以是URL地址</li>
+<li>链结的描述信息可以是图片，发布时，会在图片上添加超级链结</li>
+</ol>
+
+
+<pre class="example">
+[[http://www.google.com][res/firefox-document.png]]
+</pre>
+
+<p>效果如下：</p>
+
+<p><a class="image-link" href="http://www.google.com">
+<img src="res/firefox-document.png"></a></p>
+
+
+<h5><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec28" id="sec28"></a>
+隐式的嵌入超级链结</h5>
+
+<pre class="example">
+http://www.sohu.com
+mailto:mmmyddd@freeshell.org
+</pre>
+
+<p>效果如下：</p>
+
+<p><a href="http://www.sohu.com">http://www.sohu.com</a>
+<a href="mailto:mmmyddd@freeshell.org">mailto:mmmyddd@freeshell.org</a></p>
+
+<p>muse是通过正则表达式muse-url-regexp来判断一个字符串是否是隐式的超级链结。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec29" id="sec29"></a>
+图片</h4>
+
+
+<p>图片实际上是特殊的链结，如果在添加链结的时候，muse能够
+判断出该链结是指向本地或远程图片的(采用正则表达式muse-image-regexp)，
+那么会将该链结作为图片发布.</p>
+
+<pre class="example">
+[[res/firefox-document.png]]
+[[res/firefox-document.png][res/firefox-document]]
+[[http://www.google.com/intl/en_ALL/images/logo.gif][image with description]]
+[[http://www.google.com/intl/en_ALL/images/logo.gif]]
+</pre>
+
+<p>效果如下
+<img src="res/firefox-document.png" alt="">no title
+<table class="image" width="100%">
+  <tr><td align="center"><img src="res/firefox-document.png" alt="res/firefox-document"></td></tr>
+  <tr><td align="center" class="image-caption">res/firefox-document</td></tr>
+</table></p>
+
+<p>has title</p>
+
+<p>另一组：<img src="http://www.google.com/intl/en_ALL/images/logo.gif" alt="">not title <table class="image" width="100%">
+  <tr><td align="center"><img src="http://www.google.com/intl/en_ALL/images/logo.gif" alt="image with description"></td></tr>
+  <tr><td align="center" class="image-caption">image with description</td></tr>
+</table></p>
+
+<p>has title</p>
+
+
+<p>可以看出带有标题的图片是以段落居中格式发布的，
+而没有标题的图片是以inline格式发布的</p>
+
+<p>注意：相对路径总是可以被接受的，而如果写绝对路径，那么在发布的时候会
+采用file://类型的链结，有时候是不可以接
+受的，这时候更改muse-colors-inline-image-method的值可以定制查找
+文件的方式，默认是在当前buffer所在目录查找（default-directory),
+也可以采用发布目录（muse-colors-use-publishing-directory)。
+（muse-mode编辑编辑模式貌似对这个变量不敏感,还是在用default-directory中寻找）。</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq muse-colors-inline-image-method
+    'muse-colors-use-publishing-directory)
+</pre>
+
+<p>这样我们可以在图片中使用pic/image.png这种相对路径，
+但需要在发布前将图片所在文件拷贝到发布目录中去。</p>
+
+<pre class="example">
+[[res/firefox-document.png]]
+</pre>
+
+<p>效果如下：</p>
+
+<p class="image"><img src="res/firefox-document.png" alt=""></p>
+
+<p>更好的解决方案是将文件在发布的时候直接拷贝到对应目录上，
+这需要对muse的发布作定制。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec30" id="sec30"></a>
+锚点</h4>
+
+<p class="first">锚点实际上是一个muse文档中的特殊命令：</p>
+
+<pre class="example">
+#anchorName
+</pre>
+
+<p>在此插入一个锚点
+<a name="anchorName" id="anchorName"></a>
+并且在脚注<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>上添加对锚点的引用。</p>
+
+<p>当然，也可添加针对在项目内的其他页面中定义的锚点，
+只需要将锚点名称加在定义锚点页面名称之后即可。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec31" id="sec31"></a>
+项目内部的页面链结</h4>
+
+<p class="first">对于项目内的普通的资源文件，可以这样引用（有扩展名需要写全）</p>
+
+<pre class="example">
+[[./res/test-file][./res/test-file]]
+</pre>
+
+<p>效果如下：</p>
+
+<p><a href="./res/test-file">./res/test-file</a></p>
+
+
+<p>如果想引用项目内部的链结,可以用使用相对路径的muse文件名
+（不加上扩展名.muse），默认在项目目录里寻找。</p>
+
+<pre class="example">
+[[w3m][w3m]]
+</pre>
+
+<p><a href="http://mmmyddd.github.io/wiki/website/w3m.html">w3m</a></p>
+
+<p>如果加上了扩展名就产生了对输出格式的依赖，因此只对于特定格式的
+输出是可用的，例如：</p>
+
+<pre class="example">
+[[./w3m.html][w3m.html]]
+</pre>
+
+<p>效果如下：</p>
+
+<p><a href="w3m.html">w3m.html</a></p>
+
+<p>以上链结对于html的输出是有效的，但是这这种情况是巧合，
+因此上面链结将在muse-mode中显示为断开的链结，需要相应的给项目添加
+相应的文件：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .muse-bad-link {
+        /* muse-bad-link */
+        color: #ff0000;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    --></style><span class="muse-bad-link">w3m.html</span>
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec32" id="sec32"></a>
+项目内部的文件链结</h4>
+
+<p class="first">如上节所述，这种使用了扩展名的引用方法，主要用于项目内部的链
+结，大多数发生在图片和多媒体文件、压缩文件等，并且在项目内部
+的引用，也可用于跨项目引用资源文件。</p>
+
+<p>muse通过变量muse-file-regexp来区分文件和页面之间的区别：</p>
+
+<p>凡是满足muse-file-regexp正则表达式的链结地址被认为是文件，
+否则被认为是不带扩展名的muse页面。</p>
+
+<p>当使用&lt;tab&gt;导航至断开的链结上敲回车，muse会为该链结新建一个
+文件缓冲去，对于页面文件在文件名末尾添加muse文件扩展名，由变量
+muse-file-extension指定，而对于其他文件则不会添加。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec33" id="sec33"></a>
+项目间页面链结</h4>
+
+<p class="first">采用下面代码来启动项目间页面链结：</p>
+
+<p>首先安装<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>-<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>和muse-<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>模块</p>
+
+<p>然后在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>配置文件中加入下面代码：</p>
+
+<pre class="example">
+(require 'muse-wiki)
+(muse-configure-highlighting
+    'muse-colors-markup muse-colors-markup)
+</pre>
+
+<p>项目之间的引用也不会使用上面两个小节的方式，
+因为容易产生对项目之间相对路径的依赖，</p>
+
+<p>采用以下方式来引用项目间的页面：</p>
+
+<p><a href="http://mmmyddd.github.io/wiki/website/muse.html#anchorName">website: muse: anchor Name</a> <br>
+<a href="http://mmmyddd.github.io/wiki/website/muse.html#anchorName">website: muse: anchor Name</a> <br>
+<a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a> <br>
+<a href="http://mmmyddd.github.io/wiki/website/muse.html">website: muse</a></p>
+
+
+<p>也可以采用隐式链结：</p>
+
+<p><a href="http://mmmyddd.github.io/wiki/website/muse.html">muse</a></p>
+
+<p>这样在muse-project-alist中定义的项目名都可以用作<a href="WikiName">Wiki Name</a>,
+最后这种情况会访问<a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a>项目的默认页面。但是这样作产生的问题是
+所有的项目间的引用都是本地的file://
+链结。如果想发布到网上，需要重配置各项目的网络路径，
+定制变量muse-<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>-interwiki-alist。</p>
+
+<p><a href="http://www.emacswiki.org/cgi-bin/wiki/test">Emacs Wiki: test</a></p>
+
+<p>也可采用显式链结</p>
+
+<pre class="example">
+[[EmacsWiki::test][test@EmacsWiki]]
+</pre>
+
+<p><a href="http://www.emacswiki.org/cgi-bin/wiki/test">test@EmacsWiki</a></p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec34" id="sec34"></a>
+Muse 支持多级目录？</h4>
+
+<p class="first">如下显式连接所示，可以引用到多级项目任何目录下</p>
+
+<pre class="example">
+[[Blog::Computer/Debian/addnewresolutionundervmware]]
+</pre>
+
+<p>效果如下：</p>
+
+<p><a href="http://mmmyddd.github.io/blog/Computer/Debian/addnewresolutionundervmware.html">Blog: Computer/Debian/addnewresolutionundervmware</a></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec35" id="sec35"></a>
+脚注</h4>
+
+<p class="first">添加脚注需要使用footnote-mode,进入该模式后：</p>
+
+<p><strong><code>C-c ! a</code></strong> 插入脚注</p>
+
+<p><strong><code>C-x C-x</code></strong> 返回插入点</p>
+
+<p>例如，在这里<sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup>插入一个脚注。</p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec36" id="sec36"></a>
+表格</h4>
+
+<p class="first">muse支持三种风格的数据表生成：</p>
+
+<ul>
+<li>简单列表</li>
+</ul>
+
+<pre class="example">
+        head || head
+        body | body
+        tail ||| tail
+</pre>
+
+<p>效果为：</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>head</th>
+      <th>head</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>tail</td>
+      <td>tail</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>body</td>
+      <td>body</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>minor mode: orgtbl-mode</li>
+</ul>
+
+<pre class="example">
+|-------+-------+-------|
+| head1 | head2 | head3 |
+|-------+-------+-------|
+| data1 | data2 | data3 |
+|-------+-------+-------|
+| data2 |       |       |
+|-------+-------+-------|
+</pre>
+
+<p>效果如下：</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>head1</th>
+      <th>head2</th>
+      <th>head3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data1</td>
+      <td>data2</td>
+      <td>data3</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>data2</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>table.el提供的格式：</li>
+</ul>
+
+<pre class="example">
+      +----------+---------+++++++-----------+
+      |mult line |cell     |split|cell       |
+      |          |         |     +-----------+
+      |          |         |     |split      |
+      |          |         |     |           |
+      +----------+---------+++++++-----------+
+      |cell spaned               | cell span |
+      +----------+---------------+           |
+      |          |single line    |           |
+      +----------+---------------+-----------+
+</pre>
+
+<p>效果为：</p>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;+++++++&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td>mult line |cell     |split|cell</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+&mdash;&mdash;&mdash;&mdash;+</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>|split</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;+++++++&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td>cell spaned</td>
+      <td>cell span</td>
+    </tr>
+    <tr>
+      <td>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;&mdash;&mdash;+</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>|single line</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+
+
+<p>如果需要禁用muse表格，需要在
+muse文件头部添加指令：</p>
+
+<pre class="example">
+#disable-tables t
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec37" id="sec37"></a>
+Muse中语法高亮显示源代码</h4>
+
+<p class="first">采用&lt;src&gt;标签嵌入源代码：</p>
+
+<pre class="example">
+&lt;src type=&quot;c&quot;&gt;
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf(&quot;hello\n&quot;);
+}
+&lt;/src&gt;
+</pre>
+
+
+<p>效果如下：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
+        /* font-lock-function-name-face */
+        color: #87cefa;
+        font-weight: bold;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+      .preprocessor {
+        /* font-lock-preprocessor-face */
+        color: #7fffd4;
+      }
+      .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+      .type {
+        /* font-lock-type-face */
+        color: #87ceeb;
+        font-weight: bold;
+      }
+      .variable-name {
+        /* font-lock-variable-name-face */
+        color: #40e0d0;
+        font-weight: bold;
+      }
+    --></style><span class="preprocessor">#include</span> <span class="string">&lt;stdio.h&gt;</span>
+
+<span class="type">int</span> <span class="function-name">main</span>()
+{
+    <span class="type">int</span> <span class="variable-name">i</span>=1+2;
+    printf(<span class="string">"hello\n"</span>);
+    <span class="keyword">return</span> 0;
+}
+</pre>
+
+<p>新版的muse已经可以处理&lt;src&gt;标签了，
+这里给出一个比较好的处理函数，考虑到color-theme中的颜色。
+<a href="muse-color-code.el">muse-color-code</a></p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .comment {
+        /* font-lock-comment-face */
+        color: #d2b48c;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #d2b48c;
+      }
+      .function-name {
+        /* font-lock-function-name-face */
+        color: #87cefa;
+        font-weight: bold;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+    --></style><span class="comment-delimiter">;; </span><span class="comment">comments
+</span>(<span class="keyword">defun</span> <span class="function-name">test</span>()
+    ())
+</pre>
+
+<p>也可以通过javascript前端来高亮：</p>
+
+<pre class="example">
+&lt;literal&gt;
+&lt;pre class=&quot;brush:python; gutter:true; toolbar:true; ruler:false;&quot;&gt;
+def aFunc():
+    x = 2
+    def aInnerFunc():
+        for i in range(0,2):
+            x +=1
+            print &quot;Inner Print&quot;, x
+
+    aInnerFunc()
+
+aFunc()
+&lt;/pre&gt;
+&lt;/literal&gt;
+</pre>
+
+<p>效果如下：
+
+
+<pre class="brush:python; gutter:true; toolbar:true; ruler:false;">
+def aFunc():
+    x = 2
+    def aInnerFunc():
+        for i in range(0,2):
+            x +=1
+            print "Inner Print", x
+
+    aInnerFunc()
+
+aFunc()
+</pre>
+</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec38" id="sec38"></a>
+Muse中支持Latex公式编辑</h4>
+
+<p class="first">可以使用&lt;latex&gt;标签：</p>
+
+<pre class="example">
+inline formula:before
+&lt;math&gt;
+e=mc^2
+&lt;/math&gt;
+after
+
+block formula:
+&lt;latex&gt;
+\begin{displaymath}
+  e=mc^2
+\end{displaymath}
+&lt;/latex&gt;
+
+another block formula:
+&lt;latex&gt;
+$$e=mc^2$$
+&lt;/latex&gt;
+</pre>
+
+<p>效果如下：</p>
+
+<p>inline formula:before
+<!-- $
+e=mc^2
+$--><img src="./latex/latex2png-muse__294720786.png" alt="latex2png equation" class="latex-inline">
+after</p>
+
+<p>block formula:</p>
+
+<!-- 
+\begin{displaymath}
+  e=mc^2
+\end{displaymath}
+--><img src="./latex/latex2png-muse__2252540789.png" alt="latex2png equation" class="latex-display">
+
+<p>another block formula:
+<!-- 
+$$e=mc^2$$
+--><img src="./latex/latex2png-muse__420613323.png" alt="latex2png equation" class="latex-display"></p>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec39" id="sec39"></a>
+Muse中HTML相关的嵌入对象</h4>
+
+<p class="first">可以用&lt;literal&gt;来插入<code>embed</code>
+或者<code>object</code>:</p>
+
+
+<ul>
+<li>Audio Player:</li>
+</ul>
+
+
+<p id="audioplayer_1">Another Test</p>
+<script type="text/javascript">
+AudioPlayer.embed("audioplayer_1", {
+      soundFile: "/blog-res/Ramble/res/test.mp3",
+      titles: "题目",
+      artists: "音乐家",
+      autostart: "no"
+});
+</script>
+
+
+
+<ul>
+<li>Media Player:</li>
+</ul>
+
+
+<p id='mediaplayer_2'>The player will show in this paragraph</p>
+<script type='text/javascript'>
+        var s1 = new SWFObject(media_player,'player','400','300','9');
+        s1.addParam('allowfullscreen','true');
+        s1.addParam('allowscriptaccess','always');
+        s1.addParam('flashvars','file=/blog-res/Ramble/res/video.flv');
+        s1.write('mediaplayer_2');
+</script>
+
+
+
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec40" id="sec40"></a>
+Muse的头部指令</h3>
+
+<p class="first">Muse中以＃开头的行为指令行</p>
+
+<dl>
+<dt><strong>#author</strong></dt>
+<dd>文档作者，如果
+没有指定，则从<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>变量user-full-name中推断</dd>
+
+<dt><strong>#date</strong></dt>
+<dd>文档最新更新日期</dd>
+
+<dt><strong>#title</strong></dt><dd>
+文档题目</dd>
+</dl>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec41" id="sec41"></a>
+创建和管理Muse项目</h2>
+
+<p class="first">在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>配置文件中增加如下行：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .builtin {
+        /* font-lock-builtin-face */
+        color: #7fffd4;
+      }
+      .comment {
+        /* font-lock-comment-face */
+        color: #d2b48c;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #d2b48c;
+      }
+      .constant {
+        /* font-lock-constant-face */
+        color: #98fb98;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+      .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+    --></style>(<span class="keyword">require</span> '<span class="constant">muse-project</span>)
+(setq muse-project-alist
+      '((<span class="string">"website"</span>                 <span class="comment-delimiter">; </span><span class="comment">my various writings
+</span>         (<span class="string">"~/Pages"</span> <span class="builtin">:default</span> <span class="string">"index"</span>)
+         (<span class="builtin">:base</span> <span class="string">"html"</span> <span class="builtin">:path</span> <span class="string">"~/public_html"</span>)
+         (<span class="builtin">:base</span> <span class="string">"pdf"</span> <span class="builtin">:path</span> <span class="string">"~/public_html/pdf"</span>))))
+</pre>
+
+<p>其中~/Pages是muse文件的主项目目录，而每一中发布类型都有一个相应的发布目录，
+作为发布的输出。</p>
+
+<p>默认的访问页面是index。</p>
+
+<p>默认情况下，muse文件的扩展名为.muse，但是可以通过muse-file-extension来重新定义。
+只有具有该扩展名的文件才关联muse项目。在发布的时候会将扩展名换成和发布格式
+相关法的格式，例如muse.muse被发布为muse.pdf和muse.html。
+如果想将所有文件都包含在muse项目中，并且根据项目文件的
+位置来决定是否关联muse-mode，可以采用以下配置代码：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq muse-file-extension nil
+      muse-mode-auto-p t)
+</pre>
+
+<p>muse-mode-auto-p表示将根据项目路径的位置
+自动侦测并在打开文件的时候关联到muse-mode。</p>
+
+<hr>
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> <a href="#anchorName">anchorName</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  example foot note</p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:website_muse';
+    var disqus_title = "Justin's Wiki - Muse 使用指南";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/website/muse.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated 2008-12-26
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/website/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "website_muse");
+  //afterload();
+  fillsearch();
+</script>
+</html>

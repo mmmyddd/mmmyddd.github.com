@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Linux 0.11 Build and Debug Env. on Debian</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/debian/index.html">Debian/GNU操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Linux 0.11 Build and Debug Env. on Debian
+      </div>
+<p>最近购买并阅读了若干讲Linux早期内核的书，包括赵炯博士的
+《Linux内核完全剖析（基于0.12内核）》以及新设计团队的《Linux
+内核设计的艺术&mdash;图解Linux操作系统架构设计与实现原理》，感觉对
+Linux内核的整体概貌有了大体上的感官认识。</p>
+
+<p>为了搭建起一个间便的修改，调试，运行Linux早期内核的学习环境，
+费了不少周折，最后完成了Debian下的比较满意的环境。这里记录一
+下详细步骤，对此感兴趣的同志们可以参考下。</p>
+
+<p>另外，本文还参考了赵炯基于Linux 0.11的《Linux内核完全注释（修
+正版v3.0）》一书的电子版本，特此感谢。</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Host OS Environment</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Prepare Bochs</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec3">2.1 Download Bochs</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">2.2 Build Bochs</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec5">3 Run Linux 0.11 and 0.12 Dev. Build</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">4 Build by GCC 3.2.2 and Debug with Bochs and GDB</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">4.1 Dowload Root File System</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">4.2 Download Linux 0.11 Source</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">4.3 Build Bochs with GDB Stub Enabled</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec10">4.3.1 Change bochs-2.2.1/iodev/harddrv.h</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec11">4.3.2 Patch Bochs 2.2.1 &mdash; Fixing the &quot;Signal 0&quot; Issue</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">4.3.3 Build Bochs 2.2.1</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec13">4.4 Run Bochs with GDB stub</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec14">4.5 Install BIN86</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec15">4.6 Install GCC 3.2.2-5 from RH-9</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec16">4.7 Build Linux 0.11 Source</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec17">4.8 Build Linux 0.11 Source with Debug Info</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec18">4.9 Modify the root fs dev</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec19">4.10 Debug Linux 0.11 using Bochs and GDB</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec20">5 Build by GCC 4.x and Debug with Bochs and GDB</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Host OS Environment</h2>
+
+<p class="first">看到oldlinux坛子上许多按照教程搭建环境不成功的案例，都是因为
+案例中没有详细记录所用的软件的版本号，导致后来者走了不少弯路。
+这里先介绍一下本文的宿主操作系统的环境。</p>
+
+<p>我的Debian Squeeze GNU/Linux系统运行在VMWare虚拟机上，32bits
+单CPU配置。</p>
+
+<pre class="example">
+Linux Justin 2.6.32-5-686 #1 SMP Fri Dec 10 16:12:40 UTC 2010 i686 GNU/Linux
+</pre>
+
+<p>有三个版本的GCC，默认版本的gcc是gcc-4.4：</p>
+
+<pre class="example">
+gcc-4.1  gcc-4.3  gcc-4.4
+</pre>
+
+<p>GDB版本为：</p>
+
+<p class="verse">
+GNU gdb (GDB) 7.0.1-<a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a><br>
+Copyright (C) 2009 Free Software Foundation, Inc.<br>
+License GPLv3+: GNU GPL version 3 or later &lt;<a href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br>
+This is free software: you are free to change and redistribute it.<br>
+There is NO WARRANTY, to the extent permitted by law.  Type &quot;show copying&quot;<br>
+and &quot;show warranty&quot; for details.<br>
+This GDB was configured as &quot;i486-<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-gnu&quot;.<br>
+For bug reporting instructions, please see:<br>
+&lt;<a href="http://www.gnu.org/software/gdb/bugs/">http://www.gnu.org/software/gdb/bugs/</a>&gt;.<br>
+</p>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Prepare Bochs</h2>
+
+<p class="first">Linux早期版本运行在方便调试的x86模拟器Bochs上，Bochs对我们的
+运行环境影响较大，本文中搭建的Linux 0.11构建环境只能运行在
+Bochs 2.2.1之上。</p>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Download Bochs</h3>
+
+<p><a href="http://sourceforge.net/projects/bochs">http://sourceforge.net/projects/bochs</a></p>
+
+<p>(我们使用 bochs-2.2.1.tar.gz以及bochs-2.4.5.tar.gz)</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Build Bochs</h3>
+
+<pre class="example">
+cd bochs-2.4.5
+make
+make install     #optional
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Run Linux 0.11 and 0.12 Dev. Build</h2>
+
+<p class="first">如果你只是想试运行一下早期的Linux系统，下载：</p>
+
+<p><a href="http://www.oldlinux.org/Linux.old/bochs/linux-0.12-080324.zip">http://www.oldlinux.org/Linux.old/bochs/linux-0.12-080324.zip</a></p>
+
+<p>(或者：</p>
+
+<p><a href="http://www.oldlinux.org/Linux.old/bochs/linux-0.11-devel-060625.zip">http://www.oldlinux.org/Linux.old/bochs/linux-0.11-devel-060625.zip</a>)</p>
+
+
+<p>并解压，这个是比较新的Linux 0.12的映象，包含一个根文件系统，
+并且可以在其中构建Linux 0.11和0.12的代码。</p>
+
+<pre class="example">
+总计 256644
+-rw-r--r-- 1 justin justin   3078642 2008-03-24 bochs-2.3.6-1.i586.rpm
+-rw-r--r-- 1 justin justin   3549736 2008-03-24 Bochs-2.3.6.exe
+-rw-r--r-- 1 justin justin     15845 2008-03-24 bochsout.txt
+-rw-r--r-- 1 justin justin      1774 2008-03-24 bochsrc-0.12-fd.bxrc
+-rw-r--r-- 1 justin justin      5904 2008-03-24 bochsrc-0.12-hd.bxrc
+-rw-r--r-- 1 justin justin     35732 2007-12-24 bochsrc-sample.txt
+-rw-r--r-- 1 justin justin    150016 2004-03-06 bootimage-0.12-fd
+-rw-r--r-- 1 justin justin    154624 2006-08-27 bootimage-0.12-hd
+-rw-r--r-- 1 justin justin        68 2008-03-24 debug.bat
+-rw-r--r-- 1 justin justin   1474560 2008-03-24 diska.img
+-rw-r--r-- 1 justin justin   1474432 2006-08-27 diskb.img
+-rw-r--r-- 1 justin justin      7917 2008-03-24 linux-0.12-README
+-rw-r--r-- 1 justin justin   1474560 2008-03-24 rootimage-0.12-fd
+-rw-r--r-- 1 justin justin 251338752 2008-03-24 rootimage-0.12-hd
+-rw-r--r-- 1 justin justin     21253 2004-03-13 SYSTEM.MAP
+</pre>
+
+<p>这个版本的系统映象只能运行在Bochs 2.4.5以及之前版本的Bochs安
+装上。如果你不想安装你所下载Bochs，则需要修改run脚本, 使用本
+地编译的Bochs：</p>
+
+<pre class="example">
+export BXSHARE=~/oldlinux/bochs-2.4.5/bios
+#../bochs-2.4.5/bochs -q -f bochsrc-0.12-fd.bxrc
+../bochs-2.4.5/bochs -q -f bochsrc-0.12-hd.bxrc
+</pre>
+
+<p>老的bochsrc文件在新版本的Bochs上运行的时候需要修改，参考赵炯的提示：</p>
+
+<p class="verse">
+Incompatible issues with recent Bochs version (2.4.x)<br>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jiong Zhao      <a href="mailto:gohigh@gmail.com">gohigh@gmail.com</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2010.10.15<br>
+<br>
+The bochs image files collected in this directory are built several years ago.<br>
+They can be ran normally under Buchs 2.2.X version. But when you use these image<br>
+files under one of the recent high Bochs verions, you may encounter some incompatible<br>
+problems when using those old  <em>.bxrc with them.<br>
+<br>
+The fix method is easy. Just modify the </em>.bxrc file as following:<br>
+<br>
+1. Modify the &quot;romimage&quot; line to the exact like this:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;romimage: file=$BXSHARE/BIOS-bochs-latest<br>
+<br>
+2. Modify the &quot;vgaromimage&quot; line like this:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vgaromimage: file = $BXSHARE/VGABIOS-lgpl-latest<br>
+<br>
+3. Comment out or delete the following lines:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#parport1: enable=0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#floppy_command_delay: 50000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ips: 4000000<br>
+<br>
+That's all!<br>
+</p>
+
+<p>其中：</p>
+
+<ul>
+<li>bochsrc-0.12-fd.bxrc 使用软盘作为根文件系统，使用images，
+启动时需要在软驱A中切换软盘:
+
+<ul>
+<li>bootimage-0.12-fd</li>
+<li>rootimage-0.12-fd</li>
+</ul></li>
+<li>bochsrc-0.12-fd.bxrc 使用软盘作为根文件系统，使用images，
+启动时不需要切换软盘:
+
+<ul>
+<li>bootimage-0.12-hd</li>
+<li>rootimage-0.12-hd</li>
+</ul></li>
+<li>diska.img 和 diskb.img 包含一些工具软件，可以在系统启动后使用。</li>
+</ul>
+
+<p>运行：</p>
+
+<pre class="example">
+./run
+</pre>
+
+<p>以硬盘启动为例，如果遇到询问：</p>
+
+<p class="verse">
+Plex86/Bochs VGABios 0.6c 08 Apr 2009<br>
+This VGA/VBE Bios is released under the GNU LGPL<br>
+<br>
+Please visit :<br>
+&nbsp;&nbsp;. <a href="http://bochs.sourceforge.net">http://bochs.sourceforge.net</a><br>
+&nbsp;&nbsp;. <a href="http://www.nongnu.org/vgabios">http://www.nongnu.org/vgabios</a><br>
+<br>
+Bochs VBE Display Adapter enabled<br>
+<br>
+Bochs BIOS - build: 04/05/10<br>
+$Revision: 1.247 $ $Date: 2010/04/04 19:33:50 $<br>
+Options: apmbios pcibios pnpbios eltorito rombios32<br>
+<br>
+ata0 master: Generic 1234 ATA-6 Hard-Disk ( 239 MBytes)<br>
+<br>
+Press F12 for boot menu.<br>
+<br>
+Booting from Floppy...<br>
+<br>
+Loading........................<br>
+Press &lt;RETURN&gt; to see SVGA-modes available or any other key to continue.<br>
+<br>
+</p>
+
+<p>只需要用回车或者空格跳过即可。登录用户名为root：</p>
+
+<pre class="example">
+8 virtual consoles
+4 pty's
+Partition table ok.
+Swap device ok: 7999 pages (32763904 bytes) swap-space
+13922/64000 free blocks
+19428/21333 free inodes
+3365 buffers = 3445760 bytes buffer space
+Free mem: 12582912 bytes
+
+Linux 0.12 i386
+
+Baby login: root
+
+       |^^^^^^|        ______________________
+       |      |       /                      \
+       |      |      | Welcome to Baby Linux.|
+       | (o)(o)      |                       |
+      @      _)      | A public access Linux |
+       | ,___|     ,,| system.               |
+       |   /   ..''  |                       |
+      /____\          \_____________________/
+
+No mail.
+[/root]#
+</pre>
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Build by GCC 3.2.2 and Debug with Bochs and GDB</h2>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+Dowload Root File System</h3>
+
+<p><a href="http://oldlinux.org/Linux.old/images/">http://oldlinux.org/Linux.old/images/</a></p>
+
+<pre class="example">
+bootimage-0.11-20040305                            19-Jun-2008 12:55              121344
+bootimage-0.12-20040306                            19-Jun-2008 12:55              150016
+bootroot-0.11                                      19-Jun-2008 12:55             1474560
+bootroot-0.11.zip                                  19-Jun-2008 12:55              350019
+rootimage-0.11-20040305                            19-Jun-2008 12:55             1474560
+rootimage-0.11-for-orig                            19-Jun-2008 12:55             1474560
+rootimage-0.12-20040306                            19-Jun-2008 12:55             1474560
+</pre>
+
+<p><span class="note">
+bootroot-xxx 为集成启动盘。
+</span></p>
+
+<p>各个启动盘和文件盘的不同参考赵炯的提示：</p>
+
+<p class="verse">
+The rootimage-0.11-for-orig or rootimage-0.11.Z can be used with the<br>
+orignal bootimage-0.11. That is the bootimage compiled without any<br>
+modification to the kernel source of <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> 0.11.<br>
+<br>
+Other bootimage-0.11 images must be used with the rootimage having<br>
+the same dating tag.The difference between rootimage-0.11.Z and<br>
+rootimage-0.1x-XXXXXX is they have different bash(sh).<br>
+<br>
+rootimage-0.11.Z        bash version 1.05, No job control.<br>
+rootimage-0.11-XXXXXX   bash version 1.12, No job control.<br>
+rootimage-0.12.Z        bash version 1.12, Has job control.<br>
+rootimage-0.12.XXXXXX   bash version 1.12, Has job control.<br>
+<br>
+<br>
+Jiong Zhao (<a href="mailto:gohigh@sh163.net">gohigh@sh163.net</a>)<br>
+2004-03-23<br>
+</p>
+
+<p>也可以单独下载Linux 0.11和0.12的系统盘：</p>
+
+<p><a href="http://oldlinux.org/Linux.old/Linux-0.12/images/">http://oldlinux.org/Linux.old/Linux-0.12/images/</a></p>
+
+<pre class="example">
+bootimage-0.12.Z                                   19-Jun-2008 12:50               70345
+rootimage-0.12.Z                                   19-Jun-2008 12:50              825931
+</pre>
+
+<p><a href="http://oldlinux.org/Linux.old/Linux-0.11/images/">http://oldlinux.org/Linux.old/Linux-0.11/images/</a></p>
+
+<pre class="example">
+bootimage-0.11.Z                                   19-Jun-2008 12:50               49068
+rootimage-0.11.Z                                   19-Jun-2008 12:50              752911
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+Download Linux 0.11 Source</h3>
+
+<p class="first">因为Linux 0.11的资料比较全面，而且可以找到大致修改好的源代码，这里以Linux 0.11为例。</p>
+
+<p>原始的源代码可以在这里找到：</p>
+
+<p><a href="http://oldlinux.org/Linux.old/kernel/0.1x/">http://oldlinux.org/Linux.old/kernel/0.1x/</a></p>
+
+<pre class="example">
+linux-0.11.tar.gz
+linux-0.12.tar.gz
+</pre>
+
+<p>可以用来在主机环境下编译的大致修改好的Source有：</p>
+
+<p><a href="http://oldlinux.org/Linux.old/kernel/0.1x/">http://oldlinux.org/Linux.old/kernel/0.1x/</a></p>
+
+<pre class="example">
+linux-0.11-040327-rh9.diff.gz                      19-Jun-2008 12:50                8784
+linux-0.11-040327-rh9.tar.gz                       19-Jun-2008 12:50               96579
+linux-0.11-060617-gcc4-diff.gz                     19-Jun-2008 12:50                1698
+linux-0.11-060618-gcc4.tar.gz                      19-Jun-2008 12:50               96061
+</pre>
+
+<p>本文使用最后一个： <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>-0.11-060618-gcc4.tar.gz</p>
+
+<p>以下包中带有调试信息的可运行映像，可编译的大致修改好带调试信
+息的Source有：</p>
+
+<p><a href="http://oldlinux.org/Linux.old/bochs/">http://oldlinux.org/Linux.old/bochs/</a></p>
+
+<pre class="example">
+linux-0.11-gdb-050619.tar.gz                       19-Jun-2008 12:55              996927
+linux-0.11-gdb-rh9-050619.tar.gz                   19-Jun-2008 12:55             1164489
+</pre>
+
+<p>其中，前者是在Linux 0.11编译出来的，后者是在Redhat 9中编译出
+来的，我们这里只使用后者，前者可以在Linux 0.11的Dev Build中找
+到。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+Build Bochs with GDB Stub Enabled</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+Change bochs-2.2.1/iodev/harddrv.h</h4>
+
+<p class="first">需要注释掉 <code>iodev/harddrv.h</code> 中的290和295两行上的
+<code>sparse_image_t::</code>，才能保证编译通过:</p>
+
+<pre class="example">
+ off_t
+#ifndef PARANOID
+       /*sparse_image_t::*/
+#endif
+                       get_physical_offset();
+ void
+#ifndef PARANOID
+       /* sparse_image_t::*/
+#endif
+                       set_virtual_page(Bit32u new_virtual_page);
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+Patch Bochs 2.2.1 &mdash; Fixing the &quot;Signal 0&quot; Issue</h4>
+
+<p class="first">参考：
+<a href="http://www.oldlinux.org/oldlinux/viewthread.php?action=printable&amp;tid=10761">http://www.oldlinux.org/oldlinux/viewthread.php?action=printable&amp;tid=10761</a></p>
+
+<p>对 <code>bochs-2.2.1/gdbstub.cc</code>使用如下patch（具体行数需调整）：</p>
+
+<pre class="example">
+** gdbstub.cc.orig     Thu Oct 18 18:44:38 2007
+--- gdbstub.cc  Sat Jan 12 17:25:22 2008
+*************** static void debug_loop(void)
+*** 455,460 ****
+--- 455,464 ----
+          {
+            write_signal(&amp;buf[1], SIGTRAP);
+          }
++       else if (last_stop_reason == GDBSTUB_STOP_NO_REASON)
++       {
++         write_signal(&amp;buf[1], SIGSEGV);
++       }
+          else
+          {
+            write_signal(&amp;buf[1], 0);
+</pre>
+
+<p>此处修改使Bochs不再送出 <code>Signal 0</code>中断信号，而是改为 <code>SIGSEGV</code>
+因为gdb无法忽略Signal 0 但是可以通过命令忽略SIGSEGV：</p>
+
+<pre class="example">
+(gdb) handle SIGSEGV nostop noprint ignore
+</pre>
+
+<p>或者</p>
+
+<pre class="example">
+(gdb) handle SIGSEGV nostop noprint pass
+</pre>
+
+<p>避免了因为gdb连续收到signal 0而中断，导致无法调试内核的问题。</p>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Build Bochs 2.2.1</h4>
+
+<p class="first">这里必须使用Bochs 2.2.1作为调试运行平台，否则从软盘装载System的时
+候会不断出现“Reset-floppy Called&quot;错误。</p>
+
+<p>这里我们只构建但并不安装这个build：</p>
+
+<pre class="example">
+cd bochs-2.2.1
+./configure --enable-gdb-stub
+make
+# make install
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+Run Bochs with GDB stub</h3>
+
+<p class="first">在Bochsrc中首行指定：</p>
+
+<pre class="example">
+gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+Install BIN86</h3>
+
+<p class="first">安装as86以及ld86:</p>
+
+<pre class="example">
+sudo apt-get install bin86
+</pre>
+
+<p>该软件包的具体信息为：</p>
+
+<pre class="example">
+Package: bin86
+Priority: optional
+Section: devel
+Installed-Size: 220
+Maintainer: Juan Cespedes &lt;cespedes@debian.org&gt;
+Architecture: i386
+Source: linux86
+Version: 0.16.17-3.1
+Depends: libc6 (&gt;= 2.7)
+Conflicts: linux86
+Filename: pool/main/l/linux86/bin86_0.16.17-3.1_i386.deb
+Size: 88998
+MD5sum: 1148c8d674a8a06bc85ee7623c184c58
+SHA1: b65c7434b77c66ec4e6d09fc03a82daa54a08c1f
+SHA256: 7fd5a6f96a3342881ae858e5c00b142dc1cbfcea568f7685a7b06d7d68c37030
+Description: 16-bit x86 assembler and loader
+ This is the as86 and ld86 distribution written by Bruce Evans.
+ It's a complete 8086 assembler and loader which can make 32-bit
+ code for the 386+ processors.
+Tag: devel::machinecode, interface::commandline, role::program, scope::utility
+</pre>
+
+<p>也可以从如下地址下载：</p>
+
+<p><a href="ftp://ftp.funet.fi/">ftp://ftp.funet.fi/</a></p>
+
+<p><a href="http://oldlinux.org/Linux.old/bin/bin86-0.16.9.tar">http://oldlinux.org/Linux.old/bin/bin86-0.16.9.tar</a></p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec15" id="sec15"></a>
+Install GCC 3.2.2-5 from RH-9</h3>
+
+<p class="first">直接用 <code>gcc-4.x</code> 编译Linux 0.1x虽然能正确编译通
+过，但会造成无法load system。因此需要使用Red Hat 9的
+GCC-3.2.2-5编译。</p>
+
+<p>在Debian下安装alien, 可转换Red Hat RPM包到DEB或者TGZ格式。</p>
+
+<pre class="example">
+sudo apt-get install alien
+</pre>
+
+<p>下载符合Host环境的GCC 3.2.2-5的RPM包，这里安装GCC 3.2.2 i386 RPM, 在这里下载：</p>
+
+<p><a href="ftp://archive.download.redhat.com/pub/redhat/linux/9/en/os/i386/RedHat/RPMS/gcc-3.2.2-5.i386.rpm">ftp://archive.download.redhat.com/pub/redhat/linux/9/en/os/i386/RedHat/RPMS/gcc-3.2.2-5.i386.rpm</a></p>
+
+<p>用alien转换为压缩包,并解压缩：</p>
+
+<pre class="example">
+alien -t gcc-3.2.2-5.i386.rpm
+tar zxvf gcc-3.2.2-5.tgz
+</pre>
+
+<p>我们得到一个./usr目录,其中bin中有需要的GCC-3.2.2-5：</p>
+
+<pre class="example">
+bin
+├── c89
+├── c99
+├── cc -&gt; gcc
+├── gcc
+├── gcov
+├── i386-redhat-linux-gcc
+├── protoize
+└── unprotoize
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec16" id="sec16"></a>
+Build Linux 0.11 Source</h3>
+
+<p class="first">解压缩</p>
+
+<pre class="example">
+tar zxvf linux-0.11-060618-gcc4.tar.gz
+mv linux linux-0.11-060618-gcc4-src
+cd linux-0.11-060618-gcc4-src
+</pre>
+
+<p>新建一个脚本文件 <code>envsetup.sh</code></p>
+
+<pre class="example">
+export PATH=/home/justin/oldlinux/usr/bin/:$PATH
+</pre>
+
+<p>当前shell执行这个脚本，并执行编译：</p>
+
+<pre class="example">
+. envsetup.sh
+make
+</pre>
+
+<p>发现会报如下错误：</p>
+
+<pre class="example">
+gcc -mcpu=i386 -Wall -O -fstrength-reduce -fomit-frame-pointer -finline-functions -nostdinc -I../../include \
+        -c -o console.o console.c
+gcc -E -nostdinc -I../../include -traditional keyboard.S -o keyboard.s
+gcc: installation problem, cannot exec `tradcpp0': no such file or directory
+make[1]: *** [keyboard.s] Error 1
+make[1]: Leaving directory `/home/justin/oldlinux/linux/kernel/chr_drv'
+make: *** [kernel/chr_drv/chr_drv.a] Error 2
+</pre>
+
+<p>需要修改kernel/chr_drv/Makefile:</p>
+
+<pre class="example">
+CPP     =gcc-4.1 -E -nostdinc -I../../include
+</pre>
+
+<p>这里使用gcc-4.x的cpp预编译器处理这个错误，如果今后需要用
+gcc-4.x编译该代码，还需要修改一处：</p>
+
+<pre class="example">
+diff -r linux/kernel/blk_drv/blk.h linux-0.11-060618-gcc4-src//kernel/blk_drv/blk.h
+87c87,88
+&lt; #elif
+---
+&gt; /*#elif*/
+&gt; #else
+</pre>
+
+<p>但这步这里可以省略，再次编译该代码应该可以通过，生成一个
+<code>Image</code>顶层目录。生成的Image可以配合下节的文件系统
+一起使用。</p>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec17" id="sec17"></a>
+Build Linux 0.11 Source with Debug Info</h3>
+
+<p class="first">下载加入调试信息的源代码包：</p>
+
+<p><a href="http://oldlinux.org/Linux.old/bochs/linux-0.11-gdb-rh9-050619.tar.gz">http://oldlinux.org/Linux.old/bochs/linux-0.11-gdb-rh9-050619.tar.gz</a></p>
+
+<p>解压缩：</p>
+
+<pre class="example">
+tar zxvf linux-0.11-gdb-rh9-050619.tar.gz
+cd linux-0.11-gdb-rh9-050619
+cp -r linux mylinux
+cd mylinux
+</pre>
+
+<p>按上节方法修改源代码，需要另外添加两行代码在
+<code>mylinux/tools/build.c</code>头部：</p>
+
+<pre class="example">
+diff -r linux//tools/build.c mylinux//tools/build.c
+&lt; #include &lt;unistd.h&gt;   /* contains read/write */
+---
+&gt; #include &lt;unistd.h&gt;     /* contains read/write */
+31a32,34
+&gt; #define MAJOR(a) (((unsigned)(a))&gt;&gt;8)
+&gt; #define MINOR(a) ((a)&amp;0xff)
+&gt;
+</pre>
+
+<p>然后运行make，可以成功编译。</p>
+
+<pre class="example">
+cd linux-0.11-gdb-rh9-050619
+cp bochsrc-fd1-gdb.bxrc bochsrc-fd1-gdb-my.bxrc
+</pre>
+
+<p>修改脚本 <code>bochsrc-fd1-gdb-my.bxrc</code>：</p>
+
+<pre class="example">
+--- bochsrc-fd1-gdb.bxrc        2011-09-29 12:16:40.156170247 +0800
++++ bochsrc-fd1-gdb-my.bxrc     2011-09-29 20:13:55.958812695 +0800
+@@ -53,7 +53,7 @@
+ #floppya: 1_44=/dev/fd0, status=inserted
+ #floppya: file=../1.44, status=inserted
+ #floppya: 1_44=/dev/fd0H1440, status=inserted
+-floppya: 1_44=linux/Image, status=inserted
++floppya: 1_44=mylinux/Image, status=inserted
+
+ #=======================================================================
+ # FLOPPYB:
+</pre>
+
+<p>同时修改 <code>run</code>文件：</p>
+
+<pre class="example">
+export BXSHARE=~/oldlinux/bochs-2.2.1/bios
+#../bochs-2.2.1/bochs -q -f bochsrc-fd1-gdb.bxrc
+../bochs-2.2.1/bochs -q -f bochsrc-fd1-gdb-my.bxrc
+</pre>
+
+<p>运行 <code>./run</code>即可启动新的系统映像。</p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec18" id="sec18"></a>
+Modify the root fs dev</h3>
+
+<p class="first">默认生成的Image是通过floppyb加载根文件系统的，如果需要配合其
+他Root Fs Image使用，则需要更改加载选项：</p>
+
+<p>首先安装二进制文件修改工具，并运行：</p>
+
+<pre class="example">
+sudo apt-get install ghex
+ghex2
+</pre>
+
+<p>打开build好的Image文件修改：</p>
+
+<ul>
+<li>0x1fc 0x1fd: 00 00 表示从floppya加载root fs</li>
+<li>0x1fc 0x1fd: 1D 02 表示从floppyb加载root fs</li>
+<li>0x1fc 0x1fd: 01 03 表示从first hd加载root fs</li>
+</ul>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec19" id="sec19"></a>
+Debug Linux 0.11 using Bochs and GDB</h3>
+
+<p class="first">通过Gdb和Bochs GDB Stub调试内核，首先需要在构建bochs时打开gdb-stub选项：</p>
+
+<pre class="example">
+cd bochs-2.2.1
+./configure --enable-gdb-stub
+make
+</pre>
+
+<p>运行前确保bochsrc文件开头包含：</p>
+
+<pre class="example">
+gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
+</pre>
+
+<p>运行 <code>bochs</code> :</p>
+
+<pre class="example">
+cd linux-0.11-gdb-rh9-050619
+./run
+</pre>
+
+<p>可见:</p>
+
+<p class="verse">
+========================================================================<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bochs x86 Emulator 2.2.1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build from CVS snapshot on July 8, 2005<br>
+========================================================================<br>
+00000000000i[     ] reading configuration from bochsrc-fd1-gdb-my.bxrc<br>
+00000000000i[     ] Enabled gdbstub<br>
+00000000000i[     ] installing x module as the Bochs GUI<br>
+00000000000i[     ] using log file bochsout.txt<br>
+Waiting for gdb connection on localhost:1234<br>
+</p>
+
+<p>现在打开另外一个控制台终端，启动gdb：</p>
+
+<pre class="example">
+cd linux-0.11-gdb-rh9-050619
+cd mylinux
+gdb tools/system
+</pre>
+
+<p>在gdb的命令环境下加入断点：</p>
+
+<pre class="example">
+(gdb) break main
+Breakpoint 1 at 0x6621: file init/main.c, line 110.
+(gdb) break init
+Breakpoint 2 at 0x6784: file init/main.c, line 169.
+(gdb) break init/main.c:111
+Breakpoint 3 at 0x662d: file init/main.c, line 111.
+(gdb) info b
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x00006621 in main at init/main.c:110
+2       breakpoint     keep y   0x00006784 in init at init/main.c:169
+3       breakpoint     keep y   0x0000662d in main at init/main.c:111
+</pre>
+
+<p>禁止拦截SIGSEGV信号：</p>
+
+<pre class="example">
+(gdb) handle SIGSEGV nostop noprint pass
+Signal        Stop      Print   Pass to program Description
+SIGSEGV       No        No      Yes             Segmentation fault
+</pre>
+
+<p>连接bochs的gdb-stub：</p>
+
+<pre class="example">
+(gdb) target remote localhost:1234
+Remote debugging using localhost:1234
+warning: unrecognized item &quot;ENN&quot; in &quot;qSupported&quot; response
+0x0000fff0 in sys_mkdir (pathname=0x0, mode=0) at namei.c:481
+481                     return -EPERM;
+</pre>
+
+<p>检查当前寄存器状态：</p>
+
+<pre class="example">
+(gdb) info r
+eax            0x0      0
+ecx            0x0      0
+edx            0x543    1347
+ebx            0x0      0
+esp            0x0      0x0
+ebp            0x0      0x0
+esi            0x0      0
+edi            0x0      0
+eip            0xfff0   0xfff0 &lt;sys_mkdir+163&gt;
+eflags         0x2      [ ]
+cs             0xf000   61440
+ss             0x0      0
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+</pre>
+
+<p>看到加电后第一条指令为： 0xffff0 反汇编之：</p>
+
+<pre class="example">
+(gdb) disassemble 0xffff0 0xfffff
+Dump of assembler code from 0xffff0 to 0xfffff:
+0x000ffff0:     ljmp   $0x3730,$0xf000e05b
+0x000ffff7:     das
+0x000ffff8:     xor    %dh,(%esi)
+0x000ffffa:     das
+0x000ffffb:     xor    %dh,0xe4fc00
+End of assembler dump.
+</pre>
+
+<p>这是一条bios跳转指令，单步执行这一条汇编语句，并查看CS:EIP：</p>
+
+<pre class="example">
+(gdb) si
+do_execve (eip=0x0, tmp=0, filename=0x0, argv=0x0, envp=0x0) at exec.c:196
+196                     panic(&quot;execve called from supervisor mode&quot;);
+(gdb) info r
+eax            0x0      0
+ecx            0x0      0
+edx            0x543    1347
+ebx            0x0      0
+esp            0x0      0x0
+ebp            0x0      0x0
+esi            0x0      0
+edi            0x0      0
+eip            0xe05b   0xe05b &lt;do_execve+49&gt;
+eflags         0x2      [ ]
+cs             0xf000   61440
+ss             0x0      0
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+</pre>
+
+<p>继续执行代码：</p>
+
+<pre class="example">
+(gdb) cont
+Continuing.
+
+Breakpoint 3, main () at init/main.c:111
+111             drive_info = DRIVE_INFO;
+(gdb) info b
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0000661c in main at init/main.c:110
+        breakpoint already hit 1 time
+2       breakpoint     keep y   0x00006784 in init at init/main.c:169
+3       breakpoint     keep y   0x0000662d in main at init/main.c:111
+        breakpoint already hit 1 time
+</pre>
+
+<p>可以发现有的时候 <code>main</code>断点不会被中断，需要明确指
+明代码行数 <code>init/main.c:111</code></p>
+
+<p>也可以在具体符号所对应地址处加断点，语法为：</p>
+
+<pre class="example">
+(gdb) b *0x662d
+Note: breakpoint 3 also set at pc 0x662d.
+Breakpoint 4 at 0x662d: file init/main.c, line 111.
+(gdb) i b
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0000661c in main at init/main.c:110
+        breakpoint already hit 1 time
+2       breakpoint     keep y   0x00006784 in init at init/main.c:169
+3       breakpoint     keep y   0x0000662d in main at init/main.c:111
+        breakpoint already hit 1 time
+4       breakpoint     keep y   0x0000662d in main at init/main.c:111
+</pre>
+
+<p>符号对应的地址可以在目录 <code>mylinux/System.map</code>中找到。</p>
+
+<p>至此，一个完整能够修改调试Linux 0.11的环境就建立完毕。</p>
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec20" id="sec20"></a>
+Build by GCC 4.x and Debug with Bochs and GDB</h2>
+
+<p class="first">PS，最近又看到一些网上资料，发现已经有人将Linux 0.11的代码移植到GCC-4.x, 请参考的如下帖子：</p>
+
+<p>GCC4.3.4 - <a href="http://www.blogjava.net/menglee/archive/2011/08/02/355555.html">http://www.blogjava.net/menglee/archive/2011/08/02/355555.html</a></p>
+
+<p>GCC4.x - <a href="http://www.oldlinux.org/oldlinux/viewthread.php?tid=11651&amp;extra=page%3D1">http://www.oldlinux.org/oldlinux/viewthread.php?tid=11651&amp;extra=page%3D1</a></p>
+
+<p>GCC4.x（推荐） - <a href="http://www.oldlinux.org/oldlinux/viewthread.php?tid=13681&amp;extra=page%3D1">http://www.oldlinux.org/oldlinux/viewthread.php?tid=13681&amp;extra=page%3D1</a></p>
+
+<hr>
+References:
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> Old Linux - <a href="http://www.oldlinux.org">http://www.oldlinux.org</a></p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:debian_oldlinuxsetup';
+    var disqus_title = "Justin's Wiki - Linux 0.11 Build and Debug Env. on Debian";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/debian/oldlinuxsetup.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Tue Sep 27 18:32:22 2011
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/debian/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "debian_oldlinuxsetup");
+  //afterload();
+  fillsearch();
+</script>
+</html>

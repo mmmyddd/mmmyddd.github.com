@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Perl Programming</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "../..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/emacs/index.html">EMACS环境</a>
+&#187; 
+<a href="/wiki/emacs/java/index.html">Java开发环境</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Perl Programming
+      </div>
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>打开cperl-mode</h3>
+
+
+<p>让cperl-mode称为默认的perl编辑模式：</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
+        /* font-lock-function-name-face */
+        color: #87cefa;
+        font-weight: bold;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+    --></style>(<span class="keyword">defalias</span> '<span class="function-name">perl-mode</span> 'cperl-mode)
+</pre>
+
+<p>在没有以.perl, .pl结尾,或者#!perl开始的文件中开启，
+需要在文件开头以注释的形式选择：</p>
+
+<pre class="example">
+#anything     -*-mode:perl;-*-
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>编辑源文件</h3>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>察看文档</h3>
+
+<pre class="example">
+M-x cperl-perldoc
+M-x cperl-perldoc-at-point
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>调试程序</h3>
+
+
+
+<p>cperl-mode is an interactive compiled Lisp function in `cperl-mode.el'.
+(cperl-mode)</p>
+
+
+
+<p>Major mode for editing Perl code.
+Expression and list commands understand all C brackets.
+Tab indents for Perl code.
+Paragraphs are separated by blank lines only.
+Delete converts tabs to spaces as it moves back.</p>
+
+<p>Various characters in Perl almost always come in pairs: {}, (), [],
+sometimes &lt;&gt;.  When the user types the first, she gets the second as
+well, with optional special formatting done on {}.  (Disabled by
+default.)  You can always quote (with C-q) the left
+&quot;paren&quot; to avoid the expansion.  The processing of &lt; is special,
+since most the time you mean &quot;less&quot;.  CPerl mode tries to guess
+whether you want to type pair &lt;&gt;, and inserts is if it
+appropriate.  You can set `cperl-electric-parens-string' to the string that
+contains the parenths from the above list you want to be electrical.
+Electricity of parenths is controlled by `cperl-electric-parens'.
+You may also set `cperl-electric-parens-mark' to have electric parens
+look for active mark and &quot;embrace&quot; a region if possible.'</p>
+
+<p>CPerl mode provides expansion of the Perl control constructs:</p>
+
+<blockquote>
+<p class="quoted">if, else, elsif, unless, while, until, continue, do,
+for, foreach, formy and foreachmy.</p>
+</blockquote>
+
+<p>and POD directives (Disabled by default, see `cperl-electric-keywords'.)</p>
+
+<p>The user types the keyword immediately followed by a space, which
+causes the construct to be expanded, and the point is positioned where
+she is most likely to want to be.  eg. when the user types a space
+following &quot;if&quot; the following appears in the buffer: if () { or if ()
+} { } and the cursor is between the parentheses.  The user can then
+type some boolean expression within the parens.  Having done that,
+typing M-x cperl-linefeed places you - appropriately indented - on a
+new line between the braces (if you typed M-x cperl-linefeed in a POD
+directive line, then appropriate number of new lines is inserted).</p>
+
+<p>If CPerl decides that you want to insert &quot;English&quot; style construct like</p>
+
+<center>
+<p>bite if angry;</p>
+</center>
+
+<p>it will not do any expansion.  See also help on variable
+`cperl-extra-newline-before-brace'.  (Note that one can switch the
+help message on expansion by setting `cperl-message-electric-keyword'
+to nil.)</p>
+
+<p>M-x cperl-linefeed is a convenience replacement for typing carriage
+return.  It places you in the next line with proper indentation, or if
+you type it inside the inline block of control construct, like</p>
+
+<center>
+<p>foreach (@lines) {print; print}</p>
+</center>
+
+<p>and you are on a boundary of a statement inside braces, it will
+transform the construct into a multiline and will place you into an
+appropriately indented blank line.  If you need a usual
+`newline-and-indent' behavior, it is on C-j,
+see documentation on `cperl-electric-linefeed'.</p>
+
+<p>Use M-x cperl-invert-if-unless to change a construction of the form</p>
+
+<center>
+<p>if (A) { B }</p>
+</center>
+
+<p>into</p>
+
+<center>
+<p>B if A;</p>
+</center>
+
+<p>key             binding
+&mdash;             &mdash;&mdash;-</p>
+
+<p>C-c		Prefix Command
+TAB		cperl-indent-command
+C-j		newline-and-indent
+ESC		Prefix Command
+(		cperl-electric-paren
+)		cperl-electric-rparen
+:		cperl-electric-terminator</p>
+
+&lt;		cperl-electric-paren
+[		cperl-electric-paren
+]		cperl-electric-rparen
+{		cperl-electric-lbrace
+}		cperl-electric-brace
+DEL		cperl-electric-backspace
+
+<p>C-M-q		cperl-indent-exp
+C-M-\		cperl-indent-region
+C-M-|		cperl-lineup</p>
+
+<p>C-c C-a		cperl-toggle-auto-newline
+C-c C-b		cperl-find-bad-style
+C-c C-d		cperl-here-doc-spell
+C-c C-e		cperl-toggle-electric
+C-c C-f		auto-fill-mode
+C-c C-h		Prefix Command
+C-c C-j		cperl-linefeed
+C-c C-k		cperl-toggle-abbrev
+C-c C-n		cperl-narrow-to-here-doc
+C-c C-p		cperl-pod-spell
+C-c C-t		cperl-invert-if-unless
+C-c C-v		cperl-next-interpolated-REx
+C-c C-w		cperl-toggle-construct-fix
+C-c C-x		cperl-next-interpolated-REx-0
+C-c C-y		cperl-next-interpolated-REx-1</p>
+
+<p>C-c C-h F	cperl-info-on-command
+C-c C-h P	cperl-perldoc-at-point
+C-c C-h a	cperl-toggle-autohelp
+C-c C-h f	cperl-info-on-current-command
+C-c C-h p	cperl-perldoc
+C-c C-h v	cperl-get-help</p>
+
+
+
+<p>Setting the variable `cperl-font-lock' to t switches on font-lock-mode
+(even with older Emacsen), `cperl-electric-lbrace-space' to t switches
+on electric space between $ and {, `cperl-electric-parens-string' is
+the string that contains parentheses that should be electric in CPerl
+(see also `cperl-electric-parens-mark' and `cperl-electric-parens'),
+setting `cperl-electric-keywords' enables electric expansion of
+control structures in CPerl.  `cperl-electric-linefeed' governs which
+one of two linefeed behavior is preferable.  You can enable all these
+options simultaneously (recommended mode of use) by setting
+`cperl-hairy' to t.  In this case you can switch separate options off
+by setting them to `null'.  Note that one may undo the extra
+whitespace inserted by semis and braces in `auto-newline'-mode by
+consequent M-x cperl-electric-backspace.</p>
+
+<p>If your site has perl5 documentation in info format, you can use commands
+M-x cperl-info-on-current-command and M-x cperl-info-on-command to access it.
+These keys run commands `cperl-info-on-current-command' and
+`cperl-info-on-command', which one is which is controlled by variable
+`cperl-info-on-command-no-prompt' and `cperl-clobber-lisp-bindings'
+(in turn affected by `cperl-hairy').</p>
+
+<p>Even if you have no info-format documentation, short one-liner-style
+help is available on M-x cperl-get-help, and one can run perldoc or
+man via menu.</p>
+
+<p>It is possible to show this help automatically after some idle time.
+This is regulated by variable `cperl-lazy-help-time'.  Default with
+`cperl-hairy' (if the value of `cperl-lazy-help-time' is nil) is 5
+secs idle time .  It is also possible to switch this on/off from the
+menu, or via M-x cperl-toggle-autohelp.  Requires `run-with-idle-timer'.</p>
+
+<p>Use M-x cperl-lineup to vertically lineup some construction - put the
+beginning of the region at the start of construction, and make region
+span the needed amount of lines.</p>
+
+<p>Variables `cperl-pod-here-scan', `cperl-pod-here-fontify',
+`cperl-pod-face', `cperl-pod-head-face' control processing of POD and
+here-docs sections.  With capable Emaxen results of scan are used
+for indentation too, otherwise they are used for highlighting only.</p>
+
+<p>Variables controlling indentation style:
+<blockquote>
+<p class="quoted">`cperl-tab-always-indent'
+Non-nil means TAB in CPerl mode should always reindent the current line,
+regardless of where in the line point is when the TAB command is used.
+`cperl-indent-left-aligned-comments'
+Non-nil means that the comment starting in leftmost column should indent.
+`cperl-auto-newline'
+Non-nil means automatically newline before and after braces,
+and after colons and semicolons, inserted in Perl code.  The following
+M-x cperl-electric-backspace will remove the inserted whitespace.
+Insertion after colons requires both this variable and
+`cperl-auto-newline-after-colon' set.
+`cperl-auto-newline-after-colon'
+Non-nil means automatically newline even after colons.
+Subject to `cperl-auto-newline' setting.
+`cperl-indent-level'
+Indentation of Perl statements within surrounding block.
+The surrounding block's indentation is the indentation
+of the line on which the open-brace appears.
+`cperl-continued-statement-offset'
+Extra indentation given to a substatement, such as the
+then-clause of an if, or body of a while, or just a statement continuation.
+`cperl-continued-brace-offset'
+Extra indentation given to a brace that starts a substatement.
+This is in addition to `cperl-continued-statement-offset'.
+`cperl-brace-offset'
+Extra indentation for line if it starts with an open brace.
+`cperl-brace-imaginary-offset'
+An open brace following other text is treated as if it the line started
+this far to the right of the actual line indentation.
+`cperl-label-offset'
+Extra indentation for line that is a label.
+`cperl-min-label-indent'
+Minimal indentation for line that is a label.</p>
+</blockquote>
+
+<p>Settings for classic indent-styles: K&amp;R BSD=C++ GNU <a href="PerlStyle">Perl Style</a>=Whitesmith
+<blockquote>
+<p class="quoted">`cperl-indent-level'                5   4       2   4
+`cperl-brace-offset'                0   0       0   0
+`cperl-continued-brace-offset'     -5  -4       0   0
+`cperl-label-offset'               -5  -4      -2  -4
+`cperl-continued-statement-offset'  5   4       2   4</p>
+</blockquote>
+
+<p>CPerl knows several indentation styles, and may bulk set the
+corresponding variables.  Use M-x cperl-set-style to do this.  Use
+M-x cperl-set-style-back to restore the memorized preexisting values
+(both available from menu).  See examples in `cperl-style-examples'.</p>
+
+<p>Part of the indentation style is how different parts of if/elsif/else
+statements are broken into lines; in CPerl, this is reflected on how
+templates for these constructs are created (controlled by
+`cperl-extra-newline-before-brace'), and how reflow-logic should treat &quot;continuation&quot; blocks of else/elsif/continue, controlled by the same variable,
+and by `cperl-extra-newline-before-brace-multiline',
+`cperl-merge-trailing-else', `cperl-indent-region-fix-constructs'.</p>
+
+<p>If `cperl-indent-level' is 0, the statement after opening brace in
+column 0 is indented on
+`cperl-brace-offset'+`cperl-continued-statement-offset'.</p>
+
+<p>Turning on CPerl mode calls the hooks in the variable `cperl-mode-hook'
+with no args.</p>
+
+<p>DO NOT FORGET to read micro-docs (available from `Perl' menu)
+or as help on variables `cperl-tips', `cperl-problems',
+`cperl-praise', `cperl-speed'.</p>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:emacs_java_perl';
+    var disqus_title = "Justin's Wiki - Perl Programming";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/emacs/java/perl.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated Mar.  8, 2009
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/emacs/java/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../../res/topic.html", "emacs_java_perl");
+  //afterload();
+  fillsearch();
+</script>
+</html>

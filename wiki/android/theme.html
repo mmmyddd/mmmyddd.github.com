@@ -1,0 +1,2630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-triditional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>
+      Justin's Wiki - Theme Structure</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://mmmyddd.github.io/wiki/res/rss.xml" />
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../res/css/common2.css"/>
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="../res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="../res/css/ie6hacks.css"/>
+<![endif]-->
+
+
+    <script type="text/javascript" src="../res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="../res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script type="text/javascript" src="../res/js/audio-player.js"></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("../res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+
+    <script type="text/javascript" src="../res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "..//res/js/player.swf";
+    </script>
+
+    <meta name="description" content="Michael Olson, maintainer of Emacs Muse and ERC" />
+    <meta name="keywords" content="android theme" />
+    <meta name="generator" content="Muse" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../res/js/collapsible.js" >
+    </script>
+  </head>
+
+  <body>
+    <a name="top"></a>
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/wiki/./index.html" style="text-decoration: none;">
+          <img src="/image/wiki-logo.png" alt="Justin's Wiki" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+          &nbsp;
+        </span>
+        <a href="/wiki/res/rss.xml">
+          <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+        </a>
+      </form>
+    </div>
+
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187; 
+<a href="/wiki/./index.html">学习笔记</a>
+&#187; 
+<a href="/wiki/android/index.html">Android操作系统</a>
+
+      </div>
+      <ul>
+        <li><a href="/blog/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+  <!-- Page published by Emacs Muse begins here -->
+  <div class="container" id="container">
+
+    <!--navigation-->
+    <div class="topic" id="topic">
+      <ul id="outer">
+        <!-- Wiki projects tree -->
+        Loading ...
+      </ul>
+    </div>
+
+    <!-- collapsible arrow -->
+    <div class="muse-content" id="muse-content" >
+      <!-- collapsible splitter -->
+      <div id="collapsible"></div>
+      <div class="padding">&nbsp;</div>
+      <!--muse generated -->
+      <div class="pretty-title">
+        Theme Structure
+      </div>
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Android Resource Framework</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec2">1.1 Resource Type</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">1.2 Simple Values</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">1.3 Drawables</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">1.4 Animation</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">1.5 Layout</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec7">1.6 Style and Theme</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec8">2 Android Theme Utils</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec9">2.1 AAPT - Android Assets Package Tool</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">3 Theme Structure</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">3.1 Create the customization theme</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec12">4 Proposed Theme Framework</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec13">4.1 Goal</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec14">5 Theme Creation Tool</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec1" id="sec1"></a>
+Android Resource Framework</h2>
+
+<p><strong>Reference:</strong></p>
+
+<ol>
+<li><a href="http://code.google.com/android/reference/available-resources.html">Available Resource Types - Android SDK</a></li>
+<li><a href="http://code.google.com/android/devel/resources-i18n.html">Resource and i18n - Android SDK</a></li>
+</ol>
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec2" id="sec2"></a>
+Resource Type</h3>
+
+<p class="first">Android resources are extracted and externalized from code and packages of applications.
+All the resources are declared in a group of resource files in xml format which begin with
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;, and enclosed in the root element &lt;resources&gt; of the files:</p>
+
+<pre class="example">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+    ... ...
+&lt;/resources&gt;
+</pre>
+
+<p>The resource declaration files are located under the subdirectories of
+the <strong><em>res</em></strong> subdir under the application installation packages.</p>
+
+<p class="verse">
+&nbsp;&nbsp;/home/justin/projects/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>-projects/<a href="HelloAndroid">Hello Android</a>:<br>
+&nbsp;&nbsp;总计 40<br>
+&nbsp;&nbsp;drwxr-xr-x 6 justin justin 4096 02-16 11:29 .<br>
+&nbsp;&nbsp;drwxr-xr-x 3 justin justin 4096 02-16 11:29 ..<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash; 1 justin justin 1100 02-16 11:29 <a href="AndroidManifest">Android Manifest</a>.xml<br>
+&nbsp;&nbsp;drwxr-xr-x 2 justin justin 4096 02-16 11:29 bin<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash; 1 justin justin 2214 02-16 11:29 build.xml<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash; 1 justin justin  363 02-16 11:29 default.properties<br>
+&nbsp;&nbsp;drwxr-xr-x 2 justin justin 4096 02-16 11:29 libs<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash; 1 justin justin  478 02-16 11:29 local.properties<br>
+&nbsp;&nbsp;<strong>drwxr-xr-x 2 justin justin 4096 02-16 11:29 res</strong><br>
+&nbsp;&nbsp;drwxr-xr-x 3 justin justin 4096 02-16 11:29 src<br>
+</p>
+
+
+<p>Android theme data fall into the following types:</p>
+
+<ul>
+<li>Simple Values</li>
+<li>Drawables</li>
+<li>Animation</li>
+<li>Layout</li>
+<li>Styles and Themes</li>
+</ul>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec3" id="sec3"></a>
+Simple Values</h3>
+
+<p class="first">Simple values include:</p>
+
+<ul>
+<li>Color</li>
+<li>String and Styled Text</li>
+<li>Dimensions</li>
+</ul>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Color</h4>
+
+<p><strong>Usage</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/values/<span class="opt">colors</span>.xml</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Element</td>
+      <td>&lt;color&gt; containted in &lt;resources&gt;</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Syntax</td>
+      <td>&lt;color name=&quot;<span class="opt">color_name</span>&quot;&gt;<span class="opt">#color_value&lt;/color&gt;</span></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Value Format</td>
+      <td>#RGB<br> #ARGB<br> #RRGGBB<br> #AARRGGBB</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource Pointer to a Java int</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.color.<span class="opt">color_name</span> <br> <strong>XML:</strong> @[<span class="opt">package:</span>]color/<span class="opt">color_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;resources&gt;
+   &lt;color name=&quot;opaque_red&quot;&gt;#f00&lt;/color&gt;
+   &lt;color name=&quot;translucent_red&quot;&gt;#80ff0000&lt;/color&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+// Retrieve a color value.
+int color = getResources.getColor(R.color.opaque_red);
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;TextView android:layout_width=&quot;fill_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:textAlign=&quot;center&quot;
+          android:textColor=&quot;@color/translucent_red&quot;
+          android:text=&quot;Some Text&quot;/&gt;
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>String and Styled Text</h4>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/values/<span class="opt">strings</span>.xml</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>&lt;string&gt;</td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>&lt;string name=&quot;<span class="opt">string_name</span>&quot;&gt;<span class="opt">string_value</span>&lt;/string&gt;</td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See the <a href="#string_note">note</a></td>
+    </tr>
+    <tr>
+      <td>Compile Type</td>
+      <td>Resource pointer to a Java <a href="CharSequence">Char Sequence</a>.</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.string.<span class="opt">string_name</span> <br> <strong>XML:</strong> @[<span class="option">package</span>]string/<span class="opt">string_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong><a name="string_note" id="string_note"></a>Note:</strong></p>
+
+<p><span class="note">
+1. If you use an apostrophe or a quote in your string, you must either escape it or enclose the whole string in the
+other kind of enclosing quotes:
+</span></p>
+
+<pre class="example">
+&lt;string name=&quot;good_example&quot;&gt;&quot;This'll work&quot;&lt;/string&gt;
+&lt;string name=&quot;good_example_2&quot;&gt;This\'ll also work&lt;/string&gt;
+&lt;string name=&quot;bad_example&quot;&gt;This won't work!&lt;/string&gt;
+&lt;string name=&quot;bad_example_2&quot;&gt;XML encodings won&amp;apos;t work either!&lt;/string&gt;
+</pre>
+
+<p><span class="note">
+2. The HTML tags &lt;u&gt; &lt;i&gt; and &lt;b&gt; can be include in the text, and make the string styled.
+</span></p>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;resources&gt;
+   &lt;string name=&quot;simple_welcome_message&quot;&gt;Welcome!&lt;/string&gt;
+   &lt;string name=&quot;styled_welcome_message&quot;&gt;We are &lt;b&gt;&lt;i&gt;so&lt;/i&gt;&lt;/b&gt; glad to see you.&lt;/string&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+// Assign a styled string resource to a TextView
+// on the current screen.
+
+// Get the Char
+CharSequence str = getString(R.string.styled_welcome_message);
+
+//Get raw Text of the CharSequence
+//In the case of simple text, rawText==str
+String rawText = str.toString();
+
+TextView tv = (TextView)findViewByID(R.id.text);
+tv.setText(str);
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;TextView android:layout_width=&quot;fill_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:textAlign=&quot;center&quot;
+          android:text=&quot;@string/simple_welcome_message&quot;/&gt;
+</pre>
+
+<p><span class="note">
+The recommended way to use styled text:
+</span></p>
+
+<p>Suppose we have the original styled text:</p>
+
+<pre class="example">
+%1$d results for &lt;b&gt;&amp;quot;%2$s&amp;quot;&lt;/b&gt;
+</pre>
+
+
+<p>1. First, store the tags in the styled text in the sgml/xml escaped format,
+either in the help of tools or do it manually. The Html.htmlEncode(String) will do the job:</p>
+
+<pre class="example">
+String escapedTitle = TextUtil.htmlEncode(title);
+</pre>
+
+<p>and then we put the escaped string in the resource file:</p>
+
+<pre class="example">
+&lt;resources&gt;
+      &lt;string name=&quot;search_results_resultsTextFormat&quot;&gt;%1$d results for &amp;lt;b&gt;&amp;amp;quot;%2$s&amp;amp;quot;&amp;lt;/b&gt;&lt;/string&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>2. Then, when read from the the xml file, the string has been unescaped to tagged text:</p>
+
+<pre class="example">
+%1$d results for &lt;b&gt;&amp;quot;%2$s&amp;quot;&lt;/b&gt;
+</pre>
+
+<p>3. Use String.format() to format the HTML text at this time, substitute the parameters:</p>
+
+<pre class="example">
+String resultsText = String.format(resultsTextFormat, 13, &quot;insane&quot;);
+</pre>
+
+<p>here we get:</p>
+
+<pre class="example">
+13 results for &lt;b&gt;&amp;quot;insane&amp;quot;&lt;/b&gt;
+</pre>
+
+<p>4. As last step, get a complicated <a href="CharSequence">Char Sequence</a> (Spanned):</p>
+
+<pre class="example">
+CharSequence styledResults = Html.fromHtml(resultsText);
+</pre>
+
+<p>to get the plain text in the Spanned text, try:</p>
+
+<pre class="example">
+String plainText = styledResults.toString();
+</pre>
+
+<p>and we get the plainText:</p>
+
+<pre class="example">
+13 results for &quot;insane&quot;
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Dimension</h4>
+
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/values/<span class="opt">dimens</span>.xml</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Element</td>
+      <td>&lt;dimen&gt;</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Syntax</td>
+      <td>&lt;dimen name=&quot;<span class="opt">dimen_name</span>&quot;&gt;<span class="opt">dimen_value</span>&lt;/dimen&gt;</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a dimension.Resource pointer to a dimension.</td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See the <a href="#dimen-note">note</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.dimen.<span class="opt">dimen_name</span><br>  <strong>XML:</strong> @[<span class="opt">package:</span>]dimen/<span class="opt">dimen_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p><a name="dimen-note" id="dimen-note"></a>
+<span class="note">
+<strong>Note:</strong> A dimension is a number following by a unit of measurement. The unit includes:
+</span></p>
+
+<dl>
+<dt><strong>px</strong></dt>
+<dd>The actual pixels on the screen.</dd>
+<dt><strong>in</strong></dt>
+<dd>Based on the physical size of the screen.</dd>
+<dt><strong>mm</strong></dt>
+<dd>Millimeters based on the physical size of the screen.</dd>
+<dt><strong>pt</strong></dt>
+<dd>Points - 1/72 of an inch based on the physical size of the screen.</dd>
+<dt><strong>dp</strong></dt>
+<dd>Desity-independent pixels - an abstract unit that is based on the physical density of the screen. The unit
+is relative to a dpi screen,  one dp is one pixel on a 160 dpi screen. The ratio of dp-to-pixel will change with
+the screen density, but not necessarily in direct proportion.</dd>
+</dl>
+
+<p><span class="note">
+The compiler accepts both &quot;dip&quot; and &quot;dp&quot;, though &quot;dp&quot; is more consistent with &quot;dip&quot;.
+</span></p>
+
+<dl>
+<dt><strong>sp</strong></dt>
+<dd>Scale-independent pixels - an abstract unit like dp, but it is also scaled by the user's font size preference.
+It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and
+user's preference.</dd>
+</dl>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;resources&gt;
+    &lt;dimen name=&quot;one_pixel&quot;&gt;1px&lt;/dimen&gt;
+    &lt;dimen name=&quot;double_density&quot;&gt;2dp&lt;/dimen&gt;
+    &lt;dimen name=&quot;sixteen_sp&quot;&gt;16sp&lt;/dimen&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+float dimen = Resources.getDimension(R.dimen.one_pixel);
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;TextView android:layout_width=&quot;fill_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:textSize=&quot;@dimen/sixteen_sp&quot;/&gt;
+</pre>
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec4" id="sec4"></a>
+Drawables</h3>
+
+<p class="first">Drawables includes:</p>
+
+<ul>
+<li>Bitmap Drawable</li>
+<li>Color Drawable</li>
+<li>Nine Patch (Stretchable) Drawable</li>
+</ul>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Bitmap Drawable</h4>
+
+<p class="first">Android support the png (preferred), jpg (acceptable), gif (discouraged) image files.</p>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/drawable/<span class="opt">bitmap_name</span>.png <br> (.gif, .jpg are acceptable)</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a <a href="BitmapDrawable">Bitmap Drawable</a></td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.drawable.<span class="opt">bitmap_name</span> <br> <strong>XML:</strong> @[<span class="opt">package:</span>drawable/<span class="opt">bitmap_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+// Load an array with BitmapDrawable resources.
+private Integer[] mThumbIds = {
+   R.drawable.sample_thumb_0,
+   R.drawable.sample_thumb_1,
+   R.drawable.sample_thumb_2,
+   R.drawable.sample_thumb_3,
+   R.drawable.sample_thumb_4
+};
+
+// Load and return a view with an image.
+public View getView(int position, ViewGroup parent)
+{
+   ImageView i = new ImageView(mContext);
+   i.setImageResource(mThumbIds[position]);
+   i.setAdjustViewBounds(true);
+   i.setLayoutParams(new Gallery.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+   i.setBackground(android.R.drawable.picture_frame);
+   return i;
+}
+</pre>
+
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;ImageView id=&quot;@+id/icon&quot;
+   android:layout_width=&quot;wrap_content&quot;
+   android:layout_height=&quot;wrap_content&quot;
+   android:tint=&quot;#FF000000&quot;
+   android:src=&quot;@drawable/chat_icon&quot;/&gt;
+</pre>
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Color Drawable</h4>
+
+<p class="first">A color drawable is a rectangle of color, with optionally rounded corners.</p>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/values/<span class="opt">colors</span>.xml</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Element</td>
+      <td>&lt;drawable&gt;</td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>&lt;drawable name=&quot;<span class="opt">color_name</span>&quot;&gt;<span class="opt">#color_value</span>&lt;/drawable&gt;</td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>Same as color simple value</td>
+    </tr>
+    <tr>
+      <td>Compile Type</td>
+      <td>Resource pointer to a <a href="PaintDrawable">Paint Drawable</a>.</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.drawable.<span class="opt">color_name</span> <br> <strong>XML:</strong> @[<span class="opt">package:</span>]drawable/<span class="opt">color_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;resources&gt;
+    &lt;drawable name=&quot;solid_red&quot;&gt;#f00&lt;/drawable&gt;
+    &lt;drawable name=&quot;solid_blue&quot;&gt;#0000ff&lt;/drawable&gt;
+    &lt;drawable name=&quot;solid_green&quot;&gt;#f0f0&lt;/drawable&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+// Assign a PaintDrawable as the background to
+// a TextView on the current screen.
+Drawable redDrawable = Resources.getDrawable(R.drawable.solid_red);
+TextView tv = (TextView)findViewByID(R.id.text);
+tv.setBackground(redDrawable);
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;TextView android:layout_width=&quot;fill_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:textAlign=&quot;center&quot;
+          android:background=&quot;@drawable/solid_red&quot;/&gt;
+</pre>
+
+
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Nine Patch Strechable Drawable</h4>
+
+<p><strong>Introduction:</strong></p>
+
+<p>Nine patch stretchable image is a standard png image that include 1 pixel wide border.</p>
+
+<p>The border is used to define:</p>
+
+<p>1. the stretchable and static areas of the image. (left and top border)</p>
+
+<p>2. the padding box. (right and bottom border)</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/image/ninepatch_raw.png" alt="The stretchable and static area"></td></tr>
+  <tr><td align="center" class="image-caption">The stretchable and static area</td></tr>
+</table>
+
+
+<p>When text is to be drawn on the image, it will first stretch the the stretchable part until the text fits inside the
+stretched padding box.</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/image/ninepatch_examples.png" alt="Different Text in Nine Patch"></td></tr>
+  <tr><td align="center" class="image-caption">Different Text in Nine Patch</td></tr>
+</table>
+
+<p>The utility tool - draw9path under ~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/sdk/tools help
+to draw the border on a standard png image in a visualized way.</p>
+
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/drawable/<span class="opt">image_name</span>.9.png <br> (must end with .9.png)</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Sytax</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a <a href="NinePatchDrawable">Nine Patch Drawable</a>.</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.drawable.<span class="opt">image_name</span> <br> <strong>XML:</strong> @[<span class="opt">package:</span>]drawable/<span class="opt">image_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;Button id=&quot;@+id/tiny&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignParentTop=&quot;true&quot;
+        android:layout_centerInParent=&quot;true&quot;
+        android:text=&quot;Tiny&quot;
+        android:textSize=&quot;8sp&quot;
+        android:background=&quot;@drawable/my_button_background&quot;/&gt;
+
+&lt;Button id=&quot;@+id/big&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignParentBottom=&quot;true&quot;
+        android:layout_centerInParent=&quot;true&quot;
+        android:text=&quot;Biiiiiiig text!&quot;
+        android:textSize=&quot;30sp&quot;
+        android:background=&quot;@drawable/my_button_background&quot;/&gt;
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec5" id="sec5"></a>
+Animation</h3>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Tweened Animation</h4>
+
+<p class="first">Android perform simple animation on a single or a series of graphics, include rotations, fading, moving and streching.</p>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/anim/<span class="opt">anim_name</span>.xml <br> one resource per file, one root tag with no &lt;?xml&gt; declaration</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>See the <a href="#anim-note">note</a></td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>See the <a href="#anim-note">note</a></td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See the <a href="#anim-note">note</a></td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to an Animation</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.anim.<span class="opt">anim_name</span> <br> <strong>XML:</strong> @[<span class="opt">package:</span>]anim/<span class="opt">anim_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong><a name="anim-note" id="anim-note"></a>Note:</strong></p>
+
+<p><span class="note">
+1. The file must have a single root element: this will be either a single &lt;alpha&gt;, &lt;scale&gt;, &lt;translate&gt;, &lt;rotate&gt;,
+interpolator element, or &lt;set&gt; element that holds groups of these elements (which may include another &lt;set&gt;).
+</span></p>
+
+<pre class="example">
+&lt;set android:shareInterpolator=boolean&gt;  // Only required if multiple tags are used.
+   &lt;alpha android:fromAlpha=float
+          android:toAlpha=float &gt;   |
+   &lt;scale android:fromXScale=float
+          android:toXScale=float
+          android:fromYScale=float
+          android:toYScale=float
+          android:pivotX=string
+          android:pivotY=string&gt;    |
+   &lt;translate android:fromX=string
+              android:toX=string
+              android:fromY=string
+              android:toY=string&gt;   |
+   &lt;rotate android:fromDegrees=float
+           android:toDegrees=float
+           android:pivotX=string
+           android:pivotY=string /&gt; |
+   &lt;interpolator tag&gt;
+   &lt;set&gt;
+&lt;/set&gt;
+</pre>
+
+<p><span class="note">
+2. By default, all elements are applied simultaneously. To have them occur sequentially, you must specify the startOffset
+attribute, as shown in the example code.
+</span></p>
+
+<p><strong>Element and Attribute:</strong></p>
+
+<dl>
+<dt><strong>&lt;set&gt;</strong></dt><dd>
+The outermost tag, which can recursively hold itself or other animations. You can include as many child elements of
+the same or different types as you like. Supports the following attribute:
+
+<ul>
+<li>shareInterpolator - Whether to share the same Interpolator among all immediate child elements.</li>
+</ul></dd>
+<dt><strong>&lt;alpha&gt;</strong></dt><dd>
+A fading animation, compiled to <a href="AlphaAnimation">Alpha Animation</a>. Supports the following attributes:
+
+<ul>
+<li>fromAlpha - 0.0 to 1.0, where 0.0 is transparent.</li>
+<li>toAlpha - 0.0 to 1.0, where 0.0 is transparent.</li>
+</ul></dd>
+<dt><strong>&lt;scale&gt;</strong></dt><dd>
+A resizing animation, compiled to <a href="ScaleAnimation">Scale Animation</a>. You can specify what is the center point of the image (the pinned
+center), from which it grows outward (or inward), by specifying pivotX and pivotY. So, for example, if these were 0,
+0 (top left corner), all growth would be down and to the right. scale supports the following attributes:
+
+<ul>
+<li>fromXScale - Starting X size, where 1.0 is no change.</li>
+<li>toXScale - Ending X size, where 1.0 is no change.</li>
+<li>fromYScale - Starting Y size, where 1.0 is no change.</li>
+<li>toYScale - Ending Y size, where 1.0 is no change.</li>
+<li>pivotX - The X coordinate of the pinned center.</li>
+<li>pivotY - The Y coordinate of the pinned center.</li>
+</ul></dd>
+<dt><strong>&lt;translate&gt;</strong></dt><dd>
+A motion animation that moves a visual element within its parent element. It is equivalent to <a href="TranslateAnimation">Translate Animation</a>.
+Supports the following attributes in any of the following three formats: values from -100 to 100, ending with &quot;%&quot;,
+indicating a percentage relative to itself; values from -100 to 100, ending in &quot;%p&quot;, indicating a percentage
+relative to its parent; a float with no suffix, indicating an absolute value.
+
+<ul>
+<li>fromXDelta - Starting X location.</li>
+<li>toXDelta - Ending X location.</li>
+<li>fromYDelta - Starting Y location.</li>
+<li>toYDelta - Ending Y location.</li>
+</ul></dd>
+<dt><strong>&lt;rotate&gt;</strong></dt><dd>
+A rotation animation, compiled to <a href="RotateAnimation">Rotate Animation</a>. Supports the following attributes:
+
+<ul>
+<li>fromDegrees - Starting rotation, in degrees.</li>
+<li>toDegrees - Ending rotation, in degrees.</li>
+<li>pivotX - The X coordinate of the center of rotation, in pixels, where (0,0) is the top left corner.</li>
+<li>pivotY - The Y coordinate of the center of rotation, in pixels, where (0,0) is the top left corner.</li>
+</ul></dd>
+<dt><strong>&lt;interpolator tag&gt;</strong></dt><dd>
+You can also use any of the interpolator subclass elements defined in R.styleable. Examples include
+&lt;<a href="CycleInterpolator">Cycle Interpolator</a>&gt;, &lt;<a href="EaseInInterpolator">Ease in Interpolator</a>&gt;, and &lt;<a href="EaseOutInterpolator">Ease Out Interpolator</a>&gt;. These objects define a velocity curve that
+describes how quickly a visual action takes place on a timeline (fast at first and slow later, slow at first and
+gradually faster, and so on).</dd>
+</dl>
+
+<p><span class="note">
+Note that alpha, scale, rotate, translate all support the following attributes from the base animation class,
+<a href="BaseAnimation">Base Animation</a>:
+</span></p>
+
+<ul>
+<li>duration - Duration, in milliseconds, for this effect.</li>
+<li>startOffset - Offset start time for this effect, in milliseconds.</li>
+<li>fillBefore - Equivalent to animation.Animation.setFillBefore().</li>
+<li>fillAfter -  Equivalent to animation.Animation.setFillAfter().</li>
+<li>interpolator - You can optionally set an interpolator for each element to determine how quickly or slowly it performs
+its effect over time. For example, slow at the beginning and faster at the end for <a href="EaseInInterpolator">Ease in Interpolator</a>,
+and the reverse for <a href="EaseOutInterpolator">Ease Out Interpolator</a>. A list of interpolators is given in R.anim.
+To specify these, use the syntax:
+@<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>:anim/<span class="opt">interpolatorName</span></li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;set android:shareInterpolator=&quot;false&quot;&gt;
+   &lt;scale
+          android:interpolator=&quot;@android:anim/ease_in_out_interpolator&quot;
+          android:fromXScale=&quot;1.0&quot;
+          android:toXScale=&quot;1.4&quot;
+          android:fromYScale=&quot;1.0&quot;
+          android:toYScale=&quot;0.6&quot;
+          android:pivotX=&quot;50%&quot;
+          android:pivotY=&quot;50%&quot;
+          android:fillAfter=&quot;false&quot;
+          android:duration=&quot;700&quot; /&gt;
+   &lt;set android:interpolator=&quot;@android:anim/ease_in_interpolator&quot;&gt;
+      &lt;scale
+             android:fromXScale=&quot;1.4&quot;
+             android:toXScale=&quot;0.0&quot;
+             android:fromYScale=&quot;0.6&quot;
+             android:toYScale=&quot;0.0&quot;
+             android:pivotX=&quot;50%&quot;
+             android:pivotY=&quot;50%&quot;
+             android:startOffset=&quot;700&quot;
+             android:duration=&quot;400&quot;
+             android:fillBefore=&quot;false&quot; /&gt;
+      &lt;rotate
+             android:fromDegrees=&quot;0&quot;
+             android:toDegrees=&quot;-45&quot;
+             android:toYScale=&quot;0.0&quot;
+             android:pivotX=&quot;50%&quot;
+             android:pivotY=&quot;50%&quot;
+             android:startOffset=&quot;700&quot;
+             android:duration=&quot;400&quot; /&gt;
+   &lt;/set&gt;
+&lt;/set&gt;
+</pre>
+
+
+<p>Code Reference:</p>
+
+<pre class="example">
+mFlipper.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.hyperspace_in));
+mFlipper.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.hyperspace_out));
+</pre>
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec6" id="sec6"></a>
+Layout</h3>
+
+<p class="first">Layout specify screen layouts using XML elements inside an XML file. Each file contains a whole screen or part of a screen.</p>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FILE</td>
+      <td>res/layout/<span class="opt">layout_name</span>.xml</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td><span class="opt"><a href="ViewGroupClass">View Group Class</a></span></td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>See the <a href="#layout-syntax">Element and Attribute</a></td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See the <a href="#layout-syntax">Element and Attribute</a></td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a View (or subclass) resource.</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.layout.<span class="opt">layout_name</span> <br> <strong>XML:</strong> @[package:]layout/<span class="opt">layout_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p><strong><a name="layout-syntax" id="layout-syntax"></a>Element and Attribute:</strong></p>
+
+<p>Layout element has the following recursive structure:</p>
+
+<pre class="example">
+&lt;ViewGroupClass xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+                id=&quot;@+id/string_name&quot; (attributes)&gt;
+   &lt;widget or other nested ViewGroupClass&gt;+
+   &lt;requestFocus/&gt;(0 or 1 per layout file, assigned to any element)
+&lt;/ViewGroupClass&gt;
+</pre>
+
+<dl>
+<dt><strong>&lt;<a href="ViewGroupClass">View Group Class</a>&gt;</strong></dt><dd>
+nThe file has single root element. This can be a <em><a href="ViewGroup">View Group</a></em> class that contains other elements, or a widget (or custom item) if it's only one object. By default, you can use any (case-sensitive) Android widget or <a href="ViewGroup">View Group</a> class
+name as an element. These elements support attributes that apply to the underlying class, but the naming is not as
+clear. You should not assume that any nesting is valid.
+
+<ul>
+<li><strong>id</strong>: An ID value used to access this element in Java. Typically you will use the syntax @+id/string_name to
+generate an ID for you in the id.xml file if you haven't created one yourself.</li>
+<li><strong>xmlns:<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a></strong>=&quot;http://schemas.<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.com/apk/res/android&quot; - Required for the root element only</li>
+</ul></dd>
+
+<dt><strong>&lt;requestFocus&gt;</strong></dt><dd>
+Any element representing a View object can include this empty element, which gives it's parent tag initial focus on
+the screen. You can have only one of these elements per file.</dd>
+</dl>
+
+<p><strong>Example:</strong></p>
+
+<p>XML Declaration:</p>
+
+<p>The attributes set of an element can be found at <code>R.styleable</code>. The attributes come from the exposed attributes in the underline
+class or superclasses:</p>
+
+<p>1. Widget Attributes:</p>
+
+<p>For example, if <code>R.styleable</code> lists the following values:</p>
+
+<ul>
+<li><a href="TextView">Text View</a></li>
+<li><a href="TextView">Text View</a>_lines</li>
+<li><a href="TextView">Text View</a>_maxlines</li>
+</ul>
+
+<p>The following element can be created:</p>
+
+<pre class="example">
+&lt;TextView android:lines=&quot;10&quot; android:maxlines=&quot;20&quot;/&gt;
+</pre>
+
+<p>2. Layout Attributes:</p>
+
+<p>For example if <code>R.styleable</code> lists the following values:</p>
+
+<ul>
+<li><a href="LinearLayout">Linear Layout</a>_Layout // The actual object — not used.</li>
+<li><a href="LinearLayout">Linear Layout</a>_Layout_layout_gravity // Exposes a gravity attribute</li>
+<li><a href="LinearLayout">Linear Layout</a>_Layout_layout_height // Exposes a height attribute</li>
+<li><a href="LinearLayout">Linear Layout</a>_Layout_layout_weight // Exposes a weight attribute</li>
+<li><a href="LinearLayout">Linear Layout</a>_Layout_layout_width // Exposes a width attribute</li>
+</ul>
+
+<p>In the children nodes of the &lt;<a href="LinearLayout">Linear Layout</a>&gt;, the attribute can be specified.</p>
+
+<pre class="example">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!-- res/main_screen.xml --&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+              android:orientation=&quot;vertical&quot;    // The object's own orientation property
+              android:padding=&quot;4&quot;               // Inherited View property
+              android:gravity=&quot;center&quot;          // The object's own property
+              android:layout_width=&quot;fill_parent&quot;  // Parent object's LinearLayout.LayoutParams.width
+              android:layout_height=&quot;fill_parent&quot;&gt; // Parent object's LinearLayout.LayoutParams.height
+
+   &lt;TextView android:layout_width=&quot;fill_parent&quot;   // TextView.LayoutParams.width
+             android:layout_height=&quot;wrap_content&quot; // TextView.LayoutParams.height
+             android:layout_weight=&quot;0&quot;            // TextView.LayoutParams.weight
+             android:paddingBottom=&quot;4&quot;            // TextView.paddingBottom
+             android:text=&quot;@string/redirect_getter&quot;/&gt; // TextView.text
+
+   &lt;EditText id=&quot;@+id/text&quot;
+             android:layout_width=&quot;fill_parent&quot;   // EditText.LayoutParams.width
+             android:layout_height=&quot;wrap_content&quot; // EditText.LayoutParams.height
+             android:layout_weight=&quot;0&quot;            // EditText.LinearLayoutParams.weight
+             android:paddingBottom=&quot;4&quot;&gt;           // EditText.paddingBottom
+       &lt;requestFocus /&gt;
+   &lt;/EditText&gt;
+
+   &lt;Button id=&quot;@+id/apply&quot;
+           android:layout_width=&quot;wrap_content&quot;  // Button.LayoutParams.width
+           android:layout_height=&quot;wrap_content&quot; // Button.LayoutParams.height
+           android:text=&quot;@string/apply&quot; /&gt;      // TextView.text
+&lt;/LinearLayout&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+setContentView(R.layout.main_screen);  //Activity.setContentView
+</pre>
+
+<h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Custom Layout Resource - Styleable</h4>
+
+<p class="first">Custom elements can be used in the same way as any Android layout element, so the reusable components can be created for future reference.</p>
+
+<p><strong>USAGE</strong>:</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td><strong>Java Class:</strong> extends the View or subclass <br> <strong>Attributes Definition:</strong> res/values/<span class="opt">attrs</span>.xml</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>Without an &lt;?xml&gt; declaration,  &lt;resources&gt; root element containing one or more &lt;declare-styleable&gt;</td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>See <a href="#customer-layout-note">the note</a></td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See <a href="#customer-layout-note">the note</a></td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a View (or subclass) resource</td>
+    </tr>
+    <tr>
+      <td>Reference Name</td>
+      <td><strong>Java:</strong> R.styleable.<span class="opt">java_class_name</span> <br> <strong>XML:</strong> <span class="opt">java_full_class_name</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong><a name="customer-layout-note" id="customer-layout-note"></a>Note:</strong></p>
+
+<p>The following items need to be supplied:</p>
+
+<p>1. Jave implementation file:
+The class must extend <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.View or a subclass of View. Take com.example.<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.apis.view.<a href="LabelView">Label View</a>. in <a href="ApiDemo">Api Demo</a> for example:</p>
+
+<pre class="example">
+0:[-] LabelView.java
+1:  -&gt; LabelView{}
+2:  {-} Variables
+3:    +&gt; mTextPaint
+3:    +&gt; mText
+3:    +&gt; mAscent
+2:  {-} Methods
+3:    +&gt; LabelView()
+3:    +&gt; LabelView()
+3:    +&gt; initLabelView()
+3:    +&gt; setText()
+3:    +&gt; setTextSize()
+3:    +&gt; setTextColor()
+3:    +&gt; onMeasure()
+3:    +&gt; measureWidth()
+3:    +&gt; measureHeight()
+3:    +&gt; onDraw()
+1: {-} Imports
+2:   =&gt; android.content.Context&lt;&gt;
+2:   =&gt; android.content.res.TypedArray&lt;&gt;
+2:   =&gt; android.graphics.Canvas&lt;&gt;
+2:   =&gt; android.graphics.Paint&lt;&gt;
+2:   =&gt; android.util.AttributeSet&lt;&gt;
+2:   =&gt; android.view.View&lt;&gt;
+2:   =&gt; com.example.android.apis.R&lt;&gt;
+1:  =&gt; com.example.android.apis.view
+</pre>
+
+<p>2. res/values/<span class="opt">attrs</span>.xml:
+Define the XML element, and the attributes that it supports<br></p>
+
+<pre class="example">
+&lt;resources&gt;
+     &lt;declare-styleable name=&quot;LabelView&quot;&gt;
+        &lt;attr name=&quot;text&quot; format=&quot;string&quot; /&gt;
+        &lt;attr name=&quot;textColor&quot; format=&quot;color&quot; /&gt;
+        &lt;attr name=&quot;textSize&quot; format=&quot;dimension&quot; /&gt;
+    &lt;/declare-styleable&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>After build the <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> project, the compiler generate the styleable members in the
+com.example.<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.apis.R.Styleable class:</p>
+
+<pre class="example">
+LabelView
+LabelView_text
+LabelView_textColor
+LabelView_textSize
+</pre>
+
+<p>3. res/layout/<span class="opt">java_class_name</span>.xml:
+An optional XML file to describe the layout of your object.</p>
+
+<pre class="example">
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+        xmlns:app=&quot;http://schemas.android.com/apk/res/com.example.android.apis&quot;
+        android:orientation=&quot;vertical&quot;
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;&gt;
+
+    &lt;com.example.android.apis.view.LabelView
+            android:background=&quot;@drawable/red&quot;
+            android:layout_width=&quot;fill_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            app:text=&quot;Red&quot;/&gt;
+
+    &lt;com.example.android.apis.view.LabelView
+            android:background=&quot;@drawable/blue&quot;
+            android:layout_width=&quot;fill_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            app:text=&quot;Blue&quot; app:textSize=&quot;20dp&quot;/&gt;
+}}}
+    &lt;com.example.android.apis.view.LabelView
+            android:background=&quot;@drawable/green&quot;
+            android:layout_width=&quot;fill_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            app:text=&quot;Green&quot; app:textColor=&quot;#ffffffff&quot; /&gt;
+
+&lt;/LinearLayout&gt;
+</pre>
+
+
+
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec7" id="sec7"></a>
+Style and Theme</h3>
+
+<p class="first">A style is one or more attributes applied to a single element (for example, 10 point red Arial font, applied to a
+<a href="TextView">Text View</a>). A style is applied as an attribute to an element in a layout XML file.</p>
+
+<p>A theme is one or more attributes applied to a whole screen — for example, you might apply the stock Android Theme.dialog
+theme to an activity designed to be a floating dialog box. A theme is assigned as an attribute to an Activity in the
+manifest file.</p>
+
+<p><strong>Usage:</strong></p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td>res/valus/<span class="opt">styles</span>.xml</td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td>&lt;style&gt;</td>
+    </tr>
+    <tr>
+      <td>Syntax</td>
+      <td>See <a href="#theme-style-note">Elements and Attributes</a></td>
+    </tr>
+    <tr>
+      <td>Value Format</td>
+      <td>See <a href="#theme-style-note">Elements and Attributes</a></td>
+    </tr>
+    <tr>
+      <td>Compiled Type</td>
+      <td>Resource pointer to a Java <a href="CharSequence">Char Sequence</a></td>
+    </tr>
+    <tr>
+      <td>Resource Name</td>
+      <td><strong>Java:</strong> R.style.<span class="opt">style_id</span> for the whole style<br> R.style.<span class="opt">style_id</span>.<span class="opt">item_id</span>for the individual setting <br> <strong>XML:</strong> @[<span class="opt">package:</span>]style/<span class="opt">style_id</span> for the whole style <br> @[<span class="opt">package:</span>]style/<span class="opt">style_id</span>/<span class="opt">item_id</span> for the individual setting.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="note">
+To refer to a value in the currently applied theme, use &quot;?&quot; instead of &quot;@&quot; as described below (XML)
+</span></p>
+
+
+<p><strong><a name="theme-style-note" id="theme-style-note"></a>Elements and Attributes:</strong></p>
+
+<p>Style element has the following syntax:</p>
+
+<pre class="example">
+&lt;style name=&quot;style_id&quot; [parent=&quot;parent_id&quot;] &gt;
+   &lt;item name=string&gt;Hex value | string value | reference&lt;/item&gt;+
+&lt;/style&gt;
+</pre>
+
+
+<dl>
+<dt><strong>&lt;style&gt;</strong></dt><dd>
+Holds one or more &lt;item&gt; elements, each describing one value. This style, which is a bundle of values, can be referred
+to as a theme.
+
+<ul>
+<li>name - The name used in referring to this theme.</li>
+<li>parent - An optional parent theme. All values from the specified theme will be inherited into this theme. Any
+values with identical names that you specify will override inherited values. The name must be qualified by the
+package, but you don't need the /style directive (for example, <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>:Theme for the base Android theme, or <a href="MyTheme">My Theme</a>
+for a theme defined in your package).</li>
+</ul></dd>
+<dt><strong>&lt;item&gt;</strong></dt><dd>
+A value to use in this theme. It can be a standard string, a hex color value, or a reference to any other resource
+type.</dd>
+</dl>
+
+<p><strong>Example:</strong></p>
+
+<p>1. Style</p>
+
+<p>XML Declaration:</p>
+
+<pre class="example">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+    &lt;style name=&quot;SpecialText&quot;&gt;
+        &lt;item name=&quot;android:textSize&quot;&gt;18sp&lt;/item&gt;
+        &lt;item name=&quot;android:textColor&quot;&gt;#008&lt;/item&gt;
+    &lt;/style&gt;
+&lt;/resources&gt;
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;!-- MainPageLayout.xml --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+              android:layout_height=&quot;fill_parent&quot;
+              android:layout_width=&quot;fill_parent&quot;
+              android:orientation=&quot;vertical&quot;
+              android:scrollbars=&quot;vertical&quot;
+              id=&quot;main_frame&quot;&gt;
+    &lt;EditText id=&quot;@+id/text1&quot;
+              style=&quot;@style/SpecialText&quot;
+              android:layout_width=&quot;fill_parent&quot;
+              android:layout_height=&quot;wrap_content&quot;
+              android:text=&quot;Hello, World!&quot; /&gt;
+&lt;/LinearLayout&gt;
+</pre>
+
+<p>2. Theme</p>
+
+<p>XMLDeclaration</p>
+
+<pre class="example">
+&lt;style name=&quot;ThemeNew&quot;&gt;
+   &lt;item name=&quot;windowFrame&quot;&gt;@drawable/screen_frame&lt;/item&gt;
+   &lt;item name=&quot;windowBackground&quot;&gt;@drawable/screen_background_white&lt;/item&gt;
+   &lt;item name=&quot;panelForegroundColor&quot;&gt;#FF000000&lt;/item&gt;
+   &lt;item name=&quot;panelBackgroundColor&quot;&gt;#FFFFFFFF&lt;/item&gt;
+   &lt;item name=&quot;panelTextColor&quot;&gt;?panelForegroundColor&lt;/item&gt;
+   &lt;item name=&quot;panelTextSize&quot;&gt;14&lt;/item&gt;
+   &lt;item name=&quot;menuItemTextColor&quot;&gt;?panelTextColor&lt;/item&gt;
+   &lt;item name=&quot;menuItemTextSize&quot;&gt;?panelTextSize&lt;/item&gt;
+&lt;/style&gt;
+</pre>
+
+<p>Code Reference:</p>
+
+<pre class="example">
+setTheme(R.style.ThemeNew); //Activity.setTheme()
+</pre>
+
+<p>XML Reference:</p>
+
+<pre class="example">
+&lt;!-- AndroidManifest.xml --&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+          package=&quot;com.example.codelab.rssexample&quot;&gt;
+       &lt;activity class=&quot;AddRssItem&quot; android:label=&quot;@string/add_item_label&quot; android:theme=&quot;@android:style/Theme.Dialog&quot;/&gt;
+&lt;/manifest&gt;
+</pre>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec8" id="sec8"></a>
+Android Theme Utils</h2>
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec9" id="sec9"></a>
+AAPT - Android Assets Package Tool</h3>
+For all of those who may think in generating the R.java file from a terminal with aapt, here’s a little help on the
+command:
+
+<p>$ aapt package -m -J &lt;FOLDER&gt; -M <a href="AndroidManifest">Android Manifest</a>.xml -S res -I &lt;PATH&gt;/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.jar</p>
+
+<p>The &lt;FOLDER&gt; param represents the src folder where the .java classes are. (normally just “src”)</p>
+
+<p>The &lt;PATH&gt; is the location of the <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>.jar</p>
+
+<p>Please also note that this command must be run on the location of the Android Project.</p>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec10" id="sec10"></a>
+Theme Structure</h2>
+
+<p class="first">Android cascade theme structure.
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Theme Scope - Resource Type</h3></p>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec11" id="sec11"></a>
+Create the customization theme</h3>
+
+
+
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec12" id="sec12"></a>
+Proposed Theme Framework</h2>
+
+<pre class="example">
+    &lt;!-- Default theme for dialog windows and activities, which is used by the
+         {@link android.app.Dialog} class.  This changes the window to be
+         floating (not fill the entire screen), and puts a frame around its
+         contents.  You can set this theme on an activity if you would like to
+         make an activity that looks like a Dialog. --&gt;
+    &lt;style name=&quot;Theme.InputMethod&quot; parent=&quot;Theme.Light.NoTitleBar&quot;&gt;
+        &lt;item name=&quot;android:windowBackground&quot;&gt;@android:color/transparent&lt;/item&gt;
+        &lt;item name=&quot;android:windowFrame&quot;&gt;@null&lt;/item&gt;
+        &lt;item name=&quot;android:windowIsFloating&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:backgroundDimEnabled&quot;&gt;false&lt;/item&gt;
+        &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:windowAnimationStyle&quot;&gt;@android:style/Animation.InputMethod&lt;/item&gt;
+    &lt;/style&gt;
+</pre>
+
+
+
+<pre class="example">
+  /home/justin/android/src:
+  总计 68
+  drwxr-xr-x 16 justin justin 4096 01-15 23:46 .
+  drwxr-xr-x  7 justin justin 4096 02-17 15:41 ..
+  drwxr-xr-x  9 justin justin 4096 01-15 23:13 bionic
+  drwxr-xr-x  5 justin justin 4096 01-15 23:13 bootable
+  drwxr-xr-x  7 justin justin 4096 02-13 18:04 build
+  drwxr-xr-x 18 justin justin 4096 02-13 17:47 dalvik
+  drwxr-xr-x 15 justin justin 4096 01-15 23:14 development
+  drwxr-xr-x 61 justin justin 4096 01-15 23:16 external
+  drwxr-xr-x  5 justin justin 4096 01-15 23:16 frameworks
+  drwxr-xr-x  4 justin justin 4096 01-15 23:16 hardware
+  drwxr-xr-x 23 justin justin 4096 01-15 23:17 kernel
+  -r--r--r--  1 justin justin   87 01-15 23:14 Makefile
+  drwxr-xr-x  4 justin justin 4096 01-16 00:15 out
+  drwxr-xr-x  4 justin justin 4096 01-15 23:17 packages
+  drwxr-xr-x  9 justin justin 4096 01-15 23:18 prebuilt
+  drwxr-xr-x  6 justin justin 4096 01-15 17:19 .repo
+  drwxr-xr-x  6 justin justin 4096 01-15 23:18 system
+</pre>
+
+<pre class="example">
+# /home/justin/android/src/frameworks/base/core/res:
+#
+# Copyright (C) 2008 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_NO_STANDARD_LIBRARIES := true
+LOCAL_PACKAGE_NAME := framework-res
+LOCAL_CERTIFICATE := platform
+
+# Tell aapt to create &quot;extending (non-application)&quot; resource IDs,
+# since these resources will be used by many apps.
+LOCAL_AAPT_FLAGS := -x
+
+LOCAL_MODULE_TAGS := user development
+
+# Install this alongside the libraries.
+LOCAL_MODULE_PATH := $(TARGET_OUT_JAVA_LIBRARIES)
+
+# Create package-export.apk, which other packages can use to get
+# PRODUCT-agnostic resource data like IDs and type definitions.
+LOCAL_EXPORT_PACKAGE_RESOURCES := true
+
+include $(BUILD_PACKAGE)
+</pre>
+
+<pre class="example">
+  /home/justin/android/src/out/target/product/generic/system/framework:
+  总计 6668
+  drwxr-xr-x  2 justin justin    4096 01-16 03:21 .
+  drwxr-xr-x 12 justin justin    4096 01-16 03:21 ..
+  -rw-r--r--  1 justin justin    6520 01-16 12:02 am.jar
+  -rw-r--r--  1 justin justin  438145 01-16 12:02 android.awt.jar
+  -rw-r--r--  1 justin justin   64765 01-16 12:02 android.policy.jar
+  -rw-r--r--  1 justin justin   69913 01-16 12:02 android.test.runner.jar
+  -rw-r--r--  1 justin justin    6460 01-16 12:02 com.android.im.plugin.jar
+  -rw-r--r--  1 justin justin 1559416 01-15 23:57 core.jar
+  -rw-r--r--  1 justin justin  327666 01-15 23:57 ext.jar
+  -rw-r--r--  1 justin justin 1959226 01-16 11:49 framework.jar
+  -rw-r--r--  1 justin justin 1907175 01-16 12:04 framework-res.apk
+  -rw-r--r--  1 justin justin   11324 01-16 12:03 framework-tests.jar
+  -rw-r--r--  1 justin justin    3403 01-16 12:03 ime.jar
+  -rw-r--r--  1 justin justin    2512 01-16 12:03 input.jar
+  -rw-r--r--  1 justin justin   19915 01-16 12:03 monkey.jar
+  -rw-r--r--  1 justin justin    9869 01-16 12:03 pm.jar
+  -rw-r--r--  1 justin justin  373857 01-16 12:04 services.jar
+  -rw-r--r--  1 justin justin    3713 01-16 12:04 svc.jar
+</pre>
+
+<pre class="example">
+M Filemode      Length  Date         Time      File
+- ----------  --------  -----------  --------  ------------------------------------------------------------
+  -rw-rw-rw-     76217  16-Apr-2008  07:40:50  meta-inf/manifest.mf
+  -rw-rw-rw-     76259  16-Apr-2008  07:40:50  meta-inf/cert.sf
+  -rw-rw-rw-      1714  16-Apr-2008  07:40:50  meta-inf/cert.rsa
+  -rw-rw-rw-     31768  16-Jan-2009  12:04:18  AndroidManifest.xml
+  -rw-rw-rw-      3098  15-Jan-2009  23:16:34  assets/images/android_320x480.png
+  -rw-rw-rw-      1001  15-Jan-2009  23:16:34  assets/images/boot_robot.png
+  -rw-rw-rw-      2083  15-Jan-2009  23:16:34  assets/images/boot_robot_glow.png
+  -rw-rw-rw-       566  15-Jan-2009  23:16:34  assets/images/combobox-disabled.png
+  -rw-rw-rw-       655  15-Jan-2009  23:16:34  assets/images/combobox-noHighlight.png
+  -rw-rw-rw-       748  15-Jan-2009  23:16:34  assets/images/cylon_dot.png
+  -rw-rw-rw-      1283  15-Jan-2009  23:16:34  assets/images/cylon_left.png
+  -rw-rw-rw-      1259  15-Jan-2009  23:16:34  assets/images/cylon_right.png
+  -rw-rw-rw-     79471  15-Jan-2009  23:16:34  assets/sounds/bootanim0.raw
+  -rw-rw-rw-     79392  15-Jan-2009  23:16:34  assets/sounds/bootanim1.raw
+  -rw-rw-rw-      1140  15-Jan-2009  23:16:34  assets/webkit/android-weberror.png
+  -rw-rw-rw-       456  15-Jan-2009  23:16:34  assets/webkit/missingImage.png
+  -rw-rw-rw-      1552  15-Jan-2009  23:16:34  assets/webkit/nullplugin.png
+  -rw-rw-rw-     64890  15-Jan-2009  23:16:34  assets/webkit/play.png
+  -rw-rw-rw-       182  15-Jan-2009  23:16:34  assets/webkit/textAreaResizeCorner.png
+  -rw-rw-rw-      1413  15-Jan-2009  23:16:34  assets/webkit/youtube.html
+  -rw-rw-rw-      1544  15-Jan-2009  23:16:34  assets/webkit/youtube.png
+  -rw-rw-rw-       340  16-Jan-2009  12:04:18  res/anim/accelerate_decelerate_interpolator.xml
+  -rw-rw-rw-       368  16-Jan-2009  12:04:18  res/anim/accelerate_interpolator.xml
+  -rw-rw-rw-       568  16-Jan-2009  12:04:18  res/anim/app_starting_exit.xml
+  -rw-rw-rw-       368  16-Jan-2009  12:04:18  res/anim/decelerate_interpolator.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/dialog_enter.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/dialog_exit.xml
+  -rw-rw-rw-       492  16-Jan-2009  12:04:18  res/anim/fade_in.xml
+  -rw-rw-rw-       492  16-Jan-2009  12:04:18  res/anim/fade_out.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/grow_fade_in.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/grow_fade_in_center.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/grow_fade_in_from_bottom.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/input_method_enter.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/input_method_exit.xml
+  -rw-rw-rw-       312  16-Jan-2009  12:04:18  res/anim/linear_interpolator.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/options_panel_enter.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/options_panel_exit.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/push_down_in.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/push_down_out.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/push_up_in.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/push_up_out.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/search_bar_enter.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/search_bar_exit.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/shrink_fade_out.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/shrink_fade_out_center.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/anim/shrink_fade_out_from_bottom.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_in_bottom.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/slide_in_child_bottom.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_in_left.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_in_right.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_in_top.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_out_bottom.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_out_left.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_out_right.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/slide_out_top.xml
+  -rw-rw-rw-       772  16-Jan-2009  12:04:18  res/anim/submenu_enter.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/anim/submenu_exit.xml
+  -rw-rw-rw-       632  16-Jan-2009  12:04:18  res/anim/task_close_enter.xml
+  -rw-rw-rw-       580  16-Jan-2009  12:04:18  res/anim/task_close_exit.xml
+  -rw-rw-rw-       580  16-Jan-2009  12:04:18  res/anim/task_open_enter.xml
+  -rw-rw-rw-       632  16-Jan-2009  12:04:18  res/anim/task_open_exit.xml
+  -rw-rw-rw-       492  16-Jan-2009  12:04:18  res/anim/toast_enter.xml
+  -rw-rw-rw-       492  16-Jan-2009  12:04:18  res/anim/toast_exit.xml
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/color/primary_text_dark.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/primary_text_dark_disable_only.xml
+  -rw-rw-rw-       832  16-Jan-2009  12:04:18  res/color/primary_text_dark_focused.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/primary_text_dark_nodisable.xml
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/color/primary_text_light.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/primary_text_light_disable_only.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/primary_text_light_nodisable.xml
+  -rw-rw-rw-      1388  16-Jan-2009  12:04:18  res/color/secondary_text_dark.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/secondary_text_dark_nodisable.xml
+  -rw-rw-rw-      1388  16-Jan-2009  12:04:18  res/color/secondary_text_light.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/secondary_text_light_nodisable.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/tab_indicator_text.xml
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/color/tertiary_text_dark.xml
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/color/tertiary_text_light.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/theme_panel_text.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_autocompletetextview_dark.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_button.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_edittext_dark.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_edittext_dark_hint.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_paneltabwidget.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_textview_bigspinneritem_dark.xml
+  -rw-rw-rw-       556  16-Jan-2009  12:04:18  res/color/widget_textview_spinneritem_dark.xml
+  -rw-rw-rw-      1947  16-Jan-2009  12:04:18  res/drawable-land/bottombar_565.png
+  -rw-rw-rw-       857  16-Jan-2009  12:04:18  res/drawable-land/statusbar_background.png
+  -rw-rw-rw-       564  16-Jan-2009  12:04:18  res/drawable/app_icon_background.xml
+  -rw-rw-rw-       303  16-Jan-2009  12:04:18  res/drawable/arrow_down_float.png
+  -rw-rw-rw-       305  16-Jan-2009  12:04:18  res/drawable/arrow_up_float.png
+  -rw-rw-rw-      3073  16-Jan-2009  12:04:18  res/drawable/battery_charge_background.png
+  -rw-rw-rw-       676  16-Jan-2009  12:04:18  res/drawable/battery_charge_fill.xml
+  -rw-rw-rw-       622  16-Jan-2009  12:04:18  res/drawable/battery_charge_fill_empty.9.png
+  -rw-rw-rw-       628  16-Jan-2009  12:04:18  res/drawable/battery_charge_fill_full.9.png
+  -rw-rw-rw-       715  16-Jan-2009  12:04:18  res/drawable/battery_charge_fill_warning.9.png
+  -rw-rw-rw-      5206  16-Jan-2009  12:04:18  res/drawable/battery_low_battery.png
+  -rw-rw-rw-       178  16-Jan-2009  12:04:18  res/drawable/blank_tile.png
+  -rw-rw-rw-       573  16-Jan-2009  12:04:18  res/drawable/boot_robot.png
+  -rw-rw-rw-      1475  16-Jan-2009  12:04:18  res/drawable/bottom_bar.png
+  -rw-rw-rw-       832  16-Jan-2009  12:04:18  res/drawable/box.xml
+  -rw-rw-rw-       620  16-Jan-2009  12:04:18  res/drawable/btn_application_selector.xml
+  -rw-rw-rw-      2308  16-Jan-2009  12:04:18  res/drawable/btn_check.xml
+  -rw-rw-rw-       612  16-Jan-2009  12:04:18  res/drawable/btn_check_buttonless_off.png
+  -rw-rw-rw-       713  16-Jan-2009  12:04:18  res/drawable/btn_check_buttonless_on.png
+  -rw-rw-rw-       181  16-Jan-2009  12:04:18  res/drawable/btn_check_label_background.9.png
+  -rw-rw-rw-      1325  16-Jan-2009  12:04:18  res/drawable/btn_check_off.png
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/drawable/btn_check_off_disable.png
+  -rw-rw-rw-      1202  16-Jan-2009  12:04:18  res/drawable/btn_check_off_disable_focused.png
+  -rw-rw-rw-      1568  16-Jan-2009  12:04:18  res/drawable/btn_check_off_longpress.png
+  -rw-rw-rw-      1431  16-Jan-2009  12:04:18  res/drawable/btn_check_off_pressed.png
+  -rw-rw-rw-      1443  16-Jan-2009  12:04:18  res/drawable/btn_check_off_selected.png
+  -rw-rw-rw-      1661  16-Jan-2009  12:04:18  res/drawable/btn_check_on.png
+  -rw-rw-rw-      1203  16-Jan-2009  12:04:18  res/drawable/btn_check_on_disable.png
+  -rw-rw-rw-      1376  16-Jan-2009  12:04:18  res/drawable/btn_check_on_disable_focused.png
+  -rw-rw-rw-      1603  16-Jan-2009  12:04:18  res/drawable/btn_check_on_longpress.png
+  -rw-rw-rw-      1494  16-Jan-2009  12:04:18  res/drawable/btn_check_on_pressed.png
+  -rw-rw-rw-      1510  16-Jan-2009  12:04:18  res/drawable/btn_check_on_selected.png
+  -rw-rw-rw-       580  16-Jan-2009  12:04:18  res/drawable/btn_close.xml
+  -rw-rw-rw-      1522  16-Jan-2009  12:04:18  res/drawable/btn_close_normal.png
+  -rw-rw-rw-      1537  16-Jan-2009  12:04:18  res/drawable/btn_close_pressed.png
+  -rw-rw-rw-      1118  16-Jan-2009  12:04:18  res/drawable/btn_code_lock_default.png
+  -rw-rw-rw-      1747  16-Jan-2009  12:04:18  res/drawable/btn_code_lock_default_trackball_pressed.png
+  -rw-rw-rw-      1729  16-Jan-2009  12:04:18  res/drawable/btn_code_lock_default_trackball_selected.png
+  -rw-rw-rw-      1785  16-Jan-2009  12:04:18  res/drawable/btn_code_lock_touched.png
+  -rw-rw-rw-      1320  16-Jan-2009  12:04:18  res/drawable/btn_default.xml
+  -rw-rw-rw-      2048  16-Jan-2009  12:04:18  res/drawable/btn_default_longpress.9.png
+  -rw-rw-rw-      1230  16-Jan-2009  12:04:18  res/drawable/btn_default_normal.9.png
+  -rw-rw-rw-       791  16-Jan-2009  12:04:18  res/drawable/btn_default_normal_disable.9.png
+  -rw-rw-rw-      1061  16-Jan-2009  12:04:18  res/drawable/btn_default_normal_disable_focused.9.png
+  -rw-rw-rw-      1860  16-Jan-2009  12:04:18  res/drawable/btn_default_pressed.9.png
+  -rw-rw-rw-      2004  16-Jan-2009  12:04:18  res/drawable/btn_default_selected.9.png
+  -rw-rw-rw-      1320  16-Jan-2009  12:04:18  res/drawable/btn_default_small.xml
+  -rw-rw-rw-      1762  16-Jan-2009  12:04:18  res/drawable/btn_default_small_longpress.9.png
+  -rw-rw-rw-      1159  16-Jan-2009  12:04:18  res/drawable/btn_default_small_normal.9.png
+  -rw-rw-rw-       750  16-Jan-2009  12:04:18  res/drawable/btn_default_small_normal_disable.9.png
+  -rw-rw-rw-       968  16-Jan-2009  12:04:18  res/drawable/btn_default_small_normal_disable_focused.9.png
+  -rw-rw-rw-      1544  16-Jan-2009  12:04:18  res/drawable/btn_default_small_pressed.9.png
+  -rw-rw-rw-      1787  16-Jan-2009  12:04:18  res/drawable/btn_default_small_selected.9.png
+  -rw-rw-rw-      1120  16-Jan-2009  12:04:18  res/drawable/btn_dialog.xml
+  -rw-rw-rw-      1326  16-Jan-2009  12:04:18  res/drawable/btn_dialog_disable.png
+  -rw-rw-rw-      1298  16-Jan-2009  12:04:18  res/drawable/btn_dialog_disable_focused.png
+  -rw-rw-rw-      1103  16-Jan-2009  12:04:18  res/drawable/btn_dialog_normal.png
+  -rw-rw-rw-      1721  16-Jan-2009  12:04:18  res/drawable/btn_dialog_pressed.png
+  -rw-rw-rw-      1751  16-Jan-2009  12:04:18  res/drawable/btn_dialog_selected.png
+  -rw-rw-rw-       872  16-Jan-2009  12:04:18  res/drawable/btn_dropdown.xml
+  -rw-rw-rw-      1198  16-Jan-2009  12:04:18  res/drawable/btn_dropdown_disabled.9.png
+  -rw-rw-rw-      1699  16-Jan-2009  12:04:18  res/drawable/btn_dropdown_down.9.png
+  -rw-rw-rw-      1661  16-Jan-2009  12:04:18  res/drawable/btn_dropdown_normal.9.png
+  -rw-rw-rw-      1993  16-Jan-2009  12:04:18  res/drawable/btn_dropdown_pressed.9.png
+  -rw-rw-rw-      1972  16-Jan-2009  12:04:18  res/drawable/btn_dropdown_selected.9.png
+  -rw-rw-rw-      1499  16-Jan-2009  12:04:18  res/drawable/btn_erase_default.9.png
+  -rw-rw-rw-      1475  16-Jan-2009  12:04:18  res/drawable/btn_erase_pressed.9.png
+  -rw-rw-rw-      1261  16-Jan-2009  12:04:18  res/drawable/btn_erase_selected.9.png
+  -rw-rw-rw-       228  16-Jan-2009  12:04:18  res/drawable/btn_flicker_minus.png
+  -rw-rw-rw-       433  16-Jan-2009  12:04:18  res/drawable/btn_flicker_plus.png
+  -rw-rw-rw-      1120  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key.xml
+  -rw-rw-rw-       497  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_longpress.9.png
+  -rw-rw-rw-       581  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_longpress_off.9.png
+  -rw-rw-rw-      1080  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_longpress_on.9.png
+  -rw-rw-rw-       527  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_normal.9.png
+  -rw-rw-rw-       593  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_normal_off.9.png
+  -rw-rw-rw-      1082  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_normal_on.9.png
+  -rw-rw-rw-       519  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_pressed.9.png
+  -rw-rw-rw-       594  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_pressed_off.9.png
+  -rw-rw-rw-      1103  16-Jan-2009  12:04:18  res/drawable/btn_keyboard_key_pressed_on.9.png
+  -rw-rw-rw-      1829  16-Jan-2009  12:04:18  res/drawable/btn_media_player.9.png
+  -rw-rw-rw-       987  16-Jan-2009  12:04:18  res/drawable/btn_media_player_disabled.9.png
+  -rw-rw-rw-      1030  16-Jan-2009  12:04:18  res/drawable/btn_media_player_disabled_selected.9.png
+  -rw-rw-rw-      1554  16-Jan-2009  12:04:18  res/drawable/btn_media_player_pressed.9.png
+  -rw-rw-rw-      1841  16-Jan-2009  12:04:18  res/drawable/btn_media_player_selected.9.png
+  -rw-rw-rw-       996  16-Jan-2009  12:04:18  res/drawable/btn_minus.xml
+  -rw-rw-rw-      3378  16-Jan-2009  12:04:18  res/drawable/btn_minus_default.png
+  -rw-rw-rw-      3550  16-Jan-2009  12:04:18  res/drawable/btn_minus_disable.png
+  -rw-rw-rw-      3812  16-Jan-2009  12:04:18  res/drawable/btn_minus_disable_focused.png
+  -rw-rw-rw-      3466  16-Jan-2009  12:04:18  res/drawable/btn_minus_pressed.png
+  -rw-rw-rw-      3430  16-Jan-2009  12:04:18  res/drawable/btn_minus_selected.png
+  -rw-rw-rw-       996  16-Jan-2009  12:04:18  res/drawable/btn_plus.xml
+  -rw-rw-rw-      3431  16-Jan-2009  12:04:18  res/drawable/btn_plus_default.png
+  -rw-rw-rw-      3748  16-Jan-2009  12:04:18  res/drawable/btn_plus_disable.png
+  -rw-rw-rw-      3981  16-Jan-2009  12:04:18  res/drawable/btn_plus_disable_focused.png
+  -rw-rw-rw-      3620  16-Jan-2009  12:04:18  res/drawable/btn_plus_pressed.png
+  -rw-rw-rw-      3630  16-Jan-2009  12:04:18  res/drawable/btn_plus_selected.png
+  -rw-rw-rw-      1428  16-Jan-2009  12:04:18  res/drawable/btn_radio.xml
+  -rw-rw-rw-       181  16-Jan-2009  12:04:18  res/drawable/btn_radio_label_background.9.png
+  -rw-rw-rw-      1540  16-Jan-2009  12:04:18  res/drawable/btn_radio_off.png
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/drawable/btn_radio_off_disable.png
+  -rw-rw-rw-      1459  16-Jan-2009  12:04:18  res/drawable/btn_radio_off_disable_focused.png
+  -rw-rw-rw-      1952  16-Jan-2009  12:04:18  res/drawable/btn_radio_off_longpress.png
+  -rw-rw-rw-      1892  16-Jan-2009  12:04:18  res/drawable/btn_radio_off_pressed.png
+  -rw-rw-rw-      1868  16-Jan-2009  12:04:18  res/drawable/btn_radio_off_selected.png
+  -rw-rw-rw-      1788  16-Jan-2009  12:04:18  res/drawable/btn_radio_on.png
+  -rw-rw-rw-      1080  16-Jan-2009  12:04:18  res/drawable/btn_radio_on_disable.png
+  -rw-rw-rw-      1508  16-Jan-2009  12:04:18  res/drawable/btn_radio_on_disable_focused.png
+  -rw-rw-rw-      2046  16-Jan-2009  12:04:18  res/drawable/btn_radio_on_longpress.png
+  -rw-rw-rw-      1987  16-Jan-2009  12:04:18  res/drawable/btn_radio_on_pressed.png
+  -rw-rw-rw-      1954  16-Jan-2009  12:04:18  res/drawable/btn_radio_on_selected.png
+  -rw-rw-rw-      2059  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_off_normal.png
+  -rw-rw-rw-      3834  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_off_pressed.png
+  -rw-rw-rw-      3800  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_off_selected.png
+  -rw-rw-rw-      3688  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_on_normal.png
+  -rw-rw-rw-      3825  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_on_pressed.png
+  -rw-rw-rw-      3855  16-Jan-2009  12:04:18  res/drawable/btn_rating_star_on_selected.png
+  -rw-rw-rw-      2308  16-Jan-2009  12:04:18  res/drawable/btn_star.xml
+  -rw-rw-rw-       665  16-Jan-2009  12:04:18  res/drawable/btn_star_big_buttonless_off.png
+  -rw-rw-rw-       879  16-Jan-2009  12:04:18  res/drawable/btn_star_big_buttonless_on.png
+  -rw-rw-rw-      1725  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off.png
+  -rw-rw-rw-      1877  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off_disable.png
+  -rw-rw-rw-      1870  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off_disable_focused.png
+  -rw-rw-rw-      1702  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off_longpress.png
+  -rw-rw-rw-      1684  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off_pressed.png
+  -rw-rw-rw-      1690  16-Jan-2009  12:04:18  res/drawable/btn_star_big_off_selected.png
+  -rw-rw-rw-      1732  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on.png
+  -rw-rw-rw-      1805  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on_disable.png
+  -rw-rw-rw-      1861  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on_disable_focused.png
+  -rw-rw-rw-      1730  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on_longpress.png
+  -rw-rw-rw-      1532  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on_pressed.png
+  -rw-rw-rw-      1515  16-Jan-2009  12:04:18  res/drawable/btn_star_big_on_selected.png
+  -rw-rw-rw-       872  16-Jan-2009  12:04:18  res/drawable/btn_star_buttonless.xml
+  -rw-rw-rw-       178  16-Jan-2009  12:04:18  res/drawable/btn_star_label_background.9.png
+  -rw-rw-rw-       580  16-Jan-2009  12:04:18  res/drawable/btn_toggle.xml
+  -rw-rw-rw-       564  16-Jan-2009  12:04:18  res/drawable/btn_toggle_bg.xml
+  -rw-rw-rw-       447  16-Jan-2009  12:04:18  res/drawable/btn_toggle_off.9.png
+  -rw-rw-rw-       531  16-Jan-2009  12:04:18  res/drawable/btn_toggle_on.9.png
+  -rw-rw-rw-      2792  16-Jan-2009  12:04:18  res/drawable/btn_white_longpress.9.png
+  -rw-rw-rw-       900  16-Jan-2009  12:04:18  res/drawable/btn_zoom_page.xml
+  -rw-rw-rw-      2042  16-Jan-2009  12:04:18  res/drawable/btn_zoom_page_normal.png
+  -rw-rw-rw-      2092  16-Jan-2009  12:04:18  res/drawable/btn_zoom_page_press.png
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/drawable/button_inset.xml
+  -rw-rw-rw-       340  16-Jan-2009  12:04:18  res/drawable/button_onoff_indicator_off.png
+  -rw-rw-rw-       421  16-Jan-2009  12:04:18  res/drawable/button_onoff_indicator_on.png
+  -rw-rw-rw-       860  16-Jan-2009  12:04:18  res/drawable/checkbox.xml
+  -rw-rw-rw-       424  16-Jan-2009  12:04:18  res/drawable/checkbox_background.xml
+  -rw-rw-rw-       196  16-Jan-2009  12:04:18  res/drawable/checkbox_label_background.9.png
+  -rw-rw-rw-       442  16-Jan-2009  12:04:18  res/drawable/checkbox_off_background.png
+  -rw-rw-rw-       620  16-Jan-2009  12:04:18  res/drawable/checkbox_off_background_focus_yellow.png
+  -rw-rw-rw-       655  16-Jan-2009  12:04:18  res/drawable/checkbox_on_background.png
+  -rw-rw-rw-       866  16-Jan-2009  12:04:18  res/drawable/checkbox_on_background_focus_yellow.png
+  -rw-rw-rw-      3723  16-Jan-2009  12:04:18  res/drawable/clock_dial.png
+  -rw-rw-rw-      1946  16-Jan-2009  12:04:18  res/drawable/clock_hand_hour.png
+  -rw-rw-rw-      2173  16-Jan-2009  12:04:18  res/drawable/clock_hand_minute.png
+  -rw-rw-rw-       228  16-Jan-2009  12:04:18  res/drawable/code_lock_bottom.9.png
+  -rw-rw-rw-       202  16-Jan-2009  12:04:18  res/drawable/code_lock_left.9.png
+  -rw-rw-rw-       187  16-Jan-2009  12:04:18  res/drawable/code_lock_top.9.png
+  -rw-rw-rw-      1092  16-Jan-2009  12:04:18  res/drawable/compass_arrow.png
+  -rw-rw-rw-      2442  16-Jan-2009  12:04:18  res/drawable/compass_base.png
+  -rw-rw-rw-       760  16-Jan-2009  12:04:18  res/drawable/contextual_menu_bottom_bright.9.png
+  -rw-rw-rw-       943  16-Jan-2009  12:04:18  res/drawable/contextual_menu_top_dark.9.png
+  -rw-rw-rw-     28946  15-Jan-2009  23:16:34  res/drawable/default_wallpaper.jpg
+  -rw-rw-rw-       231  16-Jan-2009  12:04:18  res/drawable/dialog_divider_horizontal_light.9.png
+  -rw-rw-rw-       180  16-Jan-2009  12:04:18  res/drawable/divider_horizontal_bright.9.png
+  -rw-rw-rw-       211  16-Jan-2009  12:04:18  res/drawable/divider_horizontal_dark.9.png
+  -rw-rw-rw-       621  16-Jan-2009  12:04:18  res/drawable/divider_horizontal_dim_dark.9.png
+  -rw-rw-rw-       168  16-Jan-2009  12:04:18  res/drawable/divider_horizontal_textfield.9.png
+  -rw-rw-rw-       131  16-Jan-2009  12:04:18  res/drawable/divider_vertical_bright.9.png
+  -rw-rw-rw-      1320  16-Jan-2009  12:04:18  res/drawable/edit_text.xml
+  -rw-rw-rw-       560  16-Jan-2009  12:04:18  res/drawable/editbox_background.xml
+  -rw-rw-rw-       637  16-Jan-2009  12:04:18  res/drawable/editbox_background_focus_yellow.9.png
+  -rw-rw-rw-       382  16-Jan-2009  12:04:18  res/drawable/editbox_background_normal.9.png
+  -rw-rw-rw-       179  16-Jan-2009  12:04:18  res/drawable/editbox_dropdown_arrowdown.png
+  -rw-rw-rw-       174  16-Jan-2009  12:04:18  res/drawable/editbox_dropdown_arrowup.png
+  -rw-rw-rw-       420  16-Jan-2009  12:04:18  res/drawable/editbox_dropdown_background.9.png
+  -rw-rw-rw-       420  16-Jan-2009  12:04:18  res/drawable/editbox_dropdown_background_dark.9.png
+  -rw-rw-rw-       564  16-Jan-2009  12:04:18  res/drawable/expander_group.xml
+  -rw-rw-rw-      2112  16-Jan-2009  12:04:18  res/drawable/expander_ic_maximized.9.png
+  -rw-rw-rw-      2087  16-Jan-2009  12:04:18  res/drawable/expander_ic_minimized.9.png
+  -rw-rw-rw-      1294  16-Jan-2009  12:04:18  res/drawable/focused_application_background_static.png
+  -rw-rw-rw-       859  16-Jan-2009  12:04:18  res/drawable/frame_gallery_thumb.9.png
+  -rw-rw-rw-      1378  16-Jan-2009  12:04:18  res/drawable/frame_gallery_thumb_pressed.9.png
+  -rw-rw-rw-       577  16-Jan-2009  12:04:18  res/drawable/frame_gallery_thumb_selected.9.png
+  -rw-rw-rw-      1292  16-Jan-2009  12:04:18  res/drawable/gallery_item_background.xml
+  -rw-rw-rw-      1677  16-Jan-2009  12:04:18  res/drawable/gallery_selected_default.9.png
+  -rw-rw-rw-      1989  16-Jan-2009  12:04:18  res/drawable/gallery_selected_focused.9.png
+  -rw-rw-rw-      2001  16-Jan-2009  12:04:18  res/drawable/gallery_selected_pressed.9.png
+  -rw-rw-rw-       860  16-Jan-2009  12:04:18  res/drawable/gallery_thumb.xml
+  -rw-rw-rw-      1122  16-Jan-2009  12:04:18  res/drawable/gallery_unselected_default.9.png
+  -rw-rw-rw-       878  16-Jan-2009  12:04:18  res/drawable/gallery_unselected_pressed.9.png
+  -rw-rw-rw-       167  16-Jan-2009  12:04:18  res/drawable/grey_list_separator.9.png
+  -rw-rw-rw-       780  16-Jan-2009  12:04:18  res/drawable/grid_selector_background.xml
+  -rw-rw-rw-      1055  16-Jan-2009  12:04:18  res/drawable/grid_selector_background_focus.9.png
+  -rw-rw-rw-       886  16-Jan-2009  12:04:18  res/drawable/grid_selector_background_pressed.9.png
+  -rw-rw-rw-       874  16-Jan-2009  12:04:18  res/drawable/highlight_disabled.9.png
+  -rw-rw-rw-       927  16-Jan-2009  12:04:18  res/drawable/highlight_disabled_pressed.9.png
+  -rw-rw-rw-       848  16-Jan-2009  12:04:18  res/drawable/highlight_pressed.9.png
+  -rw-rw-rw-       890  16-Jan-2009  12:04:18  res/drawable/highlight_pressed_dimmed.9.png
+  -rw-rw-rw-       932  16-Jan-2009  12:04:18  res/drawable/highlight_selected.9.png
+  -rw-rw-rw-       947  16-Jan-2009  12:04:18  res/drawable/ic_btn_search.png
+  -rw-rw-rw-       448  16-Jan-2009  12:04:18  res/drawable/ic_bullet_key_permission.png
+  -rw-rw-rw-       727  16-Jan-2009  12:04:18  res/drawable/ic_check_mark_dark.png
+  -rw-rw-rw-       997  16-Jan-2009  12:04:18  res/drawable/ic_check_mark_light.png
+  -rw-rw-rw-       676  16-Jan-2009  12:04:18  res/drawable/ic_delete.png
+  -rw-rw-rw-      1026  16-Jan-2009  12:04:18  res/drawable/ic_dialog_alert.png
+  -rw-rw-rw-      1205  16-Jan-2009  12:04:18  res/drawable/ic_dialog_dialer.png
+  -rw-rw-rw-      1148  16-Jan-2009  12:04:18  res/drawable/ic_dialog_email.png
+  -rw-rw-rw-       898  16-Jan-2009  12:04:18  res/drawable/ic_dialog_info.png
+  -rw-rw-rw-      1445  16-Jan-2009  12:04:18  res/drawable/ic_dialog_map.png
+  -rw-rw-rw-      1320  16-Jan-2009  12:04:18  res/drawable/ic_dialog_menu_generic.png
+  -rw-rw-rw-      1595  16-Jan-2009  12:04:18  res/drawable/ic_dialog_time.png
+  -rw-rw-rw-      1026  16-Jan-2009  12:04:18  res/drawable/ic_dialog_usb.png
+  -rw-rw-rw-       560  16-Jan-2009  12:04:18  res/drawable/ic_emergency.png
+  -rw-rw-rw-       483  16-Jan-2009  12:04:18  res/drawable/ic_input_add.png
+  -rw-rw-rw-      1148  16-Jan-2009  12:04:18  res/drawable/ic_input_delete.png
+  -rw-rw-rw-      1491  16-Jan-2009  12:04:18  res/drawable/ic_input_get.png
+  -rw-rw-rw-      2938  16-Jan-2009  12:04:18  res/drawable/ic_launcher_android.png
+  -rw-rw-rw-       883  16-Jan-2009  12:04:18  res/drawable/ic_lock_idle_alarm.png
+  -rw-rw-rw-       713  16-Jan-2009  12:04:18  res/drawable/ic_lock_idle_charging.png
+  -rw-rw-rw-       519  16-Jan-2009  12:04:18  res/drawable/ic_lock_idle_lock.png
+  -rw-rw-rw-       766  16-Jan-2009  12:04:18  res/drawable/ic_lock_idle_low_battery.png
+  -rw-rw-rw-      1659  16-Jan-2009  12:04:18  res/drawable/ic_lock_lock.png
+  -rw-rw-rw-      1135  16-Jan-2009  12:04:18  res/drawable/ic_lock_power_off.png
+  -rw-rw-rw-      1517  16-Jan-2009  12:04:18  res/drawable/ic_lock_silent_mode.png
+  -rw-rw-rw-      1723  16-Jan-2009  12:04:18  res/drawable/ic_lock_silent_mode_off.png
+  -rw-rw-rw-      1396  16-Jan-2009  12:04:18  res/drawable/ic_maps_indicator_current_position.png
+  -rw-rw-rw-       776  16-Jan-2009  12:04:18  res/drawable/ic_maps_indicator_current_position_anim.xml
+  -rw-rw-rw-      1541  16-Jan-2009  12:04:18  res/drawable/ic_maps_indicator_current_position_anim1.png
+  -rw-rw-rw-      1549  16-Jan-2009  12:04:18  res/drawable/ic_maps_indicator_current_position_anim2.png
+  -rw-rw-rw-      1407  16-Jan-2009  12:04:18  res/drawable/ic_maps_indicator_current_position_anim3.png
+  -rw-rw-rw-      1256  16-Jan-2009  12:04:18  res/drawable/ic_media_ff.png
+  -rw-rw-rw-      1354  16-Jan-2009  12:04:18  res/drawable/ic_media_next.png
+  -rw-rw-rw-       576  16-Jan-2009  12:04:18  res/drawable/ic_media_pause.png
+  -rw-rw-rw-       938  16-Jan-2009  12:04:18  res/drawable/ic_media_play.png
+  -rw-rw-rw-      1355  16-Jan-2009  12:04:18  res/drawable/ic_media_previous.png
+  -rw-rw-rw-      1257  16-Jan-2009  12:04:18  res/drawable/ic_media_rew.png
+  -rw-rw-rw-      1965  16-Jan-2009  12:04:18  res/drawable/ic_menu_add.png
+  -rw-rw-rw-      1912  16-Jan-2009  12:04:18  res/drawable/ic_menu_agenda.png
+  -rw-rw-rw-      1114  16-Jan-2009  12:04:18  res/drawable/ic_menu_always_landscape_portrait.png
+  -rw-rw-rw-      1365  16-Jan-2009  12:04:18  res/drawable/ic_menu_call.png
+  -rw-rw-rw-      1777  16-Jan-2009  12:04:18  res/drawable/ic_menu_camera.png
+  -rw-rw-rw-      2072  16-Jan-2009  12:04:18  res/drawable/ic_menu_close_clear_cancel.png
+  -rw-rw-rw-      2686  16-Jan-2009  12:04:18  res/drawable/ic_menu_compass.png
+  -rw-rw-rw-      1137  16-Jan-2009  12:04:18  res/drawable/ic_menu_crop.png
+  -rw-rw-rw-      1118  16-Jan-2009  12:04:18  res/drawable/ic_menu_day.png
+  -rw-rw-rw-      1791  16-Jan-2009  12:04:18  res/drawable/ic_menu_delete.png
+  -rw-rw-rw-      1288  16-Jan-2009  12:04:18  res/drawable/ic_menu_directions.png
+  -rw-rw-rw-      1436  16-Jan-2009  12:04:18  res/drawable/ic_menu_edit.png
+  -rw-rw-rw-      2394  16-Jan-2009  12:04:18  res/drawable/ic_menu_gallery.png
+  -rw-rw-rw-      2587  16-Jan-2009  12:04:18  res/drawable/ic_menu_help.png
+  -rw-rw-rw-      1897  16-Jan-2009  12:04:18  res/drawable/ic_menu_info_details.png
+  -rw-rw-rw-      2534  16-Jan-2009  12:04:18  res/drawable/ic_menu_login.png
+  -rw-rw-rw-      2365  16-Jan-2009  12:04:18  res/drawable/ic_menu_manage.png
+  -rw-rw-rw-      1927  16-Jan-2009  12:04:18  res/drawable/ic_menu_mapmode.png
+  -rw-rw-rw-      2099  16-Jan-2009  12:04:18  res/drawable/ic_menu_month.png
+  -rw-rw-rw-      2067  16-Jan-2009  12:04:18  res/drawable/ic_menu_more.png
+  -rw-rw-rw-      1648  16-Jan-2009  12:04:18  res/drawable/ic_menu_my_calendar.png
+  -rw-rw-rw-      2606  16-Jan-2009  12:04:18  res/drawable/ic_menu_mylocation.png
+  -rw-rw-rw-      1356  16-Jan-2009  12:04:18  res/drawable/ic_menu_myplaces.png
+  -rw-rw-rw-      1580  16-Jan-2009  12:04:18  res/drawable/ic_menu_notifications.png
+  -rw-rw-rw-      1433  16-Jan-2009  12:04:18  res/drawable/ic_menu_preferences.png
+  -rw-rw-rw-      2805  16-Jan-2009  12:04:18  res/drawable/ic_menu_recent_history.png
+  -rw-rw-rw-      1664  16-Jan-2009  12:04:18  res/drawable/ic_menu_refresh.png
+  -rw-rw-rw-      1752  16-Jan-2009  12:04:18  res/drawable/ic_menu_report_image.png
+  -rw-rw-rw-      1524  16-Jan-2009  12:04:18  res/drawable/ic_menu_revert.png
+  -rw-rw-rw-      2155  16-Jan-2009  12:04:18  res/drawable/ic_menu_rotate.png
+  -rw-rw-rw-      1613  16-Jan-2009  12:04:18  res/drawable/ic_menu_save.png
+  -rw-rw-rw-      1972  16-Jan-2009  12:04:18  res/drawable/ic_menu_search.png
+  -rw-rw-rw-      1777  16-Jan-2009  12:04:18  res/drawable/ic_menu_send.png
+  -rw-rw-rw-      1778  16-Jan-2009  12:04:18  res/drawable/ic_menu_set_as.png
+  -rw-rw-rw-      1451  16-Jan-2009  12:04:18  res/drawable/ic_menu_share.png
+  -rw-rw-rw-      2395  16-Jan-2009  12:04:18  res/drawable/ic_menu_slideshow.png
+  -rw-rw-rw-      2124  16-Jan-2009  12:04:18  res/drawable/ic_menu_sort_alphabetically.png
+  -rw-rw-rw-       969  16-Jan-2009  12:04:18  res/drawable/ic_menu_sort_by_size.png
+  -rw-rw-rw-      1612  16-Jan-2009  12:04:18  res/drawable/ic_menu_today.png
+  -rw-rw-rw-      1537  16-Jan-2009  12:04:18  res/drawable/ic_menu_upload.png
+  -rw-rw-rw-      2411  16-Jan-2009  12:04:18  res/drawable/ic_menu_upload_you_tube.png
+  -rw-rw-rw-      1760  16-Jan-2009  12:04:18  res/drawable/ic_menu_view.png
+  -rw-rw-rw-      1362  16-Jan-2009  12:04:18  res/drawable/ic_menu_week.png
+  -rw-rw-rw-      2041  16-Jan-2009  12:04:18  res/drawable/ic_menu_zoom.png
+  -rw-rw-rw-      1533  16-Jan-2009  12:04:18  res/drawable/ic_notification_clear_all.png
+  -rw-rw-rw-       655  16-Jan-2009  12:04:18  res/drawable/ic_notification_overlay.9.png
+  -rw-rw-rw-       247  16-Jan-2009  12:04:18  res/drawable/ic_partial_secure.png
+  -rw-rw-rw-      1665  16-Jan-2009  12:04:18  res/drawable/ic_popup_disk_full.png
+  -rw-rw-rw-      1112  16-Jan-2009  12:04:18  res/drawable/ic_popup_reminder.png
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync.xml
+  -rw-rw-rw-      1465  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_1.png
+  -rw-rw-rw-      1505  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_2.png
+  -rw-rw-rw-      1463  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_3.png
+  -rw-rw-rw-      1484  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_4.png
+  -rw-rw-rw-      1587  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_5.png
+  -rw-rw-rw-      1328  16-Jan-2009  12:04:18  res/drawable/ic_popup_sync_6.png
+  -rw-rw-rw-       962  16-Jan-2009  12:04:18  res/drawable/ic_power.png
+  -rw-rw-rw-      1739  16-Jan-2009  12:04:18  res/drawable/ic_search_category_default.png
+  -rw-rw-rw-       306  16-Jan-2009  12:04:18  res/drawable/ic_secure.png
+  -rw-rw-rw-      1548  16-Jan-2009  12:04:18  res/drawable/ic_settings_indicator_next_page.png
+  -rw-rw-rw-       280  16-Jan-2009  12:04:18  res/drawable/ic_text_dot.png
+  -rw-rw-rw-      4277  16-Jan-2009  12:04:18  res/drawable/ic_vibrate.png
+  -rw-rw-rw-      1782  16-Jan-2009  12:04:18  res/drawable/ic_volume.png
+  -rw-rw-rw-      2140  16-Jan-2009  12:04:18  res/drawable/ic_volume_bluetooth_ad2p.png
+  -rw-rw-rw-      1512  16-Jan-2009  12:04:18  res/drawable/ic_volume_bluetooth_in_call.png
+  -rw-rw-rw-      2249  16-Jan-2009  12:04:18  res/drawable/ic_volume_off.png
+  -rw-rw-rw-       855  16-Jan-2009  12:04:18  res/drawable/ic_volume_off_small.png
+  -rw-rw-rw-       955  16-Jan-2009  12:04:18  res/drawable/ic_volume_small.png
+  -rw-rw-rw-      1026  16-Jan-2009  12:04:18  res/drawable/icon_highlight_rectangle.9.png
+  -rw-rw-rw-      1771  16-Jan-2009  12:04:18  res/drawable/icon_highlight_square.9.png
+  -rw-rw-rw-       307  16-Jan-2009  12:04:18  res/drawable/ime_qwerty.png
+  -rw-rw-rw-       660  16-Jan-2009  12:04:18  res/drawable/indicator_check_mark_dark.xml
+  -rw-rw-rw-       660  16-Jan-2009  12:04:18  res/drawable/indicator_check_mark_light.xml
+  -rw-rw-rw-       230  16-Jan-2009  12:04:18  res/drawable/indicator_code_lock_drag_direction_green_up.png
+  -rw-rw-rw-       258  16-Jan-2009  12:04:18  res/drawable/indicator_code_lock_drag_direction_red_up.png
+  -rw-rw-rw-      3927  16-Jan-2009  12:04:18  res/drawable/indicator_code_lock_point_area_default.png
+  -rw-rw-rw-      4125  16-Jan-2009  12:04:18  res/drawable/indicator_code_lock_point_area_green.png
+  -rw-rw-rw-      4394  16-Jan-2009  12:04:18  res/drawable/indicator_code_lock_point_area_red.png
+  -rw-rw-rw-       994  16-Jan-2009  12:04:18  res/drawable/indicator_input_error.png
+  -rw-rw-rw-       985  16-Jan-2009  12:04:18  res/drawable/indicator_show_current_selected_dark.png
+  -rw-rw-rw-       186  16-Jan-2009  12:04:18  res/drawable/keyboard_background.9.png
+  -rw-rw-rw-       576  16-Jan-2009  12:04:18  res/drawable/keyboard_key_feedback.xml
+  -rw-rw-rw-      1282  16-Jan-2009  12:04:18  res/drawable/keyboard_key_feedback_background.9.png
+  -rw-rw-rw-      1393  16-Jan-2009  12:04:18  res/drawable/keyboard_key_feedback_more_background.9.png
+  -rw-rw-rw-      1126  16-Jan-2009  12:04:18  res/drawable/keyboard_popup_panel_background.9.png
+  -rw-rw-rw-       596  16-Jan-2009  12:04:18  res/drawable/list_highlight.xml
+  -rw-rw-rw-      1056  16-Jan-2009  12:04:18  res/drawable/list_highlight_active.xml
+  -rw-rw-rw-      1056  16-Jan-2009  12:04:18  res/drawable/list_highlight_inactive.xml
+  -rw-rw-rw-      1208  16-Jan-2009  12:04:18  res/drawable/list_selector_background.xml
+  -rw-rw-rw-       874  16-Jan-2009  12:04:18  res/drawable/list_selector_background_disabled.9.png
+  -rw-rw-rw-      1055  16-Jan-2009  12:04:18  res/drawable/list_selector_background_focus.9.png
+  -rw-rw-rw-       282  16-Jan-2009  12:04:18  res/drawable/list_selector_background_longpress.9.png
+  -rw-rw-rw-       886  16-Jan-2009  12:04:18  res/drawable/list_selector_background_pressed.9.png
+  -rw-rw-rw-       508  16-Jan-2009  12:04:18  res/drawable/list_selector_background_transition.xml
+  -rw-rw-rw-       588  16-Jan-2009  12:04:18  res/drawable/load_average_background.xml
+  -rw-rw-rw-       192  16-Jan-2009  12:04:18  res/drawable/loading_tile.png
+  -rw-rw-rw-       443  16-Jan-2009  12:04:18  res/drawable/lock_asset.png
+  -rw-rw-rw-      1719  16-Jan-2009  12:04:18  res/drawable/maps_google_logo.png
+  -rw-rw-rw-      1176  16-Jan-2009  12:04:18  res/drawable/media_button_background.xml
+  -rw-rw-rw-       916  16-Jan-2009  12:04:18  res/drawable/menu_background.9.png
+  -rw-rw-rw-       292  16-Jan-2009  12:04:18  res/drawable/menu_background_fill_parent_width.9.png
+  -rw-rw-rw-      1096  16-Jan-2009  12:04:18  res/drawable/menu_selector.xml
+  -rw-rw-rw-       167  16-Jan-2009  12:04:18  res/drawable/menu_separator.9.png
+  -rw-rw-rw-      1926  16-Jan-2009  12:04:18  res/drawable/menu_submenu_background.9.png
+  -rw-rw-rw-       760  16-Jan-2009  12:04:18  res/drawable/menuitem_background.xml
+  -rw-rw-rw-      1055  16-Jan-2009  12:04:18  res/drawable/menuitem_background_focus.9.png
+  -rw-rw-rw-       886  16-Jan-2009  12:04:18  res/drawable/menuitem_background_pressed.9.png
+  -rw-rw-rw-       780  16-Jan-2009  12:04:18  res/drawable/menuitem_background_solid.xml
+  -rw-rw-rw-       133  16-Jan-2009  12:04:18  res/drawable/menuitem_background_solid_focused.9.png
+  -rw-rw-rw-       133  16-Jan-2009  12:04:18  res/drawable/menuitem_background_solid_pressed.9.png
+  -rw-rw-rw-       536  16-Jan-2009  12:04:18  res/drawable/menuitem_checkbox.xml
+  -rw-rw-rw-       211  16-Jan-2009  12:04:18  res/drawable/menuitem_checkbox_on.png
+  -rw-rw-rw-       356  16-Jan-2009  12:04:18  res/drawable/no_tile_128.png
+  -rw-rw-rw-       316  16-Jan-2009  12:04:18  res/drawable/padlock.png
+  -rw-rw-rw-      1506  16-Jan-2009  12:04:18  res/drawable/panel_background.9.png
+  -rw-rw-rw-       700  16-Jan-2009  12:04:18  res/drawable/panel_picture_frame_background.xml
+  -rw-rw-rw-       316  16-Jan-2009  12:04:18  res/drawable/panel_picture_frame_bg_disabled.9.png
+  -rw-rw-rw-      1388  16-Jan-2009  12:04:18  res/drawable/panel_picture_frame_bg_focus_blue.9.png
+  -rw-rw-rw-       519  16-Jan-2009  12:04:18  res/drawable/panel_picture_frame_bg_normal.9.png
+  -rw-rw-rw-      1370  16-Jan-2009  12:04:18  res/drawable/panel_picture_frame_bg_pressed_blue.9.png
+  -rw-rw-rw-       250  16-Jan-2009  12:04:18  res/drawable/panel_separator.9.png
+  -rw-rw-rw-       620  16-Jan-2009  12:04:18  res/drawable/pickerbox.xml
+  -rw-rw-rw-      4159  16-Jan-2009  12:04:18  res/drawable/pickerbox_background.png
+  -rw-rw-rw-       102  16-Jan-2009  12:04:18  res/drawable/pickerbox_divider.png
+  -rw-rw-rw-      2158  16-Jan-2009  12:04:18  res/drawable/pickerbox_selected.9.png
+  -rw-rw-rw-      1406  16-Jan-2009  12:04:18  res/drawable/pickerbox_unselected.9.png
+  -rw-rw-rw-      5629  16-Jan-2009  12:04:18  res/drawable/picture_emergency.png
+  -rw-rw-rw-       703  16-Jan-2009  12:04:18  res/drawable/picture_frame.9.png
+  -rw-rw-rw-      1274  16-Jan-2009  12:04:18  res/drawable/popup_bottom_bright.9.png
+  -rw-rw-rw-      1325  16-Jan-2009  12:04:18  res/drawable/popup_bottom_dark.9.png
+  -rw-rw-rw-      1325  16-Jan-2009  12:04:18  res/drawable/popup_bottom_medium.9.png
+  -rw-rw-rw-       232  16-Jan-2009  12:04:18  res/drawable/popup_center_bright.9.png
+  -rw-rw-rw-       240  16-Jan-2009  12:04:18  res/drawable/popup_center_dark.9.png
+  -rw-rw-rw-       169  16-Jan-2009  12:04:18  res/drawable/popup_center_medium.9.png
+  -rw-rw-rw-       231  16-Jan-2009  12:04:18  res/drawable/popup_divider_horizontal_dark.9.png
+  -rw-rw-rw-      1449  16-Jan-2009  12:04:18  res/drawable/popup_full_bright.9.png
+  -rw-rw-rw-      1506  16-Jan-2009  12:04:18  res/drawable/popup_full_dark.9.png
+  -rw-rw-rw-      1737  16-Jan-2009  12:04:18  res/drawable/popup_inline_error.9.png
+  -rw-rw-rw-       991  16-Jan-2009  12:04:18  res/drawable/popup_top_bright.9.png
+  -rw-rw-rw-      1044  16-Jan-2009  12:04:18  res/drawable/popup_top_dark.9.png
+  -rw-rw-rw-       904  16-Jan-2009  12:04:18  res/drawable/presence_away.png
+  -rw-rw-rw-       885  16-Jan-2009  12:04:18  res/drawable/presence_busy.png
+  -rw-rw-rw-      1026  16-Jan-2009  12:04:18  res/drawable/presence_invisible.png
+  -rw-rw-rw-       738  16-Jan-2009  12:04:18  res/drawable/presence_offline.png
+  -rw-rw-rw-       867  16-Jan-2009  12:04:18  res/drawable/presence_online.png
+  -rw-rw-rw-      1048  16-Jan-2009  12:04:18  res/drawable/pressed_application_background_static.png
+  -rw-rw-rw-      1336  16-Jan-2009  12:04:18  res/drawable/progress.xml
+  -rw-rw-rw-       517  16-Jan-2009  12:04:18  res/drawable/progress_circular_background.png
+  -rw-rw-rw-       276  16-Jan-2009  12:04:18  res/drawable/progress_circular_background_small.png
+  -rw-rw-rw-      1743  16-Jan-2009  12:04:18  res/drawable/progress_circular_indeterminate.png
+  -rw-rw-rw-       587  16-Jan-2009  12:04:18  res/drawable/progress_circular_indeterminate_small.png
+  -rw-rw-rw-       996  16-Jan-2009  12:04:18  res/drawable/progress_frame.9.png
+  -rw-rw-rw-      1840  16-Jan-2009  12:04:18  res/drawable/progress_horizontal.xml
+  -rw-rw-rw-       780  16-Jan-2009  12:04:18  res/drawable/progress_indeterminate.xml
+  -rw-rw-rw-       728  16-Jan-2009  12:04:18  res/drawable/progress_indeterminate_horizontal.xml
+  -rw-rw-rw-       780  16-Jan-2009  12:04:18  res/drawable/progress_indeterminate_small.xml
+  -rw-rw-rw-       526  16-Jan-2009  12:04:18  res/drawable/progress_inner.9.png
+  -rw-rw-rw-      1268  16-Jan-2009  12:04:18  res/drawable/progress_large.xml
+  -rw-rw-rw-      1268  16-Jan-2009  12:04:18  res/drawable/progress_medium.xml
+  -rw-rw-rw-       255  16-Jan-2009  12:04:18  res/drawable/progress_particle.png
+  -rw-rw-rw-       136  16-Jan-2009  12:04:18  res/drawable/progress_particle_small.png
+  -rw-rw-rw-      1268  16-Jan-2009  12:04:18  res/drawable/progress_small.xml
+  -rw-rw-rw-      1268  16-Jan-2009  12:04:18  res/drawable/progress_small_titlebar.xml
+  -rw-rw-rw-       668  16-Jan-2009  12:04:18  res/drawable/progressbar_indeterminate1.png
+  -rw-rw-rw-       739  16-Jan-2009  12:04:18  res/drawable/progressbar_indeterminate2.png
+  -rw-rw-rw-       686  16-Jan-2009  12:04:18  res/drawable/progressbar_indeterminate3.png
+  -rw-rw-rw-       860  16-Jan-2009  12:04:18  res/drawable/radiobutton.xml
+  -rw-rw-rw-       424  16-Jan-2009  12:04:18  res/drawable/radiobutton_background.xml
+  -rw-rw-rw-       196  16-Jan-2009  12:04:18  res/drawable/radiobutton_label_background.9.png
+  -rw-rw-rw-       667  16-Jan-2009  12:04:18  res/drawable/radiobutton_off_background.png
+  -rw-rw-rw-       882  16-Jan-2009  12:04:18  res/drawable/radiobutton_off_background_focus_yellow.png
+  -rw-rw-rw-       490  16-Jan-2009  12:04:18  res/drawable/radiobutton_on_background.png
+  -rw-rw-rw-       907  16-Jan-2009  12:04:18  res/drawable/radiobutton_on_background_focus_yellow.png
+  -rw-rw-rw-       970  16-Jan-2009  12:04:18  res/drawable/rate_star_big_half.png
+  -rw-rw-rw-       342  16-Jan-2009  12:04:18  res/drawable/rate_star_big_off.png
+  -rw-rw-rw-      1936  16-Jan-2009  12:04:18  res/drawable/rate_star_big_on.png
+  -rw-rw-rw-       619  16-Jan-2009  12:04:18  res/drawable/rate_star_small_half.png
+  -rw-rw-rw-       247  16-Jan-2009  12:04:18  res/drawable/rate_star_small_off.png
+  -rw-rw-rw-       659  16-Jan-2009  12:04:18  res/drawable/rate_star_small_on.png
+  -rw-rw-rw-       664  16-Jan-2009  12:04:18  res/drawable/ratingbar.xml
+  -rw-rw-rw-       664  16-Jan-2009  12:04:18  res/drawable/ratingbar_full.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/drawable/ratingbar_full_empty.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/drawable/ratingbar_full_filled.xml
+  -rw-rw-rw-       664  16-Jan-2009  12:04:18  res/drawable/ratingbar_small.xml
+  -rw-rw-rw-       338  16-Jan-2009  12:04:18  res/drawable/reticle.png
+  -rw-rw-rw-       804  16-Jan-2009  12:04:18  res/drawable/screen_progress.xml
+  -rw-rw-rw-       307  16-Jan-2009  12:04:18  res/drawable/screen_progress_frame.9.png
+  -rw-rw-rw-       182  16-Jan-2009  12:04:18  res/drawable/screen_progress_inner.9.png
+  -rw-rw-rw-       565  16-Jan-2009  12:04:18  res/drawable/screen_title_background.9.png
+  -rw-rw-rw-       209  16-Jan-2009  12:04:18  res/drawable/scroll_thumb_horz.9.png
+  -rw-rw-rw-       208  16-Jan-2009  12:04:18  res/drawable/scroll_thumb_vert.9.png
+  -rw-rw-rw-       290  16-Jan-2009  12:04:18  res/drawable/scrollbar.9.png
+  -rw-rw-rw-      1437  16-Jan-2009  12:04:18  res/drawable/scrollbar_handle_accelerated_anim2.9.png
+  -rw-rw-rw-       269  16-Jan-2009  12:04:18  res/drawable/scrollbar_handle_horizontal.9.png
+  -rw-rw-rw-       276  16-Jan-2009  12:04:18  res/drawable/scrollbar_handle_vertical.9.png
+  -rw-rw-rw-       194  16-Jan-2009  12:04:18  res/drawable/scrollbar_horizontal.9.png
+  -rw-rw-rw-       186  16-Jan-2009  12:04:18  res/drawable/scrollbar_vertical.9.png
+  -rw-rw-rw-       475  16-Jan-2009  12:04:18  res/drawable/search_plate.9.png
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/drawable/seek_thumb.xml
+  -rw-rw-rw-      1127  16-Jan-2009  12:04:18  res/drawable/seek_thumb_normal.png
+  -rw-rw-rw-      1127  16-Jan-2009  12:04:18  res/drawable/seek_thumb_pressed.png
+  -rw-rw-rw-      1127  16-Jan-2009  12:04:18  res/drawable/seek_thumb_selected.png
+  -rw-rw-rw-       376  16-Jan-2009  12:04:18  res/drawable/settings_header.xml
+  -rw-rw-rw-       229  16-Jan-2009  12:04:18  res/drawable/settings_header_raw.9.png
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/drawable/spinner_background.xml
+  -rw-rw-rw-       572  16-Jan-2009  12:04:18  res/drawable/spinner_dropdown_background.xml
+  -rw-rw-rw-       362  16-Jan-2009  12:04:18  res/drawable/spinner_dropdown_background_down.9.png
+  -rw-rw-rw-       360  16-Jan-2009  12:04:18  res/drawable/spinner_dropdown_background_up.9.png
+  -rw-rw-rw-      1220  16-Jan-2009  12:04:18  res/drawable/spinner_normal.9.png
+  -rw-rw-rw-      2026  16-Jan-2009  12:04:18  res/drawable/spinner_press.9.png
+  -rw-rw-rw-      2214  16-Jan-2009  12:04:18  res/drawable/spinner_select.9.png
+  -rw-rw-rw-       326  16-Jan-2009  12:04:18  res/drawable/spinnerbox_arrow_first.9.png
+  -rw-rw-rw-       326  16-Jan-2009  12:04:18  res/drawable/spinnerbox_arrow_last.9.png
+  -rw-rw-rw-       287  16-Jan-2009  12:04:18  res/drawable/spinnerbox_arrow_middle.9.png
+  -rw-rw-rw-       287  16-Jan-2009  12:04:18  res/drawable/spinnerbox_arrow_single.9.png
+  -rw-rw-rw-      1020  16-Jan-2009  12:04:18  res/drawable/spinnerbox_arrows.xml
+  -rw-rw-rw-      1194  16-Jan-2009  12:04:18  res/drawable/spinnerbox_background_focus_yellow.9.png
+  -rw-rw-rw-       382  16-Jan-2009  12:04:18  res/drawable/spinnerbox_background_normal.9.png
+  -rw-rw-rw-      1324  16-Jan-2009  12:04:18  res/drawable/spinnerbox_background_pressed_yellow.9.png
+  -rw-rw-rw-       964  16-Jan-2009  12:04:18  res/drawable/star_big_off.png
+  -rw-rw-rw-      1776  16-Jan-2009  12:04:18  res/drawable/star_big_on.png
+  -rw-rw-rw-       666  16-Jan-2009  12:04:18  res/drawable/star_off.png
+  -rw-rw-rw-      1424  16-Jan-2009  12:04:18  res/drawable/star_on.png
+  -rw-rw-rw-      1921  16-Jan-2009  12:04:18  res/drawable/starting_frame.9.png
+  -rw-rw-rw-       911  16-Jan-2009  12:04:18  res/drawable/stat_notify_alarm.png
+  -rw-rw-rw-       249  16-Jan-2009  12:04:18  res/drawable/stat_notify_browser.png
+  -rw-rw-rw-       884  16-Jan-2009  12:04:18  res/drawable/stat_notify_call_mute.png
+  -rw-rw-rw-       856  16-Jan-2009  12:04:18  res/drawable/stat_notify_chat.png
+  -rw-rw-rw-       833  16-Jan-2009  12:04:18  res/drawable/stat_notify_disk_full.png
+  -rw-rw-rw-       645  16-Jan-2009  12:04:18  res/drawable/stat_notify_error.png
+  -rw-rw-rw-       756  16-Jan-2009  12:04:18  res/drawable/stat_notify_missed_call.png
+  -rw-rw-rw-       850  16-Jan-2009  12:04:18  res/drawable/stat_notify_more.png
+  -rw-rw-rw-       479  16-Jan-2009  12:04:18  res/drawable/stat_notify_sdcard.png
+  -rw-rw-rw-       448  16-Jan-2009  12:04:18  res/drawable/stat_notify_sdcard_usb.png
+  -rw-rw-rw-       667  16-Jan-2009  12:04:18  res/drawable/stat_notify_sim_toolkit.png
+  -rw-rw-rw-      1079  16-Jan-2009  12:04:18  res/drawable/stat_notify_sync.png
+  -rw-rw-rw-      1079  16-Jan-2009  12:04:18  res/drawable/stat_notify_sync_anim0.png
+  -rw-rw-rw-       687  16-Jan-2009  12:04:18  res/drawable/stat_notify_sync_error.png
+  -rw-rw-rw-       597  16-Jan-2009  12:04:18  res/drawable/stat_notify_voicemail.png
+  -rw-rw-rw-      1061  16-Jan-2009  12:04:18  res/drawable/stat_notify_wifi_in_range.png
+  -rw-rw-rw-       486  16-Jan-2009  12:04:18  res/drawable/stat_notify_xmpp.png
+  -rw-rw-rw-      1076  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery.xml
+  -rw-rw-rw-      1302  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_0.png
+  -rw-rw-rw-       849  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_10.png
+  -rw-rw-rw-       856  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_100.png
+  -rw-rw-rw-       876  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_20.png
+  -rw-rw-rw-       934  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_40.png
+  -rw-rw-rw-       939  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_60.png
+  -rw-rw-rw-       893  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_80.png
+  -rw-rw-rw-      3604  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge.xml
+  -rw-rw-rw-       920  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim0.png
+  -rw-rw-rw-       935  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim1.png
+  -rw-rw-rw-       980  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim2.png
+  -rw-rw-rw-       999  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim3.png
+  -rw-rw-rw-      1048  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim4.png
+  -rw-rw-rw-      1007  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_charge_anim5.png
+  -rw-rw-rw-       968  16-Jan-2009  12:04:18  res/drawable/stat_sys_battery_unknown.png
+  -rw-rw-rw-       800  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_bluetooth.png
+  -rw-rw-rw-       851  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_bluetooth_connected.png
+  -rw-rw-rw-       639  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_connected_3g.png
+  -rw-rw-rw-       664  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_connected_e.png
+  -rw-rw-rw-       666  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_connected_g.png
+  -rw-rw-rw-       721  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_in_3g.png
+  -rw-rw-rw-       712  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_in_e.png
+  -rw-rw-rw-       715  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_in_g.png
+  -rw-rw-rw-       655  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_inandout_3g.png
+  -rw-rw-rw-       647  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_inandout_e.png
+  -rw-rw-rw-       651  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_inandout_g.png
+  -rw-rw-rw-       712  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_out_3g.png
+  -rw-rw-rw-       703  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_out_e.png
+  -rw-rw-rw-       706  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_out_g.png
+  -rw-rw-rw-       719  16-Jan-2009  12:04:18  res/drawable/stat_sys_data_usb.png
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/drawable/stat_sys_download.xml
+  -rw-rw-rw-       588  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim0.png
+  -rw-rw-rw-       586  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim1.png
+  -rw-rw-rw-       587  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim2.png
+  -rw-rw-rw-       587  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim3.png
+  -rw-rw-rw-       578  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim4.png
+  -rw-rw-rw-       569  16-Jan-2009  12:04:18  res/drawable/stat_sys_download_anim5.png
+  -rw-rw-rw-       627  16-Jan-2009  12:04:18  res/drawable/stat_sys_gps_acquiring.png
+  -rw-rw-rw-       628  16-Jan-2009  12:04:18  res/drawable/stat_sys_gps_acquiring_anim.xml
+  -rw-rw-rw-      1182  16-Jan-2009  12:04:18  res/drawable/stat_sys_gps_on.png
+  -rw-rw-rw-       307  16-Jan-2009  12:04:18  res/drawable/stat_sys_headset.png
+  -rw-rw-rw-       930  16-Jan-2009  12:04:18  res/drawable/stat_sys_no_sim.png
+  -rw-rw-rw-       748  16-Jan-2009  12:04:18  res/drawable/stat_sys_phone_call.png
+  -rw-rw-rw-       778  16-Jan-2009  12:04:18  res/drawable/stat_sys_phone_call_forward.png
+  -rw-rw-rw-       744  16-Jan-2009  12:04:18  res/drawable/stat_sys_phone_call_on_hold.png
+  -rw-rw-rw-       753  16-Jan-2009  12:04:18  res/drawable/stat_sys_r_signal_0.png
+  -rw-rw-rw-       768  16-Jan-2009  12:04:18  res/drawable/stat_sys_r_signal_1.png
+  -rw-rw-rw-       752  16-Jan-2009  12:04:18  res/drawable/stat_sys_r_signal_2.png
+  -rw-rw-rw-       739  16-Jan-2009  12:04:18  res/drawable/stat_sys_r_signal_3.png
+  -rw-rw-rw-       619  16-Jan-2009  12:04:18  res/drawable/stat_sys_r_signal_4.png
+  -rw-rw-rw-       578  16-Jan-2009  12:04:18  res/drawable/stat_sys_ringer_silent.png
+  -rw-rw-rw-       839  16-Jan-2009  12:04:18  res/drawable/stat_sys_ringer_vibrate.png
+  -rw-rw-rw-       671  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_0.png
+  -rw-rw-rw-       700  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_1.png
+  -rw-rw-rw-       697  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_2.png
+  -rw-rw-rw-       691  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_3.png
+  -rw-rw-rw-       525  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_4.png
+  -rw-rw-rw-       858  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_flightmode.png
+  -rw-rw-rw-       732  16-Jan-2009  12:04:18  res/drawable/stat_sys_signal_null.png
+  -rw-rw-rw-       992  16-Jan-2009  12:04:18  res/drawable/stat_sys_speakerphone.png
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload.xml
+  -rw-rw-rw-       624  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim0.png
+  -rw-rw-rw-       621  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim1.png
+  -rw-rw-rw-       622  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim2.png
+  -rw-rw-rw-       623  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim3.png
+  -rw-rw-rw-       608  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim4.png
+  -rw-rw-rw-       606  16-Jan-2009  12:04:18  res/drawable/stat_sys_upload_anim5.png
+  -rw-rw-rw-       695  16-Jan-2009  12:04:18  res/drawable/stat_sys_warning.png
+  -rw-rw-rw-       835  16-Jan-2009  12:04:18  res/drawable/stat_sys_wifi_signal_0.png
+  -rw-rw-rw-       806  16-Jan-2009  12:04:18  res/drawable/stat_sys_wifi_signal_1.png
+  -rw-rw-rw-       809  16-Jan-2009  12:04:18  res/drawable/stat_sys_wifi_signal_2.png
+  -rw-rw-rw-       787  16-Jan-2009  12:04:18  res/drawable/stat_sys_wifi_signal_3.png
+  -rw-rw-rw-       736  16-Jan-2009  12:04:18  res/drawable/stat_sys_wifi_signal_4.png
+  -rw-rw-rw-       194  16-Jan-2009  12:04:18  res/drawable/status_bar_background.9.png
+  -rw-rw-rw-       951  16-Jan-2009  12:04:18  res/drawable/status_bar_close_on.9.png
+  -rw-rw-rw-       246  16-Jan-2009  12:04:18  res/drawable/status_bar_divider_shadow.9.png
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/drawable/status_bar_item_app_background.xml
+  -rw-rw-rw-       713  16-Jan-2009  12:04:18  res/drawable/status_bar_item_app_background_normal.9.png
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/drawable/status_bar_item_background.xml
+  -rw-rw-rw-      1055  16-Jan-2009  12:04:18  res/drawable/status_bar_item_background_focus.9.png
+  -rw-rw-rw-       156  16-Jan-2009  12:04:18  res/drawable/status_bar_item_background_normal.9.png
+  -rw-rw-rw-       886  16-Jan-2009  12:04:18  res/drawable/status_bar_item_background_pressed.9.png
+  -rw-rw-rw-       141  16-Jan-2009  12:04:18  res/drawable/status_bar_item_clear_background.9.png
+  -rw-rw-rw-       220  16-Jan-2009  12:04:18  res/drawable/status_bar_shadow_bar.9.png
+  -rw-rw-rw-       564  16-Jan-2009  12:04:18  res/drawable/status_icon_background.xml
+  -rw-rw-rw-       766  16-Jan-2009  12:04:18  res/drawable/statusbar_background.png
+  -rw-rw-rw-       682  16-Jan-2009  12:04:18  res/drawable/sub_menu_bottom_bright.9.png
+  -rw-rw-rw-       787  16-Jan-2009  12:04:18  res/drawable/sub_menu_top_dark.9.png
+  -rw-rw-rw-       424  16-Jan-2009  12:04:18  res/drawable/submenu_arrow.xml
+  -rw-rw-rw-       547  16-Jan-2009  12:04:18  res/drawable/submenu_arrow_back.png
+  -rw-rw-rw-       170  16-Jan-2009  12:04:18  res/drawable/submenu_arrow_focus.png
+  -rw-rw-rw-       170  16-Jan-2009  12:04:18  res/drawable/submenu_arrow_nofocus.png
+  -rw-rw-rw-       818  16-Jan-2009  12:04:18  res/drawable/sym_action_call.png
+  -rw-rw-rw-       669  16-Jan-2009  12:04:18  res/drawable/sym_action_chat.png
+  -rw-rw-rw-       611  16-Jan-2009  12:04:18  res/drawable/sym_action_email.png
+  -rw-rw-rw-       813  16-Jan-2009  12:04:18  res/drawable/sym_action_map.png
+  -rw-rw-rw-       669  16-Jan-2009  12:04:18  res/drawable/sym_action_sms.png
+  -rw-rw-rw-       123  16-Jan-2009  12:04:18  res/drawable/sym_battery_white.png
+  -rw-rw-rw-      1282  16-Jan-2009  12:04:18  res/drawable/sym_call_incoming.png
+  -rw-rw-rw-      1332  16-Jan-2009  12:04:18  res/drawable/sym_call_missed.png
+  -rw-rw-rw-      1251  16-Jan-2009  12:04:18  res/drawable/sym_call_outgoing.png
+  -rw-rw-rw-       301  16-Jan-2009  12:04:18  res/drawable/sym_contact_card.png
+  -rw-rw-rw-      3366  16-Jan-2009  12:04:18  res/drawable/sym_def_app_icon.png
+  -rw-rw-rw-       466  16-Jan-2009  12:04:18  res/drawable/sym_default_number.png
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/drawable/tab_bottom_left.xml
+  -rw-rw-rw-       760  16-Jan-2009  12:04:18  res/drawable/tab_bottom_right.xml
+  -rw-rw-rw-       186  16-Jan-2009  12:04:18  res/drawable/tab_bottom_shadow.9.png
+  -rw-rw-rw-      1750  16-Jan-2009  12:04:18  res/drawable/tab_focus.9.png
+  -rw-rw-rw-       254  16-Jan-2009  12:04:18  res/drawable/tab_focus_bar_left.9.png
+  -rw-rw-rw-       255  16-Jan-2009  12:04:18  res/drawable/tab_focus_bar_right.9.png
+  -rw-rw-rw-      1120  16-Jan-2009  12:04:18  res/drawable/tab_indicator.xml
+  -rw-rw-rw-      1731  16-Jan-2009  12:04:18  res/drawable/tab_press.9.png
+  -rw-rw-rw-       254  16-Jan-2009  12:04:18  res/drawable/tab_press_bar_left.9.png
+  -rw-rw-rw-       255  16-Jan-2009  12:04:18  res/drawable/tab_press_bar_right.9.png
+  -rw-rw-rw-       751  16-Jan-2009  12:04:18  res/drawable/tab_selected.9.png
+  -rw-rw-rw-       248  16-Jan-2009  12:04:18  res/drawable/tab_selected_bar_left.9.png
+  -rw-rw-rw-       249  16-Jan-2009  12:04:18  res/drawable/tab_selected_bar_right.9.png
+  -rw-rw-rw-       479  16-Jan-2009  12:04:18  res/drawable/tab_selected_highlight.9.png
+  -rw-rw-rw-       999  16-Jan-2009  12:04:18  res/drawable/tab_unselected.9.png
+  -rw-rw-rw-       436  16-Jan-2009  12:04:18  res/drawable/tab_unselected_longpress.9.png
+  -rw-rw-rw-       376  16-Jan-2009  12:04:18  res/drawable/tab_unselected_pressed.9.png
+  -rw-rw-rw-       393  16-Jan-2009  12:04:18  res/drawable/tab_unselected_selected.9.png
+  -rw-rw-rw-       792  16-Jan-2009  12:04:18  res/drawable/textfield_default.9.png
+  -rw-rw-rw-       512  16-Jan-2009  12:04:18  res/drawable/textfield_disabled.9.png
+  -rw-rw-rw-      1046  16-Jan-2009  12:04:18  res/drawable/textfield_disabled_selected.9.png
+  -rw-rw-rw-      1402  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_bottom_selected.9.png
+  -rw-rw-rw-      1530  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_bottom_unselected.9.png
+  -rw-rw-rw-      1182  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_center_selected.9.png
+  -rw-rw-rw-      1076  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_center_unselected.9.png
+  -rw-rw-rw-      1182  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_top_selected.9.png
+  -rw-rw-rw-      1123  16-Jan-2009  12:04:18  res/drawable/textfield_expanded_top_unselected.9.png
+  -rw-rw-rw-      1511  16-Jan-2009  12:04:18  res/drawable/textfield_pressed.9.png
+  -rw-rw-rw-      1474  16-Jan-2009  12:04:18  res/drawable/textfield_selected.9.png
+  -rw-rw-rw-      1136  16-Jan-2009  12:04:18  res/drawable/timepicker_down_btn.xml
+  -rw-rw-rw-      1487  16-Jan-2009  12:04:18  res/drawable/timepicker_down_disabled.9.png
+  -rw-rw-rw-      1434  16-Jan-2009  12:04:18  res/drawable/timepicker_down_disabled_focused.9.png
+  -rw-rw-rw-      1316  16-Jan-2009  12:04:18  res/drawable/timepicker_down_normal.9.png
+  -rw-rw-rw-      1528  16-Jan-2009  12:04:18  res/drawable/timepicker_down_pressed.9.png
+  -rw-rw-rw-      1510  16-Jan-2009  12:04:18  res/drawable/timepicker_down_selected.9.png
+  -rw-rw-rw-      1136  16-Jan-2009  12:04:18  res/drawable/timepicker_input.xml
+  -rw-rw-rw-       692  16-Jan-2009  12:04:18  res/drawable/timepicker_input_disabled.9.png
+  -rw-rw-rw-       918  16-Jan-2009  12:04:18  res/drawable/timepicker_input_normal.9.png
+  -rw-rw-rw-      1126  16-Jan-2009  12:04:18  res/drawable/timepicker_input_pressed.9.png
+  -rw-rw-rw-      1088  16-Jan-2009  12:04:18  res/drawable/timepicker_input_selected.9.png
+  -rw-rw-rw-      1136  16-Jan-2009  12:04:18  res/drawable/timepicker_up_btn.xml
+  -rw-rw-rw-      1737  16-Jan-2009  12:04:18  res/drawable/timepicker_up_disabled.9.png
+  -rw-rw-rw-      1712  16-Jan-2009  12:04:18  res/drawable/timepicker_up_disabled_focused.9.png
+  -rw-rw-rw-      1570  16-Jan-2009  12:04:18  res/drawable/timepicker_up_normal.9.png
+  -rw-rw-rw-      1949  16-Jan-2009  12:04:18  res/drawable/timepicker_up_pressed.9.png
+  -rw-rw-rw-      1929  16-Jan-2009  12:04:18  res/drawable/timepicker_up_selected.9.png
+  -rw-rw-rw-       265  16-Jan-2009  12:04:18  res/drawable/title_bar.9.png
+  -rw-rw-rw-       149  16-Jan-2009  12:04:18  res/drawable/title_bar_shadow.png
+  -rw-rw-rw-      1808  16-Jan-2009  12:04:18  res/drawable/toast_frame.9.png
+  -rw-rw-rw-        95  16-Jan-2009  12:04:18  res/drawable/unknown_image.png
+  -rw-rw-rw-      3043  16-Jan-2009  12:04:18  res/drawable/zoom_in.png
+  -rw-rw-rw-      3385  16-Jan-2009  12:04:18  res/drawable/zoom_in_pressed.png
+  -rw-rw-rw-       341  16-Jan-2009  12:04:18  res/drawable/zoom_indicator.9.png
+  -rw-rw-rw-       369  16-Jan-2009  12:04:18  res/drawable/zoom_indicator_selected.png
+  -rw-rw-rw-      2915  16-Jan-2009  12:04:18  res/drawable/zoom_out.png
+  -rw-rw-rw-      3341  16-Jan-2009  12:04:18  res/drawable/zoom_out_pressed.png
+  -rw-rw-rw-      2207  16-Jan-2009  12:04:18  res/drawable/zoom_plate.9.png
+  -rw-rw-rw-      3433  16-Jan-2009  12:04:18  res/drawable/zoom_track.png
+  -rw-rw-rw-       724  16-Jan-2009  12:04:18  res/layout-land/icon_menu_layout.xml
+  -rw-rw-rw-       724  16-Jan-2009  12:04:18  res/layout-port/icon_menu_layout.xml
+  -rw-rw-rw-      1028  16-Jan-2009  12:04:18  res/layout/activity_list_item.xml
+  -rw-rw-rw-      4712  16-Jan-2009  12:04:18  res/layout/alert_dialog.xml
+  -rw-rw-rw-      1716  16-Jan-2009  12:04:18  res/layout/alert_dialog_progress.xml
+  -rw-rw-rw-      1244  16-Jan-2009  12:04:18  res/layout/always_use_checkbox.xml
+  -rw-rw-rw-      1444  16-Jan-2009  12:04:18  res/layout/app_permission_item.xml
+  -rw-rw-rw-      2584  16-Jan-2009  12:04:18  res/layout/app_perms_summary.xml
+  -rw-rw-rw-      1228  16-Jan-2009  12:04:18  res/layout/auto_complete_list.xml
+  -rw-rw-rw-      1388  16-Jan-2009  12:04:18  res/layout/battery_low.xml
+  -rw-rw-rw-      1976  16-Jan-2009  12:04:18  res/layout/battery_status.xml
+  -rw-rw-rw-       716  16-Jan-2009  12:04:18  res/layout/browser_link_context_header.xml
+  -rw-rw-rw-      1580  16-Jan-2009  12:04:18  res/layout/character_picker.xml
+  -rw-rw-rw-       620  16-Jan-2009  12:04:18  res/layout/character_picker_button.xml
+  -rw-rw-rw-      1376  16-Jan-2009  12:04:18  res/layout/date_picker.xml
+  -rw-rw-rw-       628  16-Jan-2009  12:04:18  res/layout/date_picker_dialog.xml
+  -rw-rw-rw-      1384  16-Jan-2009  12:04:18  res/layout/dialog_custom_title.xml
+  -rw-rw-rw-      1416  16-Jan-2009  12:04:18  res/layout/dialog_title.xml
+  -rw-rw-rw-      2204  16-Jan-2009  12:04:18  res/layout/dialog_title_icons.xml
+  -rw-rw-rw-       536  16-Jan-2009  12:04:18  res/layout/expandable_list_content.xml
+  -rw-rw-rw-       528  16-Jan-2009  12:04:18  res/layout/expanded_menu_layout.xml
+  -rw-rw-rw-      1408  16-Jan-2009  12:04:18  res/layout/global_actions_item.xml
+  -rw-rw-rw-      1204  16-Jan-2009  12:04:18  res/layout/google_web_content_helper_layout.xml
+  -rw-rw-rw-       848  16-Jan-2009  12:04:18  res/layout/icon_menu_item_layout.xml
+  -rw-rw-rw-      1052  16-Jan-2009  12:04:18  res/layout/input_method.xml
+  -rw-rw-rw-       568  16-Jan-2009  12:04:18  res/layout/input_method_extract_view.xml
+  -rw-rw-rw-       656  16-Jan-2009  12:04:18  res/layout/keyboard_key_preview.xml
+  -rw-rw-rw-      1404  16-Jan-2009  12:04:18  res/layout/keyboard_popup_keyboard.xml
+  -rw-rw-rw-      1096  16-Jan-2009  12:04:18  res/layout/keyguard.xml
+  -rw-rw-rw-      2828  16-Jan-2009  12:04:18  res/layout/keyguard_screen_glogin_unlock.xml
+  -rw-rw-rw-      4888  16-Jan-2009  12:04:18  res/layout/keyguard_screen_lock.xml
+  -rw-rw-rw-      3548  16-Jan-2009  12:04:18  res/layout/keyguard_screen_sim_pin_landscape.xml
+  -rw-rw-rw-      6060  16-Jan-2009  12:04:18  res/layout/keyguard_screen_sim_pin_portrait.xml
+  -rw-rw-rw-      3260  16-Jan-2009  12:04:18  res/layout/keyguard_screen_unlock_landscape.xml
+  -rw-rw-rw-      3212  16-Jan-2009  12:04:18  res/layout/keyguard_screen_unlock_portrait.xml
+  -rw-rw-rw-       516  16-Jan-2009  12:04:18  res/layout/list_content.xml
+  -rw-rw-rw-       680  16-Jan-2009  12:04:18  res/layout/list_menu_item_checkbox.xml
+  -rw-rw-rw-       648  16-Jan-2009  12:04:18  res/layout/list_menu_item_icon.xml
+  -rw-rw-rw-      1752  16-Jan-2009  12:04:18  res/layout/list_menu_item_layout.xml
+  -rw-rw-rw-       688  16-Jan-2009  12:04:18  res/layout/list_menu_item_radio.xml
+  -rw-rw-rw-      3064  16-Jan-2009  12:04:18  res/layout/media_controller.xml
+  -rw-rw-rw-      1792  16-Jan-2009  12:04:18  res/layout/menu_item.xml
+  -rw-rw-rw-       704  16-Jan-2009  12:04:18  res/layout/menu_item_divider.xml
+  -rw-rw-rw-      1232  16-Jan-2009  12:04:18  res/layout/number_picker.xml
+  -rw-rw-rw-       736  16-Jan-2009  12:04:18  res/layout/number_picker_edit.xml
+  -rw-rw-rw-       912  16-Jan-2009  12:04:18  res/layout/popup_menu_layout.xml
+  -rw-rw-rw-      1160  16-Jan-2009  12:04:18  res/layout/power_dialog.xml
+  -rw-rw-rw-      1912  16-Jan-2009  12:04:18  res/layout/preference.xml
+  -rw-rw-rw-       460  16-Jan-2009  12:04:18  res/layout/preference_category.xml
+  -rw-rw-rw-      1532  16-Jan-2009  12:04:18  res/layout/preference_child.xml
+  -rw-rw-rw-       864  16-Jan-2009  12:04:18  res/layout/preference_dialog_edittext.xml
+  -rw-rw-rw-      1880  16-Jan-2009  12:04:18  res/layout/preference_information.xml
+  -rw-rw-rw-       612  16-Jan-2009  12:04:18  res/layout/preference_list_content.xml
+  -rw-rw-rw-       676  16-Jan-2009  12:04:18  res/layout/preference_widget_checkbox.xml
+  -rw-rw-rw-       580  16-Jan-2009  12:04:18  res/layout/preferences.xml
+  -rw-rw-rw-      1384  16-Jan-2009  12:04:18  res/layout/progress_dialog.xml
+  -rw-rw-rw-      2044  16-Jan-2009  12:04:18  res/layout/recent_apps_dialog.xml
+  -rw-rw-rw-      1432  16-Jan-2009  12:04:18  res/layout/recent_apps_icon.xml
+  -rw-rw-rw-      1456  16-Jan-2009  12:04:18  res/layout/resolve_list_item.xml
+  -rw-rw-rw-       708  16-Jan-2009  12:04:18  res/layout/safe_mode.xml
+  -rw-rw-rw-      3416  16-Jan-2009  12:04:18  res/layout/screen.xml
+  -rw-rw-rw-      1088  16-Jan-2009  12:04:18  res/layout/screen_custom_title.xml
+  -rw-rw-rw-      2728  16-Jan-2009  12:04:18  res/layout/screen_progress.xml
+  -rw-rw-rw-       408  16-Jan-2009  12:04:18  res/layout/screen_simple.xml
+  -rw-rw-rw-      1452  16-Jan-2009  12:04:18  res/layout/screen_title.xml
+  -rw-rw-rw-      3396  16-Jan-2009  12:04:18  res/layout/screen_title_icons.xml
+  -rw-rw-rw-      2528  16-Jan-2009  12:04:18  res/layout/search_bar.xml
+  -rw-rw-rw-      1276  16-Jan-2009  12:04:18  res/layout/search_dropdown_app_selector.xml
+  -rw-rw-rw-       668  16-Jan-2009  12:04:18  res/layout/search_dropdown_item_1line.xml
+  -rw-rw-rw-      1660  16-Jan-2009  12:04:18  res/layout/search_dropdown_item_2line.xml
+  -rw-rw-rw-      1436  16-Jan-2009  12:04:18  res/layout/search_dropdown_item_icons_1line.xml
+  -rw-rw-rw-      2076  16-Jan-2009  12:04:18  res/layout/search_dropdown_item_icons_2line.xml
+  -rw-rw-rw-       924  16-Jan-2009  12:04:18  res/layout/seekbar_dialog.xml
+  -rw-rw-rw-       672  16-Jan-2009  12:04:18  res/layout/select_dialog.xml
+  -rw-rw-rw-       764  16-Jan-2009  12:04:18  res/layout/select_dialog_item.xml
+  -rw-rw-rw-       828  16-Jan-2009  12:04:18  res/layout/select_dialog_multichoice.xml
+  -rw-rw-rw-       828  16-Jan-2009  12:04:18  res/layout/select_dialog_singlechoice.xml
+  -rw-rw-rw-      1060  16-Jan-2009  12:04:18  res/layout/setting_list_category.xml
+  -rw-rw-rw-       548  16-Jan-2009  12:04:18  res/layout/setting_list_expanded_category.xml
+  -rw-rw-rw-       988  16-Jan-2009  12:04:18  res/layout/setting_list_setting.xml
+  -rw-rw-rw-       500  16-Jan-2009  12:04:18  res/layout/setting_list_setting_value_text.xml
+  -rw-rw-rw-       828  16-Jan-2009  12:04:18  res/layout/simple_dropdown_hint.xml
+  -rw-rw-rw-       720  16-Jan-2009  12:04:18  res/layout/simple_dropdown_item_1line.xml
+  -rw-rw-rw-      1660  16-Jan-2009  12:04:18  res/layout/simple_dropdown_item_2line.xml
+  -rw-rw-rw-       608  16-Jan-2009  12:04:18  res/layout/simple_expandable_list_item_1.xml
+  -rw-rw-rw-      1176  16-Jan-2009  12:04:18  res/layout/simple_expandable_list_item_2.xml
+  -rw-rw-rw-       608  16-Jan-2009  12:04:18  res/layout/simple_gallery_item.xml
+  -rw-rw-rw-       660  16-Jan-2009  12:04:18  res/layout/simple_list_item_1.xml
+  -rw-rw-rw-      1236  16-Jan-2009  12:04:18  res/layout/simple_list_item_2.xml
+  -rw-rw-rw-       728  16-Jan-2009  12:04:18  res/layout/simple_list_item_checked.xml
+  -rw-rw-rw-       728  16-Jan-2009  12:04:18  res/layout/simple_list_item_multiple_choice.xml
+  -rw-rw-rw-       728  16-Jan-2009  12:04:18  res/layout/simple_list_item_single_choice.xml
+  -rw-rw-rw-       688  16-Jan-2009  12:04:18  res/layout/simple_spinner_dropdown_item.xml
+  -rw-rw-rw-       656  16-Jan-2009  12:04:18  res/layout/simple_spinner_item.xml
+  -rw-rw-rw-      3412  16-Jan-2009  12:04:18  res/layout/status_bar.xml
+  -rw-rw-rw-      3560  16-Jan-2009  12:04:18  res/layout/status_bar_expanded.xml
+  -rw-rw-rw-      1236  16-Jan-2009  12:04:18  res/layout/status_bar_icon.xml
+  -rw-rw-rw-      1044  16-Jan-2009  12:04:18  res/layout/status_bar_latest_event.xml
+  -rw-rw-rw-      2104  16-Jan-2009  12:04:18  res/layout/status_bar_latest_event_content.xml
+  -rw-rw-rw-      1680  16-Jan-2009  12:04:18  res/layout/status_bar_tracking.xml
+  -rw-rw-rw-      1764  16-Jan-2009  12:04:18  res/layout/submenu_item.xml
+  -rw-rw-rw-      1008  16-Jan-2009  12:04:18  res/layout/tab_content.xml
+  -rw-rw-rw-      1176  16-Jan-2009  12:04:18  res/layout/tab_indicator.xml
+  -rw-rw-rw-       620  16-Jan-2009  12:04:18  res/layout/test_list_item.xml
+  -rw-rw-rw-       524  16-Jan-2009  12:04:18  res/layout/textview_hint.xml
+  -rw-rw-rw-      1616  16-Jan-2009  12:04:18  res/layout/time_picker.xml
+  -rw-rw-rw-       628  16-Jan-2009  12:04:18  res/layout/time_picker_dialog.xml
+  -rw-rw-rw-       520  16-Jan-2009  12:04:18  res/layout/time_picker_text.xml
+  -rw-rw-rw-       964  16-Jan-2009  12:04:18  res/layout/transient_notification.xml
+  -rw-rw-rw-       872  16-Jan-2009  12:04:18  res/layout/two_line_list_item.xml
+  -rw-rw-rw-       688  16-Jan-2009  12:04:18  res/layout/typing_filter.xml
+  -rw-rw-rw-      1924  16-Jan-2009  12:04:18  res/layout/volume_adjust.xml
+  -rw-rw-rw-       952  16-Jan-2009  12:04:18  res/layout/zoom_controls.xml
+  -rw-rw-rw-      1140  16-Jan-2009  12:04:18  res/layout/zoom_magnify.xml
+  -rw-rw-rw-       605  15-Jan-2009  23:16:34  res/raw-de/loaderror.html
+  -rw-rw-rw-       996  15-Jan-2009  23:16:34  res/raw-de/nodomain.html
+  -rw-rw-rw-     10975  15-Jan-2009  23:16:34  res/raw/fallbackring.ogg
+  -rw-rw-rw-       579  15-Jan-2009  23:16:34  res/raw/loaderror.html
+  -rw-rw-rw-       890  15-Jan-2009  23:16:34  res/raw/nodomain.html
+  -rw-rw-rw-     25588  16-Jan-2009  12:04:18  res/xml-en/autotext.xml
+  -rw-rw-rw-       164  16-Jan-2009  12:04:18  res/xml/apns.xml
+  -rw-rw-rw-       116  16-Jan-2009  12:04:18  res/xml/autotext.xml
+  -rw-rw-rw-       864  16-Jan-2009  12:04:18  res/xml/preferred_time_zones.xml
+  -rw-rw-rw-     61044  16-Jan-2009  12:04:18  res/xml/time_zones_by_country.xml
+  -rw-rw-rw-    747776  16-Jan-2009  12:04:18  resources.arsc
+- ----------  --------  -----------  --------  ------------------------------------------------------------
+               2246729                         851 files
+</pre>
+
+
+<h3><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec13" id="sec13"></a>
+Goal</h3>
+
+<ul>
+<li>Make the default theme customizable</li>
+<li></li>
+</ul>
+
+<hr>
+
+
+
+<h2><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec14" id="sec14"></a>
+Theme Creation Tool</h2>
+
+
+<!-- Page published by Emacs Muse ends here -->
+<!-- disqus -->
+<div id="disqus_thread" style="margin-top:100px"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'justinswebsite'; // Required - Replace example with your forum shortname
+    var disqus_identifier = 'wiki:android_theme';
+    var disqus_title = "Justin's Wiki - Theme Structure";
+    var disqus_url = 'http://mmmyddd.github.io/wiki/android/theme.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Wiki comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div><!--end of muse-content -->
+</div><!--end of container-->
+
+<div style="clear:both;margin-top:5px;">&nbsp;</div>
+
+<div class="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="33%" />
+    <col width="34%" />
+    <col width="33%" />
+    <tr>
+      <td width="33%" align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]freeshell.org">
+          mmmyddd[AT]freeshell.org
+        </a>
+
+        <br />
+        <span class="footdate">2009-2011 © CopyLeft Contributed</span>
+      </td>
+      <td width="34%" align="center" valign="top">
+      </td>
+      <td width="33%" align="right" valign="bottom" style="line-height: 175%">
+        <table style="margin: 0 0;padding: 0 0;">
+          <tr><td colspan="2" align="right">
+            <!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web site analytics"
+                 href="http://gostats.com">
+                <img alt="web site analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                     style="border-width:0" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code -->
+          </td></tr>
+          <tr style="margin: 0 0;padding: 0 0;">
+            <td style="margin: 0 0;padding: 0 0;">
+              <a href="http://validator.w3.org/check?uri=referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-xhtml10-blue.png"
+                     alt="Valid XHTML 1.0!"/>
+              </a>
+            </td>
+            <td>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer"
+                 style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px;top:0px;"
+                     src="../res/image/valid-css-blue.png"
+                     alt="Valid CSS!" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <span class="footdate">
+          Last updated 2009-02-12
+        </span>
+        <br />
+        [ <a href="#top">Top</a> | <a href="/wiki/android/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="collapsible-arrow" style="display:none;"></div>
+</body>
+<script language="javascript">
+  getContent("../res/topic.html", "android_theme");
+  //afterload();
+  fillsearch();
+</script>
+</html>

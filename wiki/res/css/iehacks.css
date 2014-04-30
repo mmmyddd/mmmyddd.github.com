@@ -1,0 +1,151 @@
+/* Internet Explorer hacks for Google Code (http://code.google.com)
+   Copyright 2007 Google Inc. All rights reserved. */
+
+/* Without this sheet, if elements inside #pagecontent are wider than
+   the window, IE will expand the width of #pagecontent to fit the contents
+   (expanding box bug), which causes float drops. */
+
+/* IE7 float-drop fix.
+   This tells pagecontent that its width should be the size of the window,
+   minus its distance from the left edge of the window. */
+/* * #pagecontent{
+  width: expression(document.body.offsetWidth - 197);
+}	*/
+	
+/* IE6 float-drop fix.
+   In this case, we want the sidenav to be invisible to the pagecontent,
+   so we give the sidenav absolute position. 
+   The pagecontent stays in place thanks to its left-margin.  */
+/* * html #navbar {
+  position: absolute;
+  left: 0;
+}*/
+	
+/* Follow-up to above IE6 fix.
+   The above fix also makes the sidenav invisible to the footer, so it will 
+   float up and overlap the sidenav content if the pagecontent has a smaller
+   height than the sidenav. To fix this, we read the height of the sidenav and
+   use that height for the height of the pagecontent. */
+/* * html #container { */
+/*   width: auto;  /\* overwrite the width above, which is intended only for IE7  *\/ */
+/*   height: expression(((document.getElementById("navbar").clientHeight > document.getElementById("container").clientHeight) ? document.getElementById("navbar").clientHeight : " ")); */
+/* } */
+
+/** IE6 absolute position only take effect in a relative wrapper container with layout 
+this can be done with the rule added to wrapper:
+<!--[if IE]><style>
+.layout {
+	height: 0;
+	he\ight: auto;
+	zoom: 1;
+}
+</style><![endif]-->
+*/
+
+/* .banner { */
+/*     height: 0; */
+/*     he\ight: auto; */
+/*     zoom: 1; */
+/* } */
+
+.muse-content {
+    height: 0;
+    he\ight: auto;
+    zoom: 1; 
+}
+
+/* fix the muse-content layout under topic bug in IE 6 */
+.muse-content * {
+    zoom: 0;
+}
+
+.muse-content .syntaxhighlighter{
+
+    zoom: 1;
+}
+
+.muse-content .syntaxhighlighter * {
+
+    zoom: 0;
+}
+
+
+
+.muse-content h3 * {
+    zoom: 0; 	/*for IE6 to display inner float object correctly*/
+} 
+
+.muse-content pre {
+    width: auto;
+    overflow: auto;
+}
+
+.navbar { 
+    zoom: 1;
+}
+
+.navbar * {
+    zoom: 0;
+}
+
+/* .navbar * {
+/*     zoom: 1; */
+/* } */
+
+/* .navbar div { */
+/*     zoom: 1; */
+/* } */
+
+.topic li div {
+    he\ight: auto;
+    zoom: 1;
+}
+
+/* .container { */
+/*     he\ight: auto; */
+/*     zoom: 1; */
+/* } */
+
+/* .topic ul li, .topic li div a.tgl-control{ */
+/*     zoom: 1; */
+/* } */
+
+/* .body { */
+/*     zoom:1; */
+/*     he\ight: auto; */
+/* } */
+
+/* blockquote { */
+/*     zoom: 1; */
+/* } */
+
+/* .topic li div a.tgl-control { */
+/*     zoom: 1; */
+/* } */
+
+/* .navfoot table tr td a span { */
+/*     zoom: 1; */
+/* } */
+
+
+
+/* /\* image converted to span *\/ */
+.muse-content .latex-display {
+    margin-left: 36%;
+    display: block;
+}
+
+.muse-content ul, .muse-content ol, .muse-content li {
+
+    zoom: 0;
+}
+
+.muse-content ul, .muse-content ol {
+    padding-left: 2em;    
+}
+
+
+.muse-table {
+   border-collapse: collapse;
+}
+
