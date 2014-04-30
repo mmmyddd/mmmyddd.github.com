@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="js语法高亮器v3"> 
+<meta name="description" content="js语法高亮器v3">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jssc3.js"></script>
+<title>语法高亮器v3</title>
+</head>
+
+<body>
+
+<textarea name="code" class="javascript">//javascript
+function none(){
+}
+/* javascript
+jscript */
+var s = "Hello World!\"" + "
+	" + "\\\"" + "\\" + "'" + "\'";
+var reg = /[/][*]([\S\s]*?)(?:[*][/]|$)|[/][/g;](.*)|"((?:\\\\|\\"|[^"])*)"|'((?:\\\\|\\'|[^'])*)'/gm;
+var num1 = 0.541f;
+var num2 = - 0x3a86;
+document.writer(str);
+function f(test) {   
+    return (test/*  
+    /* //  
+    ' "  
+    { ;  
+    \*/ && // /* // " ' { ; \   
+    test &&   
+    " /* // \   
+    \" ' \   
+    { ;" &&   
+    ' /* // \   
+    " \' \   
+    { ;' &&   
+    test);   
+}</textarea>
+
+<pre name="code" class="未知">
+//unknow language type
+String s = "string";
+</pre>
+<textarea name="code" class="java">//java
+import java.util.*;
+
+public class Test {
+	StringBuilder sb = new StringBuilder();
+	sb.append("Hello ");
+	sb.append("World!");
+	public static void main(String[] args) {
+		if(true) {
+			System.out.println(sb.toString());
+		} else {
+			System.out.println(function in() {});
+		}
+	}
+}</textarea>
+
+<textarea name="code" class="actionscript">//Action Script
+var s:String = "Hello World!";
+var n:Number = 3;
+function printString(str:String) {
+    trace(s);
+}</textarea>
+
+<textarea name="code" class="c">//c
+#include <stdio.h>
+int main() {
+	int i = 0;
+	for(; i < 10; i++) {
+		printf("Hello World!");
+	}
+	return 0;
+}</textarea>
+
+<textarea name="code" class="cpp">//cpp
+#include "iostream.h"
+using namespace std;
+int main () {
+	char c = 'c';
+	cout << "Hello World!";
+	return 0;
+}</textarea>
+
+<pre name="code" class="php">//php
+$get = _GET['name'];
+$count = 1L;
+if(isset($get)) {
+	echo "Hello!".$get;
+}
+else {
+	$get = "guest";
+	echo "Hello!".$get;
+}</pre>
+
+<textarea name="code" class="csharp">//c#
+using System;
+/// <summary> 
+///  HelloWorld 
+/// </summary> 
+#region HelloWorld  
+namespace HelloWorld 
+{ 
+    public partial class helloworld 
+    {
+       static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+#End region</textarea>
+
+<textarea name="code" class="vb">'vb
+Private Sub Form_Load()
+	If(true)
+	    Form1.Print "Hello World"
+	End If
+End Sub </textarea>
+<textarea name="code" class="python">#python
+n = 1;
+if n == 1:
+	c = 'Hello World!';
+	s = """Hello \
+	''World!'''"""
+	if c != s:
+		print s;</textarea>
+
+<textarea name="code" class="ruby">#ruby
+class MyTestController < ApplicationController
+	def index
+		render:text => "Helo, World"
+	end
+end</textarea>
+
+<textarea name="code" class="delphi">//delphi
+program HelloWorld;
+uses
+    Dialogs;
+begin
+    ShowMessage('Hello, World!');
+end</textarea>
+
+<textarea name="code" class="sql">--sql
+CREATE DATABASE `army` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+create TABLE `army`.`teacher` (
+`id` INT( 4 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`name` VARCHAR( 10 ) NOT NULL ,
+`sex` BOOL NOT NULL ,
+) ENGINE = InnoDB;</textarea>
+
+<textarea name="code" class="xhtml">&lt;!-- xhtml
+and
+html --&gt;
+&lt;textarea name="code" class="xhtml"&gt;abc def	g&lt;/textarea&gt;
+&lt;div&gt;
+	&lt;img src="http://army.512j.com" width=30 height='60' /&gt;b &lt; a ? 0 : 1&lt;br /&gt;
+&lt;/div&gt;</textarea>
+
+<textarea name="code" class="css">//css
+!important
+/*jssc是个轻量级的解析器，
+在处理html、css、xml上还是弱项*/
+body {
+	margin: 0px;
+	padding-top: auto;
+	line-height: 1.5em;
+	font: 12px "宋体";
+	position: absolute;
+	left: -15px;
+}</textarea>
+
+<textarea name="code" class="xml">&lt;!-- xml --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;army8735&gt;
+	&lt;title name=&quot;mytitle&quot;&gt;jssc2&lt;/title&gt;
+	&lt;author id=&quot;myauthor&quot;&gt;army&lt;/author&gt;
+	&lt;say&gt;Hello World!&lt;/say&gt;
+&lt;/army8735&gt;</textarea>
+
+<script type="text/javascript">
+jssc.colorAll("code");
+</script>
+</body>
+</html>
