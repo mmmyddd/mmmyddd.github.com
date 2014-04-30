@@ -1,0 +1,6 @@
+/* patches for ie6 */
+
+.muse-content pre {
+    width: 100%;
+}
+

@@ -1,0 +1,88 @@
+body {
+padding: 5px;
+margin: 5px;
+background: #fff;
+font: 10pt "宋体";
+color: #333;
+}
+.textarea {
+width: 95%;
+height: 300px;
+border: 0px;
+background: #fff;
+overflow: hidden;
+font: 10pt "Courier New",Courier,"宋体";
+background: #fcfcfc;
+}
+.muse-content .jssc {
+font: 10pt "Courier New","宋体";
+border: 1px solid #ccc;
+background-color: #f3f3f3;
+padding-top: 1px;
+padding-right: 2px;
+padding-bottom: 1px;
+padding-left: 5px;
+margin: 5px 2px 10px 2px;
+overflow: auto;
+}
+.muse-content .jssccodetitle {
+font: 9pt Verdana,"宋体";
+margin: 20px 0px 5px 40px;
+font-weight: bold;
+color: #79a;
+}
+.muse-content .jssccodetitle span{
+margin-Left: 30px;
+font-weight: normal;
+text-decoration: underline;
+cursor: pointer;
+}
+.muse-content .jssc ul {
+margin: 0px;
+padding: 0px;
+list-style: decimal outside;
+background-color: #fff;
+border-left: 1px solid #abc;
+color: #999;
+}
+.muse-content .jssc ul li div {
+color: #333;
+padding-left: 6px;
+}
+.muse-content .jssc img {
+vertical-align: top;
+margin-right: 5px;
+width: 11px;
+height: 16px;
+}
+.muse-content .jssc .alt {
+background-color: #fafafa;
+}
+.muse-content .jssc .javascriptcomment, .muse-content .jssc .javacomment, .muse-content .jssc .ccomment, .muse-content .jssc .cppcomment, .muse-content .jssc .phpcomment, .muse-content .jssc .csharpcomment, .muse-content .jssc .vbcomment, .muse-content .jssc .rubycomment, .muse-content .jssc .delphicomment, .muse-content .jssc .sqlcomment, .muse-content .jssc .actionscriptstring, .muse-content .jssc .htmlcomment, .muse-content .jssc .xmlcomment, .muse-content .jssc .pythoncomment {
+color: #090;
+}
+.muse-content .jssc .javascriptstring, .muse-content .jssc .javastring, .muse-content .jssc .ckeywords, .muse-content .jssc .cppkeywords, .muse-content .jssc .phpkeywords, .muse-content .jssc .csharpkeywords, .muse-content .jssc .vbkeywords, .muse-content .jssc .rubykeywords, .muse-content .jssc .delphikeywords, .muse-content .jssc .sqlkeywords, .muse-content .jssc .actionscriptkeywords, .muse-content .jssc .pythonkeywords, .muse-content .jssc .csskeywords, .muse-content .jssc .xmlvariables, .muse-content .jssc .htmlnum, .muse-content .jssc .xmlsign, .muse-content .jssc .htmlsign {
+color: #33f;
+}
+.muse-content .jssc .javascriptchar, .muse-content .jssc .javachar, .muse-content .jssc .cchar, .muse-content .jssc .cppchar, .muse-content .jssc .phpchar, .muse-content .jssc .rubychar, .muse-content .jssc .actionscriptchar {
+	color: #e9a;
+}
+.muse-content .jssc .javascriptnum, .muse-content .jssc .javanum, .muse-content .jssc .cstring, .muse-content .jssc .cppstring, .muse-content .jssc .phpstring, .muse-content .jssc .rubystring, .muse-content .jssc .delphistring, .muse-content .jssc .sqlstring, .muse-content .jssc .actionscriptnum, .muse-content .jssc .pythonstring, .muse-content .jssc .pythonchar, .muse-content .jssc .htmlvariables, .muse-content .jssc .cssnum {
+color: #f33;
+}
+.muse-content .jssc .javakeywords {
+color: #905;
+font-weight: bold;
+}
+.muse-content .jssc .cnum, .muse-content .jssc .cppnum, .muse-content .jssc .phpnum, .muse-content .jssc .csharpnum, .muse-content .jssc .vbnum, .muse-content .jssc .delphinum, .muse-content .jssc .sqlnum, .muse-content .jssc .rubynum, .muse-content .jssc .pythonnum, .muse-content .jssc .htmlkeywords, .muse-content .jssc .xmlkeywords {
+color: #a36;
+}
+.muse-content .jssc .javascriptkeywords, .muse-content .jssc .phpvariables, .muse-content .jssc .rubyvariables, .muse-content .jssc .cssstring, .muse-content .jssc .htmlchar, .muse-content .jssc .xmlchar, .muse-content .jssc .htmlstring, .muse-content .jssc .xmlstring {
+color: #f6f;
+}
+.muse-content .jssc .csharpstring, .muse-content .jssc .vbstring, .muse-content .jssc .rubysymbol {
+color: #900;
+}
+.muse-content .jssc .csharpregion, .muse-content .jssc .vbregion, .muse-content .jssc .actionscriptcomment, .muse-content .jssc .csscomment {
+color: #ccc;
+}
