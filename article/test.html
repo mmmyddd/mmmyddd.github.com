@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<head>
+<title>Test Article</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Test Article"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-09-25"/>
+<meta name="author" content="Justin Jiang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+        border: 1pt solid #AEBDCC;
+        background-color: #F3F5F7;
+        padding: 5pt;
+        font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
+<script type="text/javascript" src="/article/res/js/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "0");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Test Article</h1>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Test</a>
+<ul>
+<li><a href="#sec-1-1">1.1 Test                               :tags:test:abs:tags:testag:test:ATTACH:8</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1 under test</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2 special</a></li>
+<li><a href="#sec-1-3">1.3 give a new test on the functions</a></li>
+<li><a href="#sec-1-4">1.4  test me too</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 test</a></li>
+<li><a href="#sec-3">3 </a></li>
+<li><a href="#sec-4">4 Organizaton [0%]</a></li>
+<li><a href="#sec-5">5 other</a>
+<ul>
+<li><a href="#sec-5-1">5.1 Department [2/2]</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1 test1</a></li>
+<li><a href="#sec-5-1-2">5.1.2 test2</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2 atet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><a name="sqafh501s4f0" id="sqafh501s4f0"></a><span class="section-number-2">1</span> Test &nbsp;&nbsp;&nbsp;<span class="tag"><span class="test">test</span>&nbsp;<span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><a name="er58dkz0s4f0" id="er58dkz0s4f0"></a><span class="section-number-3">1.1</span> Test                               :tags:test:abs:tags:testag:test:ATTACH:8 &nbsp;&nbsp;&nbsp;<span class="tag"><span class="ATTACH">ATTACH</span></span></h3>
+<div class="outline-text-3" id="text-1-1">
+
+<ul>
+<li>dfs
+</li>
+<li>sffdsf
+
+<p>
+    <img src="./images/er/58dkz0s4f0/wallpaper.jpg"  alt="./images/er/58dkz0s4f0/wallpaper.jpg" />
+</p></li>
+</ul>
+
+
+<p>
+tex只认识png/jpg图片。
+</p>
+<p>
+need in the attachment folder, use relatvie path
+</p>
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> under test</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+<p>    fsf ta
+    fdsfs
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> special</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">test</th><th scope="col" class="left">teswt2</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">tes</td><td class="left"></td></tr>
+<tr><td class="left">test</td><td class="left">test</td></tr>
+</tbody>
+<tbody>
+</tbody>
+<tbody>
+<tr><td class="left">test</td><td class="left"><a href="#id-test">t3st</a></td></tr>
+</tbody>
+</table>
+
+
+<p>
+<a href="http://www.sohu.com">test</a>
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> give a new test on the functions</h3>
+<div class="outline-text-3" id="text-1-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> <span class="timestamp-wrapper"> <span class="timestamp">2010-09-24 五 09:56</span></span> test me too &nbsp;&nbsp;&nbsp;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> test</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+<a href="#sec-1-2">special</a>
+</p>
+<p>
+<img src="file:////home/justin/Blog/Computer/Emacs/res/2010-09-21-080942_389x461_scrot.png"  alt="file:////home/justin/Blog/Computer/Emacs/res/2010-09-21-080942_389x461_scrot.png" />
+</p>
+<p>
+iimage-mode
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <span class="done REPORT">REPORT</span></h2>
+<div class="outline-text-2" id="text-3">
+
+<p>   <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2010-09-23 四 21:01</span></span><br/>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Organizaton [0%]</h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li><code>[-]</code> test1 [50%]
+<ul>
+<li><code>[X]</code> test1-1
+</li>
+<li><code>[&nbsp;]</code> test1-2
+</li>
+</ul>
+
+</li>
+<li><code>[&nbsp;]</code> test
+</li>
+<li><code>[&nbsp;]</code> test2
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> other</h2>
+<div class="outline-text-2" id="text-5">
+
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Department [2/2]</h3>
+<div class="outline-text-3" id="text-5-1">
+
+
+</div>
+
+<div id="outline-container-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> <span class="done DONE">DONE</span> test1</h4>
+<div class="outline-text-4" id="text-5-1-1">
+
+<p>     <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2010-09-23 四 21:07</span></span><br/>
+</p></div>
+
+</div>
+
+<div id="outline-container-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> <span class="done DONE">DONE</span> test2</h4>
+<div class="outline-text-4" id="text-5-1-2">
+
+
+
+
+<pre class="src src-emacs-lisp">(color-theme-eclipse)
+(<span style="color: #afeeee; font-weight: bold;">provide</span> '<span style="color: #98fb98;">color-theme-eclipse</span>)
+</pre>
+
+
+<p>
+&pi;
+</p>
+
+
+\begin{equation}
+e=mc^2
+x=\sqrt{b}
+\end{equation}
+
+
+<p>
+     If \(a^2=b\) and \( b=2 \), then the solution must be
+     either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> atet</h3>
+<div class="outline-text-3" id="text-5-2">
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<head>
+<title>Emacs Org Mode</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Emacs Org Mode"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2011-07-04"/>
+<meta name="author" content="Justin Jiang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+        border: 1pt solid #AEBDCC;
+        background-color: #F3F5F7;
+        padding: 5pt;
+        font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
+<script type="text/javascript" src="/article/res/js/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "0");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Emacs Org Mode</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 OrgMode Introduction</a></li>
+<li><a href="#sec-2">2 OrgMode Installation and Activation</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Installation</a></li>
+<li><a href="#sec-2-2">2.2 Activation</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Document Structure</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Headlines</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Rich Text Mark</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Inline Font Mark</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1 Bold</a></li>
+<li><a href="#sec-4-1-2">4.1.2 Italic</a></li>
+<li><a href="#sec-4-1-3">4.1.3 Underline</a></li>
+<li><a href="#sec-4-1-4">4.1.4 Strike-Through</a></li>
+<li><a href="#sec-4-1-5">4.1.5 Code</a></li>
+<li><a href="#sec-4-1-6">4.1.6 Verbatim</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2 Span Font Mark</a></li>
+<li><a href="#sec-4-3">4.3 Horizontal Ruler</a></li>
+<li><a href="#sec-4-4">4.4 Comment</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> OrgMode Introduction</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+开始学习最强大的Emacs应用： <code>Org-Mode</code> 。在Emacs下学习这种发布系
+统，最有效的办法就是用Org-Mode本身写一个教程。于是就有了本文。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> OrgMode Installation and Activation</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Installation</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+<ul>
+<li>下载OrgMode-7.5:  <a href="http://orgmode.org/org-7.5.zip">http://orgmode.org/org-7.5.zip</a>
+</li>
+<li>解压文件：
+</li>
+</ul>
+
+
+
+
+<pre class="example">unzip org-7.5.zip
+</pre>
+
+<ul>
+<li>运行命令：
+</li>
+</ul>
+
+
+
+
+<pre class="example">make
+make install-info
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Activation</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+<ul>
+<li>将org-mode的路径加入 <code>load-path</code>:
+</li>
+</ul>
+
+
+
+
+<pre class="example">(add-to-list 'load-path "~/.emacs.d/org-7.5/lisp")
+(add-to-list 'load-path "~/.emacs.d/org-7.5/contrib/lisp")
+</pre>
+
+
+<ul>
+<li>将下面代码加入 <code>.emacs</code>:
+</li>
+</ul>
+
+
+
+
+<pre class="example">(require 'org-install)
+;; The following lines are always needed.  Choose your own keys.
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+;; (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-ci" 'org-iswitchb)
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Document Structure</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+Org Mode采用基于Outline Mode，提供了层次化的文档结构，并且定
+义了多导航的快捷方式。
+</p>
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Headlines</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<p>
+Org Mode的Headlines格式和Outline Mode类似，用在行首的若干星号
+加一个空格开始一个标题行：
+</p>
+
+
+
+<pre class="example">* Top level headline
+** Second level
+*** 3rd level
+some text
+*** 3rd level
+more text
+
+* Another top level headling
+</pre>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Rich Text Mark</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Inline Font Mark</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>面向文本的标记，需要注意三点：
+</p><ul>
+<li>以下文本标记是在一个段落内使用的，不能跨越段落使用
+</li>
+<li>标记前后需要和文本别的部份用whitespace分开
+</li>
+<li>不能嵌套使用，如果嵌套，最外层的起作用
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Bold</h4>
+<div class="outline-text-4" id="text-4-1-1">
+
+
+<p>
+粗体显示文字：
+</p>
+
+
+<pre class="example">*bold*
+</pre>
+
+<p>
+效果如下：
+<b>bold</b>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Italic</h4>
+<div class="outline-text-4" id="text-4-1-2">
+
+
+<p>
+斜体显示文字：
+</p>
+
+
+<pre class="example">/italic/
+</pre>
+
+
+<p>
+效果如下：
+<i>italic</i>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> Underline</h4>
+<div class="outline-text-4" id="text-4-1-3">
+
+
+<p>
+下划线显示文字：
+</p>
+
+
+<pre class="example">_underline_
+</pre>
+
+
+<p>
+效果如下：
+<span style="text-decoration:underline;">underline</span>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Strike-Through</h4>
+<div class="outline-text-4" id="text-4-1-4">
+
+
+<p>
+带删除线的文字：
+</p>
+
+
+<pre class="example">+strike-through+
+</pre>
+
+
+<p>
+效果如下：
+<del>strike-through</del>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-1-5" class="outline-4">
+<h4 id="sec-4-1-5"><span class="section-number-4">4.1.5</span> Code</h4>
+<div class="outline-text-4" id="text-4-1-5">
+
+
+<p>
+等宽显示代码：
+</p>
+
+
+<pre class="example">=code=
+</pre>
+
+
+<p>
+效果如下：
+<code>code</code>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-1-6" class="outline-4">
+<h4 id="sec-4-1-6"><span class="section-number-4">4.1.6</span> Verbatim</h4>
+<div class="outline-text-4" id="text-4-1-6">
+
+
+<p>
+如果需要输入上述特殊标记，则需要使用字面标记符：
+</p>
+
+
+
+<pre class="example">~=test=~
+</pre>
+
+
+<p>
+效果如下：
+<code>=test=</code>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Span Font Mark</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>面向段落的文本标记
+</p>
+
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Horizontal Ruler</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p>可以通过5个以上的 <code>-</code> 来表示水平分割线：
+</p>
+
+
+
+<pre class="example">-----
+</pre>
+
+
+<p>
+效果如下：
+
+</p>
+<hr/>
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Comment</h3>
+<div class="outline-text-3" id="text-4-4">
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

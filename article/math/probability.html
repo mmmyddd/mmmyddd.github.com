@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<head>
+<title>Probability Theory</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Probability Theory"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-12-31"/>
+<meta name="author" content="Justin Jiang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+        border: 1pt solid #AEBDCC;
+        background-color: #F3F5F7;
+        padding: 5pt;
+        font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
+<script type="text/javascript" src="/article/res/js/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "0");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Probability Theory</h1>
+
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 概率简介</a>
+<ul>
+<li><a href="#sec-1-1">1.1 概率论问题</a></li>
+<li><a href="#sec-1-2">1.2 概率的概念</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1 现象和事件</a></li>
+<li><a href="#sec-1-2-2">1.2.2 频率和概率</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 概率论的基本概念</a>
+<ul>
+<li><a href="#sec-2-1">2.1 样本空间</a></li>
+<li><a href="#sec-2-2">2.2 事件</a></li>
+<li><a href="#sec-2-3">2.3 事件的关系和运算</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 公理概率论和概率空间</a>
+<ul>
+<li><a href="#sec-3-1">3.1 基本概念</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1 样本空间\(\Omega\)</a></li>
+<li><a href="#sec-3-1-2">3.1.2 事件域\(\mathscr{F}\)</a></li>
+<li><a href="#sec-3-1-3">3.1.3 概率的形式定义</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2 </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 随机变量</a>
+<ul>
+<li><a href="#sec-4-1">4.1 离散型随机变量</a></li>
+<li><a href="#sec-4-2">4.2 连续型随机变量</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 概率简介</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 概率论问题</h3>
+<div class="outline-text-3" id="text-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 概率的概念</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+
+</div>
+
+<div id="outline-container-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> 现象和事件</h4>
+<div class="outline-text-4" id="text-1-2-1">
+
+<ul>
+<li id="sec-1-2-1-1">决定性现象<br/>
+某些现象的结果必然会发生，或者必然不会发生,这种现象称为
+<b>决定性现象</b> ， 是概率论以外的数学分支研究的对象。
+
+<ul>
+<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用\(\Omega\) 来表示。
+</li>
+<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用\(\varnothing\) 来表示。
+</li>
+</ul>
+
+
+<p>
+必然事件和不可能事件实质上是相同的，都属于 <b>决定性事件</b>
+</p>
+</li>
+</ul>
+<ul>
+<li id="sec-1-2-1-2">随机现象<br/>
+然而有些现象的结果呈现偶然性，称为 <b>随机现象</b> ，是概率论研究
+的对象。
+
+<p>
+随机现象中可能出现的结果成为 <b>随机事件</b> ， 简称 <b>事件</b> ，一般
+用大写字母\(A,B,C,\ldots\) 来表示。
+</p>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> 频率和概率</h4>
+<div class="outline-text-4" id="text-1-2-2">
+
+
+<p>
+为了得到关于随机事件的规律，我们需要对随机现象进行观察和试验。
+随机事件在某次试验或观察中可能发生，但是在大量的试验中却呈现
+出明显的规律性，这说明随机事件有其偶然性的一面，也有其必然性
+的一面，因此也就有可能对其规律性展开研究。
+</p>
+<ul>
+<li id="sec-1-2-2-1">频率<br/>
+
+<p>
+对于随机事件\(A\) ，若在\(N\) 次试验中出现了\(n\) 次，则称：
+</p>
+
+
+$$F_N \left( A \right) = \frac{n}{N}$$
+
+<p>
+为随机事件\(A\) 在\(N\) 次试验中出现的 <b>频率</b>
+</p>
+</li>
+</ul>
+<ul>
+<li id="sec-1-2-2-2">频率的性质<br/>
+
+<p>
+由频率的定义不难得出：
+</p>
+<ul>
+<li><b>频率的非负性</b>
+
+<p>
+  \(F_N \left( A \right) \geqslant 0\)
+</p>
+</li>
+<li><b>必然事件频率为1</b>
+
+<p>
+  \(F_N \left( \Omega \right) = 1\)
+</p>
+</li>
+<li><b>频率的可加性</b>: 对于不可能同时发生的事件\(A\) 和 \(B\) 称为 <b>不相容事件</b>,用\(A+B\) 表
+  示\(A\) 或者 \(B\) 至少出现其中之一的事件，则有：
+
+<p>
+  \(F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)\)
+</p></li>
+</ul>
+
+
+<p>
+由上述基本性质有：
+</p>
+<ul>
+<li><b>不可能事件频率为0</b>
+
+<p>
+  \(F_N \left( \varnothing \right) = 0\)
+</p>
+</li>
+<li><b>频率不大于1</b>
+
+<p>
+  \(F_N \left( A \right) \leqslant 1\)
+</p>
+</li>
+<li>有限两两不相容事件的 <b>频率的可加性</b>
+
+<p>
+  $$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N
+ORG-LIST-END-MARKER
+\left( A_i \right)$$
+
+
+</p></li>
+</ul>
+<ul>
+<li id="sec-1-2-2-3">频率的稳定性<br/>
+
+<p>
+随机事件的必然性表现为在大量的随机实验中，随机事件出现的频率
+的稳定性，即一个随机事件出现的频率常在某个固定的常熟附近摆
+动，这种规律性称为 <b>统计规律性</b> 。
+</p>
+<p>
+这种频率的稳定性说明随机事件发生的可能性是随机事件本身固有的
+客观属性，可以进行度量。
+</p>
+</li>
+</ul>
+<ul>
+<li id="sec-1-2-2-4">概率<br/>
+
+<p>
+对于一个随机事件\(A\) ,用一个数\(P(A)\) 来表示该事件发生的可能性
+大小，称为随机事件\(A\) 的 <b>概率</b>
+</p>
+<p>
+关于概率和频率的关系，现在有如下命题待证明：
+</p>
+
+<p>
+<b>命题1</b> （频率和概率）：$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
+\left( A \right)$$
+
+
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 概率论的基本概念</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 样本空间</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+<p>
+随机试验中可能出现的结果称为 <b>样本点</b> ，用\(\omega\) 表示。
+</p>
+<p>
+样本点的全体构成的集合叫作 <b>样本空间</b> 用\(\Omega\) 表示。
+</p>
+<p>
+样本空间可能是有限集，离散可列集，不可列集，或者多维空间。
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 事件</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>有了样本空间，我们用集合的观点来定义事件：如果 \(A \subseteq
+\Omega\) ，则称\(A\) 是样本空间\(\Omega\) 上的一个 <b>事件</b> 。样本空
+间上所有事件的集合可记作 \(2^{\Omega} = \left\{ A|A \subseteq
+\Omega \right\}\)
+
+
+一个事件 <b>发生</b> 当且仅当它所包含的某个样本点出现。
+</p>
+<ul>
+<li>样本空间\(\Omega\) 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
+
+</li>
+<li>空集\(\varnothing\) 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> 事件的关系和运算</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+<p>
+和集合之间的关系类似，我们可以定义事件之间的关系：
+</p>
+<ol>
+<li>事件\(B\) <b>包含</b> 事件\(A\) , 记作\(A \subseteq B\) 或者 \(B \supseteq A\) 是指： \(\forall \omega \in A \Rightarrow \omega \in B\)
+</li>
+</ol>
+
+
+<p>
+对于任何事件\(A\) 显然有: \(\varnothing \subseteq A \subseteq \Omega\)
+</p>
+<ol>
+<li>事件\(A\) 与事件\(B\) <b>相等</b> ， 记作\(A=B\) 是指: \(A \subseteq B\)  并且 \(B \subseteq A\)
+
+</li>
+<li>事件\(A\) 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 \(\bar{A}\) : \(\bar{A} = \left\{ \omega | \omega \notin A \right\}\)
+</li>
+</ol>
+
+
+<p>
+显然一个事件和其对立事件在同一次试验能只能发生其一。
+</p>
+<ol>
+<li>
+</li>
+</ol>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 公理概率论和概率空间</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 基本概念</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+
+</div>
+
+<div id="outline-container-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间\(\Omega\)</h4>
+<div class="outline-text-4" id="text-3-1-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域\(\mathscr{F}\)</h4>
+<div class="outline-text-4" id="text-3-1-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> 概率的形式定义</h4>
+<div class="outline-text-4" id="text-3-1-3">
+
+
+<p>
+<b>定义:</b> 定义在事件域$\mathscr{f}$上的实值函数$P:\mathscr{F}
+</p>
+
+
+<p>
+  \[ P : \mathscr{F} \rightarrow R^1 \]
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> </h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 随机变量</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 离散型随机变量</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+
+
+$$q_{_A} = \left\{ \begin{array}{cc}
+  1 & \tmop{if} A \tmop{occurs}\\
+  0 & \tmop{if} A \tmop{does} \tmop{not} \tmop{occur}
+\end{array} \right.$$
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> 连续型随机变量</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+
+
+$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

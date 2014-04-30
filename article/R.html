@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<head>
+<title>R Language</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="R Language"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-03-01"/>
+<meta name="author" content="Justin Jiang"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+        border: 1pt solid #AEBDCC;
+        background-color: #F3F5F7;
+        padding: 5pt;
+        font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
+<script type="text/javascript" src="/article/res/js/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "0");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">R Language</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 R Language</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><a name="ID-ced4d2a0-2b07-4310-96e8-89935e5b429a" id="ID-ced4d2a0-2b07-4310-96e8-89935e5b429a"></a><span class="section-number-2">1</span> R Language &nbsp;&nbsp;&nbsp;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+fdsfbff \(e=mc^2\) dfsfsdfs $$e=mc^2$$ dfsfd
+</p>
+
+
+
+
+<pre class="example"><span id="coderef-name" class="coderef-off"><span class="linenr">1:  </span>fsdf  (name)</span>
+</pre>
+
+
+<p>
+<a href="#coderef-name" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-name');" onmouseout="CodeHighlightOff(this, 'coderef-name');">(name)</a>line
+</p>
+<p>
+<b>fsfsf</b> <code>fdsfsd</code>
+</p>
+
+
+
+<pre class="example">fsfa
+</pre>
+
+
+
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+
+
+
+<pre class="src src-python"><span style="color: #afeeee; font-weight: bold;">print</span> <span style="color: #87cefa;">"hello"</span>
+</pre>
+
+
+\begin{equation}
+\setcounter{equation}{3}
+E=mc^2
+\end{equation}
+
+<p>
+     The mass if the sun is M<sub>sun</sub> = 1.989 x 10<sup>30</sup> kg.  The radius of
+     the sun is R<sub>sun</sub><sup>2<sup>2</sup></sup> = 6.96 x 10<sup>8</sup> m.
+</p>
+
+<p>
+If \(a^2=b\) and \( b=2 \), then the solution must be
+either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+</p>
+
+
+
+<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">2:  </span>   (goto-char (point-min))       (jump)</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">3:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">4:  </span>   (goto-char (point-min))       (jump)</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">5:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">6:  </span>   (goto-char (point-min))       (jump)</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">7:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">8:  </span>   (goto-char (point-min))       (jump)</span>
+<span class="linenr">9:  </span>
+</pre>
+
+<p>
+In line <a href="#coderef-sc" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-sc');" onmouseout="CodeHighlightOff(this, 'coderef-sc');">(sc)</a> we remember the current position.  <a href="#coderef-jump" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-jump');" onmouseout="CodeHighlightOff(this, 'coderef-jump');">Line (jump)</a>
+jumps to point-min.
+</p>
+
+
+
+
+<p><textarea cols="80" rows="1">fac 5
+</textarea>
+</p>
+
+
+<p>
+fsdfsdf
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
