@@ -1,0 +1,34 @@
+Options +MultiViews
+AddType application/x-httpd-cgi .cgi
+#AddType text/xml .rss
+#AddHandler text/xml .rss
+#AddType application/xhtml+xml .rss
+#AddHandler application/xhtml+xml .rss
+RewriteEngine On
+RewriteBase /
+# RewriteLog /arpa/gm/m/mmmyddd/html/rewrite.log
+# RewriteLogLevel 3
+
+RewriteRule ^blog\/index\.rss$ blog-res/rss.xml [L]
+RewriteRule ^blog\/(.*)$ blog-res/tblog.html [L]
+RewriteRule ^blog$ blog-res/tblog.html [L]
+RewriteRule ^blog-res/blogroll.txt blog-res/blogroll.txt [L]
+RewriteRule ^blog-res/blog(.*) blog-res/tblog.html [L]
+RewriteRule ^blog-res(.*)$ blog-res$1 [L]
+RewriteRule ^blog-app(.*)$ blog-app$1 [L]
+RewriteRule ^blog\.cgi(.*)$ tblog.cgi$1 [L] 
+RewriteRule ^blog(.*)$    tblog.cgi$1 [L]
+RewriteRule ^man(.*)$  tman.cgi$1 [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
