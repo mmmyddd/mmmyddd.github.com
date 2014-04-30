@@ -1,0 +1,515 @@
+Trac and SVN Setup
+#tags apache,python,fastcgi,trac,svn
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Introduction</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Install Prequisites</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 Configuration</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec4">3.1 Config SVN on Apache</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">3.2 Config Trac on Apache</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<br>
+
+<h2><a name="sec1" id="sec1"></a>
+Introduction</h2>
+
+<p class="first">Trac是edgewall公司开发的一个用<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>实现的项目管理和缺陷追踪系统,
+包含有web界面展现的<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>, 源代码浏览, 需求变更, 缺陷追踪, 统计
+更新通知等模块，trac可选的模块 <code>trac-bitten</code>甚至能够
+提供对持续集成(CI)的支持. Trac可以和多种版本控制系统协同工作，内置支持Subversion, 其他的括展有：
+Git, Mercurial, bzr等.</p>
+
+<p>在Debian下可以用命令：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+apt-cache show trac
+</code>
+</p>
+
+<p>来查看trac软件包的信息：</p>
+
+<pre class="example">
+Package: trac
+Priority: optional
+Section: web
+Installed-Size: 3048
+Maintainer: Debian Trac Team &lt;pkg-trac-devel@lists.alioth.debian.org&gt;
+Architecture: all
+Version: 0.11.1-2.1
+Depends: python (&gt;= 2.3), python-central (&gt;= 0.6.7), python-setuptools (&gt;&gt; 0.5), python-pysqlite2 (&gt;= 2.3.2), python-subversi
+on, subversion (&gt;= 1.0.1), python-genshi (&gt;= 0.5), libjs-jquery
+Recommends: apache2 | httpd, python-pygments (&gt;= 0.6) | enscript, python-tz
+Suggests: python-docutils, libapache2-mod-wsgi | libapache2-mod-python, python-psycopg2, python-mysqldb (&gt;= 1.2.1), python-te
+xtile (&gt;= 2.0), trac-git, trac-spamfilter, trac-bzr (&gt;= 0.2+bzr45), trac-mercurial (&gt;= 0.11.0.4)
+Conflicts: libapache2-mod-python2.3 (&lt;&lt; 3.2.8-3)
+Filename: pool/main/t/trac/trac_0.11.1-2.1_all.deb
+Size: 559792
+MD5sum: 5dd1cffaf0e4afd3903bddffaa799f41
+SHA1: b839fded26027f42fefe6982bdaeb0348c2b20b7
+SHA256: 5cb5ceb9fc83627a7912484d7f3ea02e6475911abd33d942c6b592f9ddeabda9
+Description: Enhanced wiki and issue tracking system for software development projects
+ Trac uses a minimalistic approach to web-based software project management.
+ Our mission; to help developers write great software while staying out of
+ the way. Trac should impose as little as possible on a team's established
+ development process and policies.
+ Trac can use SQLite, PostgreSQL and MySQL backends. The preferred and easier
+ to use is SQLite.
+Homepage: http://trac.edgewall.com
+Python-Version: all
+Tag: devel::bugtracker, implemented-in::python, interface::web, role::program, web::wiki, works-with::bugs
+</pre>
+
+<p>本文介绍trac和svn协同工作时的配置。</p>
+
+
+<h2><a name="sec2" id="sec2"></a>
+Install Prequisites</h2>
+
+<p class="first">首先安装必需的软件包：</p>
+
+<ul>
+<li>安装Subverson</li>
+</ul>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install subversion
+</code>
+
+
+<ul>
+<li>安装Apache2</li>
+</ul>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install apache2
+</code>
+
+
+<ul>
+<li>安装libapache2-svn</li>
+</ul>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install libapache2-svn
+</code>
+
+
+
+<ul>
+<li>可选的软件包：libapache2-mod-<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>, libapache2-mod-fastcgi, libapache2-mode-wsgi</li>
+
+<li>安装trac</li>
+</ul>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install trac
+</code>
+
+
+
+<ul>
+<li>安装可选包trac-bitten</li>
+</ul>
+
+<p>在Debian lenny下这个软件包可从backports的源中获得。首先在 <code>/etc/apt/sources.list</code>中包含源：</p>
+
+<pre class="example">
+deb http://www.backports.org/debian lenny-backports main contrib non-free
+</pre>
+
+<p>然后安装所需的验证：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install debian-backports-keyring
+</code>
+</p>
+
+<p>然后运行：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get update
+</code>
+</p>
+
+<p>下载更新完源数据库后就可以安装：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo apt-get install trac-bitten
+</code>
+</p>
+
+<p><span class="note">
+<strong>注意:</strong> backports中有许多都是在Debian稳定版中不曾包含的最新软件，可以作为升级的testing，unstable
+之外的另外一种升级到最新软件包的选择。
+</span></p>
+
+
+
+
+
+<h2><a name="sec3" id="sec3"></a>
+Configuration</h2>
+
+<h3><a name="sec4" id="sec4"></a>
+Config SVN on Apache</h3>
+
+<p class="first">首先在home目录下新建目录 <code>trac</code>：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~
+mkdir trac
+</code>
+</p>
+
+
+<h4>Initialize a svn repository</h4>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+svnadmin create svn
+</code>
+
+
+<p>这样初始化了一个svn的repository：<code>~/trac/svn</code>,
+我们还需要更改这个目录下的权限，让apache可以访问它：</p>
+
+<p>首先查找apache运行时的用户和组，在 <code>/etc/apache2/envvars</code>中有：</p>
+
+<pre class="example">
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data
+</pre>
+
+<p>执行如下操作：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+sudo chown -R justin:www-data svn
+sudo chmod -R g+w svn
+sudo chmod -R g+s svn/db
+</code>
+</p>
+
+
+<h4>Config apache for svn</h4>
+
+<p class="first">更改 <code>/etc/apache2/sites-available/default</code>, 增加下列配置：</p>
+
+<pre class="example">
+        &lt;Location /svn&gt;
+            DAV svn
+            SVNListParentPath on
+            SVNPath /home/justin/trac/svn
+            #SVNParentPath /home/justin/trac/svn
+            AuthType Basic
+            AuthName &quot;Subversion Repository&quot;
+            AuthUserFile /home/justin/trac/svntrac.htpasswd
+            &lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;
+                Require valid-user
+            &lt;/LimitExcept&gt;
+        &lt;/Location&gt;
+</pre>
+
+<p><span class="note">
+<strong>注意:</strong> 如果是一个svn项目可以用 <code>SVNPath</code>,多个则指定他们的上层目录<code>SVNParentPath</code>
+<code>LimitExcept</code>中限定了匿名的用户值用checkout权限，没有commit权限。
+</span></p>
+
+
+<p>如果DAV模块没有被加载过，还需要在 <code>/etc/apache2/apache2.conf</code>中加入：</p>
+
+<pre class="example">
+LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+
+#add following ..
+LoadModule dav_module         modules/mod_dav.so
+LoadModule dav_fs_module      modules/mod_dav_fs.so
+LoadModule dav_svn_module     modules/mod_dav_svn.so
+LoadModule authz_svn_module   modules/mod_authz_svn.so
+
+# before this
+Include /etc/apache2/sites-enabled/
+</pre>
+
+<p>重新启动apache2:
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo /etc/init.d/apache2 restart
+</code>
+</p>
+
+
+<h4>Config access authentication</h4>
+
+<p class="first">在用户认证文件中，增加用户：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+htpasswd -c svntrac.htpasswd justin
+</code>
+</p>
+
+<p>在提示语后输入两次密码即可，这时 <code>svntrac.htpasswd</code> 文件被创建，并含有刚加入的
+用户名和密码，这个文件被用来作为svn和trac公用的用户/密码文件。</p>
+
+<p>然后为刚创建的用户增加svn的读写权限，在 <code>~/trac/svn/conf/authz</code>文件中增加：</p>
+
+<pre class="example">
+[/]
+&amp;justin  = rw
+</pre>
+
+<p>或这根据文件的说明增加用户组和权限。</p>
+
+
+<h4>Validate</h4>
+
+<p class="first">现在来验证一下svn的配置，
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd testproj
+svn import . --username justin http://localhost/svn/testproj/trunk
+</code>
+</p>
+
+
+<p>打开<a href="http://localhost/svn">http://localhost/svn</a>
+可以看到刚才导入的代码，试着重新checkout出来：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd /tmp
+svn checkout --username justin http://localhost/svn/testproj/trunk testproj
+</code>
+</p>
+
+<p>如果成功，说明配置成功。</p>
+
+
+
+<h3><a name="sec5" id="sec5"></a>
+Config Trac on Apache</h3>
+
+<h4>Initialize a trac project</h4>
+
+<p class="first">首先，根据刚才创建的svn的repository来创建：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+trac-admin trac initenv
+</code>
+</p>
+
+<p>这个命令在接下来的执行中会提示输入下列问题：</p>
+
+<ul>
+<li>trac站点的名称，随便，例如&quot;Project Name&quot;</li>
+<li>trac所采用的底层数据库类型，默认sqlite:db/trac.db</li>
+<li>版本控制系统的类型，默认svn</li>
+<li>svn仓库的位置， /home/justin/trac/svn (绝对路径)</li>
+</ul>
+
+<p>执行完后，可以通过standalone server的形式来验证trac：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+tracd --port 8000 /home/justin/trac/trac
+</code>
+</p>
+
+<p>然后打开<a href="http://localhost:8000/trac">http://localhost:8000/trac</a>
+如果需要调整trac的配置，可以更改文件 <code>~/trac/trac/conf/trac.ini</code></p>
+
+
+
+<h4>Deploy the web site</h4>
+
+<p class="first">下边需要部署trac站点，生成服务器cgi脚本文件，这里采用的是cgi/fastcgi来运行trac站点。
+
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+trac-admin trac deploy www
+</code>
+</p>
+
+<p>该命令生成的cgi和htdoc在www目录下：</p>
+
+<pre class="example">
+www
+|-- cgi-bin
+|   |-- trac.cgi
+|   |-- trac.fcgi
+|   `-- trac.wsgi
+`-- htdocs
+    |-- common
+    `-- site
+</pre>
+
+
+
+<h4>Config the access permission</h4>
+
+<p class="first">首先来看trac站点在新建后有的权限列表：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+trac-admin ~/trac/trac permission list
+</code>
+</p>
+
+
+<pre class="example">
+anonymous      BROWSER_VIEW
+anonymous      CHANGESET_VIEW
+anonymous      FILE_VIEW
+anonymous      LOG_VIEW
+anonymous      MILESTONE_VIEW
+anonymous      REPORT_SQL_VIEW
+anonymous      REPORT_VIEW
+anonymous      ROADMAP_VIEW
+anonymous      SEARCH_VIEW
+anonymous      TICKET_VIEW
+anonymous      TIMELINE_VIEW
+anonymous      WIKI_VIEW
+authenticated  TICKET_CREATE
+authenticated  TICKET_MODIFY
+authenticated  WIKI_CREATE
+authenticated  WIKI_MODIFY
+
+
+Available actions:
+ BROWSER_VIEW, CHANGESET_VIEW, CONFIG_VIEW, EMAIL_VIEW, FILE_VIEW,
+ LOG_VIEW, MILESTONE_ADMIN, MILESTONE_CREATE, MILESTONE_DELETE,
+ MILESTONE_MODIFY, MILESTONE_VIEW, PERMISSION_ADMIN, PERMISSION_GRANT,
+ PERMISSION_REVOKE, REPORT_ADMIN, REPORT_CREATE, REPORT_DELETE,
+ REPORT_MODIFY, REPORT_SQL_VIEW, REPORT_VIEW, ROADMAP_ADMIN, ROADMAP_VIEW,
+ SEARCH_VIEW, TICKET_ADMIN, TICKET_APPEND, TICKET_CHGPROP, TICKET_CREATE,
+ TICKET_EDIT_CC, TICKET_EDIT_DESCRIPTION, TICKET_MODIFY, TICKET_VIEW,
+ TIMELINE_VIEW, TRAC_ADMIN, WIKI_ADMIN, WIKI_CREATE, WIKI_DELETE,
+ WIKI_MODIFY, WIKI_VIEW
+</pre>
+
+<p>现在要给trac的用户增加权限：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+trac-admin ~/trac/trac permission add justin TRAC_ADMIN
+</code>
+</p>
+
+<p>重新运行第一条命令，在权限列表的末尾增加了一条记录：</p>
+
+<pre class="example">
+justin         TRAC_ADMIN
+</pre>
+
+
+
+<h4>Config apache for trac</h4>
+
+
+<p>首先修改trac目录的权限，使apache服务器能够访问trac项目的目录：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd ~/trac
+sudo chown -R justin:www-data trac
+sudo chmod -R g+w trac
+sudo chown -R justin:www-data www
+sudo chmod -R a+x www/cgi-bin
+</code>
+</p>
+
+
+<p>然后在 <code>/etc/apache2/sites-available/default</code>文件中增加：</p>
+
+<pre class="example">
+        ScriptAlias /trac /home/justin/trac/www/cgi-bin/trac.cgi
+        &lt;Location &quot;/trac&quot;&gt;
+          SetEnv TRAC_ENV &quot;/home/justin/trac/trac&quot;
+        &lt;/Location&gt;
+
+        &lt;Location &quot;/trac/login&quot;&gt;
+            AuthType Basic
+            AuthName &quot;Trac Login&quot;
+            AuthUserFile /home/justin/trac/svntrac.htpasswd
+            Require valid-user
+        &lt;/Location&gt;
+
+        Alias /trac/chrome/common &quot;/home/justin/trac/www/htdocs&quot;
+        &lt;Directory &quot;/home/justin/trac/www/htdocs&quot;&gt;
+            Options Indexes MultiViews
+            AllowOverride None
+            Order allow,deny
+            Allow from all
+        &lt;/Directory&gt;
+
+</pre>
+
+<p><span class="note">
+<strong>注意:</strong> 同上, 如果是一个trac项目可以用 <code>TRAC_ENV</code>,
+多个则指定他们的上层目录<code>TRAC_ENV_PARENT_DIR</code>
+</span></p>
+
+
+<p>重新启动apache
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+sudo /etc/init.d/apache2 restart
+</code>
+</p>
+
+
+
+<h4>Validate</h4>
+
+<p class="first">打开<a href="http://localhost/trac">http://localhost/trac</a>
+执行登录，新建<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>页面，管理ticket等，浏览源代码等操作，可以看到刚才导入svn的代码
+如果没有问题，说明配置成功。</p>
+
+
+
+

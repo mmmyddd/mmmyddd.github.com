@@ -1,0 +1,62 @@
+Register IRC Account
+#tags irc,pidgin,debian
+<p>按照如下步骤在irc.freenode.net上申请IRC的注册用户名：</p>
+
+
+<ul>
+<li>首先用任意用户名在pidgin上登录freenode服务器(port:6667),密码省略</li>
+
+<li>连接上服务器后，会自动弹出一个会话窗口，输入命令：</li>
+</ul>
+
+<pre class="example">
+/join #emacs
+</pre>
+
+<p>可以在本次会话中暂时加入该频道</p>
+
+<p><span class="note">
+以/开头的是命令， 更多命令可键入/help获得
+</span></p>
+
+<ul>
+<li>如果想要永久加入该频道，并在打开的时候自动加入聊天，首先切换至该聊天频道的窗口，
+然后从 <strong>对话</strong> 菜单中选择 <strong>添加...</strong>, 在弹出的窗口中把 <strong>Autojoin when account becomes online</strong>
+和 <strong>Hide chat when the window is closed</strong> 勾上，后一个选项的意思是保留完整的会话聊天记录，
+要实现聊天记录的保存，还得从 <strong>选项</strong> 菜单中勾选 <strong>允许记录日志</strong> 菜单项。</li>
+</ul>
+
+
+
+
+
+<ul>
+<li>如果想要注册永久注册帐号，首先， 改变当前的别名为要注册的永久用户名：</li>
+</ul>
+
+<pre class="example">
+/nick Justin
+</pre>
+
+<p>确认更改成功，聊天窗口中会显示&quot;已将名字更改为...&quot;</p>
+
+<ul>
+<li>运行注册命令，</li>
+</ul>
+
+<pre class="example">
+/msg NickServ REGISTER &lt;your-passwd&gt; &lt;your-email&gt;
+</pre>
+
+<p>运行该命令后，会发确认信到指定的邮箱中，</p>
+
+<ul>
+<li>按照确认信的提示，输入含有确认码的命令，以确认注册：</li>
+</ul>
+
+<pre class="example">
+/msg NickServ VERIFY REGISTER Justin &lt;confirmation-code&gt;
+</pre>
+
+<p>如果成功，会有&quot;you are now identified for ...&quot; 的提示，这时可以将密码保存在pidgin帐户中，
+下次登录的时候可以自动认证身份，如果有人临时使用已经注册的帐户，注册用户登录时将会被踢:)</p>

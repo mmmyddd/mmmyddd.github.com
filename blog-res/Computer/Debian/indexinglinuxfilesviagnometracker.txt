@@ -1,0 +1,78 @@
+Indexing Linux Document Via Gnome Tracker
+#tags indexing,linux,gnome,debian
+<p>Linux的特点就是文档丰富，文档类型丰富，大部份文档基于文本。因此一直以来
+都在寻找类似Google的桌面搜索工具，快速搜索这些文件，在需要时找到想要的文档。
+试用了一下Gnome下的Tracker，感觉还不错。</p>
+
+<p>Tracker项目的主页： <a href="http://projects.gnome.org/tracker">http://projects.gnome.org/tracker</a></p>
+
+<p>如果需要对Tracker的特征大致了解，可以参考FAQ： <a href="http://projects.gnome.org/tracker/faq.html">http://projects.gnome.org/tracker/faq.html</a></p>
+
+<blockquote>
+<p class="quoted">
+与 KDE4 引入的桌面搜索类似，GNOME Tracker 0.8 同样使用得到欧盟赞助的 Nepomuk 拓扑模型，提供了全文搜索。此外实时更新保证了可以无需等待即可搜索新增或更改的文件，搜索关键词类推测保证包含关键词的单复数和不同词性的文件都得到搜索。</p>
+
+</blockquote>
+
+<p>Tracker的索引基于mine-type：</p>
+
+<ul>
+<li>对于二进制度的媒体文件，索引filename, metadate, tag, notes</li>
+<li>对于文本文件作全文索引，html, pdf, text, doc, etc.</li>
+</ul>
+
+<p>和Tracker类似的一个搜项索目<a href="http://beagle-project.org/">Beagle</a>，这个项目已经不活跃了。</p>
+
+<p>在Debian Squeeze上的安装比较简单：</p>
+
+<pre class="example">
+sudo apt-get install tracker tracker-search-tool
+</pre>
+
+<p>前者是Tracker的工具集合，后者是GUI。</p>
+
+<p>安装后注销并重新登录，在状态栏处出现了一个放大镜图标(从命令行启动tracker-status-icon)，使用用起来也比较方便。
+左键单击图标就看到了搜索选项（也可以从命令行tracker-search-tool), 右键单击图表可以看到首选项（命令行tracker-preferences)</p>
+
+<p>Tracker还有一些命令行工具：</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tracker-control</td>
+      <td>Manage Tracker processes and data</td>
+    </tr>
+    <tr>
+      <td>tracker-info</td>
+      <td>Get all information about one or more files</td>
+    </tr>
+    <tr>
+      <td>tracker-search</td>
+      <td>Search for terms in all data</td>
+    </tr>
+    <tr>
+      <td>tracker-stats</td>
+      <td>Show statistics for all Nepomuk defined ontology classes</td>
+    </tr>
+    <tr>
+      <td>tracker-status</td>
+      <td>Monitor and control status</td>
+    </tr>
+    <tr>
+      <td>tracker-sparql</td>
+      <td>Query or update using SPARQL</td>
+    </tr>
+    <tr>
+      <td>tracker-tag</td>
+      <td>Add, remove or list tags</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>现在可以将所有的文档放在诸如 <code>~/doc</code>下边，并对这个目录作递归的索引，索引和查找的速度相当快，生活真美好:)</p>

@@ -1,0 +1,147 @@
+Auto Complete by Pycomplete
+#tags python,emacs
+<p>本文回答sqrabs关于auto-complete和pycomplete的问题。</p>
+
+<p>因为我用的auto-complete版本比较老(Version: 0.2.0),
+<a href="./res/auto-complete.tar.gz">这里</a>可下载。新版本有一些变化，最近却没有时间更新，所以在写完上篇
+<a href="/blog/Computer/Python/delightedprogpythonunderemacs">Enjoy Python under Emacs</a> 以后没有跟进，这次借此机会把
+以前的思路整理一下。</p>
+
+<p>题外话，老版本的auto-complete速度比新版本快不少，可能是因为新版本
+改善了弹出的补全菜单的提示界面，猜想这些新的效果应该可以被关闭。</p>
+
+<p>Pycomplete的candidate函数和source函数定义如下，
+可以看到ac-pycomplete-candidate没有用到ac-complete的前缀提示字符串
+ac-prefix：</p>
+
+<pre class="example">
+(defun ac-pycomplete-candidate ()
+  (let ((pymacs-forget-mutability t))
+    (if (and (eolp) (not (bolp))
+             (not (char-before-blank))
+             (not (blank-linep)))
+	(let ((py-complete-str
+	       (pycomplete--get-all-completions
+		(py-symbol-near-point)
+		(buffer-file-name)
+		(py-find-global-imports))
+	       ))
+	  py-complete-str)
+)))
+
+(defface ac-pycomplete-candidate-face
+  '((t (:background &quot;red&quot; :foreground &quot;black&quot;)))
+  &quot;Face for yasnippet candidate.&quot;)
+
+(defface ac-pycomplete-selection-face
+  '((t (:background &quot;black&quot; :foreground &quot;white&quot;)))
+  &quot;Face for the yasnippet selected candidate.&quot;)
+
+(defvar ac-source-pycomplete
+  '((candidates . ac-pycomplete-candidate)
+    (candidate-face . ac-pycomplete-candidate-face)
+    (selection-face . ac-pycomplete-selection-face))
+)
+</pre>
+
+<p>py-complete更多时候是用在当输入<code>os.path.</code>的时候提示
+下一级的成员。而这个时候ac-prefix是空，py-complete内部实现会直接从当前buffer
+中获得提示。从<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-mode下获取ac-prefix的方法可以验证这一点：</p>
+
+<pre class="example">
+(defun ac-python-find ()
+  &quot;Python `ac-find-function'.&quot;
+  (require 'thingatpt)
+  (let ((symbol (car-safe (bounds-of-thing-at-point 'symbol))))
+    (if (null symbol)
+        (if (string= &quot;.&quot; (buffer-substring (- (point) 1) (point)))
+            (point)
+          nil)
+      symbol)))
+</pre>
+
+<p>ac-<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-find返回一个buffer中的位置，ac-complete把当前位置和这个位置之间的字符串
+作为ac-prefix。但是，当输入<code>os.path.</code>的时候，按照这种方式找到的ac-prefix
+是空字符串。而在原始ac-complete的实现中，如果ac-prefix为空，ac-complete是不被执行，
+而是调用ac-abort退出。因此需要下面的修改，在ac-prefix为空的时候给它一个特殊符号
+<code>^</code>作前缀：</p>
+
+<pre class="example">
+(defun my-ac-start ()
+  &quot;Start completion.&quot;
+  (interactive)
+  (let* ((point (save-excursion (funcall ac-prefix-function)))
+         (reposition (not (equal ac-point point))))
+    (if (null point)
+	(progn (ac-abort)
+	       (message &quot;null point&quot;))
+      (setq ac-buffer (current-buffer))
+      (setq ac-point point)
+      (when (not (equal ac-point ac-old-point))
+        (setq ac-old-point point))
+      (setq ac-prefix (buffer-substring-no-properties point (point)))
+      (setq ac-limit ac-candidate-max)
+      (if (or reposition (null ac-menu))
+          (save-excursion
+            (funcall ac-init-function)))
+      ;; for py complete, if no word is used as prefix, assign it to '^'
+      (if (not (&gt; (length ac-prefix) 0))
+	  (setq ac-prefix &quot;^&quot;))
+      ;;;;;;;;;;;;;;;;;
+
+      (let* ((candidates
+              (if (or ac-completing
+                      (not (integerp ac-auto-start))
+                      (&gt;= (length ac-prefix) ac-auto-start))
+                  (save-excursion
+                    (funcall ac-candidate-function))))
+             (current-width (if ac-menu (ac-menu-width ac-menu) 0))
+             (width (let ((w '(0)) s)
+                      (dotimes (i ac-candidate-menu-height)
+                        (setq s (nth i candidates))
+                        (if (stringp s) (push (string-width s) w)))
+                      (apply 'max w))))
+
+        (if (or reposition
+                (null ac-menu)
+                (&gt; width current-width)
+                (&lt; width (- current-width 10)))
+            (ac-setup-menu point (* (ceiling (/ width 10.0)) 10)))
+        (if (and ac-dwim
+                 (= (length candidates) 1)
+                 (equal (car candidates) ac-prefix)
+                 (null (ac-get-candidate-action (car candidates))))
+            (setq candidates nil))
+	(message ac-prefix)
+        (ac-update-candidates candidates)))))
+
+(defalias 'ac-start 'my-ac-start)
+</pre>
+
+<p>但是这样会给需要ac-prefix的补全函数带来麻烦，比如说rope，我们需要特殊的处理：</p>
+
+<pre class="example">
+(defun prefix-list-elements (list prefix)
+  (let (value)
+    (nreverse
+     (dolist (element list value)
+      (setq value (cons (format &quot;%s%s&quot; prefix element) value))))))
+(defvar ac-source-rope
+  '((candidates
+     . (lambda ()
+	 (if (string= ac-prefix &quot;^&quot;)
+	     (rope-completions)
+	   (prefix-list-elements (rope-completions) ac-prefix)))))
+</pre>
+
+
+<p>最后将所有东西都串起来：</p>
+
+<pre class="example">
+(add-hook 'python-mode-hook
+  (lambda ()
+     (auto-complete-mode 1)
+     (set (make-local-variable 'ac-sources)
+       (append ac-sources '(ac-source-rope) '(ac-source-yasnippet) '(ac-source-pycomplete)))
+     (set (make-local-variable 'ac-find-function) 'ac-python-find)))
+</pre>

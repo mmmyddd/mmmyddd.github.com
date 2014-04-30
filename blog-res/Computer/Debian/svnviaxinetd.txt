@@ -1,0 +1,46 @@
+svn for xinetd
+#tags svn,debian,xinetd
+<p><strong>Install xinetd:</strong></p>
+
+<pre class="example">
+sudo apt-get install xinetd
+</pre>
+
+<p><strong>In</strong> <code>/ect/services</code>, <strong>add following lines:</strong></p>
+
+<pre class="example">
+svn		3690/tcp	subversion	# Subversion protocol
+svn		3690/udp	subversion
+</pre>
+
+<p><strong>Create</strong> <code>
+/etc/xinetd.d/svn
+</code>:</p>
+
+<pre class="example">
+service svn
+{
+     disable = no
+     socket_type = stream
+     protocol = tcp
+     wait = no
+     user = root
+     server = /usr/bin/svnserve
+     server_args = -i -r /home/justin/repository
+     port = 3690
+}
+
+</pre>
+
+<p><span class="note">
+Make sure the two file have same <strong>service-name/port-num</strong> pair.
+Exam <code>xinetd</code> debug message by <code>sudo xinetd -d</code> when errors accurs.
+</span></p>
+
+<p><strong>Restart Service</strong></p>
+
+<pre class="example">
+sudo /etc/init.d/xinetd restart
+</pre>
+
+

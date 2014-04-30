@@ -1,0 +1,155 @@
+Emacs Table Editing
+#tags emacs,table
+<p>Emacs自带了一个Table编辑的minor-mode,
+可以编辑复杂的列表，在muse的环境下共有3
+种方法来编辑列表：</p>
+
+<ul>
+<li>简单列表</li>
+</ul>
+
+<pre class="example">
+        head || head
+        body | body
+        tail ||| tail
+</pre>
+
+<p>效果为：</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>head</th>
+      <th>head</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>tail</td>
+      <td>tail</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>body</td>
+      <td>body</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>orgtbl</li>
+</ul>
+
+<pre class="example">
+| head | table |
+|------+-------|
+| body | body  |
+</pre>
+
+<p>效果为：</p>
+
+<table class="muse-table" cellpadding="0" >
+  <thead>
+    <tr>
+      <th>head</th>
+      <th>table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>body</td>
+      <td>body</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>table mode</li>
+</ul>
+
+<pre class="example">
+      +----------+---------+++++++-----------+
+      |mult line |cell     |split|cell       |
+      |          |         |     +-----------+
+      |          |         |     |split      |
+      |          |         |     |           |
+      +----------+---------+++++++-----------+
+      |cell spaned               | cell span |
+      +----------+---------------+           |
+      |          |single line    |           |
+      +----------+---------------+-----------+
+</pre>
+
+<p>效果为：</p>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;+++++++&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td>mult line |cell     |split|cell</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+&mdash;&mdash;&mdash;&mdash;+</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>|split</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;+++++++&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+<table class="muse-table" cellpadding="0" >
+  <tbody>
+    <tr>
+      <td>cell spaned</td>
+      <td>cell span</td>
+    </tr>
+    <tr>
+      <td>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;&mdash;&mdash;+</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>|single line</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<center>
+<p>+&mdash;&mdash;&mdash;-+&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;+</p>
+</center>
+
+<p>该编辑模式只能在text-mode下使用配置如下：</p>
+
+<pre class="example">
+(require 'table)
+(add-hook 'text-mode-hook 'table-recognize)
+</pre>
+
+
+
+
+

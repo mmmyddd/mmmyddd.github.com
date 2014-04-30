@@ -1,0 +1,111 @@
+Using Cscope as Semanticdb Backend
+#tags emacs,cedet,cscope,semanticdb
+<p>CEDET 1.0终于在8月份的时候发布了，新的semanticdb实现竟然加入
+了对cscope后端的支持，真是用完才觉得爽。使用auto-complete前端
+加上cscope解析如图：</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-09-21-080942_389x461_scrot.png" alt="cscope+auto-complete"></td></tr>
+  <tr><td align="center" class="image-caption">cscope+auto-complete</td></tr>
+</table>
+
+<p>其实早就觉得ctags/etags对头文件的解析不够完整，这次用cscope，
+基本上所有的函数和变量定义都能找到。闲话少说，上配置：</p>
+
+<pre class="example">
+;; turn on cscope semanticdb backend
+(require 'semanticdb-cscope)
+(semanticdb-enable-cscope-databases)
+</pre>
+
+<p>CEDET1.0可以按照CEDET 1.0pre7的<a href="/blog/Computer/Emacs/config_cedet_for_c_programming">配置方法</a>。加入上述配置就可以在
+c/c++模式下打开cscope的semanticdb后端的支持。</p>
+
+<p>不如意的地方是semanticdb-cscope不支持在当前目录的文件路径上递
+归寻找cscope数据文件，只能在所编辑的文件的当前目录中寻找，而前者
+是cscope的默认行为。</p>
+
+<p>自己尝试修改了两个文件，可以支持cscope的递归搜索行为：</p>
+
+<ul>
+<li>修改 <code>cedet-1.0/semantic/semanticdb-cscope.el</code></li>
+</ul>
+
+<pre class="example">
+;; add the following line
+(require 'xcscope)
+
+;; ...
+
+;; modifiy the function `semanticdb-enable-cscope-in-buffer'
+(defun semanticdb-enable-cscope-in-buffer (&amp;optional dont-err-if-not-available)
+  &quot;Enable a CScope database in the current buffer.
+When CScope is not available for this directory, display a message
+if optional DONT-ERR-IF-NOT-AVAILABLE is non-nil; else throw an error.&quot;
+  (interactive &quot;P&quot;)
+  ;; ==&gt; begin change
+  ;; commented out - (if (cedet-cscope-support-for-directory (semantic-symref-calculate-rootdir))
+  ;; changed to the following line
+   (if (cedet-cscope-support-for-directory (cscope-search-directory-hierarchy default-directory))
+  ;; &lt;== end change
+       (setq
+       ;; Add to the system database list.
+       semanticdb-project-system-databases
+       (cons (semanticdb-project-database-cscope &quot;CScope&quot;)
+	     semanticdb-project-system-databases)
+       ;; Apply the throttle.
+       semanticdb-find-default-throttle
+       (append semanticdb-find-default-throttle
+	       '(omniscience))
+       )
+    (if dont-err-if-not-available
+	nil; (message &quot;No CScope support in %s&quot; default-directory)
+      (error &quot;No CScope support in %s&quot; default-directory))
+    ))
+</pre>
+
+
+<ul>
+<li>修改 <code>cedet-1.0/semantic/symref/semantic-symref-cscope.el</code></li>
+</ul>
+
+<pre class="example">
+;; add the following line
+(require 'xcscope)
+
+;; ...
+
+;; modify the method `semantic-symref-perform-search'
+(defmethod semantic-symref-perform-search ((tool semantic-symref-tool-cscope))
+  &quot;Perform a search with GNU Global.&quot;
+  (let* ((rootproj (when (and (featurep 'ede) ede-minor-mode)
+		     (ede-toplevel)))
+	 (default-directory (if rootproj
+				(ede-project-root-directory rootproj)
+;; ==&gt; begin change
+;; comment out -	      default-directory))
+;; change to the following line
+			      (cscope-search-directory-hierarchy default-directory)))
+;; &lt;== end change
+
+	 ;; CScope has to be run from the project root where
+	 ;; cscope.out is.
+	 (b (cedet-cscope-search (oref tool :searchfor)
+				 (oref tool :searchtype)
+				 (oref tool :resulttype)
+				 (oref tool :searchscope)
+				 ))
+	)
+    (semantic-symref-parse-tool-output tool b)
+    ))
+</pre>
+
+<p>还需要修改 <code>cedet-1.0/semantic/common/cedet-cscope.el</code>,改变默认的cscope最小版本：</p>
+
+<pre class="example">
+;;(defvar cedet-cscope-min-version &quot;16.0&quot;
+(defvar cedet-cscope-min-version &quot;15.0&quot;
+  &quot;Minimum version of CScope required.&quot;)
+</pre>
+
+<p>多谢Kai的提醒:)</p>

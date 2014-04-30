@@ -1,0 +1,60 @@
+China Pub 9th Anniversary
+<p>周日参加了China Pub的九周年庆祝活动，收获不错。</p>
+
+<p>主办方安排了丰富的活动，特此感谢，祝<a href="ChinaPub">China Pub</a>越来越好～</p>
+
+
+<p>1. 《Thinking in UML（大象）》的作者谭元杰</p>
+
+<p>讲述了写大象这本书的前因后果。本人比较喜欢作者的谈话方式，觉得作者没有太多锋芒，谦虚而谨慎，
+因此卖下了一本大象，一读之下，果然爱不释手，暗自庆幸自己眼光尚可。</p>
+
+<p>特此留下作者的联系方式，为博主流名：</p>
+
+<ul>
+<li>MSN： <a href="mailto:coffeewoo@263.com">coffeewoo@263.com</a></li>
+<li>Blog： <a href="http://blog.csdn.net/coffeewoo">http://blog.csdn.net/coffeewoo</a> <a href="http://coffeewoo.itpub.net">http://coffeewoo.itpub.net</a></li>
+</ul>
+
+<p>2. 哲思团队： 《可爱的Python》 主讲－<a href="ZoomQuiet">Zoom Quiet</a></p>
+
+<p>讲述他们协作出书的经历，最感兴趣的应该是他们的“工具链“：</p>
+
+
+<ul>
+<li>ubuntu</li>
+<li>gmail</li>
+<li>firefox:
+
+<ul>
+<li>scrapbook</li>
+<li>it's all text</li>
+</ul></li>
+<li>scrot</li>
+<li>s5</li>
+<li>graphviz</li>
+<li><a href="MoinMoin">Moin Moin</a></li>
+<li>svn</li>
+<li>pidgin &amp; irc</li>
+<li>maillist</li>
+<li>google code</li>
+<li>freemind</li>
+<li><a href="InkScape">Ink Scape</a></li>
+<li>gnuplot ?</li>
+</ul>
+
+<p>收获尚可，感觉演讲者锋芒太过，也许是Hacker文化的熏陶:)</p>
+
+<p>3. 李笑来： 《和时间作朋友》</p>
+
+<p>看到本书的第一眼，发现已经被吸引用，可能也是因为自己最近也出于和作者的描绘相近的境地，
+没办法，只能买一本，不过对笑来老师的”第一份职业七年论“颇不认同～，难道只是因为作者本人在
+新东方7年就得出此普遍结论？呵呵</p>
+
+<p>笑来老师的主页： <a href="http:\\www.lixiaolai.com">http:\\www.lixiaolai.com</a></p>
+
+<p>4. 《方兴未艾的Android开发》， eoeandroid/eoemobile</p>
+
+<p>这个可惜没听完，作者似乎和上面几位比演讲经验稍差，同时也比较真诚，主题是我比较感兴趣的，
+希望网上可以拿到视频看看。</p>
+

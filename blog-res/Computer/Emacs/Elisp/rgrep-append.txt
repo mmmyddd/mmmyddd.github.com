@@ -1,0 +1,7 @@
+rgrep-append
+#tags emacs,elisp,rgrep
+<p><a href="http://www.emacswiki.org/emacs/rgrep-append.el">rgrep-append.el</a> is my first formal externsion to <a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a> ^_^</p>
+
+<p>Start to use it from here:</p>
+
+<p><a href="http://www.emacswiki.org/emacs/AppendGrepResult">http://www.emacswiki.org/emacs/AppendGrepResult</a></p>

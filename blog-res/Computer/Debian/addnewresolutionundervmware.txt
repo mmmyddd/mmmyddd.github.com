@@ -1,0 +1,168 @@
+Add New Resolution for Debian on VMWare
+#tags debian,xorg,resolution
+<p>I want to have my <a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a> run under vmware on my new desktop
+with a resolution of 1600x900. But there is no option for
+the new resolution in the display setting. I need to add the
+choice myself.</p>
+
+<ul>
+<li>Generate the template <code>xorg.conf</code> file</li>
+</ul>
+
+<p>In the new version of X system, the supported resolution of
+the display can be decided via graphic driver. The
+<code>xorg.conf</code> can not be found at <code>/etc/X11/</code>.</p>
+
+<p>As the 1600x900 resolution is a non standard option, we need
+to add it manually to this file. To generate it, run:</p>
+
+<pre class="example">
+sudo X -configure :1
+</pre>
+
+<p>The <code>:1</code> is another display other than the
+current used one. (if you don't specify <code>:1</code>,
+error will occurs because the display :0 is used by default,
+and X server is running on it)</p>
+
+<p>The generated file is <code>~/xorg.conf.new</code></p>
+
+<p>If you use NVIDIA as the graphic driver, you can run
+<code>sudo nvidia-xconfig</code> to generate a <code>xorg.conf</code>
+under <code>/etc/X11/</code>.</p>
+
+<ul>
+<li>Generate a appropriate Mode Line in the configuration</li>
+</ul>
+
+<pre class="example">
+gtk 1600 900 60
+</pre>
+
+<p>Got the following line:</p>
+
+<p class="verse">
+# 1600x900 @ 60.00 Hz (GTF) hsync: 55.92 kHz; pclk: 119.00 MHz<br>
+&nbsp;&nbsp;Modeline &quot;1600x900_60.00&quot;  119.00  1600 1696 1864 2128  900 901 904 932  -HSync +Vsync<br>
+</p>
+
+
+<p>GTF Reference:</p>
+
+<p class="verse">
+usage: gtf x y refresh [-v|&mdash;verbose] [-f|&mdash;fbmode] [-x|&mdash;xorgmode]<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x : the desired horizontal resolution (required)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y : the desired vertical resolution (required)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refresh : the desired refresh rate (required)<br>
+&nbsp;&nbsp;-v|&mdash;verbose : enable verbose printouts (traces each step of the computation)<br>
+&nbsp;&nbsp;-f|&mdash;fbmode : output an fbset(8)-style mode description<br>
+&nbsp;&nbsp;-x|&mdash;xorgmode : output an Xorg-style mode description (this is the default<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if no mode description is requested)<br>
+</p>
+
+
+<ul>
+<li>Modify the <code>xorg.conf</code> as:</li>
+</ul>
+
+<p class="verse">
+......<br>
+<br>
+Section &quot;Monitor&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identifier   &quot;Monitor0&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="VendorName">Vendor Name</a>   &quot;Monitor Vendor&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModelName">Model Name</a>    &quot;Monitor Model&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModeLine">Mode Line</a> &quot;1600x900&quot;  119.00  1600 1696 1864 2128  900 901 904 932  -HSync +Vsync<br>
+<a href="EndSection">End Section</a><br>
+<br>
+......<br>
+<br>
+Section &quot;Screen&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identifier &quot;Screen0&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Device     &quot;Card0&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monitor    &quot;Monitor0&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DefaultDepth">Default Depth</a> 24<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     8<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes     &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     15<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes     &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     16<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes     &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SubSection">Sub Section</a> &quot;Display&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viewport   0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth     24<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;virtual 1600 900<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modes     &quot;1600x900&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EndSubSection">End Sub Section</a><br>
+<a href="EndSection">End Section</a><br>
+</p>
+
+<ul>
+<li>Put the file under <code>/etc/X11</code>, restart Debian :)</li>
+
+<li>To check if the new resolution is added, run:</li>
+</ul>
+
+<pre class="example">
+xrand
+</pre>
+
+<p>The new mode line is appended at the end:</p>
+
+<p class="verse">
+Screen 0: minimum 320 x 200, current 1600 x 900, maximum 2560 x 1600<br>
+default connected 1600x900+0+0 0mm x 0mm<br>
+&nbsp;&nbsp;&nbsp;&nbsp;800x600        60.0     56.0      0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;640x480        60.0      0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;320x240         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;400x300         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;512x384         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1024x768        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1152x864        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1280x960        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1400x1050       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1600x1200       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1920x1440       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2048x1536       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;854x480         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1280x720        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1366x768        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1920x1080       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1280x800        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1440x900        0.0*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1680x1050       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1920x1200       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2560x1600       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;720x480         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;720x576         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;320x200         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;640x400         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;800x480         0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1280x768        0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1280x1024       0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1600x900       60.0<br>
+</p>
+
+<ul>
+<li>Change the display setting in System-&gt;Administration-&gt;Display, enjoy:)</li>
+</ul>

@@ -1,0 +1,11 @@
+Rest In Peace
+#tags c,apple,motorola
+<p>We lost them in this October:</p>
+
+<ul>
+<li>Apple's Pre-CEO, Steve P. Jobs, Oct 5, 2011</li>
+<li>Co-Inventor of C Programming Language, Dennis M. Ritchie, Oct 9, 2011</li>
+<li>Motorola's Pre-CEO, Robert W. Galvin, Oct 11, 2011</li>
+</ul>
+
+<p>R.I.P ... ...</p>

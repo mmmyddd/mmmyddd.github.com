@@ -1,0 +1,43 @@
+Perl正则表达式(1)
+<p>以下这段perl代码实现了对一段字符串中的变量名进行值替换：</p>
+
+<pre class="example">
+  $interpolate =
+    sub {
+      package blosxom;
+      my $template = shift;
+      $template =~
+        s/(\$\w+(?:::)?\w*)/&quot;defined $1 ? $1 : ''&quot;/gee;
+      return $template;
+    };
+</pre>
+
+
+<p>关于正则表达式的替换中/e选项的应用：</p>
+
+<p>/e代表重新对替换表达式中的第二部份做eval运算。所以上面/gee是对：</p>
+
+<pre class="example">
+s/.../&quot;defined $1 ? $1 : ''&quot;/gee;
+</pre>
+
+<p>做了两次求值运算：</p>
+
+<ul>
+<li>第一次计算将搜索替换表达式的第二部份字符串作为代码计算，
+将变量<code>$1</code>替换为搜索表达式中
+所匹配的部份－这部份实际上是在<code>$template</code>字符串中找到的
+变量名，例如：$blog_title</li>
+</ul>
+
+<pre class="example">
+&quot;define $1 ? $1 : ''&quot;
+</pre>
+
+<ul>
+<li>第二次将替换后的字符串作为代码重新计算, 返回该变量的值:</li>
+</ul>
+
+<pre class="example">
+define $blog_title ? $blog_title : ''
+</pre>

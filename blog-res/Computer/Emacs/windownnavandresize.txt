@@ -1,0 +1,60 @@
+Windown Navigation And Resize
+#tags emacs,window,buffer
+<p>Window Move and Resize Config:</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .comment {
+        /* font-lock-comment-face */
+        color: #d2b48c;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #d2b48c;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+      .string {
+        /* font-lock-string-face */
+        color: #87cefa;
+      }
+    --></style><span class="comment-delimiter">;; </span><span class="comment">----------------------------------------------------------------
+</span><span class="comment-delimiter">;; </span><span class="comment">window move and resize
+</span><span class="comment-delimiter">;; </span><span class="comment">----------------------------------------------------------------
+</span>(<span class="keyword">when</span> (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(global-set-key (kbd <span class="string">"S-C-&lt;left&gt;"</span>) 'shrink-window-horizontally)
+(global-set-key (kbd <span class="string">"S-C-&lt;right&gt;"</span>) 'enlarge-window-horizontally)
+(global-set-key (kbd <span class="string">"S-C-&lt;down&gt;"</span>) 'shrink-window)
+(global-set-key (kbd <span class="string">"S-C-&lt;up&gt;"</span>) 'enlarge-window)
+</pre>
+
+<p>Uniquify the buffer Name:</p>
+
+<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .comment {
+        /* font-lock-comment-face */
+        color: #d2b48c;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #d2b48c;
+      }
+      .constant {
+        /* font-lock-constant-face */
+        color: #98fb98;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #afeeee;
+        font-weight: bold;
+      }
+    --></style><span class="comment-delimiter">;; </span><span class="comment">----------------------------------------------------------------
+</span><span class="comment-delimiter">;; </span><span class="comment">unify buffer name
+</span><span class="comment-delimiter">;; </span><span class="comment">----------------------------------------------------------------
+</span>
+(<span class="keyword">require</span> '<span class="constant">uniquify</span>)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+(setq uniquify-strip-common-suffix nil)
+</pre>

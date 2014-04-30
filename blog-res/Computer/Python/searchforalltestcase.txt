@@ -1,0 +1,87 @@
+Run All Test Case
+#tags python,test
+<p>Put the following script at the top level folder of your source code:
+
+
+<code config="brush: python;">
+#!/usr/bin/env python
+
+import os
+import imp
+import unittest
+
+def suite():
+    # import all the test file
+    alltests = unittest.TestSuite()
+
+    #find test
+
+    def path_walker(dummy, dirname, fileindir):
+        for fname in fileindir:
+            if fname.endswith("tests.py"):
+                module_name = fname[:-3]
+                fp = file(os.path.join(dirname, fname), "r")
+                description = (".py", "r", imp.PY_SOURCE)
+
+                module = imp.load_module(
+                    module_name, fp, os.path.join(dirname, fname), description)
+
+                alltests.addTest(unittest.findTestCases(module))
+
+    srcdirname = os.path.abspath(os.path.dirname(__file__))
+
+    os.path.walk(srcdirname, path_walker, None)
+    return alltests
+
+if __name__ == '__main__':
+    #print suite()
+    unittest.main(defaultTest='suite')
+</code>
+</p>
+
+<p>Then you can run all of the test cases contained in the source tree, down to any level of sub folders.
+Let's assume the script is <code>
+alltests.py
+</code>, then it can be run like this:</p>
+
+<pre class="example">
+python alltests.py
+</pre>
+
+<p>All your test module should end with &quot;tests.py&quot;,
+the layout of your code would be like the following:</p>
+
+<pre class="example">
+&lt;-&gt; subdir1
+ &lt;-&gt; subdir1subdir1
+  [+] __init__.py
+  [+] code.py
+  [+] codetests.py
+ &lt;-&gt; subdir1subdir2
+  [+] __init__.py
+  [+] code.py
+  [+] codetests.py
+ [+] __init__.py
+ [+] code.py
+ [+] codetests.py
+&lt;-&gt; subdir2
+ &lt;-&gt; subdir2subdir1
+  [+] __init__.py
+  [+] code.py
+  [+] codetests.py
+ &lt;-&gt; subdir2subdir2
+  [+] __init__.py
+  [+] code.py
+  [+] codetests.py
+ [+] __init__.py
+ [+] code.py
+ [+] codetests.py
+[+] alltests.py
+[+] code.py
+[+] codetests.py
+</pre>
+
+<p><span class="note">
+<strong>Note</strong>: Always use absolute package path (full qualified package name)
+in the import statement in modules within sub packages.
+</span></p>

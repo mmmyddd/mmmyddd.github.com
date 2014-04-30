@@ -1,0 +1,35 @@
+Kindle DXG and ME 600
+<p>黑色的Kindle DXG终于到手了，和小ME差了4个月。装了多看
+(www.duokan.com)的系统，其实是做了双启动，保留了原来Amazon的
+预制系统。多看系统中文显示很漂亮，支持更多的文件格式
+（txt，pdf，doc，zip，epub，甚至chm，虽然排版不是很好）奇怪的是不支
+持html。</p>
+
+
+<p>当然Kindle DXG还是看扫描版的pdf最强，因为我的大部份的电子书
+都是pdf，其中大部份都是扫描版的。其他格式的文档很容易做成pdf。</p>
+
+<ul>
+<li>在Linux下，例如chm，可以通过chm2pdf来转为pdf，htmldoc可以
+将许多html文档转为pdf。Openoffice 可以将许多文档直接转为pdf。
+pdftex将tex作为pdf输出。</li>
+</ul>
+
+
+<ul>
+<li>在Windows下，装一个pdf的虚拟打印机，就搞定一切了，orz:)</li>
+</ul>
+
+
+<p>ME600看和Kindle正好相反，看html和chm是它的强项：</p>
+
+<ul>
+<li>Beamer Reader 搞定pdf</li>
+<li>iReader搞定chm</li>
+</ul>
+
+
+<hr>
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  ME600支持网站： <a href="http://me600.net">http://me600.net</a>
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  多看论坛： <a href="http://www.duokan.com/forum">http://www.duokan.com/forum</a></p>

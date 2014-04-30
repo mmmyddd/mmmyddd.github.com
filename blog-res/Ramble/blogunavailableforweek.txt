@@ -1,0 +1,7 @@
+Unavailable for one week
+<p>由于台湾至釜山段的海底光缆中断，一周没有访问该站点，感慨网的脆弱，发贴留念。</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/903466.jpg" alt="海底光缆"></td></tr>
+  <tr><td align="center" class="image-caption">海底光缆</td></tr>
+</table>

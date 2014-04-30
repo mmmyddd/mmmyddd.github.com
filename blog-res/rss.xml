@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Justin&apos;s Blog</title>
+    <link>http://mmmyddd.github.io/blog-res/blog</link>
+    <description></description>
+    <language>en</language>
+    <pubDate>Wed, 30 Apr 2014 15:33:09 CST</pubDate>
+    <lastBuildDate>Wed, 30 Apr 2014 15:33:09 CST</lastBuildDate>
+    <item>
+      <title>AddApplicationsToStartUpMenu</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/addapplicationstostartupmenu</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Seven Habit Of High Effective People</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Reading/sevenhabitofhigheffectivepeople</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Build Goldfish Kernel For Android 4.2</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/buildgoldfishkernelforandroid42</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Export Synfig Animation to Video</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/exportsynfiganimationtovideo</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Goodbye MOTO</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/goodbye_moto</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Start To Use Github</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/starttousegithub</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Insert Latex Formula in Muse and Org Articles</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/LaTeX/insertlatexformulainmuseandorg</link>
+      <description></description>
+    </item>
+    <item>
+      <title>TeXmacs is Awesome</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/LaTeX/texmacsisawesome</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Understanding C Typedef With Cdecl</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/understandingctypedefwithcdecl</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Mount Remote SSH File System</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/mountremotesshfs</link>
+      <description></description>
+    </item>
+    <item>
+      <title>基于jQuery和Elisp的Blog发布</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/new_jquery_version_of_blog</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Info文件的安装</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/installinfo</link>
+      <description></description>
+    </item>
+    <item>
+      <title>rgrep-append</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/Elisp/rgrep-append</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Rest In Peace</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/ripallinoctober</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs Key Binding Issues on Windows</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/emacskeybindingissuesonwindows</link>
+      <description></description>
+    </item>
+    <item>
+      <title>XKeymacs: Emacs Key-Binding under Windows</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/xkeymacsemacskeybindingforwindows</link>
+      <description></description>
+    </item>
+    <item>
+      <title>寒夜孤灯三十周年祭</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/thirtyyearsold</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs And Scim</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/emacsandscim</link>
+      <description></description>
+    </item>
+    <item>
+      <title>W3M Load Failed But FireFox Succeed</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/w3mloadfailedbutfirefoxcan</link>
+      <description></description>
+    </item>
+    <item>
+      <title>SDF Support URL Rewrite</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Web/sdfsupporturlrewrite</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Auto Delete Whitespace And Replace Tabs</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/autodeletewhitespaceandreplacetabs</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Use True Type Font in Emacs</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/usettfinemacs</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Add New Resolution for Debian on VMWare</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/addnewresolutionundervmware</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Install Ricoh Aficio 3025 Printer Driver</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/ricohprinterdriver</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Bus Time for Android</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/bustimeforandroid</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Kindle DXG and ME 600</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/kindleandme600</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Android SAX Compatibility</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/saxcompatibility</link>
+      <description></description>
+    </item>
+    <item>
+      <title>三国杀 Android 客户端发布</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/sanguoshaandroidclient</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Windown Navigation And Resize</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/windownnavandresize</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Close Blog Comments</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/closeblogcomments</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Using Cscope as Semanticdb Backend</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/usecscopesemanticdbbackend</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Setup Minix On Bochs Under Linux</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Linux/setupminixonbochsunderlinux</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Workrave</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/workrave</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Auto Complete by Pycomplete</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/integratepycompleteintoac</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Panasonic Lumix ZS7 GK</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/panasoniclumixzs7gk</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Freemind Mind Map</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/freemindmindmap</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs Table Editing</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/emacstable</link>
+      <description></description>
+    </item>
+    <item>
+      <title>给Blog增加 Audio-Media Player</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/addblogaudioplay</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Indexing Linux Document Via Gnome Tracker</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/indexinglinuxfilesviagnometracker</link>
+      <description></description>
+    </item>
+    <item>
+      <title>关于Wiki的修改</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/asynchronizedwikipost</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Adjust Time Using NTP</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/adjusttimeusingntp</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Difference between du and df</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Linux/dudfdiff</link>
+      <description></description>
+    </item>
+    <item>
+      <title>LCD上的水波纹</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/waterstriponlcddisplay</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Android Fast Incremental Build</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/fastincrementalbuildforandroid</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Configuration of CEDET for C/C++ Programming</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/config_cedet_for_c_programming</link>
+      <description></description>
+    </item>
+    <item>
+      <title>SDF Is Moving</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/sdfismoving</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Include Untracked Files in Git Diff</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/gitdiffforuntrackedfiles</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Repeated Connection Attempts Of ADT on Debian</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/repeatedconnectionattemptsofadtondebian</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Attache Android Source Code in ADT</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/attacheandroidsourcecodeinadt</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Trac and SVN Setup</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/tracandsvnsetup</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Gnome Shortcut Keys</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/gnomeshortcutkey</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Fire Fox Shortcut Keys</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/FireFox/firefoxshortcutkey</link>
+      <description></description>
+    </item>
+    <item>
+      <title>利用diff和patch作补丁</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/diffandpatch</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs Plus Improvement</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Eclipse/emacsplusimprovement</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Enjoy Python under Emacs</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/delightedprogpythonunderemacs</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Register IRC Account</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/registerircaccount</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Install MoinMoin in Debian</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/installmoinindebian</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Literate Programming</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/literateprogramming</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Get the Thing Done</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/get_the_thing_done</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming Language Summary</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/languagecoordination</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Yakuake</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/yakuake</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Planner Mode</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/planner_mode</link>
+      <description></description>
+    </item>
+    <item>
+      <title>MozRepl for Javascript</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/FireFox/mozrepl_for_javascript</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs Plus Plugin For Eclipse</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Eclipse/emacsplusforeclipse</link>
+      <description></description>
+    </item>
+    <item>
+      <title>等额本金还是等额本息</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Math/whichloan</link>
+      <description></description>
+    </item>
+    <item>
+      <title>dired mode下的文件关联</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/filerelatedindired</link>
+      <description></description>
+    </item>
+    <item>
+      <title>[ZT] 新年的12个健康礼物</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/healthcare</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Ice Freeze My Blog Code</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/blogfinished</link>
+      <description></description>
+    </item>
+    <item>
+      <title>如何拨打国际长途</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/internationallongdistancecall</link>
+      <description></description>
+    </item>
+    <item>
+      <title>svn for xinetd</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/svnviaxinetd</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Run All Test Case</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/searchforalltestcase</link>
+      <description></description>
+    </item>
+    <item>
+      <title>给Blog增加评论功能</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/addcommentsforblog</link>
+      <description></description>
+    </item>
+    <item>
+      <title>给Blog增加Abstraction</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/addabstracttoblog</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Read CHM in Debian</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/read_chm_in_debian</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Use Cscope in Emacs</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/emacscscope</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Setting For MH-E</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Emacs/settingformh-e</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Subversion Configuration For Http</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/subversionconfigforhttp</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Build Android SDK under Linux</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/buildlinuxsdk</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Damn Good Gmail</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Web/damngoodgmail</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Build Android 1.6 - Donut</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/buildandroiddonut</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Change Debian Locale Settings</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/changedebianlocale</link>
+      <description></description>
+    </item>
+    <item>
+      <title>SSH auto logon without password</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/ssh_auto_logon</link>
+      <description></description>
+    </item>
+    <item>
+      <title>给Blog增加标签</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/tags_added</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Screen Capture Using Scrot</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Debian/screen-capture-scrot</link>
+      <description></description>
+    </item>
+    <item>
+      <title>China Pub 9th Anniversary</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/china_pub_9th_anniversary</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Back to Android</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/backtoandroid</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Closure</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/pythonclosure</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Unavailable for one week</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/blogunavailableforweek</link>
+      <description></description>
+    </item>
+    <item>
+      <title>GUI System</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Architecture/guiframeworkelements</link>
+      <description></description>
+    </item>
+    <item>
+      <title>PythonFunctionParameter</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/pythonfunctionparameter</link>
+      <description></description>
+    </item>
+    <item>
+      <title>上帝也疯狂</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/thecrazygod</link>
+      <description></description>
+    </item>
+    <item>
+      <title>ApiDemos for Cupcake</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/apidemos</link>
+      <description></description>
+    </item>
+    <item>
+      <title>备份阿…备份</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/backupandbackup</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Python 的导入路径</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/importpath</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Python 2D Drawing and Imaging</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Python/pythondrawingandimaging</link>
+      <description></description>
+    </item>
+    <item>
+      <title>无题</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/signature</link>
+      <description></description>
+    </item>
+    <item>
+      <title>继续改进中</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/progress-2009-03-29</link>
+      <description></description>
+    </item>
+    <item>
+      <title>醒来</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Mood/wake_up</link>
+      <description></description>
+    </item>
+    <item>
+      <title>使用AAPT处理资源apk包</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/aapt-decompress-apk</link>
+      <description></description>
+    </item>
+    <item>
+      <title>贷款购房相关问题</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Math/loan-rate</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Perl正则表达式(1)</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Computer/Perl/regular-expression-1</link>
+      <description></description>
+    </item>
+    <item>
+      <title>设计无处不在</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/design-is-everywhere</link>
+      <description></description>
+    </item>
+    <item>
+      <title>修复IE下的显示错误</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/fix-ie-display</link>
+      <description></description>
+    </item>
+    <item>
+      <title>test</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/test</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Latex数学公式测试</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Math/test-latex-formula</link>
+      <description></description>
+    </item>
+    <item>
+      <title>不过如此</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/just-so-so</link>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog开张公告贴</title>
+      <link>http://mmmyddd.github.io/blog-res/blog/Ramble/blog开张公告贴</link>
+      <description></description>
+    </item>
+  </channel>
+</rss>

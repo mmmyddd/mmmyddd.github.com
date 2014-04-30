@@ -1,0 +1,347 @@
+使用AAPT处理资源apk包
+<h3>AAPT 工具介绍</h3>
+
+<p class="first">下面是取自&quot;http://www.androidcn.net/<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>/index.php/Reference/aapt&quot;的介绍</p>
+
+<p class="verse">
+aapt stands for Android Asset Packaging Tool and is included in the tools/ directory of the SDK. This tool allows you to view, create, and update Zip-compatible archives (zip, jar, apk). It can also compile resources into binary assets.<br>
+<br>
+aapt即Android Asset Packaging Tool , 在SDK的tools/目录下. 该工具可以查看, 创建, 更新ZIP格式的文档附件(zip, jar, apk). 也可将资源文件编译成二进制文件.<br>
+<br>
+Though you probably won't often use aapt directly, build scripts and IDE plugins can utilize this tool to package the apk file that constitutes an Android application.<br>
+<br>
+尽管你可能没有直接使用过aapt工具, 但是build scripts和IDE插件会使用这个工具打包apk文件构成一个Android 应用程序.<br>
+<br>
+For more usage details, open a terminal, go to the tools/ directory, and run the command:<br>
+<br>
+获取更多的实用信息, 请打开终端控制台, 到tools/目录下, 执行命令:<br>
+<br>
+Linux or Mac OS X:<br>
+<br>
+&nbsp;&nbsp;./aapt<br>
+<br>
+Windows:<br>
+<br>
+aapt.exe<br>
+<br>
+</p>
+
+
+
+<h3>AAPT 的帮助信息</h3>
+
+<p class="first">执行上述命令，会在控制台打出相应aapt的信息：</p>
+
+<pre class="example">
+Android Asset Packaging Tool
+
+Usage:
+ aapt l[ist] [-v] [-a] file.{zip,jar,apk}
+   List contents of Zip-compatible archive.
+
+ aapt d[ump] WHAT file.{apk} [asset [asset ...]]
+   badging          Print the label and icon for the app declared in APK.
+   permissions      Print the permissions from the APK.
+   resources        Print the resource table from the APK.
+   configurations   Print the configurations in the APK.
+   xmltree          Print the compiled xmls in the given assets.
+   xmlstrings       Print the strings of the given compiled xml assets.
+
+ aapt p[ackage] [-f][-u][-m][-v][-x][-M AndroidManifest.xml] \
+        [-0 extension [-0 extension ...]] \
+        [-I base-package [-I base-package ...]] \
+        [-A asset-source-dir] [-P public-definitions-file] \
+        [-S resource-sources] [-F apk-file] [-J R-file-dir] \
+        [raw-files-dir [raw-files-dir] ...]
+
+   Package the android resources.  It will read assets and resources that are
+   supplied with the -M -A -S or raw-files-dir arguments.  The -J -P -F and -R
+   options control which files are output.
+
+ aapt r[emove] [-v] file.{zip,jar,apk} file1 [file2 ...]
+   Delete specified files from Zip-compatible archive.
+
+ aapt a[dd] [-v] file.{zip,jar,apk} file1 [file2 ...]
+   Add specified files to Zip-compatible archive.
+
+ aapt v[ersion]
+   Print program version.
+
+ Modifiers:
+   -a  print Android-specific data (resources, manifest) when listing
+   -c  specify which configurations to include.  The default is all
+       configurations.  The value of the parameter should be a comma
+       separated list of configuration values.  Locales should be specified
+       as either a language or language-region pair.  Some examples:
+            en
+            port,en
+            port,land,en_US
+       If you put the special locale, zz_ZZ on the list, it will perform
+       pseudolocalization on the default locale, modifying all of the
+       strings so you can look for strings that missed the
+       internationalization process.  For example:
+            port,land,zz_ZZ
+   -d  one or more device assets to include, separated by commas
+   -f  force overwrite of existing files
+   -j  specify a jar or zip file containing classes to include
+   -m  make package directories under location specified by -J
+   -u  update existing packages (add new, replace older, remove deleted files)
+   -v  verbose output
+   -x  create extending (non-application) resource IDs
+   -z  require localization of resource attributes marked with
+       localization=&quot;suggested&quot;
+   -A  additional directory in which to find raw asset files
+   -F  specify the apk file to output
+   -I  add an existing package to base include set
+   -J  specify where to output R.java resource constant definitions
+   -M  specify full path to AndroidManifest.xml to include in zip
+   -P  specify where to output public resource definitions
+   -S  directory in which to find resources
+   -0  specifies an additional extension for which such files will not
+       be stored compressed in the .apk.  An empty string means to not
+       compress any files at all.
+</pre>
+
+
+<p>根据以上帮助信息，用aapt可以使用以下操作：</p>
+
+
+
+<h3>查看AAPT的版本</h3>
+
+<pre class="example">
+ ./aapt v
+</pre>
+
+<p>得到当前工具的版本：</p>
+
+<pre class="example">
+Android Asset Packaging Tool, v0.2
+</pre>
+
+
+
+
+<h3>使用AAPT列出资源包（.apk）文件列表</h3>
+
+<pre class="example">
+ aapt l[ist] [-v] [-a] file.{zip,jar,apk}
+   List contents of Zip-compatible archive.
+</pre>
+
+
+<p>可以用命令查看系统资源包的内容：</p>
+
+<pre class="example">
+./aapt l framework-res.apk
+</pre>
+
+<pre class="example">
+META-INF/MANIFEST.MF
+META-INF/CERT.SF
+META-INF/CERT.RSA
+AndroidManifest.xml
+assets/images/android_320x480.png
+assets/images/boot_robot.png
+assets/images/boot_robot_glow.png
+
+...
+
+assets/webkit/youtube.html
+assets/webkit/youtube.png
+res/anim/accelerate_decelerate_interpolator.xml
+res/anim/accelerate_interpolator.xml
+res/anim/app_starting_exit.xml
+
+...
+
+res/raw-de/loaderror.html
+res/raw-de/nodomain.html
+res/raw/fallbackring.ogg
+res/raw/loaderror.html
+res/raw/nodomain.html
+res/xml-en/autotext.xml
+res/xml/apns.xml
+res/xml/autotext.xml
+res/xml/preferred_time_zones.xml
+res/xml/time_zones_by_country.xml
+resources.arsc
+</pre>
+
+<p>如果采用-v选项，会将所有文件的详细信息打印出来：</p>
+
+<pre class="example">
+Archive:  framework-res.apk
+ Length   Method    Size  Ratio   Date   Time   CRC-32    Name
+--------  ------  ------- -----   ----   ----   ------    ----
+   76217  Deflate   25576  66%  04-16-08 07:40  3b7140fa  META-INF/MANIFEST.MF
+   76259  Deflate   25706  66%  04-16-08 07:40  a21d76be  META-INF/CERT.SF
+    1714  Deflate    1156  33%  04-16-08 07:40  ca66d55e  META-INF/CERT.RSA
+   31768  Deflate    5556  83%  01-16-09 12:04  8c137ee8  AndroidManifest.xml
+    3098  Stored     3098   0%  01-15-09 23:16  ed1132c9  assets/images/android_320x480.png
+    1001  Stored     1001   0%  01-15-09 23:16  c53ad035  assets/images/boot_robot.png
+    2083  Stored     2083   0%  01-15-09 23:16  12acc29d  assets/images/boot_robot_glow.png
+
+... ...
+
+     340  Deflate     155  54%  01-16-09 12:04  cc2ad7f2  res/anim/accelerate_decelerate_interpolator.xml
+     368  Deflate     179  51%  01-16-09 12:04  c94b9323  res/anim/accelerate_interpolator.xml
+     568  Deflate     260  54%  01-16-09 12:04  e0972304  res/anim/app_starting_exit.xml
+
+... ...
+
+     605  Deflate     296  51%  01-15-09 23:16  88710568  res/raw-de/loaderror.html
+     996  Deflate     471  53%  01-15-09 23:16  c42ea004  res/raw-de/nodomain.html
+   10975  Stored    10975   0%  01-15-09 23:16  21dc2fce  res/raw/fallbackring.ogg
+     579  Deflate     282  51%  01-15-09 23:16  11c56b88  res/raw/loaderror.html
+     890  Deflate     418  53%  01-15-09 23:16  393cf037  res/raw/nodomain.html
+   25588  Deflate    5051  80%  01-16-09 12:04  cf7826df  res/xml-en/autotext.xml
+     164  Deflate      97  41%  01-16-09 12:04  ee886635  res/xml/apns.xml
+     116  Deflate      59  49%  01-16-09 12:04  885f246d  res/xml/autotext.xml
+     864  Deflate     312  64%  01-16-09 12:04  65ad9d7e  res/xml/preferred_time_zones.xml
+   61044  Deflate   11755  81%  01-16-09 12:04  0bc79a58  res/xml/time_zones_by_country.xml
+  747776  Stored   747776   0%  01-16-09 12:04  98f996b3  resources.arsc
+--------          -------  ---                            -------
+ 2246729          1774656  21%                            851 files
+</pre>
+
+<p>如果采用-a选项，会在上述文件列表之后，打印出<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>使用的符号表：</p>
+
+<pre class="example">
+Resource table:
+mError=0x0 (Success)
+Package Groups (1)
+Package Group 0 id=1 packageCount=1 name=android
+  Package 0 id=1 name=android typeCount=13
+    type 0 configCount=1 entryCount=599
+      spec resource 0x01010000 android:attr/theme: flags=0x40000000
+      spec resource 0x01010001 android:attr/label: flags=0x40000000
+      spec resource 0x01010002 android:attr/icon: flags=0x40000000
+      spec resource 0x01010003 android:attr/name: flags=0x40000000
+      spec resource 0x01010004 android:attr/manageSpaceActivity: flags=0x40000000
+      spec resource 0x01010005 android:attr/allowClearUserData: flags=0x40000000
+      spec resource 0x01010006 android:attr/permission: flags=0x40000000
+      spec resource 0x01010007 android:attr/readPermission: flags=0x40000000
+      spec resource 0x01010008 android:attr/writePermission: flags=0x40000000
+      spec resource 0x01010009 android:attr/protectionLevel: flags=0x40000000
+      spec resource 0x0101000a android:attr/permissionGroup: flags=0x40000000
+... ...
+</pre>
+
+<p>这些符号表的格式还需要进一步研究才能搞明白 -_-!</p>
+
+
+
+<h3>使用AAPT打包资源文件</h3>
+
+<p class="first">使用以下命令查看<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>的build系统是如何打包framework-res模块的：</p>
+
+<pre class="example">
+cd ~/android/src
+make -n --debug framework-res
+</pre>
+
+<p>以下是从输出提取的关键步骤：</p>
+
+<p>1. 第一步，生成资源apk包，由以下命令完成：</p>
+
+<pre class="example">
+out/host/linux-x86/bin/aapt package -z -u -x  -M frameworks/base/core/res/AndroidManifest.xml -S frameworks/base/core/res/res
+ -A frameworks/base/core/res/assets  -F out/target/product/generic/obj/APPS/framework-res_intermediates/package.apk
+</pre>
+
+<p>2. 第二步，为生成的资源包做签名：</p>
+
+<pre class="example">
+java -jar out/host/linux-x86/framework/signapk.jar build/target/product/security/platform.x509.pem build/target/product/secur
+ity/platform.pk8 out/target/product/generic/obj/APPS/framework-res_intermediates/package.apk.unsigned out/target/product/gene
+ric/obj/APPS/framework-res_intermediates/package.apk.signed
+</pre>
+
+<p>3. 第三步，为生成的包做对齐处理：</p>
+
+<pre class="example">
+out/host/linux-x86/bin/zipalign -f 4 out/target/product/generic/obj/APPS/framework-res_intermediates/package.apk.unaligned ou
+t/target/product/generic/obj/APPS/framework-res_intermediates/package.apk.aligned
+</pre>
+
+<p>如此生成的framework-res.apk包可以被用来替换system.img中的资源包。（在<a href="CupCake">Cup Cake</a>前的稳定版本中测试可行）</p>
+
+<p>具体步骤：</p>
+
+<ol>
+<li>首先用生成的framework-res.apk替换在~/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>/src/out/target/product/generic/system/framework中的同名文件。</li>
+<li>用make snod生成新的system.img，替换sdk目录下的images/system.img</li>
+<li>用-wipe-date参数启动emulator</li>
+</ol>
+
+
+
+<h3>使用AAPT解压资源包（.apk）</h3>
+
+<pre class="example">
+./aapt d xmltree framework-res.apk res/anim/fade_in.xml
+</pre>
+
+<pre class="example">
+N: android=http://schemas.android.com/apk/res/android
+  E: alpha (line=21)
+    A: android:interpolator(0x01010141)=@0x10a0006
+    A: android:duration(0x01010198)=(type 0x10)0x12c
+    A: android:fromAlpha(0x010101ca)=(type 0x4)0x0
+    A: android:toAlpha(0x010101cb)=(type 0x4)0x3f800000
+</pre>
+
+<pre class="example">
+./aapt d xmlstrings framework-res.apk res/anim/fade_in.xml
+</pre>
+
+<pre class="example">
+String #0: interpolator
+String #1: fromAlpha
+String #2: toAlpha
+String #3: duration
+String #4: android
+String #5: http://schemas.android.com/apk/res/android
+String #6:
+String #7: alpha
+</pre>
+
+
+<p>而没有经过编译的文件为：</p>
+
+<pre class="example">
+&lt;alpha xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+       android:interpolator=&quot;@anim/decelerate_interpolator&quot;
+       android:fromAlpha=&quot;0.0&quot;
+       android:toAlpha=&quot;1.0&quot;
+       android:duration=&quot;300&quot; /&gt;
+</pre>
+
+<p>相应的R.java文件为：</p>
+
+<pre class="example">
+package com.android.internal;
+
+public final class R {
+    public static final class anim {
+        public static final int accelerate_decelerate_interpolator=0x010a0004;
+        public static final int accelerate_interpolator=0x010a0005;
+        public static final int app_starting_exit=0x010a0007;
+        public static final int decelerate_interpolator=0x010a0006;
+        public static final int dialog_enter=0x010a0008;
+        public static final int dialog_exit=0x010a0009;
+... ...
+</pre>
+
+<p>也可以从符号表中得到这些索引值：</p>
+
+<pre class="example">
+resource 0x010a0006 android:anim/decelerate_interpolator: t=0x03 d=0x00001132 (s=0x0008 r=0x00) (PUBLIC)
+</pre>
+
+<p>配合系统预定的framework/base/core/res/res目录的模版，就可以重建/res文件.</p>
+
+<p>具体过程后续。</p>
+
+

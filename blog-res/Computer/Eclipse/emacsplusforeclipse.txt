@@ -1,0 +1,29 @@
+Emacs Plus Plugin For Eclipse
+#tags emacs,eclipse
+<p>Eclipse plugin with <a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a> style key binding
+is the thing I am looking for for long, and
+now update site is available at:</p>
+
+<p><a href="http://www.mulgasoft.com/emacsplus/update-site/plugins">http://www.mulgasoft.com/emacsplus/update-site/plugins</a></p>
+
+<p>You can also download it <a href="./res/com.mulgasoft.emacsplus_2.7.7.zip">here</a>.</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>M-x command execution</li>
+<li>C-u universal-argument</li>
+<li>Emacs style selection</li>
+<li>Emacs style search and query/replace</li>
+<li>A kill ring for deleted text</li>
+<li>Balanced expression (s-expression) commands</li>
+<li>Split editor windows via keystrokes</li>
+<li>Rectangle commands</li>
+<li>Named registers and both global and buffer-local mark rings</li>
+<li>Tags search (without tags)</li>
+<li>Transposition of characters, words, lines and s-expressions</li>
+<li>Line and character commands</li>
+<li>Space and blank line handling</li>
+<li>Simple text manipulation commands</li>
+<li>End-of-line comment operations</li>
+</ul>

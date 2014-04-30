@@ -1,0 +1,61 @@
+Python 的导入路径
+<p>在Python中导入路径，用户可以通过环境变量$PYTHONPATH增加，
+$PYTHONPATH是由:分隔开的一些路径，但是对于相对路径和绝对路径的处理是不同的：</p>
+
+<p>1. 绝对路径</p>
+
+<pre class="example">
+export PYTHONPATH=&quot;/home/justin/projects/python/testdir&quot;
+</pre>
+
+<p>然后可以查看：</p>
+
+<pre class="example">
+python -c &quot;import sys; print sys.path&quot;
+</pre>
+
+<p>结果为：</p>
+
+<p class="verse">
+['', <strong>'/home/justin/projects/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>/testdir'</strong>, '/usr/lib/python2.5', '/usr/lib/python2.5/plat-linux2', '/usr/lib/python2.5/lib-<br>
+tk', '/usr/lib/python2.5/lib-dynload', '/usr/local/lib/python2.5/site-packages', '/usr/lib/python2.5/site-packages', '/usr/li<br>
+b/python2.5/site-packages/Numeric', '/usr/lib/python2.5/site-packages/PIL', '/usr/lib/python2.5/site-packages/gst-0.10', '/va<br>
+r/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/python2.5', '/usr/lib/python2.5/site-packages/gtk-2.0', '/var/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/python2.5/gtk-2.0']<br>
+</p>
+
+
+<p>2. 相对路径（包含以～开头的路径）</p>
+
+<pre class="example">
+export PYTHONPATH=&quot;~/projects/python/testdir&quot;
+</pre>
+
+<p>可以查看</p>
+
+<p class="verse">
+['', <strong>'/home/justin/testbasedir/~/projects/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>/testdir'</strong>, '/usr/lib/python2.5', '/usr/lib/python2.5/plat-linux2', '<br>
+/usr/lib/python2.5/lib-tk', '/usr/lib/python2.5/lib-dynload', '/usr/local/lib/python2.5/site-packages', '/usr/lib/python2.5/s<br>
+ite-packages', '/usr/lib/python2.5/site-packages/Numeric', '/usr/lib/python2.5/site-packages/PIL', '/usr/lib/python2.5/site-p<br>
+ackages/gst-0.10', '/var/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/python2.5', '/usr/lib/python2.5/site-packages/gtk-2.0', '/var/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/<br>
+python2.5/gtk-2.0']<br>
+</p>
+
+<p>可以看到如果这样设置路径就错了</p>
+
+<p>3. 相对和绝对路径混合</p>
+
+<pre class="example">
+export PYTHONPATH=&quot;/home/justin/projects/python/testdir&quot;:&quot;~/projects/python/testdir&quot;
+</pre>
+
+<p>结果如下：</p>
+
+<p class="verse">
+['', <strong>'/home/justin/projects/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>/testdir'</strong>, <strong>'/home/justin/testbasedir/~/projects/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>/testdir'</strong>, '/usr/lib/python2<br>
+.5', '/usr/lib/python2.5/plat-linux2', '/usr/lib/python2.5/lib-tk', '/usr/lib/python2.5/lib-dynload', '/usr/local/lib/python2<br>
+.5/site-packages', '/usr/lib/python2.5/site-packages', '/usr/lib/python2.5/site-packages/Numeric', '/usr/lib/python2.5/site-p<br>
+ackages/PIL', '/usr/lib/python2.5/site-packages/gst-0.10', '/var/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/python2.5', '/usr/lib/python2.5/site-pack<br>
+ages/gtk-2.0', '/var/lib/<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-support/python2.5/gtk-2.0']<br>
+</p>
+
+<p>每条路径都是按照前两条规则分开做处理的</p>

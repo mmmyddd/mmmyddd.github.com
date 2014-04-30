@@ -1,0 +1,2 @@
+Close Blog Comments
+<p>服务器Perl模块升级，暂时关闭Comments功能。</p>

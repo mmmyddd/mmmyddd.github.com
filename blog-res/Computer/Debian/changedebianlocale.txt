@@ -1,0 +1,583 @@
+Change Debian Locale Settings
+#tags debian,locale,linux
+<h3>GNOME会话设置</h3>
+
+<p class="first">因为在安装Debian的时候默认是简体中文安装，并且locale选择
+了<code>
+zh_CN.utf8
+</code></p>
+
+<p>但是参考网上资料的时候往往都是英文的，对照起来有些麻烦，
+尽管启动一些应用程序时候可以临时指定语言变量：</p>
+
+<pre class="example">
+LC_ALL=en_US.utf8 glade-3
+</pre>
+
+<p>但是毕竟很麻烦，因此考虑将系统切换到英文状态：</p>
+
+<p><strong><em>1. 生成英文Locale设置：</em></strong></p>
+
+<pre class="example">
+sudo dpkg-reconfigure locales
+</pre>
+
+<p>选择生成en_US.utf8的设置</p>
+
+<p><strong><em>2. 在GNOME的会话启动时候，可以选择美国英语为默认的语言、地区设置</em></strong></p>
+
+
+
+<h3>关于Locale命令</h3>
+
+<p class="first">另外就是locale这个命令的说明了：</p>
+
+<h4>1. 输出所有系统已经生成/支持的语言区域设置</h4>
+
+<pre class="example">
+locale －a
+</pre>
+
+<p>在我的系统中， 输出结果为：</p>
+
+<pre class="example">
+C
+en_US.utf8
+POSIX
+zh_CN.utf8
+</pre>
+
+
+<h4>2. 输出所有当前支持的charmap</h4>
+
+<pre class="example">
+locale -a
+</pre>
+
+<p>这是一个很长的列表：</p>
+
+<pre class="example">
+ANSI_X3.110-1983
+ANSI_X3.4-1968
+ARMSCII-8
+ASMO_449
+BIG5
+BIG5-HKSCS
+BRF
+BS_4730
+BS_VIEWDATA
+CP10007
+CP1125
+CP1250
+CP1251
+CP1252
+CP1253
+CP1254
+CP1255
+CP1256
+CP1257
+CP1258
+CP737
+CP775
+CP949
+CSA_Z243.4-1985-1
+CSA_Z243.4-1985-2
+CSA_Z243.4-1985-GR
+CSN_369103
+CWI
+DEC-MCS
+DIN_66003
+DS_2089
+EBCDIC-AT-DE
+EBCDIC-AT-DE-A
+EBCDIC-CA-FR
+EBCDIC-DK-NO
+EBCDIC-DK-NO-A
+EBCDIC-ES
+EBCDIC-ES-A
+EBCDIC-ES-S
+EBCDIC-FI-SE
+EBCDIC-FI-SE-A
+EBCDIC-FR
+EBCDIC-IS-FRISS
+EBCDIC-IT
+EBCDIC-PT
+EBCDIC-UK
+EBCDIC-US
+ECMA-CYRILLIC
+ES
+ES2
+EUC-JISX0213
+EUC-JP
+EUC-JP-MS
+EUC-KR
+EUC-TW
+GB18030
+GB2312
+GBK
+GB_1988-80
+GEORGIAN-ACADEMY
+GEORGIAN-PS
+GOST_19768-74
+GREEK-CCITT
+GREEK7
+GREEK7-OLD
+HP-ROMAN8
+IBM037
+IBM038
+IBM1004
+IBM1026
+IBM1047
+IBM1124
+IBM1129
+IBM1132
+IBM1133
+IBM1160
+IBM1161
+IBM1162
+IBM1163
+IBM1164
+IBM256
+IBM273
+IBM274
+IBM275
+IBM277
+IBM278
+IBM280
+IBM281
+IBM284
+IBM285
+IBM290
+IBM297
+IBM420
+IBM423
+IBM424
+IBM437
+IBM500
+IBM850
+IBM851
+IBM852
+IBM855
+IBM856
+IBM857
+IBM860
+IBM861
+IBM862
+IBM863
+IBM864
+IBM865
+IBM866
+IBM866NAV
+IBM868
+IBM869
+IBM870
+IBM871
+IBM874
+IBM875
+IBM880
+IBM891
+IBM903
+IBM904
+IBM905
+IBM918
+IBM922
+IEC_P27-1
+INIS
+INIS-8
+INIS-CYRILLIC
+INVARIANT
+ISIRI-3342
+ISO-8859-1
+ISO-8859-10
+ISO-8859-11
+ISO-8859-13
+ISO-8859-14
+ISO-8859-15
+ISO-8859-16
+ISO-8859-2
+ISO-8859-3
+ISO-8859-4
+ISO-8859-5
+ISO-8859-6
+ISO-8859-7
+ISO-8859-8
+ISO-8859-9
+ISO-8859-9E
+ISO-IR-197
+ISO-IR-209
+ISO-IR-90
+ISO_10367-BOX
+ISO_10646
+ISO_11548-1
+ISO_2033-1983
+ISO_5427
+ISO_5427-EXT
+ISO_5428
+ISO_646.BASIC
+ISO_646.IRV
+ISO_6937
+ISO_6937-2-25
+ISO_6937-2-ADD
+ISO_8859-1,GL
+ISO_8859-SUPP
+IT
+JIS_C6220-1969-JP
+JIS_C6220-1969-RO
+JIS_C6229-1984-A
+JIS_C6229-1984-B
+JIS_C6229-1984-B-ADD
+JIS_C6229-1984-HAND
+JIS_C6229-1984-HAND-ADD
+JIS_C6229-1984-KANA
+JIS_X0201
+JOHAB
+JUS_I.B1.002
+JUS_I.B1.003-MAC
+JUS_I.B1.003-SERB
+KOI-8
+KOI8-R
+KOI8-RU
+KOI8-T
+KOI8-U
+KSC5636
+LATIN-GREEK
+LATIN-GREEK-1
+MAC-CENTRALEUROPE
+MAC-CYRILLIC
+MAC-IS
+MAC-SAMI
+MAC-UK
+MACINTOSH
+MAC_CENTRALEUROPE
+MIK
+MSZ_7795.3
+NATS-DANO
+NATS-DANO-ADD
+NATS-SEFI
+NATS-SEFI-ADD
+NC_NC00-10
+NEXTSTEP
+NF_Z_62-010
+NF_Z_62-010_(1973)
+NF_Z_62-010_1973
+NS_4551-1
+NS_4551-2
+PT
+PT154
+PT2
+RK1048
+SAMI
+SAMI-WS2
+SEN_850200_B
+SEN_850200_C
+SHIFT_JIS
+SHIFT_JISX0213
+T.101-G2
+T.61-7BIT
+T.61-8BIT
+TCVN5712-1
+TIS-620
+TSCII
+UTF-8
+VIDEOTEX-SUPPL
+VISCII
+WIN-SAMI-2
+WINDOWS-31J
+</pre>
+
+
+
+<h4>3. 区域设置信息显示</h4>
+
+<p class="first">首先说明区域设置的信息是分成几个大类的：</p>
+
+<ul>
+<li>我们可以查看这些类别的设置情况：</li>
+</ul>
+
+<pre class="example">
+locale
+</pre>
+
+
+<p>输出为：</p>
+
+<p class="verse">
+LANG=zh_CN.UTF-8<br>
+LC_CTYPE=&quot;zh_CN.UTF-8&quot;<br>
+LC_NUMERIC=&quot;zh_CN.UTF-8&quot;<br>
+LC_TIME=&quot;zh_CN.UTF-8&quot;<br>
+LC_COLLATE=&quot;zh_CN.UTF-8&quot;<br>
+LC_MONETARY=&quot;zh_CN.UTF-8&quot;<br>
+LC_MESSAGES=&quot;zh_CN.UTF-8&quot;<br>
+LC_PAPER=&quot;zh_CN.UTF-8&quot;<br>
+LC_NAME=&quot;zh_CN.UTF-8&quot;<br>
+LC_ADDRESS=&quot;zh_CN.UTF-8&quot;<br>
+LC_TELEPHONE=&quot;zh_CN.UTF-8&quot;<br>
+LC_MEASUREMENT=&quot;zh_CN.UTF-8&quot;<br>
+LC_IDENTIFICATION=&quot;zh_CN.UTF-8&quot;<br>
+LC_ALL=<br>
+</p>
+
+
+<ul>
+<li>每一个大类下边还有键/值， 例如查看：</li>
+</ul>
+
+<pre class="example">
+locale -k LC_TIME
+</pre>
+
+<p>输出为：</p>
+
+<p class="verse">
+abday=&quot;日;一;二;三;四;五;六&quot;<br>
+day=&quot;星期日;星期一;星期二;星期三;星期四;星期五;星期六&quot;<br>
+abmon=&quot; 1月; 2月; 3月; 4月; 5月; 6月; 7月; 8月; 9月;10月;11月;12月&quot;<br>
+mon=&quot;一月;二月;三月;四月;五月;六月;七月;八月;九月;十月;十一月;十二月&quot;<br>
+am_pm=&quot;上午;下午&quot;<br>
+d_t_fmt=&quot;%Y年%m月%d日 %A %H时%M分%S秒&quot;<br>
+d_fmt=&quot;%Y年%m月%d日&quot;<br>
+t_fmt=&quot;%H时%M分%S秒&quot;<br>
+t_fmt_ampm=&quot;%p %I时%M分%S秒&quot;<br>
+era=<br>
+era_year=&quot;&quot;<br>
+era_d_fmt=&quot;&quot;<br>
+alt_digits=<br>
+era_d_t_fmt=&quot;&quot;<br>
+era_t_fmt=&quot;&quot;<br>
+time-era-num-entries=0<br>
+time-era-entries=&quot;�e&quot;<br>
+week-ndays=7<br>
+week-1stday=19971130<br>
+week-1stweek=0<br>
+first_weekday=2<br>
+first_workday=2<br>
+cal_direction=1<br>
+timezone=&quot;&quot;<br>
+date_fmt=&quot;%Y年 %m月 %d日 %A %H:%M:%S %Z&quot;<br>
+time-codeset=&quot;UTF-8&quot;<br>
+</p>
+
+<ul>
+<li>也可查看某个关键字的内容：</li>
+</ul>
+
+<pre class="example">
+locale -k abday
+</pre>
+
+<p>输出这个键和它对应的值：</p>
+
+<p class="verse">
+abday=&quot;日;一;二;三;四;五;六&quot;<br>
+</p>
+
+<ul>
+<li>如果我们要知道abday所在类别：</li>
+</ul>
+
+<pre class="example">
+locale -c abday
+</pre>
+
+<p>得到它的值和所在类：</p>
+
+<p class="verse">
+LC_TIME<br>
+日;一;二;三;四;五;六<br>
+</p>
+
+<ul>
+<li>也可以输出整个类别所有的字符串，但较少见：</li>
+</ul>
+
+<pre class="example">
+locale -c LC_TIME
+</pre>
+
+<p>输出为不带有键的值列表：</p>
+
+<p class="verse">
+LC_TIME<br>
+日;一;二;三;四;五;六<br>
+星期日;星期一;星期二;星期三;星期四;星期五;星期六<br>
+&nbsp;&nbsp;1月; 2月; 3月; 4月; 5月; 6月; 7月; 8月; 9月;10月;11月;12月<br>
+一月;二月;三月;四月;五月;六月;七月;八月;九月;十月;十一月;十二月<br>
+上午;下午<br>
+%Y年%m月%d日 %A %H时%M分%S秒<br>
+%Y年%m月%d日<br>
+%H时%M分%S秒<br>
+%p %I时%M分%S秒<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+0<br>
+�e<br>
+7<br>
+19971130<br>
+0<br>
+2<br>
+2<br>
+1<br>
+<br>
+%Y年 %m月 %d日 %A %H:%M:%S %Z<br>
+UTF-8<br>
+</p>
+
+
+<h4>4. 参考信息：</h4>
+
+<p class="first">locale 命令由GNU/Debian包locales提供：</p>
+
+<pre class="example">
+Package: locales (Installed)
+Priority: standard
+Section: libs
+Installed-Size: 11744
+Maintainer: GNU Libc Maintainers &lt;debian-glibc@lists.debian.org&gt;
+Architecture: all
+Source: glibc
+Version: 2.7-18
+Replaces: base-config, lliurex-belocs-locales-data
+Depends: glibc-2.7-1, debconf | debconf-2.0
+Conflicts: base-config, belocs-locales-bin,
+           belocs-locales-data
+Filename: pool/main/g/glibc/locales_2.7-18_all.deb
+Size: 4491580
+MD5sum: 1e23c5d9adf9d75324ce13e6b8d1a0ed
+SHA1: f34e0a5c63c7fcdce05612a4fef3a2995bbbba2b
+SHA256: 8fcf0ec19dbcb5f77af3b5bdfc9b18b0706f3fcd58322748c4ed3491ea7c432e
+Description-zh_CN: GNU C 程序库：多国语言 (locale) 数据 [支持]
+ 和本地化(l10n)以及国际化(i18n)相关的这部分 C 程序库，所使用的机器可辨识的数
+ 据文件、共享目标文件(shared objects)以及一些软件。
+ .
+ 本软件包含有 libc.mo 的 i18n 文件，还有从原始文件生成 locale 定义文件的工具
+ 软件(软件包中已含有)。这样你就可以自己定制哪些 locale 定义文件是真正要生成
+ 的了。以前这个软件包的缺省处理方式是生成所有的 locale，现在的机制和以往相比
+ 要节省空间一些。把软件包解压之后的大小超过了 30 兆字节。
+Tag: admin::configuring, devel::i18n, implemented-in::c, role::app-data, role::program, scope::utility, suite::gnu
+Task: bosnian, british, croatian, norwegian, romanian, swedish, turkish
+
+</pre>
+
+<p>locale 命令的手册页：</p>
+
+<pre class="example">
+
+LOCALE(1)                                Debian GNU/Linux                               LOCALE(1)
+
+NAME
+       locale - Get locale-specific information.
+
+SYNOPSIS
+       locale [ -a | -m]
+
+       locale [ -ck ] name...
+
+DESCRIPTION
+       The locale program writes information about the current locale environment, or all
+       locales, to standard output.
+
+       When invoked without arguments, locale summarizes the current locale environment for each
+       locale category defined by the LC_* environment variables.
+
+       -a, --all-locales
+
+               Write names of available locales.
+
+       -m, --charmaps
+
+               Write names of available charmaps.
+
+       Output Format:
+
+       -c, --category-name
+
+               Write names of selected categories.
+
+       -k, --keyword-name
+
+               Write names and values of selected keywords.
+
+ENVIRONMENT VARIABLES
+       These environment variables affect each locale categories for all locale-aware programs:
+
+       LC_CTYPE
+
+               Character classification and case conversion.
+
+       LC_COLLATE
+
+               Collation order.
+
+       LC_TIME
+
+               Date and time formats.
+
+       LC_NUMERIC
+
+               Non-monetary numeric formats.
+
+       LC_MONETARY
+
+               Monetary formats.
+
+       LC_MESSAGES
+
+               Formats of informative and diagnostic messages and
+               interactive responses.
+
+       LC_PAPER
+
+               Paper size.
+
+       LC_NAME
+
+               Name formats.
+
+       LC_ADDRESS
+
+               Address formats and location information.
+
+       LC_TELEPHONE
+
+               Telephone number formats.
+
+       LC_MEASUREMENT
+
+               Measurement units (Metric or Other).
+
+       LC_IDENTIFICATION
+
+               Metadata about the locale information.
+
+       This environment variable can switch against multiple locale database:
+
+       LOCPATH
+
+               The directory where locale data is stored.  By default, /usr/lib/locale is used.
+
+FILES
+       /usr/share/i18n/SUPPORTED
+               List of supported values (and their associated encoding) for the locale name.
+               This representation is recommended over --all-locales one, due being the system
+               wide supported values.
+
+AUTHOR
+       locale was written by Ulrich Drepper for the GNU C Library.
+       This manpage was written by Joel Klecker &lt;espy@debian.org&gt; for the Debian GNU/Linux sys-
+       tem, and expanded by Alastair McKinstry &lt;mckinstry@computer.org&gt;
+
+SEE ALSO
+       locale(5), locale(7), setlocale(3)
+
+3rd Berkeley Distribution                   2004-12-16                                  LOCALE(1)
+ Manual page locale(1) line 42/117 (END)
+</pre>
+
+
+

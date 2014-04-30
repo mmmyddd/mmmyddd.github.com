@@ -1,0 +1,93 @@
+Emacs And Scim
+#tags scim,emacs,debian,im
+<p>昨天安装了一个配置input method的工具：</p>
+
+<pre class="example">
+sudo apt-get install im-config
+</pre>
+
+<p>然后又卸载了，结果今天打开<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>，发现不能用scim输入法了。运行
+下列命令发现可以：</p>
+
+<pre class="example">
+export LANG=zh_CN.UTF-8
+export XMODIFIERS=&quot;@im=SCIM&quot;
+export XIM=SCIM
+export XIM_PROGRAM=scim
+export GTK_IM_MODULE=scim
+export QT_IM_MODULE=scim
+scim -d
+emacs
+</pre>
+
+<p>最后发现启动配置文件/etc/X11/Xsession.d/80im-config_launch被更改为：</p>
+
+<pre class="example">
+#!/bin/sh
+# vim: set sts=4 expandtab:
+# Copyright (C) 2010 Osamu Aoki &lt;osamu@debian.org&gt;
+# GNU General Public License version 2 or later.
+#
+# Input Method for X, GNOME, KDE, ... see im-config(8).
+
+# If already tweaked, keep hands off :-)
+if [ -z &quot;$XMODIFIERS&quot; ] &amp;&amp; \
+   [ -z &quot;$GTK_IM_MODULE&quot; ] &amp;&amp; \
+   [ -z &quot;$QT_IM_MODULE&quot; ] &amp;&amp; \
+   [ -r /usr/share/im-config/xinputrc.common ]; then
+    # initialize all im-config common functions and parameters
+    . /usr/share/im-config/xinputrc.common
+    # source the first found configuration file
+    if [ -r &quot;$IM_CONFIG_XINPUTRC_USR&quot; ]; then
+        . $IM_CONFIG_XINPUTRC_USR
+    elif [ -r &quot;$IM_CONFIG_XINPUTRC_SYS&quot; ]; then
+        . $IM_CONFIG_XINPUTRC_SYS
+    fi
+fi
+</pre>
+
+<p>重新安装 <code>im-config</code>,结果系统运行正常。查看：
+<code>man im-config</code> 发现这是一个输入法的切换工具。</p>
+
+<pre class="example">
+im-config
+</pre>
+
+<p>启动界面，可以切换多种输入法，配置文件为：</p>
+
+<pre class="example">
+  /usr/share/im-config/data:
+  总计 128
+  drwxr-xr-x 2 root root 4096 07-15 19:36 .
+  drwxr-xr-x 3 root root 4096 07-15 19:36 ..
+  -rw-r--r-- 1 root root  547 2010-07-17 00_default.dsc
+  -rw-r--r-- 1 root root  117 2010-07-17 00_default.im
+  -rw-r--r-- 1 root root  135 2010-07-17 01_auto.dsc
+  -rw-r--r-- 1 root root  358 2010-07-17 01_auto.im
+  -rw-r--r-- 1 root root  144 2010-07-17 02_cjkv.dsc
+  -rw-r--r-- 1 root root  276 2010-07-17 02_cjkv.im
+  -rw-r--r-- 1 root root  141 2010-07-17 20_ibus.dsc
+  -rw-r--r-- 1 root root  570 2010-07-17 20_ibus.im
+  -rw-r--r-- 1 root root  336 2010-07-17 22_scim.dsc
+  -rw-r--r-- 1 root root  959 2010-07-17 22_scim.im
+  -rw-r--r-- 1 root root  344 03-17 19:15 23_skim.dsc
+  -rw-r--r-- 1 root root  968 03-17 19:15 23_skim.im
+  -rw-r--r-- 1 root root   96 2010-07-17 24_uim.dsc
+  -rw-r--r-- 1 root root  883 2010-07-17 24_uim.im
+  -rw-r--r-- 1 root root   97 03-17 19:15 40_gcin.dsc
+  -rw-r--r-- 1 root root  585 03-17 19:15 40_gcin.im
+  -rw-r--r-- 1 root root   77 2010-07-17 70_none.dsc
+  -rw-r--r-- 1 root root   51 2010-07-17 70_none.im
+  -rw-r--r-- 1 root root  115 2010-07-17 80_fcitx.dsc
+  -rw-r--r-- 1 root root  174 2010-07-17 80_fcitx.im
+  -rw-r--r-- 1 root root  107 2010-07-17 80_kinput2.dsc
+  -rw-r--r-- 1 root root  420 2010-07-17 80_kinput2.im
+  -rw-r--r-- 1 root root  163 2010-07-17 80_skkinput.dsc
+  -rw-r--r-- 1 root root  185 2010-07-17 80_skkinput.im
+  -rw-r--r-- 1 root root   80 2010-07-17 90_bogus.dsc
+  -rw-r--r-- 1 root root   51 2010-07-17 90_bogus.im
+  -rw-r--r-- 1 root root   89 2010-07-17 90_custom.dsc
+  -rw-r--r-- 1 root root   51 2010-07-17 90_custom.im
+  -rw-r--r-- 1 root root   79 2010-07-17 90_unreadable.dsc
+  -rw-r--r-- 1 root root   51 2010-07-17 90_unreadable.im
+</pre>

@@ -1,0 +1,42 @@
+Repeated Connection Attempts Of ADT on Debian
+#tags android,eclipse,debian
+<p>在Debian下安装Eclispe插件Android ADT,连接模拟器的时候总是发现有如下错误：</p>
+
+<pre class="example">
+[2010-03-04 23:04:42 - ddms]Failed to reopen debug port for Selected Client to: 8700
+[2010-03-04 23:04:42 - ddms]不適用的引數
+java.net.SocketException: 不適用的引數
+at sun.nio.ch.Net.bind(Native Method)
+at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:119)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:59)
+at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:52)
+at com.android.ddmlib.MonitorThread.reopenDebugSelectedPort(Unknown Source)
+at com.android.ddmlib.MonitorThread.run(Unknown Source)
+
+[2010-03-04 23:04:42 - DeviceMonitor]Connection attempts: 1
+[2010-03-04 23:04:43 - DeviceMonitor]Connection attempts: 2
+[2010-03-04 23:04:45 - DeviceMonitor]Connection attempts: 3
+</pre>
+
+<p>临时解决方法：
+
+
+<code config="brush:bash; gutter:true; toolbar:true; ruler:false;">
+sudo sysctl -w net.ipv6.bindv6only=0
+</code>
+</p>
+
+<p>永久解决方法：</p>
+
+<p>修改<code>/etc/sysctl.d/bindv6only.conf</code>文件,设定：</p>
+
+<pre class="example">
+net.ipv6.bindv6only = 0
+</pre>
+
+
+<p>参考资料：</p>
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> <a href="http://groups.google.com.tw/group/android-developers/browse_thread/thread/85ca7f2498e8f89c?fwc=1">http://groups.google.com.tw/group/android-developers/browse_thread/thread/85ca7f2498e8f89c?fwc=1</a>
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a> <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=560142">http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=560142</a>
+<p class="footnote"><a class="footnum" name="fn.3" href="#fnr.3">3.</a> <a href="http://gaznjang.blogspot.com/">http://gaznjang.blogspot.com/</a></p>

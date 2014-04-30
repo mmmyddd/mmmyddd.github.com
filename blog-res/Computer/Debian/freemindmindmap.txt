@@ -1,0 +1,25 @@
+Freemind Mind Map
+#tags mindmap,debian,literate programming
+<p>Install freemind in Debian:</p>
+
+<pre class="example">
+sudo apt-get install freemind freemind-doc freemind-browser
+</pre>
+
+<p>Other optional plugin packages:</p>
+
+<pre class="example">
+sudo apt-get install freemind-plugins-help freemind-plugins-script \
+         freemind-plugins-svg freemind-plugins-time
+</pre>
+
+
+<p>Freemind <code>0.9.0~rc7+dfsg-1</code> need <code>open-jdk6</code>,
+make sure the <code>JAVA_HOME</code> environment set properly:</p>
+
+<pre class="example">
+JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk
+</pre>
+
+<p>快捷键可以定制，而编辑方式有点像leo的literal programming,
+稍后绑定到Emacs的键绑定上试一下:)</p>

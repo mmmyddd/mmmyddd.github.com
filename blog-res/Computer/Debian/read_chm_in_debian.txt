@@ -1,0 +1,35 @@
+Read CHM in Debian
+#tags emacs,chm,debian
+<p>在Debian的软件库中有几种类型的CHM阅读器，试用了以下几种：</p>
+
+<ol>
+<li>kchmviewer: 基于KDE，和windows下边的chm阅读器最为相似，但是最近发现好多chm文件读不出来</li>
+<li>gnochm: 基于GNOME，界面也比友好，但是没有单页搜索功能</li>
+<li>xchm: 这个很强悍，功能从书签到单页搜索，到全文搜索都提供，推荐试用</li>
+<li>chmsee: 和gnochm类似，令人吃惊的是，这个竟然连全文搜索也省略了</li>
+<li>Okular: 也是基于kde，一直感觉KDE比GNOME的显示要好，但是文本选中功能好像在GNOME用不了
+这个功能也很强大，有类似修订的功能，可以加亮和标记文本，但是搜索功能依然很烂，竟然只能搜索导航栏中的文本</li>
+<li><a href="FirFox">Fir Fox</a> addon CHM Reader: 和浏览器接合比较紧密，但是目录导航页和内容是分开的，自然无法做全文搜索</li>
+<li>Emacs + w3m + archmage + chm-view.el: 这个需要安装arhmage包，这个包将解压chm中的页面，作为本地的一个web站点提供给浏览器，
+配合使用还是挺爽的，问题是还是无法全文搜索，现在只是拷贝代码方便,而且找toc太费劲，速度打开也稍微慢了些。</li>
+</ol>
+
+<p><strong>配置</strong>:</p>
+
+<p>首先安装archmage:</p>
+
+<pre class="example">
+sudo apt-get install archmage
+</pre>
+
+<p>然后下载<a href="http://www.emacswiki.org/emacs/download/chm-view.el">chm-view.el</a>:</p>
+
+<p>在配置文件.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中：</p>
+
+<pre class="example">
+(require 'chm-view)
+</pre>
+
+<p>详细配置参考<a href="http://www.emacswiki.org/cgi-bin/wiki/ChmView">ChmView@EmacsWiki</a></p>
+
+<p><strong>结论，暂时使用xchm和<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>的chm-view来看chm文件。</strong></p>

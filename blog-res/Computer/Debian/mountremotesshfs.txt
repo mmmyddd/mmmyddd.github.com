@@ -1,0 +1,64 @@
+Mount Remote SSH File System
+#tags sshfs,ssh,minix,debian
+<p>最近需要在Minix上修改编译程序，其实Minix3里边的环境已经比
+Minix2好很多了，但是感觉里面的Emacs-Like编辑器mg很是不给力,
+后来考虑远程通过ssh协议修改Minix上的代码，试着通过tramp登陆，
+结果tramp在出现&quot;Found remote shell prompt on minix&quot;的提示后就
+停在那里不动了，最后无奈，求助于sshfs的远程挂接，记录如下：</p>
+
+<h2>Install</h2>
+
+<pre class="example">
+sudo apt-get install sshfs
+</pre>
+
+
+<h2>Mount</h2>
+
+<p class="first">挂载命令是<code>sshfs</code>， 需要sudo权限</p>
+
+<pre class="example">
+sudo sshfs [-o options] [user@]host:[dir] mountpoint
+</pre>
+
+<p><strong>options：</strong></p>
+
+<ul>
+<li><code>-h, --help</code></li>
+<li>-C 压缩，或者-o compression=yes</li>
+<li>-o reconnect 自动重连</li>
+<li>-o transform_symlinks 表示转换绝对链接符号为相对链接符号</li>
+<li>-o follow_symlinks 沿用服务器上的链接符号</li>
+<li>-o cache=yes</li>
+<li>-o allow_other 这个参数最重要，必须写，否则任何文件都是Permission Deny</li>
+</ul>
+
+<p>典型的配置：</p>
+
+<pre class="example">
+sudo sshfs -o cache=yes,allow_other user@xx.xx.xx.xx:/dir_remote ./dir_local
+</pre>
+
+
+<h2>Unmount</h2>
+
+<p class="first">不要用普通的 <code>umount</code>命令，在远程机器无法连接的情
+况下，它会无法卸载干净， 要使用 <code>sshfs</code>自带的命令
+<code>fusermount</code>：</p>
+
+<pre class="example">
+fusermount -u mountpoint
+</pre>
+
+<p>或者使用lazy unmount(works even if resource is still busy):</p>
+
+<pre class="example">
+fusermount -u -z mountpoint
+</pre>
+
+<p><span class="note">重新安装minix和openssh后，minix上的sshd会
+重新生成public-key,所以需要删除.ssh/known_hosts文件。因为使用
+sshfs需要sudo权限，root的HOME目录下的.ssh/known_hosts文件也要
+删除。</span></p>
+
+

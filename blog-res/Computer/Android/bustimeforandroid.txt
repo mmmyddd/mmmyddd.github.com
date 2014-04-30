@@ -1,0 +1,35 @@
+Bus Time for Android
+#tags android,bustime
+<p>Android版本的Bus Time最终提交Google Market。可以在Market上搜
+索&quot;Bus Time&quot;下载并安装。希望使用Android手机的朋友帮忙试一试，
+欢迎提出改进意见:)</p>
+
+<p>感谢<a href="http://www.fallhunter.com">Fallhunter</a>及<a href="http://www.mapiz.com">Mapiz</a>团队提供的这次机会和平台。</p>
+
+<p class="image"><img src="./res/bustime-1.png" alt=""> <img src="./res/bustime-2.png" alt=""></p>
+
+<blockquote>
+<p class="quoted">&quot;This is an extremely simple and easy to use application for checking bus and ferry time across entire US!&quot;</p>
+</blockquote>
+
+<ul>
+<li>Get arrival times based on actual vehicle locations (powered by Next Bus)</li>
+<li>Add favorite routes and stops and view their arrival times concurrently</li>
+<li>Check bus stops on the map</li>
+<li>See buses moving on the map in real time</li>
+</ul>
+
+<p class="image"><img src="./res/bustime-icon.png" alt="">  by - <a href="http://www.mapiz.com">http://www.mapiz.com</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+Bookmarks
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Python</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Emacs</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 Debian</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 Embedded System</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<br>
+
+<h3><a name="sec1" id="sec1"></a>
+Python</h3>
+
+<p><strong>Python官方网址</strong> - <a href="http://www.python.org">http://www.python.org</a></p>
+
+
+
+<h3><a name="sec2" id="sec2"></a>
+Emacs</h3>
+
+<p><strong>Emacs Wiki</strong> - <a href="http://www.emacswiki.org">http://www.emacswiki.org</a></p>
+
+
+<h3><a name="sec3" id="sec3"></a>
+Debian</h3>
+
+<p><strong>Debian</strong> - <a href="http://www.debian.org">http://www.debian.org</a></p>
+
+
+<h3><a name="sec4" id="sec4"></a>
+Embedded System</h3>
+
+<p class="first">Embed Online - <a href="http://bbs.mcuol.com">http://bbs.mcuol.com</a></p>
+
+

@@ -1,0 +1,47 @@
+Understanding C Typedef With Cdecl
+#tags c,cdecl,debian,typedef,emacs
+<p>Debian下边安装程序cdecl，可以把C语言中用typedef的定义复杂类型转换为
+自然语言，解决了本人记不清楚优先级和结合率的问题：</p>
+
+<h2>安装</h2>
+
+<pre class="example">
+sudo apt-get install cdecl
+</pre>
+
+
+<h2>使用</h2>
+
+<p class="first">例如现在不清楚一下定义有什么差别：</p>
+
+<pre class="example">
+char * const argv[];
+const char * argv[];
+const char (*argv) [];
+</pre>
+
+<p>可以问一下 <code>cdecl</code>：</p>
+
+<pre class="example">
+justin@Justin:~$ cdecl
+Type `help' or `?' for help
+cdecl&gt; explain char * const argv []
+declare argv as array of const pointer to char
+cdecl&gt; explain const char * argv[];
+declare argv as array of pointer to const char
+cdecl&gt; explain const char (*argv) [];
+declare argv as pointer to array of const char
+cdecl&gt;
+</pre>
+
+
+<h2>Emacs 绑定</h2>
+
+<p><a href="https://github.com/jhgorrell/cdecl-el/blob/master/cdecl.el">这里</a>有个<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>下使用cdecl的扩展cdecl.el</p>
+
+
+<h2>启示</h2>
+
+<p class="first">如果记不住某些逻辑，可以集中时间弄明白后，写个程序固化下来 :)</p>
+
+

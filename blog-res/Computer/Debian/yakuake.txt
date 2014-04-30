@@ -1,0 +1,31 @@
+Yakuake
+#tags debian
+<p>今天在Debian的软件包中找到了一个有趣的东西<code>
+yakuake
+</code>:</p>
+
+<p>安装这个软件包: </p>
+
+<pre class="example">
+sudo apt-get install yakuake
+</pre>
+
+<p>并配置在桌面Session启动时候运行：</p>
+
+<p><code>
+System -&gt; Preference -&gt; Session ...
+</code></p>
+
+<p>在Session的配置窗口中为yakuake命令新建一个启动项目。</p>
+
+<p>然后在任意窗口中用默认的快捷键<code>
+F12
+</code>， 可以启动一个多Tab的Terminal界面:</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/yakuake-thumb.png" alt="效果"></td></tr>
+  <tr><td align="center" class="image-caption">效果</td></tr>
+</table>
+
+<p>支持新建终端窗口，给窗口改名，在窗口间切换，一切都可以通过快捷键完成。
+在桌面环境中不用担心开启过多的终端窗口而找不到要切换到的shell。</p>

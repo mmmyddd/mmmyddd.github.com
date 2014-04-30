@@ -1,0 +1,146 @@
+Screen Capture Using Scrot
+#tags screen capture, debian, linux
+<p><a href="http://linuxbrit.co.uk/scrot/">Scrot</a> 是一种命令行下的简单的截屏工具：</p>
+
+<h4>安装</h4>
+
+<pre class="example">
+sudo apt-get  install scrot
+</pre>
+
+
+<h4>帮助</h4>
+
+<pre class="example">
+scrot --help
+</pre>
+
+<p>帮助内容如下：</p>
+
+<pre class="example">
+Usage : scrot [OPTIONS]... [FILE]
+  Where FILE is the target file for the screenshot.
+  If FILE is not specified, a date-stamped file will be dropped in the
+  current directory.
+  See man scrot for more details
+  -h, --help                display this help and exit
+  -v, --version             output version information and exit
+  -b, --border              When selecting a window, grab wm border too
+  -c, --count               show a countdown before taking the shot
+  -d, --delay NUM           wait NUM seconds before taking a shot
+  -e, --exec APP            run APP on the resulting screenshot
+  -q, --quality NUM         Image quality (1-100) high value means
+                            high size, low compression. Default: 75.
+                            For lossless compression formats, like png,
+                            low quality means high compression.
+  -m, --multidisp           For multiple heads, grab shot from each
+                            and join them together.
+  -s, --select              interactively choose a window or rectangle
+                            with the mouse
+  -t, --thumb NUM           generate thumbnail too. NUM is the percentage
+                            of the original size for the thumbnail to be,
+                            or the geometry in percent, e.g. 50x60 or 80x20.
+
+  SPECIAL STRINGS
+  Both the --exec and filename parameters can take format specifiers
+  that are expanded by scrot when encountered.
+  There are two types of format specifier. Characters preceded by a '%'
+  are interpreted by strftime(2). See man strftime for examples.
+  These options may be used to refer to the current date and time.
+  The second kind are internal to scrot  and are prefixed by '$'
+  The following specifiers are recognised:
+                  $f image path/filename (ignored when used in the filename)
+                  $m thumbnail path/filename
+                  $n image name (ignored when used in the filename)
+                  $s image size (bytes) (ignored when used in the filename)
+                  $p image pixel size
+                  $w image width
+                  $h image height
+                  $t image format
+                  $$  prints a literal '$'
+                  \n prints a newline (ignored when used in the filename)
+  Example:
+          scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/images/shots/'
+          Creates a file called something like 2000-10-30_2560x1024_scrot.png
+          and moves it to your images directory.
+
+This program is free software see the file COPYING for licensing info.
+Copyright Tom Gilbert 2000
+Email bugs to &lt;scrot_sucks@linuxbrit.co.uk&gt;
+</pre>
+
+
+<h4>例子</h4>
+
+<h5><strong>例一:</strong> 延迟20秒截取全屏, 截屏前数秒：</h5>
+
+<pre class="example">
+scrot -d 5 -c
+</pre>
+
+<p>截屏前输出数秒提示：</p>
+
+<pre class="example">
+Taking shot in 20.. 19.. 18.. 17.. 16.. 15.. 14.. ...
+</pre>
+
+<p><span class="note">
+生成的文件放在当前目录下，默认文件名类似<code>2009-10-14-222131_2048x1152_scrot.png</code>
+</span></p>
+
+
+<h5><strong>例二：</strong> 采用JPEG文件格式和自定义的文件名存储文件，并且将文件拷贝到备用目录：</h5>
+
+<pre class="example">
+scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/images/shots/'
+</pre>
+
+
+<h5><strong>例三：</strong> 用鼠标截取窗口或者区域, 同时生成20%的thumb文件：</h5>
+
+<pre class="example">
+scrot -s -t 20 -c -d 5
+</pre>
+
+
+<p><span class="note">
+输入命令后，scrot等待鼠标(左右键都可)点击一个窗口或者拖拽出一个矩形, (按任意键盘键取消截屏)然后开始数秒。
+生成的thumb文件名格式为<code>filename-thumb.fileext</code>，其图片格式和原始图片格式一致。
+</span></p>
+
+
+
+<h4>更多</h4>
+
+<p class="first">关于<code>-m</code>选项是用在Multiheads System中：</p>
+
+<blockquote>
+<p class="quoted">Now here's another interesting feature that may make scrot an attractive
+alternative to any gui based screen capture program. Scrot has another interesting
+option that allows you to capture screenshots of all the active desktops on a multi-head system.
+So if your <a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a> box is designed to allow more than one user at a time to use it,
+aka a multi-head system, you can capture screenshots from all the desktops at once,
+rather than having to do them individually.</p>
+</blockquote>
+
+<p>参考：<a href="http://www.raiden.net/articles/linux_tip_guide_using_scrot/">http://www.raiden.net/articles/linux_tip_guide_using_scrot/</a></p>
+
+<p>Multihead有许多的<a href="http://en.wikipedia.org/wiki/Multi-monitor#Span_mode">显示模式</a>,以下是span模式的图片：</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="http://www.ibm.com/developerworks/linux/library/os-mltihed/500_quad_devel.jpg" alt="multihead"></td></tr>
+  <tr><td align="center" class="image-caption">multihead</td></tr>
+</table>
+
+
+<h4>总结</h4>
+
+<p class="first">Scrot是一个比较便捷的抓图工具，如果设置命令行参数后还可以自动完成后续的图片处理任务。但是它还是有很多缺点，
+例如，不能滚屏抓图，不能抓取窗口被其他窗口档住，或者在桌面以外的部份。Linux下还有另外一个比较强大的抓图工具
+<a href="http://shutter-project.org">shutter</a>。</p>
+
+
+
+
+
+

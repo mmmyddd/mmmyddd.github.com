@@ -1,0 +1,6 @@
+给Blog增加标签
+<p>这两天终于把标签加到Blog中来了，perl的代码写的可真苦，调试起来也比较困难，
+不过总算把Blog的基本内容搭建起来了。剩下的就是内容的充实了和一些周边的辅助
+条目的增加。终于可以静下心来写Blog了，*^_^*!</p>
+
+<p class="image"><img src="http://www.lodosbarandgrill.com/images/happy-face_happyface_smiley_800x800.gif" alt=""></p>

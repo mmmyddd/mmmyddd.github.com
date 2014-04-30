@@ -1,0 +1,91 @@
+Emacs Key Binding Issues on Windows
+#tags putty,emacs,windows,vnc,x
+<p>在Window下远程访问Linux上的Emacs，主要有三种方式：</p>
+
+<ul>
+<li>使用Putty或者SecureCRT，这类远程登录工具打开一个terminal会
+话，使用 <code>emacs -nw</code> 打开字符模式<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>实例。</li>
+
+<li>在Windows上打开Humming Bird Exceed这类 X server，创建一个
+到服务器的X会话。</li>
+
+<li>使用Vncviewer访问服务器上的Vnc服务</li>
+</ul>
+
+<p>在Windows以上方式中使用远程server上的<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>时有时会出现一些键
+绑定的问题，主要有以下两类：</p>
+
+<ul>
+<li>Putty是一个小巧的远程登陆程序，操作简单，携带方便，即开即
+用，但是以上述第一种方式打开terminal上的<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>实例，会发现
+Right Alt Key无效，不能绑定为默认的M-按键。产生这种现象的
+原因是Putty默认将Right Alt转换为<a href="AltGr">Alt Gr</a>，看到若干解决方案：
+
+<ul>
+<li>转向使用更为强大的SecureCRT或者其他类似工具，但是可能需
+要安装（none portable)</li>
+<li>从Server端更改按键映射，具体参考：
+
+<ol>
+<li><a href="http://www.joshstaiger.org/archives/2005/04/fixing_the_righ.html">http://www.joshstaiger.org/archives/2005/04/fixing_the_righ.html</a></li>
+<li><a href="http://blog.donews.com/pluskid/archive/2006/05/06/858314.aspx">http://blog.donews.com/pluskid/archive/2006/05/06/858314.aspx</a></li>
+</ol></li>
+<li>在Windows上更改按键映射（更改注册表或者使用映射修改工具），具体参考：
+
+<ol>
+<li><a href="http://www.emacswiki.org/emacs/PuTTY#toc8">http://www.emacswiki.org/emacs/PuTTY#toc8</a></li>
+<li><a href="http://lifegoo.pluskid.org/?p=101">http://lifegoo.pluskid.org/?p=101</a></li>
+</ol></li>
+<li>最方便还是重新编译Putty原码，禁止R-Alt到<a href="AltGr">Alt Gr</a>的转换，具体参考：
+
+<ol>
+<li><a href="http://www.cnblogs.com/ThomasNet/archive/2008/03/25/1122012.html">http://www.cnblogs.com/ThomasNet/archive/2008/03/25/1122012.html</a></li>
+<li><a href="http://www.emacswiki.org/emacs/PuTTY#toc8">http://www.emacswiki.org/emacs/PuTTY#toc8</a></li>
+</ol></li>
+</ul></li>
+</ul>
+
+<p>我编译好的Putty也备份了一个在<a href="./res/putty-right-alt.zip">这里</a>, 修改的代码如下：</p>
+
+<pre class="example">
+Or, download putty0.60 source, patch it and compile:
+
+$ diff -c putty-src/WINDOWS/WINDOW.c WINDOW-patched.C
+*** putty-src/WINDOWS/WINDOW.c  Wed Apr 29 17:35:45 2009
+--- WINDOW.C    Tue Mar 25 06:11:32 2008
+***************
+*** 3674,3680 ****
+        if (wParam == VK_MENU &amp;&amp; (HIWORD(lParam) &amp; KF_EXTENDED)) {
+            keystate[VK_RMENU] = keystate[VK_MENU];
+        }
+!
+
+        /* Nastyness with NUMLock - Shift-NUMLock is left alone though */
+        if ((cfg.funky_type == FUNKY_VT400 ||
+--- 3674,3681 ----
+        if (wParam == VK_MENU &amp;&amp; (HIWORD(lParam) &amp; KF_EXTENDED)) {
+            keystate[VK_RMENU] = keystate[VK_MENU];
+        }
+!       /*disable altgr*/
+!       keystate[VK_RMENU] = 0;
+
+        /* Nastyness with NUMLock - Shift-NUMLock is left alone though */
+        if ((cfg.funky_type == FUNKY_VT400 ||
+</pre>
+
+
+<ul>
+<li>在windows下输入法转换按键往往绑定在
+<code>Ctrl＋SPC</code>，这和<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中的
+<code>set-mark-command</code> 冲突，而windows似乎有某种
+bug，很难将其重新绑定至其他按键组合.搜索了下网上的解决方
+案，这里 <a href="http://stackoverflow.com/questions/179119/how-to-prevent-windows-xp-from-stealing-my-input-ctrl-space-which-is-meant-for-em">http://stackoverflow.com/questions/179119/how-to-prevent-windows-xp-from-stealing-my-input-ctrl-space-which-is-meant-for-em</a> 是一解:
+
+<ol>
+<li>打开控制面板-&gt;输入法设置，设置默认输入法语言为en_US键盘，删除所有其他语言的输入法。</li>
+<li>并重新启动Windows，以清除在系统中所有已经启动的输入法语言。</li>
+<li>打开控制面板-&gt;输入法设置，增添一种中文输入法， 并设置好替换Ctrl-SPC的快捷键，比如Ctrl+Shift, Shift+Alt，确认退出。</li>
+<li>打开控制面板-&gt;输入法设置，再增添一种中文输入法，确认退出。</li>
+<li>再次打开控制面板-&gt;输入法设置，删除其中一种中文输入法，确认退出。</li>
+</ol></li>
+</ul>

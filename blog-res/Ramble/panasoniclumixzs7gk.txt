@@ -1,0 +1,62 @@
+Panasonic Lumix ZS7 GK
+#tags camera
+<p>刚买到一部松下的ZS7相机，按照下面步骤可以进入工程模式，验证是否行货：</p>
+
+<ol>
+<li>准备： 关机，切换到拍摄模式，模式转盘旋转到P。</li>
+<li>同时按住“Dispaly”和方向键“↑”：
+
+<ul>
+<li>开机</li>
+<li>从拍摄模式切换到回放模式</li>
+<li>松开“Dispaly”和方向键“↑”</li>
+</ul></li>
+
+<li>同时按住“Dispaly”和方向键“↑”：
+
+<ul>
+<li>从回放模式切换到拍摄模式</li>
+<li>松开“Dispaly”和方向键“↑”</li>
+</ul></li>
+
+<li>同时按住“MENU/SET”键和方向键“→”
+
+<ul>
+<li>关机</li>
+</ul></li>
+
+<li>这时屏幕上会出现如下菜单，并且喇叭长响，代表成功进入工程模式：</li>
+</ol> 
+
+<p class="verse">
+&nbsp;&nbsp;&nbsp;&nbsp;INITIAL SETTINGS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GK ZS7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CANCEL(←)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END(→)<br>
+&nbsp;&nbsp;<br>
+</p>
+<blockquote>
+<p class="quoted">其中GK代表大陆行货，如果是GH则是港行。</p>
+</blockquote>
+
+<ul>
+<li>退出工程模式，按“→”键，并完成初始设置。
+
+<ul>
+<li>重新开机，重新调整时间。</li>
+<li>关机，关机前屏幕上出现“Lumix”代表成功退出。如果屏幕上出现
+大的感叹号，证明没有从工程模式退出，需要按照上述步骤重新操作一遍。</li>
+</ul></li>
+</ul>
+
+<hr>
+参考资料：
+
+<ol>
+<li>工程模式 - <a href="http://dcbbs.zol.com.cn/62/84_613822.html">http://dcbbs.zol.com.cn/62/84_613822.html</a></li>
+<li>ZS7参数 - <a href="http://product.pcpop.com/000266536/Detail.html">http://product.pcpop.com/000266536/Detail.html</a></li>
+</ol>
+
+
+

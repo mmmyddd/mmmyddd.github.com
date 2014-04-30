@@ -1,0 +1,38 @@
+TeXmacs is Awesome
+#tags texmacs,tex,latex,emacs,debian
+<p>Debian下有几个帮助写tex公式的软件：</p>
+
+<ul>
+<li>lyx</li>
+<li>texmaker</li>
+<li>texmacs</li>
+</ul>
+
+<p>Texmaker很传统，写的Latex文档通过编译生成ps/pdf文件或dvi文
+档，然后才可以预览。</p>
+
+<p>Lyx中规中矩，是一个所见即所得的latex前端程序，使用tex作为后端
+的存储方式，也能在tex编译前，有限的预览需要生成的公式，可以在
+预览文档中与后端所写的tex代码对应起来，很是方便。</p>
+
+<p>最让人惊呼的是texmacs，属于GNU基金会的项目，他自己实现了类似
+tex的高质量的排版引擎，并且使用tex中的字体。可以不用通过漫长
+的tex处理就立即看到公式的效果。文档采用自己的tm文本格式存储，
+但是可以很方便转换成html, pdf, latex，xml等格式，也能接受导入
+html, latex文件。最令人感动的是，他可以做为任何支持字符接口的
+CAS或者绘图软件的前端，甚至支持动态语言REPL解释器的输出，声称
+的结果可以即时嵌入文档，需要时可以重新运行。因为<a href="TeXmacs">Te Xmacs</a>的目标
+是一个科学文档编辑器。和Emacs一样， Texmacs是一个可扩展的平
+台，支持以Guile/scheme, <a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>, c++写的插件，具有强大的扩展能
+力。<a href="TeXmacs">Te Xmacs</a>支持Linux, Windows, MacOS, 支持中文输入。按键部分
+兼容<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>风格，也是比较方便。</p>
+
+<p>缺点也不少，按键数量明显增多，还是需要有菜单帮助的。Debian下
+的版本不是很稳定，可能和软件兼容性有关，据说Ubuntu下的版本已
+经比较稳定了。还有人专门做了写定制工作，在google code上成立了
+iTeXmacs项目，这个项目在Windows下中文支持已经不错了，可以做为
+Emacser的一个替代word的富文本编辑器。</p>
+
+<hr>
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  <a href="TeXmacs">Te Xmacs</a>: <a href="http://www.texmacs.org/tmweb/home/welcome.en.html">http://www.texmacs.org/tmweb/home/welcome.en.html</a>
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  iTeXmacs: <a href="http://code.google.com/p/itexmacs/">http://code.google.com/p/itexmacs/</a></p>

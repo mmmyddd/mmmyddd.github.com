@@ -1,0 +1,57 @@
+Install Ricoh Aficio 3025 Printer Driver
+#tags printer,debian
+<p>没有找到打印机Ricoh Aficio 3025的PPD文件，只有Driver安装包可以用：</p>
+
+<p>1. Install the driver from open printing, Driver downloads:<a href="http://www.openprinting.org/download/printdriver/debian/dists/lsb3.2/main/binary-i386/openprinting-ppds-pxlmono-ricoh_20100917-1lsb3.2_all.deb">here</a></p>
+
+<pre class="example">
+sudo dpkg -i openprinting-ppds-pxlmono-ricoh_20100917-1lsb3.2_all.deb
+</pre>
+
+<p>2. System -&gt; Administration -&gt; Printing:
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-175623_461x238_scrot.png" alt="Printer Management"></td></tr>
+  <tr><td align="center" class="image-caption">Printer Management</td></tr>
+</table></p>
+
+<p>3. Edit -&gt; New Printer, Select LPD/LPR host or printer,
+enter the printer's ip, and test the printer to ensure
+connection, then press next.
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-180353_613x452_scrot.png" alt="New Printer"></td></tr>
+  <tr><td align="center" class="image-caption">New Printer</td></tr>
+</table></p>
+
+<p>4. Select the driver in the producer's list:
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-181420_601x447_scrot.png" alt="Select Producer"></td></tr>
+  <tr><td align="center" class="image-caption">Select Producer</td></tr>
+</table>
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-181713_730x493_scrot.png" alt="Select Driver"></td></tr>
+  <tr><td align="center" class="image-caption">Select Driver</td></tr>
+</table></p>
+
+<p>5. Use default intallation option:
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-182029_598x457_scrot.png" alt="Installation Options"></td></tr>
+  <tr><td align="center" class="image-caption">Installation Options</td></tr>
+</table></p>
+
+<p>6. Describe the printer, and add it to the list of printers:
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-182150_595x455_scrot.png" alt="Description"></td></tr>
+  <tr><td align="center" class="image-caption">Description</td></tr>
+</table></p>
+
+<p>7. Select the new printer in the list, edit it by double-click:</p>
+
+<p>8. Set user code and done:
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-182638_716x575_scrot.png" alt="Add Usercode Option"></td></tr>
+  <tr><td align="center" class="image-caption">Add Usercode Option</td></tr>
+</table>
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/2010-12-23-182654_715x577_scrot.png" alt="Set Usercode"></td></tr>
+  <tr><td align="center" class="image-caption">Set Usercode</td></tr>
+</table></p>

@@ -1,0 +1,23 @@
+Include Untracked Files in Git Diff
+#tags git,diff,linux
+<p>使用git的diff命令声称patch文件时候，默认是没有包含新添加的文件的。
+如果需要在<code>git diff</code>生成的patch文件中包含新添加的文件，
+需要首先将新加入的文件添加至git版本库的文件索引中。
+
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+git add -N newfile
+</code>
+</p>
+
+
+<p>然后使用diff命令：
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+git diff HEAD > diff.patch
+</code>
+</p>
+
+<p><strong>注意：</strong><code>git diff</code>命令对于目录是递归遍历执行的。</p>

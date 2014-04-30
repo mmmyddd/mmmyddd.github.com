@@ -1,0 +1,5 @@
+W3M Load Failed But FireFox Succeed
+#tags w3m,debian
+<p>今天碰到一个奇怪的问题，<code>w3m</code>连不上google但是
+<code>firefox</code>却可以。这个问题以前也碰到过，解决办法很
+简单，将Home目录下的 <code>.w3m/config</code>删除就可以了。</p>

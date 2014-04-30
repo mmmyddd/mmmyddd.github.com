@@ -1,0 +1,229 @@
+Android SAX Compatibility
+#tags android,sax
+<p>I have been working with <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> XML SAX parser these days
+and found some ugly compatibility issues about SAX
+implementation on different <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> releases.</p>
+
+
+<p>Here I wrote a test program to demostrate the change.
+
+
+<code config="brush:java; gutter:true; toolbar:true; ruler:false;">
+package net.freeshell.mmmyddd
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.net.MalformedURLException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.DefaultHandler;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class TestSAXActivity extends Activity{
+
+    @Override
+	protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+
+	try {
+	    SAXParserFactory factory = SAXParserFactory.newInstance();
+	    SAXParser parser = factory.newSAXParser();
+	    XMLReader xmlReader = parser.getXMLReader();
+	    xmlReader.setContentHandler(new DefaultHandler(){
+		    @Override
+			public void startElement(String uri, String localName, String qName, Attributes attributes)
+			throws SAXException {
+			Log.i("TestSAX", "qName="+qName);
+			Log.i("TestSAX", "localName="+localName);
+			Log.i("TestSAX", "attributes.getValue(qName)="+attributes.getValue("value"));
+			Log.i("TestSAX", "attributes.getValue(uri, localName)=" + attributes.getValue("", localName));
+		    }
+		});
+
+	    String str="<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<elem attr=\"value\">\n</elem>\n";
+	    StringReader sr = new StringReader(str);
+	    InputSource is = new InputSource(sr);
+	    xmlReader.parse(is);
+	} catch (ParserConfigurationException e) {
+	    e.printStackTrace();
+	} catch (SAXException e) {
+	    e.printStackTrace();
+	} catch (MalformedURLException e) {
+	    e.printStackTrace();
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
+    }
+}
+</code>
+</p>
+
+
+<ul>
+<li>On 2.1-update1 and former release of Android, the output is:</li>
+</ul>
+
+<pre class="example">
+TestSAX  qName=
+TestSAX  localName=elem
+TestSAX  attributes.getValue(qName)=value
+TestSAX  attributes.getValue(uri, localName)=value
+</pre>
+
+<ul>
+<li>On 2.2 release of Android, the output changes to:</li>
+</ul>
+
+<pre class="example">
+TestSAX  qName=elem
+TestSAX  localName=
+TestSAX  attributes.getValue(qName)=value
+TestSAX  attributes.getValue(uri, localName)=value
+</pre>
+
+<p>The change is caused by a bug fixing of Android in Froyo 2.2:</p>
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=6632">http://code.google.com/p/android/issues/detail?id=6632</a></p>
+
+
+<p>Before I figured out the changes, I have thought that I
+encoutered the same issue as:</p>
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=11223">http://code.google.com/p/android/issues/detail?id=11223</a></p>
+
+<p>Because I have put a brief log message at the beginning of
+my content handler <code>startElement()</code> method:</p>
+
+<pre class="example">
+Log(&quot;MyHandler&quot;, qName);
+</pre>
+
+<p>when run the code with 2.1-update1 release the
+<code>qName</code> is an empty string, and the logging
+system ignored the line, and didn't put any word even an
+empty line in logcat. So I considered the xml document were
+not got parsed at all.</p>
+
+<p>So how to tweak the problem and write a compatible
+application that could work on both Froyo and old Android
+platform?</p>
+
+<p>After investigation, I work it around. Just set the value of
+a property of <code>SAXParserFactory</code>:
+
+
+
+<code config="brush:java; gutter:true; toolbar:true; ruler:false;">
+...
+	try {
+	    SAXParserFactory factory = SAXParserFactory.newInstance();
+
+            // add line below:
+            factory.setNamespaceAware(true);
+
+	    SAXParser parser = factory.newSAXParser();
+	    XMLReader xmlReader = parser.getXMLReader();
+	    xmlReader.setContentHandler(new DefaultHandler(){
+...
+
+</code>
+</p>
+
+<ul>
+<li>On 2.1-update1 and former release of Android, the output
+is the same:</li>
+</ul>
+
+<pre class="example">
+TestSAX  qName=
+TestSAX  localName=elem
+TestSAX  attributes.getValue(qName)=value
+TestSAX  attributes.getValue(uri, localName)=value
+</pre>
+
+<ul>
+<li>On 2.2 release of Android, the output changes to:</li>
+</ul>
+
+<pre class="example">
+TestSAX  qName=elem
+TestSAX  localName=elem
+TestSAX  attributes.getValue(qName)=value
+TestSAX  attributes.getValue(uri, localName)=value
+</pre>
+
+<p>The content handler can now use <strong>localName</strong> for selecting
+element during parsing.</p>
+
+
+<p>In fact The 2.2 SAX implementation is the correct solution,
+and the java document of <code>startElement</code> reveals:</p>
+
+<pre class="example">
+void net.freeshell.justin.TestSAXActivity.onCreate(...).new DefaultHandler() {...}.startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
+
+Receive notification of the start of an element.
+
+By default, do nothing. Application writers may override this method in a subclass to take specific actions at the start of each element (such as allocating a new tree node or writing output to a file).
+Overrides: startElement(...) in DefaultHandler
+
+Parameters:
+    uri The Namespace URI, or the empty string if the element has no Namespace URI or if Namespace processing is not being performed.
+    localName The local name (without prefix), or the empty string if Namespace processing is not being performed.
+    qName The qualified name (with prefix), or the empty string if qualified names are not available.
+    attributes The attributes attached to the element. If there are no attributes, it shall be an empty Attributes object.
+Throws:
+    SAXException - Any SAX exception, possibly wrapping another exception.
+</pre>
+
+<p>and the java document of <code>setNamespaceAware</code> reveals:</p>
+
+<pre class="example">
+void javax.xml.parsers.SAXParserFactory.setNamespaceAware(boolean value)
+
+Determines whether the factory is configured to deliver parsers that are namespace-aware.
+
+Parameters:
+    value turns namespace-awareness on or off.
+Since:
+    Android 1.0
+</pre>
+
+<p>According to the above documentation, if <code>setNamespaceAware</code> is not called, the default
+value is <code>false</code>, and the <code>localName</code> is <code>null</code>.</p>
+
+<p>But on 2.1-update and former release of Android, if you call
+<code>setNamespaceAware</code> explicitly with argument
+<code>false</code>, there will be an excpetion:</p>
+
+<pre class="example">
+&quot;The 'namespace-prefix' feature is not supported while the 'namespaces' feature is enabled.&quot;
+</pre>
+
+<p>The problem is detailed in the bug description of:</p>
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=6632">http://code.google.com/p/android/issues/detail?id=6632</a></p>
+
+<p>The implement of this interface contradicts with the
+document, and confused with the <code>true</code> and
+<code>false</code> arguments, the following interfaces are
+also affacted:</p>
+
+<pre class="example">
+factory.setFeature(&quot;http://xml.org/sax/features/namespaces&quot;, boolean-value);
+factory.setFeature(&quot;http://xml.org/sax/features/namespace-prefixes&quot;, boolean-value);
+</pre>
+
+<blockquote>
+<p class="quoted">Looking forward to a more stable and unified Android platform.</p>
+</blockquote>

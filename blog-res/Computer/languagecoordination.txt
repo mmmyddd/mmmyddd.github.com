@@ -1,0 +1,16 @@
+Programming Language Summary
+#tags language
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/languages-coordinate.png" alt="Figure 1. Programming Language Coordination"></td></tr>
+  <tr><td align="center" class="image-caption">Figure 1. Programming Language Coordination</td></tr>
+</table>
+
+
+<br>
+
+
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/languages-pos.png" alt="Figure 2. Programming Language Summary"></td></tr>
+  <tr><td align="center" class="image-caption">Figure 2. Programming Language Summary</td></tr>
+</table>

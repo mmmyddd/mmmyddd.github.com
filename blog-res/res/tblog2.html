@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="shortcut icon" href="/image/favicon.ico"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog-res/rss.xml" />
+    <link rel="stylesheet" type="text/css" charset="UTF-8" media="all" href="/blog-res/res/blog.css" />
+    <!--[if IE]>
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="/blog-res/res/iehacks.css" />
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="/blog-res/res/ie6hacks.css" />
+    <![endif]-->
+    <!-- old scripts  -->
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shCore.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="/blog-app/res/js/scripts/shBrushDiff.js"></script>
+    <link type="text/css" rel="stylesheet" href="/blog-app/res/css/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="/blog-app/res/css/styles/shThemeDefault.css"/>
+    <script type="text/javascript" src="/blog-app/res/js/collapsible.js" ></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '/blog-app/res/js/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+    <script type="text/javascript" src="/blog-app/res/js/audio-player.js" ></script>
+    <script type="text/javascript">
+      AudioPlayer.setup("/blog-app/res/js/audioplayer.swf", {
+      width: 290,
+      transparentpagebg: "yes"
+      });
+    </script>
+    <script type="text/javascript" src="/blog-app/res/js/swfobject.js"></script>
+    <script type="text/javascript">
+      var media_player = "/blog-app/res/js/player.swf";
+    </script>
+    <!-- end old scripts -->
+
+
+
+    <script type="text/javascript" src="/blog-res/res/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="/blog-res/res/blog.js"></script>
+    <script type="text/javascript">
+    var json = null;
+    var list = [];
+    $(document).ready(function() {
+        // var html = '';
+        // $.each(data, function(entryIndex, entry) {
+        //     html += '<div class="entry">';
+        //     html += '<h3 class="term">' + entry.term + '</h3>';
+        //     html += '<div class="part">' + entry.part + '</div>';
+        //     html += '<div class="definition">';
+        //     html += entry.definition;
+        //     html += '</div>';
+        //     html += '</div>';
+
+        get_links();
+
+        $.getJSON('/blog-res/tblog.json', function(data) {
+            //1. save the json data
+            json = data;
+
+            //2. calculate the navigtor
+            //alert($(location).attr('pathname'));
+            var nav_info = gen_nav($(location));
+            gen_nav_bar(nav_info);
+
+            //3. calculate the categories
+            gen_categories();
+
+            //4. calculate the tags
+            gen_tags();
+
+            //5. calculate the archives
+            gen_archives();
+
+            //6. fill the list or the unique contents
+            list = gen_list(nav_info);
+
+            $("#entry-list-view").hide();
+            $("#entry-unique").hide();
+
+            $("#list-number").html(list.length);
+
+            if(nav_info["unique"]){
+                gen_list_html(list);
+                gen_unique_html(nav_info);
+            } else {
+                gen_list_html(list);
+                $("#entry-list-view").show();
+            }
+            return;
+        });
+
+        //alert($(location).attr('pathname'));
+        //alert(document.URL);
+        return false;
+    });
+    </script>
+    <style type="text/css">
+    </style>
+    <title> Justin's Blog </title>
+  </head>
+
+  <body>
+  <div id="body-center">
+
+    <a name="top" />
+    <!-- All Body contents goes here -->
+    <div id="banner">
+      <div id="logo">
+        <a href="/blog-res/blog/">
+          <img src="/image/blog-logo.png" alt="Justin's Blog" />
+        </a>
+      </div>
+
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <input name="cx" value="005444793828600865576:qmbd79za6di" type="hidden" />
+        <input name="ie" value="UTF-8" type="hidden" />
+        <input gtbfieldid="1" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" size="16" type="text" />
+        <input value="mmmyddd.freeshell.net/blog" name="siteurl" type="hidden" />
+        <input name="ref" type="hidden" />
+        <input name="ss" type="hidden" />
+        <div id="rss">
+          <a href="/blog-res/rss.xml">
+            <img alt="rss" src="/image/rss.png" />
+          </a>
+        </div>
+      </form>
+      <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+    </div>
+
+    <div id="nav">
+      <div id="navbar">
+        <a href="/">Home</a>  &#187;
+        <a href="/blog-res/blog">Blog</a></div>
+
+      <div id="navlinks">
+        <div>
+          <a href="/blog-res/blog/about">About</a>&nbsp; :: &nbsp;
+          <a href="/blog-res/blog/">Blog</a>&nbsp; :: &nbsp;
+          <a href="/wiki/">Wiki</a>&nbsp; :: &nbsp;
+          <a href="/article/">Article</a>&nbsp; :: &nbsp;
+          <a href="/blog-res/blog/bookmarks">Bookmarks</a>&nbsp; :: &nbsp;
+          <a href="/blog-res/blog/projects">Projects</a>&nbsp; :: &nbsp;
+          <a href="/blog-res/blog/Albums">Albums</a>&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div id="site-begin"></div>
+
+    <div id="site-container">
+
+
+    <div id="site-nav">
+    <div id="site-right">
+
+      <div id="widget-about">
+        <div id="about-header" class="widget-header">
+          <b>About Me</b>
+        </div>
+        <div id="about-body" class="widget-body">
+          <table border="0" width="100%">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/blog-res/blog/about">
+                    <img id="myinfo-portrait"
+                         src="/image/photo.jpg" style="width: 120px; height: 90px;" />
+                  </a>
+                </td>
+                <td>
+                  <div id="myinfo-list">
+                    <div class="myinfo-item location">Beijing, China</div>
+                    <div class="myinfo-item name">Justin</div>
+                    <div class="myinfo-item career">Programmer</div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+          </table>
+          <div id="about-motto">
+            Roaming on my way, taking all the time, if got lost, pretend to be cool ...
+          </div>
+        </div>
+      </div>
+
+      <div id="widget-counter">
+        <div id="counter-header" class="widget-header">
+          <b>Total</b>
+          <span><!-- GoStats JavaScript Based Code -->
+            <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+            <script type="text/javascript">_gos='gostats.com';_goa=745573;
+              _got=4;_goi=64;_goz=0;_god='visitors';_gol='web analytics';_GoStatsRun();</script>
+            <noscript>
+              <a target="_blank" title="web analytics"
+                 href="http://gostats.com">
+                <img alt="web analytics"
+                     src="http://gostats.com/bin/count/a_745573/t_4/i_64/z_0/show_visitors/counter.png"
+                     style="border-width:0;" />
+              </a>
+            </noscript>
+            <!-- End GoStats JavaScript Based Code --></span>
+          <b>Visitors</b>
+        </div>
+      </div>
+
+      <div id="widget-links" style="display:none;">
+        <div id="links-header" class="widget-header">
+          <b>More Sites</b>
+        </div>
+        <div id="links-body" class="widget-body">
+        </div>
+      </div>
+    </div>
+
+    <div id="site-left">
+      <div id="widget-category">
+        <div id="category-header" class="widget-header">
+          <b>Categories</b>
+        </div>
+        <div id="category-body" class="widget-body">
+        </div>
+      </div>
+
+      <!-- <hr/> -->
+
+      <div id="widget-archive">
+        <div id="archive-header" class="widget-header">
+          <b>Archives</b>
+        </div>
+        <div id="archive-body" class="widget-body">
+        </div>
+      </div>
+
+      <!-- <hr/> -->
+
+      <div id="widget-tag">
+        <div id="tag-header" class="widget-header">
+          <b>Tags</b>
+        </div>
+        <div id="tag-body" class="widget-body">
+        </div>
+      </div>
+
+      <!-- <hr/> -->
+    </div>
+    </div>
+
+    <div id="site-content">
+
+      <div id="entry-list-view" style="display:none;">
+          <div id="entry-list-nav">
+            List View:
+            <span id="list-number"></span>
+            Posts Found.
+          </div>
+          <div id="entry-list">
+          </div>
+      </div>
+      <div id="entry-unique" style="display:none">
+        <div id="entry-nav">
+          <span id="entry-back-container">Back:&nbsp;<a id="entry-back" href="javascript:">List View</a></span> &nbsp;&nbsp;
+          <span id="entry-pre-container">Prev:&nbsp;<a id="entry-pre" href="javascript:">Prev</a></span> &nbsp;&nbsp;
+          <span id="entry-next-container">Next:&nbsp;<a id="entry-next" href="javascript:">Next</a></span>
+        </div>
+        <div id="entry-body">
+          <div id="entry-title"></div>
+          <div id="entry-meta"></div>
+          <div id="entry-content"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div id="footer">
+      <hr id="footer-splitter"/>
+      <a href="/">
+        <img alt="Home" style="border:0;width:230px;height:50px;top:0px;" src="/image/test.png" />
+      </a>
+      <br/>
+      <span class="footdate">Contact:</span>
+      <a href="mailto:mmmyddd[AT]freeshell.org">mmmyddd[AT]freeshell.org</a>
+      <br/>
+      <span class="footdate">2009-2012 © CopyLeft Contributed</span>
+    </div>
+
+  </div>
+  </body>
+
+  <script type="text/javascript">
+    //to be added
+    afterload();
+  </script>
+</html>

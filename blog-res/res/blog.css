@@ -1,0 +1,775 @@
+/* CSS:TRBL */
+body {
+    background-color: #FFFFFF;
+    background-image: url("/image/calm-blue-striped-pattern.jpg");
+    color: black;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+h2 a:link:hover, h2 a:visited:hover {
+    text-decoration: none;
+}
+
+/* Link style */
+a {
+    text-decoration: none;
+}
+a:visited {
+/*  color: #556B2F;               dark olive green */
+    color: #551A8B;
+
+}
+
+a:link, a:visited{
+  /*color: #0000CD;*/               /* blue */
+    /* color:#3333aa; */
+    color: #525299;
+}
+
+a:link:hover{
+    color: #0000CD;
+    text-decoration: underline;
+    font-style: none;
+}
+
+a:visited:hover{
+    color: #551A8B;
+    text-decoration: underline;
+    font-style: none;
+}
+
+
+/**********************************/
+
+div#body-center{
+    width: 1230px;
+    /* width: 800px; */
+    margin: auto;
+}
+
+/* div#site-container{ */
+/*    width: 800px; */
+/*     margin: auto; */
+/* } */
+
+div.category-indent, div.archive-indent{
+    padding-left: 15px;
+}
+
+div#site-left{
+    /* clear: right; */
+    /* float: right; */
+    /* margin: 0 !important; */
+    /* padding-left: 0 !important; */
+    /* padding-right: 0 !important; */
+    /* padding-top: 0.5em !important; */
+    width: 250px;
+    /* width: 200px; */
+    margin-right: 270px;
+}
+
+div#site-right{
+    clear: right;
+    float: right;
+    width: 250px;
+    border-left: 3px double #cccccc;
+    padding-left: 5px;
+}
+
+div#site-nav{
+    clear:right;
+    float:right;
+    width:520px;
+}
+
+div#about-motto{
+    clear: both;
+    color: #44AA55;
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 3px 0 3px;
+    text-align: center;
+}
+
+div#site-content{
+    width: 700px;
+    /* width: 550px; */
+    /* padding-left: 5px; */
+    margin-right: 10px;
+}
+
+div.widget-header{
+    /* background-color: #aaaaaa; */
+    background-color: #A6BCED;
+    /* margin-top: 10px; */
+ /* #E6ECF9; */
+    /* border-bottom: 1px solid #3366CC; */
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+div.widget-body{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 3px;
+}
+
+div#about-body{
+    margin-bottom: 3px;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+/*
+ * Begin: the banner parts
+ */
+div#banner{
+    height: 90px;
+}
+
+div#logo{
+    display: inline;
+}
+
+div#banner form{
+    /* display: inline; */
+    float: right;
+    /* clear: right; */
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+div#rss{
+    display: inline;
+}
+
+
+/* end of banner */
+
+/*
+ * Begin: the nav part
+ */
+div#nav{
+    background-color: #E6ECF9;
+    border-top: 1px solid #3366CC;
+    vertical-align: middle;
+    padding-bottom: 0.2em;
+}
+
+div#navbar{
+    background-color: transparent;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.1em 0 0.22em 5px;
+    vertical-align: middle;
+}
+
+div#navlinks{
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0.24em 0 0.22em;
+    text-align: right;
+    white-space: nowrap;
+}
+/* end of nav part */
+
+
+div#entry-nav{
+    background-color: #DDDDFF;
+    padding: 3px 5px 3px 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+div#entry-list-nav{
+    background-color: #DDDDFF;
+    padding: 3px 5px 3px 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+div#entry-date{
+    font-weight: bold;
+    font-size: 150%;
+    margin-top: 20px;
+}
+
+
+/* Clear to begin the site contents */
+div#site-begin{
+    clear: both;
+}
+
+hr {
+  color: #FFFFFF;
+}
+
+div#entry-title h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    text-transform: capitalize;
+}
+
+.entry-title h2 {
+    text-transform: capitalize;
+}
+
+div#entry-body{
+    padding: 0 5px 30px 10px;
+    background-color: #eeeeee;
+}
+
+div#entry-list{
+    background-color: #eeeeee;
+    padding: 10px 5px 30px 10px;
+}
+
+div#entry-date{
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+div#site-begin{
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+div#entry-content pre {
+    color: #006000;
+    /* line-height: 110%; */
+    /* padding: 0.99em; */
+    font-family: monospace;
+    white-space: pre;
+    overflow: auto;
+    background: none repeat scroll 0 0 #DFDFDF;
+    border: 1px solid #CFCFCF;
+    padding: 5px;
+}
+
+div#entry-content img.latex-display {
+    display: block;
+    margin: auto;
+}
+
+div#entry-content pre.src {
+    padding: 5px;
+}
+
+
+div#entry-content code{
+    color: #006000;
+}
+
+
+hr#footer-splitter{
+    /* border-color: #3366CC -moz-use-text-color -moz-use-text-color; */
+    border-right: medium none;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    clear: both;
+    color: #3366CC;
+    height: 0;
+    margin-bottom: 2px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+div#footer span {
+    color: #666666;
+    font-weight: bold;
+    line-height: 160%;
+}
+
+div#counter-header{
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+div#about-header{
+    text-align: center;
+}
+
+div#links-header, div#mysites-header{
+    text-align: center;
+}
+
+#myinfo-portrait{
+    height: 84px;
+    width: 112px;
+    /* background-attachment: scroll; */
+    /* background-color: transparent; */
+    /* background-position: -28px -146px; */
+    /* background-repeat: no-repeat; */
+    border: 1px solid #000000;
+    clear: left;
+    float: left;
+    margin-left: 0;
+    position: relative;
+}
+
+#myinfo-list{
+    padding-left: 3px;
+}
+
+#myinfo-list .location {
+    padding-top: 15px;
+    font-family: Arial,Helvetica,san-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 130%;
+}
+
+#myinfo-list .name {
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#myinfo-list .career {
+    font-family: Georgia,Time New Roman,Times,serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 90%;
+    text-align: right;
+    text-transform: uppercase
+}
+
+.verse{
+    background-color: #dddddd;
+    font-family: monospace;
+    padding: 5px;
+}
+
+.quoted, .citation{
+    color: #666666;
+    margin: 0;
+}
+
+blockquote {
+    border-left: 5px solid #A52A2A;
+    padding: 5px 5px 5px 8px;
+    margin-left: 25px;
+}
+
+/* #entry-content ul { */
+/*     padding-left: 20px; */
+/* } */
+
+.toplink {
+    float: right;
+    font-size: 80%;
+    display: none;
+}
+
+div#error{
+    font-weight: bold;
+    color: red;
+}
+
+/* table parts */
+.muse-table {
+    border-bottom: 1px solid #3366CC !important;
+    border-left: medium none;
+    border-right: 1px solid #3366CC !important;
+    border-spacing: 0 !important;
+    border-top: medium none;
+ /* clear: right;*/
+    line-height: 125%;
+    /* margin: 0.5em 5%; */
+    width: auto;
+}
+
+.muse-table th {
+    background-color: #E5ECF9;
+    border-collapse: collapse;
+    border-left: 1px solid #3366CC !important;
+    border-top: 1px solid #3366CC !important;
+    /* font-size: small; */
+    font-weight: bold;
+    margin: 0;
+    padding: 6px 12px;
+    text-align: left;
+    width: auto;
+}
+
+.muse-table td {
+    border-collapse: collapse;
+    border-left: 1px solid #3366CC !important;
+    border-top: 1px solid #3366CC !important;
+    /* font-size: small; */
+    margin: 0;
+    padding: 6px 12px;
+    text-align: left;
+    width: auto;
+}
+
+.muse-table tfoot td {
+    background-color: #DDDDDD;
+    border-collapse: collapse;
+    border-left: 1px solid #3366CC !important;
+    border-top: 1px solid #3366CC !important;
+    /* font-size: small; */
+    font-weight: bold;
+    margin: 0;
+    padding: 6px 12px;
+    text-align: left;
+    width: auto;
+}
+
+/* end table  */
+
+div.toggle {
+    font-size: 120%;
+    /* font-weight: bold; */
+}
+
+.contents {
+    background-color: #F5F5F5;
+    border: 1px solid #AAAAAA !important;
+    margin: 0 0 0 10px;
+    padding: 5px 10px 5px 5px;
+}
+
+
+/* CSS:TRBL */
+body {
+    background-color: #FFFFFF;
+    background-image: url("/image/calm-blue-striped-pattern.jpg");
+    color: black;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+h2 a:link:hover, h2 a:visited:hover {
+    text-decoration: none;
+}
+
+/* Link style */
+a {
+    text-decoration: none;
+}
+a:visited {
+/*  color: #556B2F;               dark olive green */
+    color: #551A8B;
+
+}
+
+a:link, a:visited{
+  /*color: #0000CD;*/               /* blue */
+    /* color:#3333aa; */
+    color: #525299;
+}
+
+a:link:hover{
+    color: #0000CD;
+    text-decoration: underline;
+    font-style: none;
+}
+
+a:visited:hover{
+    color: #551A8B;
+    text-decoration: underline;
+    font-style: none;
+}
+
+
+/**********************************/
+
+div#body-center{
+    width: 1230px;
+    /* width: 800px; */
+    margin: auto;
+}
+
+/* div#site-container{ */
+/*    width: 800px; */
+/*     margin: auto; */
+/* } */
+
+div.category-indent, div.archive-indent{
+    padding-left: 15px;
+}
+
+div#site-left{
+    /* clear: right; */
+    /* float: right; */
+    /* margin: 0 !important; */
+    /* padding-left: 0 !important; */
+    /* padding-right: 0 !important; */
+    /* padding-top: 0.5em !important; */
+    width: 250px;
+    /* width: 200px; */
+    margin-right: 270px;
+}
+
+div#site-right{
+    clear: right;
+    float: right;
+    width: 250px;
+    border-left: 3px double #cccccc;
+    padding-left: 5px;
+}
+
+div#site-nav{
+    clear:right;
+    float:right;
+    width:520px;
+}
+
+div#about-motto{
+    clear: both;
+    color: #44AA55;
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 3px 0 3px;
+    text-align: center;
+}
+
+div#site-content{
+    width: 700px;
+    /* width: 550px; */
+    /* padding-left: 5px; */
+    margin-right: 10px;
+}
+
+div.widget-header{
+    /* background-color: #aaaaaa; */
+    background-color: #A6BCED;
+    /* margin-top: 10px; */
+ /* #E6ECF9; */
+    /* border-bottom: 1px solid #3366CC; */
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+div.widget-body{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 3px;
+}
+
+div#about-body{
+    margin-bottom: 3px;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+/*
+ * Begin: the banner parts
+ */
+div#banner{
+    height: 90px;
+}
+
+div#logo{
+    display: inline;
+}
+
+div#banner form{
+    /* display: inline; */
+    float: right;
+    /* clear: right; */
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+div#rss{
+    display: inline;
+}
+
+
+/* end of banner */
+
+/*
+ * Begin: the nav part
+ */
+div#nav{
+    background-color: #E6ECF9;
+    border-top: 1px solid #3366CC;
+    vertical-align: middle;
+    padding-bottom: 0.2em;
+}
+
+div#navbar{
+    background-color: transparent;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.1em 0 0.22em 5px;
+    vertical-align: middle;
+}
+
+div#navlinks{
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0.24em 0 0.22em;
+    text-align: right;
+    white-space: nowrap;
+}
+/* end of nav part */
+
+
+div#entry-nav{
+    background-color: #DDDDFF;
+    padding: 3px 5px 3px 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+div#entry-list-nav{
+    background-color: #DDDDFF;
+    padding: 3px 5px 3px 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+div#entry-date{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+
+/* Clear to begin the site contents */
+div#site-begin{
+    clear: both;
+}
+
+hr {
+  color: #FFFFFF;
+}
+
+div#entry-title h1 {
+    margin-top: 0;
+    padding-top: 40px;
+    text-transform: capitalize;
+}
+
+.entry-title h2 {
+    text-transform: capitalize;
+}
+
+div#entry-body{
+    padding: 0 5px 30px 10px;
+    background-color: #eeeeee;
+}
+
+div#entry-list{
+    background-color: #eeeeee;
+    padding: 10px 5px 30px 10px;
+}
+
+div#entry-date{
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+div#site-begin{
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+div#entry-content .note {
+    background-color: #EFEFEF;
+    border-bottom: 1px solid #3366CC;
+    border-top: 1px solid #3366CC;
+    border-left: 5px solid #3366CC;
+    display: block;
+    padding: 3px 10px 3px 10px;
+}
+
+#entry-body {
+    line-height: 1.571em;
+}
+
+.entry {
+    margin-bottom: 15px;
+}
+
+.image-caption {
+    color: black;
+    font-weight: bold;
+}
+
+#float {
+    width: 30px;
+    /* background-color: #dddddd; */
+    background-color: #888888;
+    margin: 0;
+    padding: 3px;
+}
+
+#float img {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+}
+
+.social-div{
+    height: 18px;
+    line-height: 18px;
+    display: inline;
+}
+.social-link{
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+}
+
+.social{
+    display: inline-block;
+    background: url("/blog-res/res/16x16.gif") no-repeat 0px 0px;
+    border: 0px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+
+
+/* test index of header line */
+div#entry-content h2:before{
+    content: counter(chapter) " " ;
+}
+div#entry-content h2{
+    counter-increment: chapter;
+    counter-reset: section;
+}
+
+div#entry-content h3:before{
+    content: counter(chapter) "." counter(section) " " ;
+}
+div#entry-content h3{
+    counter-increment: section;
+    counter-reset: subsection;
+}
+
+div#entry-content h4:before{
+    content: counter(chapter) "." counter(section) "." counter(subsection) " " ;
+}
+div#entry-content h4{
+    counter-increment: subsection;
+    counter-reset: subsubsection;
+}
+
+div#entry-content h5:before{
+    content: counter(chapter) "." counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+    /* counter-reset: subsubsubsection; */
+}
+
+div#entry-content h5{
+    counter-increment: subsubsection;
+    /* counter-reset: subsubsubsection; */
+}

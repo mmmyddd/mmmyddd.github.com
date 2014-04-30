@@ -1,0 +1,34 @@
+AddApplicationsToStartUpMenu
+#tags debian
+<p>1. 应用程序</p>
+
+<p>比如想把Eclipse添加到系统的“应用程序”菜单里，方法如下：</p>
+
+<p>sudo gedit /usr/share/applications/Eclipse.desktop//文件名可以随意起</p>
+
+<p>然后在里面添加如下内容：</p>
+
+<p>[Desktop Entry]
+Name=Eclipse
+Comment=Eclipse
+Exec=/home/gcc/work/eclipse/eclipse//这是依你的系统目录而改变
+Icon=/home/gcc/work/eclipse/icon.xpm
+Terminal=false
+Type=Application
+Categories=Application;Development;</p>
+
+<p>2. Panels</p>
+
+<p>Alt+Right Click on panels</p>
+
+<p>3. icons</p>
+
+<p>/usr/share/icons</p>
+
+<p>4. move icons in panel</p>
+
+<p>Alt+Right Click the icons</p>
+
+<p>5. change the properties</p>
+
+<p>right click on icons</p>

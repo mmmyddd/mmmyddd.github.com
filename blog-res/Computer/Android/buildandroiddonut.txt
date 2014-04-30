@@ -1,0 +1,68 @@
+Build Android 1.6 - Donut
+#tags debian,android,gcc
+<p>From: <a href="http://source.android.com">http://source.android.com</a></p>
+
+<p>Ubuntu Linux (32-bit x86)</p>
+
+<p>To set up your Linux development environment, make sure you have the following:</p>
+
+<h4>Required Packages:</h4>
+
+
+<ul>
+<li>Git 1.5.4 or newer and the GNU Privacy Guard.</li>
+
+<li>JDK 5.0, update 12 or higher. Java 6 is not supported, because of incompatibilities with @Override.</li>
+
+<li>flex, bison, gperf, libsdl-dev, libesd0-dev, libwxgtk2.6-dev (optional), build-essential, zip, curl.</li>
+</ul>
+
+<pre class="example">
+$ sudo apt-get install git-core gnupg sun-java5-jdk flex bison gperf \
+                       libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip \
+                       curl libncurses5-dev zlib1g-dev
+</pre>
+
+
+
+
+
+
+<h4>You might also want Valgrind</h4>
+
+<p class="first">a tool that will help you find memory leaks, stack corruption, array bounds overflows, etc.</p>
+
+<pre class="example">
+sudo apt-get install valgrind
+</pre>
+
+
+
+<h4>Ubuntu Intrepid (8.10) users may need a newer version of libreadline:</h4>
+
+<pre class="example">
+sudo apt-get install lib32readline5-dev
+</pre>
+
+
+<h4>Debian Issues</h4>
+
+<p class="first">In <a href="http://mmmyddd.github.io/wiki/debian/index.html">debian</a> Lenney build, when run <code>make</code>, the following error occurs:</p>
+
+<p class="verse">
+gcc: error trying to exec 'cc1plus':execvp: no such file or directory<br>
+</p>
+
+<p>首先确保安装了gcc和g++ 并且版本相同,</p>
+
+<pre class="example">
+sudo apt-get install gcc-4.3 g++-4.3
+</pre>
+
+<p>将cc1plus建立符号链结：</p>
+
+<pre class="example">
+sudo ln -s /usr/lib/gcc/i486-linux-gnu/4.3/cc1plus /usr/bin/cc1plus
+</pre>
+
+

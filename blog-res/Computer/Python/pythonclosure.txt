@@ -1,0 +1,101 @@
+Python Closure
+<p>Python closure is not the &quot;true-closure&quot;, it does not support to modify the variable in the closure chain.
+Try to run the following code in the interpreter:
+
+
+<code config="brush: python;">
+def aFunc():
+    x = 2
+    def aInnerFunc():
+        for i in range(0,2):
+            x +=1
+            print "Inner Print", x
+
+    aInnerFunc()
+
+aFunc()
+</code>
+</p>
+
+<p>You will get the complain like:</p>
+
+<pre class="example">
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 14, in &lt;module&gt;
+  File &quot;&lt;stdin&gt;&quot;, line 10, in aFunc
+  File &quot;&lt;stdin&gt;&quot;, line 7, in aInnerFunc
+UnboundLocalError: local variable 'x' referenced before assignment
+</pre>
+
+<p>Well, it seems the interpreter would not like to check the outer closure
+chain while some undefined variable is used as left-value.</p>
+
+<p>But the following code does work:
+
+
+<code config="brush: python;">
+def aFunc():
+    x = 2
+    def aInnerFunc():
+        for i in range(0,2):
+            print "Inner Print", x
+
+    aInnerFunc()
+
+aFunc()
+</code>
+</p>
+
+<p>So the conclusion is the closure chain in Python is <strong><em>Read Only</em></strong>.</p>
+
+<p>I come out the following work around solution, choose the one you like:</p>
+
+<ul>
+<li>Define another variable to hold in the outer variable value:</li>
+</ul>
+
+
+<code config="brush: python;">
+def aFunc():
+    x = 2
+    def aInnerFunc():
+        y = x
+        for i in range(0,2):
+            y += 1
+            print "Inner Print", y
+
+    aInnerFunc()
+
+aFunc()
+</code>
+
+
+
+<ul>
+<li>Use the container types. The container it self cannot be change, but the elements
+in the container can be changed without problems:</li>
+</ul>
+
+
+<code config="brush: python;">
+def aFunc():
+    x = [2]
+    def aInnerFunc():
+        for i in range(0,2):
+            x[0] += 1
+            print "Inner Print", x[0]
+
+    aInnerFunc()
+
+aFunc()
+</code>
+
+
+<p>Awful, but you will know how easy to make <a href="http://mmmyddd.github.io/wiki/python/index.html">python</a> support &quot;true closure&quot; and why it doesn't after
+reading <sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>. And thanks for ynniv's wonderful article <sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup>.</p>
+
+
+<hr>
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  Snowdream's blog - <a href="http://www.blogjava.net/zellux/archive/2008/02/11/179611.html">http://www.blogjava.net/zellux/archive/2008/02/11/179611.html</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  ynniv's blog - <a href="http://ynniv.com/blog/2007/08/closures-in-python.html">http://ynniv.com/blog/2007/08/closures-in-python.html</a></p>

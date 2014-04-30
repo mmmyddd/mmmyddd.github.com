@@ -1,0 +1,54 @@
+Damn Good Gmail
+#tags google,gmail
+<p>过去使用OUTLOOK作为邮件系统， 本周公司邮件系统向GMail迁移，学习了以下GMail的特性，颇有收获：</p>
+
+
+<p>个人认为Conversation＋Label＋Filter＋Search的作法现阶段对于海量信件处理几乎是完美的组合。</p>
+
+
+<h4>Label vs. Folder</h4>
+
+<p class="first">GMail 是以Lable为内容组织方式的，Conversation和Label的对应关系是多对多的，实际上我们收到的很多mail都会讨论
+多个问题，因此这种方式要比单纯的使用Folder自然的多，也方便自动分发处理信件。</p>
+
+<p>GMail support to create 1000+ labels!</p>
+
+
+<h4>Conversation vs. Messages</h4>
+
+<p class="first">GMail以Conversation作为组织邮件的基本单位，每个Conversation会随着新邮件的到来而自动更新状态，邮件条目数会大大减少，
+而邮件上下文也会被完整保留。</p>
+
+
+
+<h4>Search vs. Sort</h4>
+
+<p class="first">GMail没有提供除时间以外的任何邮件排序， 但是提供了丰富的搜索语法来对邮件进行过滤，刚开始用还是不太习惯。</p>
+
+
+
+<h4>Inbox, Archive, Spam, Trash</h4>
+
+<p class="first">Gmail通过Inbox，Archive，Spam， Trash这种方式建议了一种有效的清理垃圾和无用邮件的方法，
+30天前的Spam和Trash将被自动清除</p>
+
+
+
+<h4>Filter - Automated Dispatcher</h4>
+
+<p class="first">Damn good is for the filter!
+Filter作为自动处理和分发工具利用了Label，Search等特性. 为阅读邮件组和并行事务提供了天然的支持</p>
+
+
+
+<h4>Keyboard shortcuts</h4>
+
+<p class="first">使用keyboard shortcuts 功能几乎不用和鼠标切换就能自由书写邮件了</p>
+
+
+
+<h4>Reply by chat</h4>
+
+<p class="first">在GMail中同时集成了IM功能，甚至音频和视频聊天功能，支持群聊， 文字的聊天记录甚至能作为Conversation的一部分作为保存。</p>
+
+

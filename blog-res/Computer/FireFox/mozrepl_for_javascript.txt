@@ -1,0 +1,152 @@
+MozRepl for Javascript
+#tags firefox
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 安装</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 运行</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 Emacs 绑定</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 连接</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">5 使用</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+<br>
+
+<p>REPL (Read,Evaluate, Print, Loop) 是很多动态语言解释器内置的
+的功能，perl是个例外，但是和其他动态语言类似，使用语言本身内置的
+eval函数可以很容易的实现类似REPL的功能。</p>
+
+<p>Javascript是个特例，在浏览器，数据库管理系统或者其他内嵌Javascript的运行环境中，
+Javascript的运行需要其运行环境，例如环境变量和对像，
+例如网页中的DOM、CSS对象，数据库对象等，根据语境进行初始化。
+在这些环境中Javascipt不是一个单纯编程语言，而是一种嵌入式的脚本。
+这样对模拟出Javascript的一种REPL解释器就有了一些限制。</p>
+
+<p>而<a href="MozRepl">Moz Repl</a>从当前运行的FF环境中模拟出一种类似的REPL解释器作为服务器，
+为FF下的插件的Javascipt开发提供支持帮助。</p>
+
+
+<h3><a name="sec1" id="sec1"></a>
+安装</h3>
+
+<p><a href="MozRepl">Moz Repl</a>的主页在<a href="http://wiki.github.com/bard/mozrepl">http://wiki.github.com/bard/mozrepl</a>
+当前最新版本是1.0.0, 下载下来的是可直接安装的firefox扩展xpi文件。</p>
+
+
+
+<h3><a name="sec2" id="sec2"></a>
+运行</h3>
+
+<p class="first">在FF的菜单栏/Tool/<a href="MozRepl">Moz Repl</a>/Start</p>
+
+
+<h3><a name="sec3" id="sec3"></a>
+Emacs 绑定</h3>
+
+
+<ul>
+<li>如果使用<a href="http://github.com/bard/mozrepl/blob/master/chrome/content/javascript.el?raw=true">javascipt.el</a>和<a href="http://github.com/bard/mozrepl/blob/master/chrome/content/moz.el?raw=true">moz.el</a>组合，配置为：</li>
+</ul>
+
+<pre class="example">
+;; load javascript mode
+(add-to-list 'auto-mode-alist '(&quot;\\.js\\'&quot; . javascript-mode))
+(autoload 'javascript-mode &quot;javascript&quot; nil t)
+
+(autoload 'moz-minor-mode &quot;moz&quot; &quot;Mozilla Minor and Inferior Mozilla Modes&quot; t)
+
+(add-hook 'javascript-mode-hook 'javascript-custom-setup)
+(defun javascript-custom-setup ()
+  (moz-minor-mode 1))
+</pre>
+
+
+<ul>
+<li>如果使用<a href="http://github.com/bard/mozrepl/blob/master/chrome/content/espresso.el?raw=true">espresso.el</a>和<a href="http://github.com/bard/mozrepl/blob/master/chrome/content/moz.el?raw=true">moz.el</a>组合，配置为：</li>
+</ul>
+
+<pre class="example">
+;; load javascript mode
+(add-to-list 'auto-mode-alist '(&quot;\\.js\\'&quot; . javascript-mode))
+(autoload 'javascript-mode &quot;javascript&quot; nil t)
+(autoload 'moz-minor-mode &quot;moz&quot; &quot;Mozilla Minor and Inferior Mozilla Modes&quot; t)
+    (add-hook 'espresso-mode-hook 'espresso-custom-setup)
+    (defun espresso-custom-setup ()
+      (moz-minor-mode 1))
+</pre>
+
+
+<p><strong><em>Key Map</em></strong></p>
+
+<p><strong>Moz Mode</strong></p>
+
+<pre class="example">
+C-M-x		moz-send-defun
+C-c C-c		moz-send-defun-and-go
+C-c C-l		moz-save-buffer-and-send
+C-c C-r		moz-send-region
+C-c C-s		run-mozilla
+</pre>
+
+<p><strong>Inf-<a href="MozRepl">Moz Repl</a> mode</strong></p>
+
+<pre class="example">
+C-c c		inferior-moz-insert-moz-repl
+</pre>
+
+
+<h3><a name="sec4" id="sec4"></a>
+连接</h3>
+
+<p class="first">实际上可以通过telnet到默认端口4242来启动脚本：</p>
+
+<pre class="example">
+telnet localhost 4242
+</pre>
+
+<p>启动后的提示符为：</p>
+
+<p class="verse">
+repl&gt;<br>
+</p>
+
+<p>如果想要获得命令的历史信息，可以安装readline wrap:</p>
+
+<pre class="example">
+sudo apt-get install rlwrap
+</pre>
+
+<p>然后这样启动：</p>
+
+<pre class="example">
+rlwrap telnet 4242
+</pre>
+
+<p>而这些功能在<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中的repl窗口都具备了。</p>
+
+
+<h3><a name="sec5" id="sec5"></a>
+使用</h3>
+
+<p class="first">当连接moz repl服务后，我们就在浏览器的运行环境中了，需要注意的是，
+该环境是整个FF浏览器的运行环境(XUL)，而不是某一个或当前网页的DOM环境。
+如果想要操纵网页，还是需要特殊的操作的。具体参考<a href="http://wiki.github.com/bard/mozrepl/tutorial">MozREPL的教程</a>。</p>
+
+

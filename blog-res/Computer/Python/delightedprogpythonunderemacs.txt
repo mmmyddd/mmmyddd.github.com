@@ -1,0 +1,40 @@
+Enjoy Python under Emacs
+#tags emacs,debian,python
+<p>最近，随着好多工具的熟悉，越来越觉得在Emacs下用Python编程真是非常:
+
+<center><font color="#FF0000" size="1000%">爽</font></center>
+</p>
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/python-programming-under-emacs.png" alt="Python under Emacs"></td></tr>
+  <tr><td align="center" class="image-caption">Python under Emacs</td></tr>
+</table>
+
+<p>下面是所有用到的工具的一个总结，稍后会用<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>中的一篇文章详细清点一下配置：</p>
+
+<ul>
+<li>主模式： <a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-mode （这个可不是<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>自带的那个<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>.el，
+而是文件名为<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-mode.el，为<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>社区推荐）</li>
+
+<li>折叠代码： hs-minor-mode， hs本身对<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>这种缩进格式不支持，
+但是<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-mode 有一个patch修复了这个问题，但是针对多层嵌套的结构
+还有小问题，当前只支持对def函数的这叠。</li>
+
+<li>查看文档： py-complete， 查看pydoc中的Api文档</li>
+
+<li>语法检查： flymake + epyflint2</li>
+
+<li>自动补全： 前端用auto-complete, 后端合成了rope(项目内部)， yasnippet(模版）, pycomplete（库）</li>
+
+<li>代码模版： yasnippet</li>
+
+<li>代码重构： rope + ropemacs</li>
+
+<li>交互Shell： 用iPython代替默认的解释器</li>
+
+<li>调试： pydb, 代替pdb</li>
+
+<li>测试： doctest（需要0.5beta） ＋ mmm (multi major mode support)</li>
+
+<li>生成文档： epydoc, 代替pydoc</li>
+</ul>

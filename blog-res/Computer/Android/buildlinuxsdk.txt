@@ -1,0 +1,50 @@
+Build Android SDK under Linux
+#tags android,sdk,linux,aapt
+<p>在使用<a href="http://mmmyddd.github.io/wiki/linux/index.html">linux</a>下面默认选项build出来的SDK作开发时候，出现了以下问题：</p>
+
+<pre class="example">
+...Unable to get buffer of resource asset file
+</pre>
+
+<p>解决办法是将<code>build sdk</code>时候的product该为sdk，有两种方法：</p>
+
+
+<p><strong>1. 使用lunch更改配置：</strong></p>
+
+<pre class="example">
+cd ~/android/src
+. build/envsetup.sh
+lunch sdk-eng
+make sdk
+</pre>
+
+<p>配置之后的结果是：</p>
+
+<pre class="example">
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=1.6
+TARGET_PRODUCT=sdk
+TARGET_BUILD_VARIANT=eng
+TARGET_SIMULATOR=false
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm
+HOST_ARCH=x86
+HOST_OS=linux
+HOST_BUILD_TYPE=release
+BUILD_ID=Donut
+============================================
+</pre>
+
+<p><strong>2. 直接用make参数：</strong></p>
+
+<pre class="example">
+make PRODUCT-sdk-sdk
+</pre>
+
+
+<p>参考资料:</p>
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  <a href="http://osdir.com/ml/android-platform/2009-01/msg00153.html">http://osdir.com/ml/android-platform/2009-01/msg00153.html</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  <a href="http://blog.csdn.net/winner82/archive/2009/09/24/4589660.aspx">http://blog.csdn.net/winner82/archive/2009/09/24/4589660.aspx</a></p>

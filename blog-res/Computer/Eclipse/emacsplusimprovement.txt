@@ -1,0 +1,16 @@
+Emacs Plus Improvement
+#tags emacs,eclipse
+<p>今天更新了一下<a href="/blog/Computer/Eclipse/emacsplusforeclipse">Eclipse Emacs+ Plugin</a>, 感觉这个插件比2.7.7做了很多更改：</p>
+
+<p>首先将更新站点定位在：
+<a href="http://www.mulgasoft.com/emacsplus/update-site">http://www.mulgasoft.com/emacsplus/update-site</a>
+发现插件已经更新到2.8.6:</p>
+
+<p>安装后，切换到在Eclipse的Preference中将keys改为Emacs+Scheme，
+有一点麻烦的是，需要新建一个工作区才能生效，对老的工作区无效。</p>
+
+<p>比较贴心的改动是在代码提示的弹出窗口中，依然可以使用C-n, C-p来选中提示项，
+使书写代码的过程更流畅。</p>
+
+<p>另外发现的一些功能使，通过F12切换到编辑窗口,可以通过C-m来最大、最小化编辑窗口。
+更多功能发现中。</p>

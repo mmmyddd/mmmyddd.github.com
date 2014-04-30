@@ -1,0 +1,16 @@
+Goodbye MOTO
+<blockquote>
+<p class="quoted">After six years with MOTO, at this time of departure,
+I just want to say &quot;Good night, have a sweet dream&quot; to
+her. MOTO will always stay with me in my memory ...</p>
+</blockquote>
+
+
+<p id='mediaplayer_1'>Goodbye, MOTO~</p>
+<script type='text/javascript'>
+        var s1 = new SWFObject(media_player,'player','400','300','9');
+        s1.addParam('allowfullscreen','true');
+        s1.addParam('allowscriptaccess','always');
+        s1.addParam('flashvars','file=/blog-res/Mood/res/goodbye_moto.mp4');
+        s1.write('mediaplayer_1');
+</script>

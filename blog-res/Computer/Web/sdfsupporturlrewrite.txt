@@ -1,0 +1,36 @@
+SDF Support URL Rewrite
+#tags sdf,apache
+<p>原来SDF的Apache服务器是支持目录级别的 <code>.htaccess</code>
+中使用URL Rewrite的，这个功能由 <code>mod_rewrite</code>提供。</p>
+
+<p>这样可以使用虚拟的静态目录做为Blog路径，可以这样写：</p>
+
+<ul>
+<li>打开cgi的执行权限，支持.cgi脚本不加扩展名运行。</li>
+</ul>
+
+<pre class="example">
+Options +MultiViews
+AddType application/x-httpd-cgi .cgi
+</pre>
+
+<ul>
+<li>打开Rewrite功能，并设置Rewirte的Base目录</li>
+</ul>
+
+<pre class="example">
+RewriteEngine On
+RewriteBase /
+</pre>
+
+<ul>
+<li>设置该目录下的重写规则：</li>
+</ul>
+
+<pre class="example">
+RewriteRule ^blog(.*)$   index.cgi$1 [L]
+</pre>
+
+<p><span class="note">
+[L]指的是这时最后一条规则
+</span></p>

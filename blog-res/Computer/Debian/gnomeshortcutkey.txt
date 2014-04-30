@@ -1,0 +1,216 @@
+Gnome Shortcut Keys
+#tags debian,gnome,shortcut key
+<p>简单总结一下Gnome桌面的快捷键：</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Global</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Desktop</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 Window</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 General Application Keys</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec5">4.1 File</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">4.2 Editing</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec7">4.3 Menu</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec8">5 Customizable Global Application Shortcuts</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">6 Yakuake</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<br>
+
+<h2><a name="sec1" id="sec1"></a>
+Global</h2>
+
+<p class="first">Alt + F1: Expand Application Menu</p>
+
+<p>Alt + F2: Open Run Application Dialog</p>
+
+<p>Print Screen: Capture the Entire Desktop</p>
+
+<p>Alt + Print Screen: Capture the Current Focused Window</p>
+
+<p>Alt + Ctrl + D: Show/Hide Desktop, Switch Between Current Window and Desktop</p>
+
+<p>Alt + Ctrl + L: Lock the screen</p>
+
+<p>Alt+Tab: Switch among Windows in Current Workspace (<strong>with</strong> a popup window list all window), press &lt;shift&gt; in reverse order</p>
+
+<p>Alt+Esc:  Switch among Windows in Current Workspace (<strong>without</strong> a popup window list all window), press &lt;shift&gt; in reverse order</p>
+
+<p>Alt+Ctrl+Tab: select panels/desktop (<strong>with</strong> a popup window list all panels), press &lt;shift&gt; in reverse order</p>
+
+<p>Alt+Ctrl+Esc: select panels/desktop (<strong>without</strong> a popup window list all panels), press &lt;shift&gt; in reverse order</p>
+
+<p>Shift+Ctrl+Del or Shift+Ctrl+Alt+Insert: Show system quite option dialog, i.e. (logout, shutdown, restart, suspend)</p>
+
+<p>Alt+Ctrl+&lt;left&gt;/&lt;right&gt;/&lt;up&gt;/&lt;down&gt;: Switch Between Workspaces</p>
+
+<p>Shift+Ctrl+Alt+&lt;left&gt;/&lt;right&gt;/&lt;up&gt;/&lt;down&gt;: Move Currentl Window to Next Workspace</p>
+
+
+
+<h2><a name="sec2" id="sec2"></a>
+Desktop</h2>
+
+<p class="first">F1: Show Online Help Window</p>
+
+<p>Ctrl+O: Open the Selected Item</p>
+
+<p>Ctrl+R：Reload Desktop, Refresh Icons</p>
+
+<p>Ctrl+S: Select items By RE Mode String</p>
+
+<p>Ctrl+L: 打开位置对话框</p>
+
+<p>Ctrl+F: 打开文件搜索窗口</p>
+
+<p>Ctrl+B: Open Bookmark Dialog</p>
+
+<p>Arrows: Select Desktop Items</p>
+
+
+
+<h2><a name="sec3" id="sec3"></a>
+Window</h2>
+
+<p class="first">Alt+&lt;Spacebar&gt;: Open Window Menu</p>
+
+<p>Alt+F4: Close</p>
+
+<p>Alt+F5: Restore</p>
+
+<p>Alt+F7: Move</p>
+
+<p>Alt+F8: Resize</p>
+
+<p>Alt+F9: Minimize</p>
+
+<p>Alt+F10: Maximize</p>
+
+<p>F10: Focus on Leftmost Menu</p>
+
+<p>Ctrl+F10: context menu of the panel</p>
+
+<p>Shift+F10: context menu for selected the panel object or windows</p>
+
+<p>Tab or &lt;Arrows&gt;: navigate</p>
+
+<p>Esc: close menu</p>
+
+<p>Enter or Spacebar: choose menu item</p>
+
+
+
+<h2><a name="sec4" id="sec4"></a>
+General Application Keys</h2>
+
+<p class="first">下面是比较普遍的应用程序的快捷键定义，但是会根据具体应用程序的不同而有差异</p>
+
+<h3><a name="sec5" id="sec5"></a>
+File</h3>
+
+<p class="first">Ctrl+N: New Document or Window</p>
+
+<p>Ctrl+S: Save</p>
+
+
+<h3><a name="sec6" id="sec6"></a>
+Editing</h3>
+
+<p class="first">Ctrl+X: Cut</p>
+
+<p>Ctrl+C: Copy</p>
+
+<p>Ctrl+V: Paste</p>
+
+<p>Ctrl+Z: Undo</p>
+
+<p>Ctrl+Y: Redo</p>
+
+
+
+<h3><a name="sec7" id="sec7"></a>
+Menu</h3>
+
+<p class="first">Alt+&lt;key&gt;: 选择菜单</p>
+
+&lt;key&gt;: 选择菜单项
+
+
+
+
+
+<h2><a name="sec8" id="sec8"></a>
+Customizable Global Application Shortcuts</h2>
+
+<p class="first">上面介绍的快捷键的设置大部份都可以在gnome的注册表 <code>apps/metacity</code>下找到定义，
+这里仅介绍如何定义全局的快捷键来启动应用程序：</p>
+
+<ol>
+<li>打开－<code>gconf-editor</code></li>
+
+<li>选择键值： apps/metacity/keybinding_commands/command_(n), Set the Command Line</li>
+
+<li>选择键值： apps/metacity/global_keybindings/run_command_(n), Set the Hot Key</li>
+</ol>
+
+<p>下边是我经常用到的定义：</p>
+
+<p>Ctrl+Shift+T: Open a Terminal Window</p>
+
+<p>Ctrl+Shift+E: Open Emacs</p>
+
+<p>Ctrl+Shift+F: Open Firefox</p>
+
+
+
+<h2><a name="sec9" id="sec9"></a>
+Yakuake</h2>
+
+<p class="first">Ctrl+Esc: Show/Hide yakuake</p>
+
+<p>Ctrl+Shift+N, Ctrl+Shift+P: Next/Previous terminal</p>
+
+<p>Ctrl+Alt+N: New Terminal Window</p>
+
+<p>Ctrl+Alt+K: Kill the Terminal Window</p>
+
+<p>Ctrl+Alt+M: Rename the Terminal Window</p>
+
+

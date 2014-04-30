@@ -1,0 +1,25 @@
+Blog开张公告贴
+<p>Blog经过两星期努力，正式上线测试。</p>
+
+<p>本站采用Blosxom引擎，perl脚本实现，只包含了一些基本的控件和展示效果，页面还得调整一下：</p>
+
+<ul>
+<li>个人信息介绍</li>
+<li>日历</li>
+<li>分类</li>
+<li>存档</li>
+<li>分页</li>
+<li>Latex公式</li>
+<li>Muse发布</li>
+</ul>
+
+<p>计划实现的功能包括：</p>
+
+<ul>
+<li>标签</li>
+<li>评论</li>
+<li>代码展现</li>
+</ul>
+
+<p>这些功能还需要数据库的支持，所以暂且搁置，
+准备把Google的GAE作为本站的远程数据库，用<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>－Dijango实现数据存储管理。</p>

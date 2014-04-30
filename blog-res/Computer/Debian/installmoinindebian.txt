@@ -1,0 +1,109 @@
+Install MoinMoin in Debian
+#tags moinmoin,debian,wiki
+<p>Debian下很容易安装软件包moinmoin-common和<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>-moinmoin， 但配置起来实在麻烦，
+尤其是后者提供对<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a> farm的配置，搞的头大了，wsgi倒是简单，配好以后
+总是登录不上去，反正是自己要用的，干脆返璞归真，用cgi这种据说很慢的方式搭建。</p>
+
+<ul>
+<li>首先从源代码Moin-1.9.1开始安装，把下载下来tar包的解压缩，然后运行：</li>
+</ul>
+
+<pre class="example">
+cd ~/downloads/moin-1.9.1
+sudo python setup.py install --force --record=install.log
+</pre>
+
+
+<ul>
+<li>将按装路径下的文件拷贝一份出来到本地路径</li>
+</ul>
+
+<pre class="example">
+cd ~/local/
+cp -r /usr/share/moin/ ./
+cp -r /usr/local/lib/python2.5/site-packages/MoinMoin/web/static/htdocs \
+      ./moin/
+</pre>
+
+<ul>
+<li>将cgi脚本拷贝到本地目录顶层</li>
+</ul>
+
+<pre class="example">
+cd ~/local/moin
+cp ./moin/server/moin.cgi ./
+cp ./config/wikiconfig.py ./
+</pre>
+
+
+<ul>
+<li>更改配置wikiconfig.py：</li>
+</ul>
+
+<pre class="example">
+
+# uncomment the following lines
+page_front_page = u&quot;FrontPage&quot;
+
+# ...
+
+superuser = [u&quot;Justin&quot;, ]
+
+</pre>
+
+
+<ul>
+<li>改变目录的访问权限, 其中www-data是httpd服务器的运行脚本的权限</li>
+</ul>
+
+<pre class="example">
+cd ~/local/
+sudo chown -R www-data.www-data moin
+sudo chmod -R ug+rwX moin
+sudo chmod -R o-rwx moin
+</pre>
+
+
+<ul>
+<li>配置Apache， 在/etc/apache2/conf.d中增添moin配置文件：</li>
+</ul>
+
+<pre class="example">
+
+&lt;IfModule alias_module&gt;
+    Alias /moin_static191/ &quot;/home/justin/local/moin/htdocs/&quot;
+    ScriptAlias /wiki &quot;/home/justin/local/moin/moin.cgi&quot;
+&lt;/IfModule&gt;
+
+&lt;Directory &quot;/home/justin/local/moin&quot;&gt;
+    AllowOverride None
+    Options None
+    Order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+&lt;Directory &quot;/home/justin/local/moin/htdocs&quot;&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+</pre>
+
+
+<ul>
+<li>重新Apache服务：</li>
+</ul>
+
+<pre class="example">
+sudo /etc/init.d/apache2 restart
+</pre>
+
+
+<ul>
+<li>重起后以超级用户登录，安装语言包，输入以下地址到浏览器：
+<a href="http://localhost/wiki/LanguageSetup?action=language_setup">http://localhost/wiki/LanguageSetup?action=language_setup</a>
+然后，Pick up your language if different from English, then press install on the all_pages link (it's the last line in the list). You'll obtain a &quot;Attachment 'English_all_pages.zip installed.&quot; message.
+配置完成，测试一下，编辑新的<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>页面: <a href="http://localhost/wiki/TestPage">http://localhost/wiki/TestPage</a></li>
+</ul>

@@ -1,0 +1,45 @@
+等额本金还是等额本息
+<p>在<a href="/blog/Math/loan-rate">贷款购房相关问题</a>中计算过，</p>
+
+<p><strong>1. 等额本金的还款总额是：</strong>
+<br>
+
+<math>
+P + P \times \frac{r\%}{12} \times \frac{12\times N +1}{2}
+</math>
+</p>
+
+<p><strong>2. 等额本息的还款总额是：</strong>
+<br>
+
+<math>
+12\times N \times P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}
+</math>
+</p>
+
+
+<p>为了比较这两种还款方式的差别，我们将这两个式子做比值，即 <strong>等额本金/等额本息</strong>,
+约去公共项, 得到：</p>
+
+<!-- 
+$$\frac{1 + \frac{r\%}{12} \times \frac{ 12 \times N +1}{2} }{12\times N \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}}$$
+--><img src="./latex/latex2png-whichloan__1300318956.png" alt="latex2png equation" class="latex-display">
+
+<p>并将当前商业贷款利率 <strong>r%=4.158%</strong>, 以还款年限为横坐标，使用gnuplot将该曲线画出：</p>
+
+
+
+<table class="image" width="100%">
+  <tr><td align="center"><img src="./res/loan-rate.png" alt="等额本金:等额本息"></td></tr>
+  <tr><td align="center" class="image-caption">等额本金:等额本息</td></tr>
+</table>
+
+
+
+<p>可以看到当还款年限较短，等额本金和等额本息的偿还总额之比接近1,二者偿还总额差不多，
+而当还款年限30年时，二者的比值接近92%，如果按按揭60万计算，等额本金的还款方式将
+比等额本息少还款10万左右。当然，这是以还款的现金价值为代价的。</p>
+
+<p>如果贷款人有更高回报的投资方式，即回报率大于贷款利率4.187%，则可以采取等额本息还款，
+否则则应采用等额本金的还款方式。当然，要考虑的还有贷款人的承受能力和投资的时间成本，
+以及通货膨胀，银行利率调整等的因素的影响。</p>

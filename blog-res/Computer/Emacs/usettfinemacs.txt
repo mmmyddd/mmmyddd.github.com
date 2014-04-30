@@ -1,0 +1,64 @@
+Use True Type Font in Emacs
+#tags debian,font,linux,emacs
+<p>Emacs23 GTK版本已经支持XFT/TTF字体。我的字体配置：</p>
+
+<ul>
+<li>默认（英文字体）为Apple－Monaco</li>
+<li>中文字体为Microsoft－雅黑</li>
+</ul>
+
+<p>这里给出配置步骤：</p>
+
+<ul>
+<li>将如下字体文件拷贝到系统字体目录的一个子目录
+例如<code>/usr/share/fonts/truetype/custom</code>：</li>
+</ul>
+
+<p class="verse">
+&nbsp;&nbsp;-rwxr-xr-x  1 root root   275744 04-05 07:39 Monaco_Linux.ttf<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash;  1 root root 14685876 06-21 22:35 msyhbd.ttf<br>
+&nbsp;&nbsp;-rw-r&mdash;r&mdash;  1 root root 15044440 06-21 22:35 msyh.ttf<br>
+</p>
+
+<ul>
+<li>运行字体刷新命令：</li>
+</ul>
+
+<pre class="example">
+fc-cache -f -v
+</pre>
+
+<ul>
+<li>配置Emacs，在 <code>~/.Xresources</code>文件中加入：</li>
+</ul>
+
+<pre class="example">
+Emacs.Font: Monaco-9
+</pre>
+
+<p>并运行：</p>
+
+<pre class="example">
+xrdb -load ~/.Xresources
+</pre>
+
+<ul>
+<li>编辑Emacs启动文件，加入：</li>
+</ul>
+
+<pre class="example">
+(if window-system
+    (progn
+      (create-fontset-from-x-resource)
+
+      ;; 设置中文字体
+      (set-fontset-font &quot;fontset-default&quot;
+                        'chinese-gb2312  '(&quot;Microsoft YaHei&quot;  .  &quot;gb2312.1980-0&quot;))))
+</pre>
+
+
+<ul>
+<li>重新启动Emacs，效果如下：</li>
+</ul>
+
+<p class="image"><img src="./res/2011-06-22-213225_684x558_scrot.png" alt=""></p>

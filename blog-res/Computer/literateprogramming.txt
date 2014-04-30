@@ -1,0 +1,34 @@
+Literate Programming
+#tags language,literate programming
+<p>最近试用了下Leo这个编辑器，感觉很另类，用一个大纲视图组织一个项目的所有文档和代码，
+代码片断之间可以相互引用。这样从一份代码和文档的混合体中，可以直接生成代码和文档。</p>
+
+<p>记得在《程序员修炼》中曾经提到，文档应该内嵌到代码中，在<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>的doctest，甚至
+测试的代码也可以文档化，而在Leo这种编辑模式中，我们却看到了另外一个极端，代码文档化，
+或者说代码被嵌入到文档中间。</p>
+
+<p>实际上，这种代码书写方式实践了Donald E. Knuth的文学化编程（Literate Programming)
+Donald从编写Tex到写TAOCP, 最终将这Tex和代码结合起来，产生了LP的念头：</p>
+
+
+<pre class="example">
+         	 (weave) ------------&gt;+------------+
+	       	/     		      |	 Tex Doc   |\
++------------+ /      		      +------------+ \
+|Literate    |/					      \
+|Program     |\	 &lt;-------------------------------------	(Synchronize)
++------------+ \				       /
+       	       	\				      /
+               (tangle) -------------&gt;+-------------+/
+		    		      |	 Source Code|
+		    		      +-------------+
+</pre>
+
+<p>按照Donald最初的关于文学化编程的描述，LP源代码是文档和代码的web，在这种模式下需要两个转化，
+用weave从LP文档中提取文档，用tangle来提取源代码，同时通过导出到Tex和代码中的标记，也可以
+很方便的和LP文档做同步。</p>
+
+<p>在Debian的软件包目录下，主要有两种常用的cweb和noweb，noweb似乎对多种编程语言的支持好些。
+关于二者的一个讨论可以看<a href="http://omlc.ogi.edu/software/lp/">这里</a>。</p>
+
+<p>LP Website: <a href="http://www.literateprogramming.com/">http://www.literateprogramming.com/</a></p>

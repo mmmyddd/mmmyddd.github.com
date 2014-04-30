@@ -1,0 +1,14 @@
+关于Wiki的修改
+<blockquote>
+<p class="quoted">Emacs相对于vi而言，更像一种书写工具，而不是编程工具。</p>
+</blockquote>
+
+<p>最近两天，把<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>部份的内容和topic树改成异步传输，通过iframe把
+topic部份传送过来，<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>这边只需要维护一个全局的topic文件就可
+以了，这样以后就可以单独更新每一篇<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>文章，topic也会跟着改变。</p>
+
+<p>所以，以后我更新<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>的速度就会加快不少，和blog一样，只需要写完每篇文章
+<code>C-c C-t</code>,就可以将文章本身和引用的图片等资源上传
+到服务器上。</p>
+
+<p>这也是我做这个主页空间尝试的一种方式&mdash;连贯书写, 自由表达:)</p>

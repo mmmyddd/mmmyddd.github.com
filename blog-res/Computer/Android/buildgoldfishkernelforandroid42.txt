@@ -1,0 +1,36 @@
+Build Goldfish Kernel For Android 4.2
+#tags android,goldfish,kernel
+<h2>Download</h2>
+
+<pre class="example">
+justin@Justin:~/android/src/goldfish/arch/arm/boot$ git remote -v
+origin  https://android.googlesource.com/kernel/goldfish.git (fetch)
+origin  https://android.googlesource.com/kernel/goldfish.git (push)
+</pre>
+
+
+
+<h2>Change Makefile</h2>
+
+<pre class="example">
+ARCH = arm
+CROSS_COMPILE = arm-eabi-
+</pre>
+
+
+<h2>Build with Make (for <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> 4.x use armv7)</h2>
+
+<pre class="example">
+export PATH=/home/justin/android/src/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin/:$PATH
+make goldfish_armv7_defconfig
+make
+</pre>
+
+
+<h2>Use the new kernel</h2>
+
+<pre class="example">
+alias emulator='emulator -avd 4.2 -system ~/android/src/out/target/product/generic/system.img -kernel ~/android/src/goldfish/arch/arm/boot/zImage -sdcard ~/.android/avd/4.2.avd/sdcard'
+</pre>
+
+

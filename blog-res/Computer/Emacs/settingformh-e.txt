@@ -1,0 +1,138 @@
+Setting For MH-E
+#tags mail,debian,emacs
+<p>使用<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>自带的默认mail前端作为邮件阅读工具：</p>
+
+
+<h4>安装所需要的软件包</h4>
+
+
+<pre class="example">
+sudo apt-get install fetchmail procmail msmtp mh mh-e
+</pre>
+
+
+
+<h4>配置</h4>
+
+<p><strong>1.Send Mail</strong></p>
+
+<p>如下是<a href="http://www.emacswiki.org/cgi-bin/wiki/">Emacs Wiki</a><sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>的给出的配置文件， <code>
+~/.msmtprc
+</code> ：</p>
+
+<pre class="example">
+# username@yandex.ru
+account yandex
+host smtp.yandex.ru
+from username@yandex.ru
+auth login
+user username
+password userpass
+# username@gmail.com
+account gmail
+host smtp.gmail.com
+port 587
+from username@gmail.com
+auth on
+user username@gmail.com
+password userpass
+tls on
+tls_trust_file /home/banan/.certs/ThawtePremiumServerCA.crt
+</pre>
+
+<p>修改文件权限为0600</p>
+
+<p>msmtp是用来通过SMTP协议发送邮件，
+以上配置了两个发信用的帐户，具有不同的from域。</p>
+
+<p>然后可以配置从MH-E写的草稿中的from域来匹配帐户的from域，
+从而选择发送邮件的帐户：</p>
+
+<p>首先在<code>
+/etc/nmh/mts.conf
+</code>中修改相应的配置：</p>
+
+<pre class="example">
+sendmail: /home/justin/bin/.msmtp-envelope-from.sh
+mts: sendmail
+masquerade: draft_from
+</pre>
+
+<p>然后补齐其中用到的脚本<code>
+/home/justin/.msmtp-envelope-from.sh
+</code>, 并将该脚本加上可执行权限：</p>
+
+<pre class="example">
+#!/bin/sh
+# can't just write &quot;sendmail: /usr/local/bin/msmtp --read-envelope-from&quot; in mts.conf
+# so it's a little workaround
+# makes msmtp to read &quot;From:&quot; field and to use corresponding account
+/usr/local/bin/msmtp --read-envelope-from $*
+</pre>
+
+<p><strong>2. Recieve and Dispatch Mail</strong></p>
+
+<p>收信首先配置收信帐户，<code>
+~/.fetchmailrc
+</code>, 修改：</p>
+
+<pre class="example">
+set daemon 900
+set logfile /home/justin/.fetchmaillog
+poll pop.gmail.com proto POP3 user ***@gmail.com pass *** ssl keep
+fetchlimit 20
+mda &quot;/usr/bin/procmail -d %T&quot;
+</pre>
+
+<p>修改文件权限为0600</p>
+
+<p>修改procmail的分发目录，在<code>
+~/.procmailrc
+</code>中：</p>
+
+
+<pre class="example">
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+SHELL=/bin/bash
+MAILDIR=$HOME/Mail
+DEFAULT=$MAILDIR/inbox/.
+LOGFILE=$MAILDIR/.procmaillog
+</pre>
+
+<p><span class="note">
+<strong>注意：</strong>  DEFAULT变量最后的<code>
+/.
+</code>说明这个目录是MH格式的邮件目录<sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup>
+</span></p>
+
+
+<p><strong>3. MH-E Setting</strong></p>
+
+<p>设置MH的收信目录和发信方法：</p>
+
+<pre class="example">
+Path: Mail
+postproc: /usr/local/libexec/nmh/spost
+</pre>
+
+<p>收信目录为<code>
+~/Mail
+</code>, 发信采用spost方法。</p>
+
+<p><strong>4. Emacs Setting</strong></p>
+
+<p>配置相应的<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>前端变量：</p>
+
+<pre class="example">
+(setq mh-send-uses-spost-flag t)
+(setq mail-user-agent 'mh-e-user-agent)
+</pre>
+
+<hr>
+参考资料:
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> Emacswiki: <a href="http://www.emacswiki.org/emacs/MH-E">http://www.emacswiki.org/emacs/MH-E</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a> Using Procmail at Monash University: <a href="http://polydistortion.net/doc/procmail-monash.html">http://polydistortion.net/doc/procmail-monash.html</a></p>
+
+

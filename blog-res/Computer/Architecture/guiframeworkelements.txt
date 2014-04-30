@@ -1,0 +1,106 @@
+GUI System
+<h4>GUI系统的例子</h4>
+
+<p class="first">从接触计算机到现在，学习了很多GUI的系统，列举如下：</p>
+
+<ul>
+<li>Jave AWT/Swing</li>
+<li>Eclipse SWT</li>
+<li>MFC</li>
+<li>Gtk+ 2.0</li>
+<li>Qt</li>
+</ul>
+
+<p>还没有接触到的，或者接触较少的，类似的系统还有：</p>
+
+<ul>
+<li>C#.NET 框架</li>
+<li>Flex/Flash</li>
+<li>Silverlight</li>
+<li>HTML/Ajax (可类比，接触较少）</li>
+<li>HTML5 (?)</li>
+</ul>
+
+<p>实际上还有很多内部开发的私有GUI框架，有些甚至是用XML＋嵌入式脚本语言实现。</p>
+
+
+
+<h4>GUI系统的组成</h4>
+
+<p class="first">这里先明确要讨论的对象，既不是应用程序开发框架(Application Framework), 例如MFC，QT;
+也不是程序语言开发平台(Programming Language Platform)，例如Java，C#;
+而仅仅是应用程序开发中的GUI框架, 即编写一个GUI应用程序所用到的必要的组件。</p>
+
+
+
+<ul>
+<li>Widgets
+
+<ul>
+<li>Control Tree: Containment</li>
+
+<li>Control Event: Interaction, signal</li>
+
+<li>Control Model: Data binding</li>
+
+<li>Control Layout: Dimension, Coordination, Packing</li>
+
+<li>Control Appearance: Look and feel, theme</li>
+</ul></li>
+
+<li>Low level event
+
+<ul>
+<li>Mouse</li>
+
+<li>Keyboard</li>
+</ul></li>
+
+<li>Resource: Icon/Image, Font, Color, String, Media, File etc</li>
+
+<li>Drawing
+
+<ul>
+<li>2D Drawing</li>
+
+<li>3D Drawing</li>
+</ul></li>
+
+<li>GUI Threading: Event Loop</li>
+
+<li>Common Componets: Common Dialog, Menu, Context Menu, Window</li>
+
+<li>Document-View Model</li>
+
+<li>Utils
+
+<ul>
+<li>UI builders</li>
+
+<li>Command, Action, Acceleration, Navigation</li>
+
+<li>Help system</li>
+
+<li>I18N/L10N</li>
+</ul></li>
+</ul>
+
+
+
+<h4>GUI的发展趋势</h4>
+
+<p class="first">GUI的发展有以下特征：</p>
+
+<p>1. 声明式的UI</p>
+
+<p>2. 高级的数据绑定形式</p>
+
+<p>3. 可切换的外观</p>
+
+<p>4. 脚本化的事件处理逻辑</p>
+
+
+
+
+
+

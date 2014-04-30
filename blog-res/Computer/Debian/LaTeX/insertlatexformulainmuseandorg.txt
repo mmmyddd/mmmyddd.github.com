@@ -1,0 +1,196 @@
+Insert Latex Formula in Muse and Org Articles
+#tags texmacs,latex,muse,org-mode,emacs
+<p>Muse and Orgmode is my current way to write on the <a href="http://mmmyddd.github.io/wiki/website/index.html">website</a>
+with Emacs. Emacs makes me feel free to write blog and <a href="http://mmmyddd.github.io/wiki/index.html">wiki</a> with
+pure text manipulations, and I can copy anything I want from
+other buffers. It is also possible to use latex fragments in
+Emacs Muse and Orgmode articles, for example, in muse you
+can write:</p>
+
+<pre class="example">
+&lt;latex&gt;
+$$E=mc^2$$
+&lt;/latex&gt;
+</pre>
+
+<p>to insert:</p>
+
+
+<!-- 
+$$E=mc^2$$
+--><img src="./latex/latex2png-insertlatexformulainmuseandorg__420613331.png" alt="latex2png equation" class="latex-display">
+
+<p>To compose a formula intuitively, I prefer the Texmacs way because
+<a href="http://mmmyddd.github.io/blog/Computer/Debian/LaTeX/texmacsisawesome.html">TeXmacs is Awesome</a> So I am always
+thinking about if I can connect the two sides, and make the
+insertion of Formula more fluently.</p>
+
+<p>Here is my current solution:</p>
+
+<p><strong>1.</strong> Defined a hotkey in Texmacs init file
+<code>/home/justin/.TeXmacs/progs/my-init-texmacs.scm</code>
+to export the current selection to latex fragment:</p>
+
+<pre class="example">
+(kbd-map
+ (&quot;C-c C-w&quot; (clipboard-copy-export &quot;latex&quot; &quot;primary&quot;))
+)
+</pre>
+
+<p><strong>2.</strong> Insert the copied latex fragment into <a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a> buffer using the hotkey:
+<code>F10, e, p</code></p>
+
+<p><strong>3.</strong> Org mode already has the function
+<code>org-preview-latex-fragment</code> binding to key
+<code>C-c, C-x, C-l</code> to in-place preview the tex
+fragment, to cancel the preview, use
+<code>org-ctrl-c-ctrl-c</code>, which is binding to
+<code>C-c, C-c</code>, if you would like to add this preview
+feature in muse mode, add the following lines in your <a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>
+init file:</p>
+
+<pre class="example">
+(define-key muse-mode-map [(control c) (control j)] 'org-preview-latex-fragment)
+(define-key muse-mode-map [(control c) (control c)] 'org-ctrl-c-ctrl-c)
+</pre>
+
+<p><span class="note"> <strong>Note:</strong> By default,
+<code>org-preview-latex-fragment</code> can only recognize
+the latex fragments staying in $ or $$, or other \begin
+... \end structure of latex, so in muse you should always
+include these structrues in <code>&lt;math&gt;</code> or <code>&lt;latex&gt;</code> tags. (May be
+we can do more to customize the fuction to recognize the
+<code>&lt;math&gt;</code> tag, because muse will put the content of <code>&lt;math&gt;</code> in $
+pairs. (TBD - refer to <code>org-latex-regexps</code>
+variable) or we can just always use <code>&lt;latex&gt;</code> tag in muse to
+step aside.  </span></p>
+
+<p><strong>4.</strong> Because Texmacs introduces some private latex macros, we
+need to add these macros to the header of the temp files
+which will be used to compile and generate the preview
+images, otherwise we should be bothered to edit the latex
+fragments from Texmacs every now and then. Below is what I used:</p>
+
+
+<p>For muse:</p>
+
+<pre class="example">
+ '(muse-latex-header &quot;\\documentclass{article}
+
+\\usepackage[english]{babel}
+\\usepackage{ucs}
+\\usepackage[utf8x]{inputenc}
+\\usepackage[T1]{fontenc}
+\\usepackage{hyperref}
+\\usepackage[pdftex]{graphicx}
+
+\\def\\museincludegraphics{%
+  \\begingroup
+  \\catcode`\\|=0
+  \\catcode`\\\\=12
+  \\catcode`\\#=12
+  \\includegraphics[width=0.75\\textwidth]
+}
+
+%%%%%%%%%% Start TeXmacs macros
+\\newenvironment{enumeratenumeric}{\\begin{enumerate}[1.]}{\\end{enumerate}}
+\\newcommand{\\mathe}{\\mathrm{e}}
+\\newcommand{\\mathd}{\\mathrm{d}}
+\\newcommand{\\tmop}[1]{\\operatorname{#1}}
+\\newcommand{\\tmscript}[1]{\\text{\\scriptsize $#1$}}
+\\newcommand{\\tmem}[1]{{\\em #1\\/}}
+%%%%%%%%%% End TeXmacs macros
+
+
+\\begin{document}
+
+\\title{&lt;lisp&gt;(muse-publish-escape-specials-in-string
+  (muse-publishing-directive \&quot;title\&quot;) 'document)&lt;/lisp&gt;}
+\\author{&lt;lisp&gt;(muse-publishing-directive \&quot;author\&quot;)&lt;/lisp&gt;}
+\\date{&lt;lisp&gt;(muse-publishing-directive \&quot;date\&quot;)&lt;/lisp&gt;}
+
+\\maketitle
+
+&lt;lisp&gt;(and muse-publish-generate-contents
+           (not muse-latex-permit-contents-tag)
+           \&quot;\\\\tableofcontents
+\\\\newpage\&quot;)&lt;/lisp&gt;
+
+&quot;)
+ '(muse-latex2png-fg &quot;black&quot;)
+ '(muse-latex2png-template &quot;\\documentclass{article}
+\\usepackage{fullpage}
+\\usepackage{amssymb}
+\\usepackage[usenames]{color}
+\\usepackage{amsmath}
+\\usepackage{latexsym}
+\\usepackage[mathscr]{eucal}
+%preamble%
+\\pagestyle{empty}
+
+%%%%%%%%%% Start TeXmacs macros
+\\newenvironment{enumeratenumeric}{\\begin{enumerate}[1.]}{\\end{enumerate}}
+\\newcommand{\\mathe}{\\mathrm{e}}
+\\newcommand{\\mathd}{\\mathrm{d}}
+\\newcommand{\\tmop}[1]{\\operatorname{#1}}
+\\newcommand{\\tmscript}[1]{\\text{\\scriptsize $#1$}}
+\\newcommand{\\tmem}[1]{{\\em #1\\/}}
+%%%%%%%%%% End TeXmacs macros
+\\begin{document}
+{%code%}
+\\end{document}
+&quot;)
+</pre>
+
+<p>For orgmode:</p>
+
+<pre class="example">
+(custom-set-variables
+'(org-format-latex-header &quot;\\documentclass{article}
+\\usepackage[usenames]{color}
+\\usepackage{amsmath}
+\\usepackage[mathscr]{eucal}
+\\pagestyle{empty}             % do not remove
+[PACKAGES]
+[DEFAULT-PACKAGES]
+% The settings below are copied from fullpage.sty
+\\setlength{\\textwidth}{\\paperwidth}
+\\addtolength{\\textwidth}{-3cm}
+\\setlength{\\oddsidemargin}{1.5cm}
+\\addtolength{\\oddsidemargin}{-2.54cm}
+\\setlength{\\evensidemargin}{\\oddsidemargin}
+\\setlength{\\textheight}{\\paperheight}
+\\addtolength{\\textheight}{-\\headheight}
+\\addtolength{\\textheight}{-\\headsep}
+\\addtolength{\\textheight}{-\\footskip}
+\\addtolength{\\textheight}{-3cm}
+\\setlength{\\topmargin}{1.5cm}
+\\addtolength{\\topmargin}{-2.54cm}
+%%%%%%%%%% Start TeXmacs macros
+\\newenvironment{enumeratenumeric}{\\begin{enumerate}[1.]}{\\end{enumerate}}
+\\newcommand{\\mathe}{\\mathrm{e}}
+\\newcommand{\\mathd}{\\mathrm{d}}
+\\newcommand{\\tmop}[1]{\\operatorname{#1}}
+\\newcommand{\\tmscript}[1]{\\text{\\scriptsize $#1$}}
+\\newcommand{\\tmem}[1]{{\\em #1\\/}}
+%%%%%%%%%% End TeXmacs macros
+&quot;)
+)
+</pre>
+
+<p>So let us now try to write a complex equation array for test
+here:</p>
+
+<!-- 
+\begin{eqnarray*}
+  (\Delta^{- 1} \Delta f) (z) & = & \left( \frac{a}{\mathe^a - 1} a^{- 1}
+  \Delta f \right) (z)\\
+  & = & \left( \frac{a}{\mathe^a - 1} a^{- 1} ((\mathe^a - 1) f) \right)\\
+  & = & \left( \frac{a}{\mathe^a - 1}  \int_0^z \left( \sum_{j \geqslant 1}
+  \frac{a^j}{j!} \right) (f) \mathd u \right)\\
+  & = & \left( \sum_{k \geqslant 0} B_k  \frac{a^k}{k!}  \int_0^z \left(
+  \sum_{j \geqslant 1} \frac{a^j}{j!} (f) \right) \mathd u \right)\\
+  & = & \left( \sum_{k \geqslant 0} B_k  \frac{a^k}{k!} \left( \sum_{j  \geqslant 1} \int_0^z \left( \frac{a^j}{j!} f \right) \mathd u \right)
+  \right)
+\end{eqnarray*}
+--><img src="./latex/latex2png-insertlatexformulainmuseandorg__1391105394.png" alt="latex2png equation" class="latex-display">

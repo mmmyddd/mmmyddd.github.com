@@ -1,0 +1,20 @@
+Attache Android Source Code in ADT
+#tags android,eclipse
+<ul>
+<li>Download the different source packages for each platform(eclair, donut, cupcake)
+<a href="http://android.opensourceror.org/2010/01/18/android-source">http://android.opensourceror.org/2010/01/18/android-source</a>
+in each platform folder $SDK/platform/<a href="http://mmmyddd.github.io/wiki/android/index.html">android</a>-2.1-update1/, find that there is <code>android.jar</code>,
+then create a dir named as <code>sources</code>, unzip the source code package to the folder.</li>
+
+<li>If you are modifying the source with an <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> source tree, link to the source code in <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> source
+tree is also ok:</li>
+</ul>
+
+
+<code config="brush:bash; gutter:false; toolbar:true; ruler:false;">
+cd $SDK/platforms/android-2.1-update1/
+ln -s $SRC/frameworks/base/core/java sources
+</code>
+
+
+<p>RESTART your eclispe later...</p>

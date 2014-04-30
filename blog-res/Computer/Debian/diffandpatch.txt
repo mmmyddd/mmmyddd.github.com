@@ -1,0 +1,412 @@
+利用diff和patch作补丁
+#tags linux,patch,diff
+<p>本文总结补丁相关的Diff和Patch命令，参考资料<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>。</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 准备</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 用diff生成patch文件：</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 用Patch来使用patch文件：</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 总结</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+
+<h3><a name="sec1" id="sec1"></a>
+准备</h3>
+
+<p class="first">首先建立一个目录<code>test-diff-patch</code>
+其目录的结构的<code>tree</code>输出为：</p>
+
+<pre class="example">
+.
+|-- new
+|   `-- a
+|       `-- b
+|           `-- c
+|               `-- test.txt
+`-- old
+    `-- a
+        `-- b
+            `-- c
+                `-- test.txt
+</pre>
+
+<p>其中，
+old目录下的test.txt:</p>
+
+<pre class="example">
+context1
+context2
+context3
+old1
+old2
+post-context1
+post-context2
+post-context3
+</pre>
+
+<p>new目录下的test.txt:</p>
+
+<pre class="example">
+context1
+context2
+context3
+new1
+new2
+post-context1
+post-context2
+post-context3
+</pre>
+
+
+<h3><a name="sec2" id="sec2"></a>
+用diff生成patch文件：</h3>
+
+<p class="first">进入到包含new和old的上层目录，
+
+
+<code config="brush:bash;light:true;">
+cd test-diff-patch
+</code>
+</p>
+
+<p>并执行：
+
+<code config="brush:bash;light:true;">
+LC_ALL=C TZ=UTC0 diff -Naur old new > patch.diff
+</code>
+</p>
+
+<p>如果不在意字符集和时差， 则可以直接使用：
+
+<code config="brush:bash;light:true;">
+diff -Naur old new > diff.patch
+</code>
+</p>
+
+<p>生成的补丁文件<code>diff.patch</code>的内容为：
+
+<code config="brush:diff;gutter:true;toolbar:true;">
+diff -Naur old/a/b/c/test.txt new/a/b/c/test.txt
+--- old/a/b/c/test.txt	2010-03-18 23:27:37.000000000 +0800
++++ new/a/b/c/test.txt	2010-03-18 23:27:55.000000000 +0800
+@@ -1,8 +1,8 @@
+ context1
+ context2
+ context3
+-old1
+-old2
++new1
++new2
+ post-context1
+ post-context2
+ post-context3
+</code>
+</p>
+
+
+
+<p>从上边的文件中我们可以看到，一个patch文件中包含有生成这个patch文件的diff命令的
+所有原始参数。同时也包含了在打补丁的时候新旧文件的路径，这个路径，特别是旧文件的路径在使用
+patch的时候提供了有效的信息，具体见<a href="#patch">下节</a>。</p>
+
+<p>生成的文件中默认包含内容相同的3行context,如果想要更改包含的context的行数，则需要用
+<code>-U n</code>的选项来取代 <code>-u</code>，例如：
+
+
+<code config="brush:bash;light:true;">
+diff -Nar -U 2 old new > diff.patch
+</code>
+</p>
+
+<p>上边的context行只输出一次，因此被称为unified context,
+也可以才用另外一种输出形式，将context的输出分别和old与new分组(copied context)：
+
+
+<code config="brush:bash;light:true;">
+diff -Nacr old new > diff.patch
+</code>
+</p>
+
+<p>产生如下格式的输出：
+
+
+<code config="brush:diff; gutter:true; toolbar:true; ruler:false;">
+diff -Nacr old/a/b/c/test.txt new/a/b/c/test.txt
+*** old/a/b/c/test.txt	2010-03-18 23:27:37.000000000 +0800
+--- new/a/b/c/test.txt	2010-03-18 23:27:55.000000000 +0800
+***************
+*** 1,8 ****
+  context1
+  context2
+  context3
+! old1
+! old2
+  post-context1
+  post-context2
+  post-context3
+--- 1,8 ----
+  context1
+  context2
+  context3
+! new1
+! new2
+  post-context1
+  post-context2
+  post-context3
+</code>
+</p>
+
+<p>这中输出形式下，默认也是输出3行context.也可以用 <code>-C n</code>取代 <code>-c</code>来
+定制输出的context的行数。</p>
+
+<p><span class="note">
+<strong>注意</strong>: 这两种输出格式是互斥的，不能同时使用-c, -u, -C, -U 之中的任何两个。
+</span></p>
+
+<p>如下是上边用到的参数的介绍，正如我们最初介绍的，<code>-Naur</code>是比较通用的打补丁的参数。</p>
+
+<pre class="example">
+options:
+	-w  --ignore-all-space
+		Ignore all white space. （谨慎使用，会忽略单词间的所有空格）
+	-B  --ignore-blank-lines         （实验，但似乎无效）
+		Ignore changes whose lines are all blank.
+	-N  --new-file
+		Treat absent files as empty.
+
+	-c  -C NUM  --context[=NUM]
+		Output NUM (default 3) lines of copied context.
+
+	-u  -U NUM  --unified[=NUM]
+		Output NUM (default 3) lines of unified context.
+	-r  --recursive
+		Recursively compare any subdirectories found.
+
+	-a  --text
+		Treat all files as text.
+</pre>
+
+
+
+
+<h3><a name="sec3" id="sec3"></a>
+用Patch来使用patch文件：</h3>
+
+<p class="first">现在来看看如何使用上面生成的patch文件：</p>
+
+<p>首先进入旧的文件结构：
+
+
+<code config="brush:bash;light:true;">
+cd test-diff-patch/old
+</code>
+</p>
+
+<p><a name="patch" id="patch"></a>
+然后执行：
+
+
+<code config="brush:bash;light:true;">
+patch -p1 old diff.patch
+</code>
+</p>
+
+<p>命令行输出，patch被应用：</p>
+
+<pre class="example">
+patching file a/b/c/test.txt
+</pre>
+
+
+<p>其中选项 <code>-p1</code>是指将刚才生成patch的文件中旧文件的路径减去多少段就是当前的旧文件路径。
+如果不使用 <code>-p</code>则会忽略任何的路径而直接使用文件名。</p>
+
+
+<p>执行完以上命令，当前目录下的文件已经被更新。但是还可以取消刚才所打的补丁，再次执行刚才的命令：
+
+<code config="brush:bash;light:true;">
+patch -p1 < ../diff.patch
+</code>
+</p>
+
+<p>当命令行提示是否取消已经应用的patch，选择是：</p>
+
+<pre class="example">
+patching file a/b/c/test.txt
+Reversed (or previously applied) patch detected!  Assume -R? [n] y
+</pre>
+
+<p>取消刚才进行的patch操作，并在相同目录下备份了已经应用完补丁的文件test.txt.orig：</p>
+
+<pre class="example">
+`-- old
+    `-- a
+        `-- b
+            `-- c
+                |-- test.txt
+                `-- test.txt.orig
+</pre>
+
+<p>另外，可以显式的声明我们是在打补丁还是取消补丁：</p>
+
+<p>如果强制声明应用补丁文件：
+
+
+<code config="brush:bash;light:true;">
+patch -Np1 < ../diff.patch
+</code>
+</p>
+
+<p>或者强制声明取消已经应用了的补丁：
+
+
+<code config="brush:bash;light:true;">
+patch -Rp1 < ../diff.patch
+</code>
+</p>
+
+<p>当然在搞不清楚的情况下，连续两次应用或取消补丁会发生错误，例如连续应用两次后：</p>
+
+<pre class="example">
+patching file a/b/c/test.txt
+Reversed (or previously applied) patch detected!  Skipping patch.
+1 out of 1 hunk ignored -- saving rejects to file a/b/c/test.txt.rej
+</pre>
+
+<p>会在相同目录下生成一个reject文件：</p>
+
+<pre class="example">
+`-- old
+    `-- a
+        `-- b
+            `-- c
+                |-- test.txt
+                `-- test.txt.rej
+</pre>
+
+<p>其中内容是：
+
+
+<code config="brush:diff; gutter:true; toolbar:true; ruler:false;">
+***************
+*** 1,8 ****
+  context1
+  context2
+  context3
+! old1
+! old2
+  post-context1
+  post-context2
+  post-context3
+--- 1,8 ----
+  context1
+  context2
+  context3
+! new1
+! new2
+  post-context1
+  post-context2
+  post-context3
+</code>
+</p>
+
+<p>告诉使用者该patch不能够被应用，上半段是patch文件的期望的内容，
+而下半段是当前文件的内容，二者内容不符合。</p>
+
+<p>上面的这些pathc命令都可以在 <code>test-diff-patch</code> 目录以-p0的参数运行，
+<code>-p0</code>前提是diff和patch使用处的旧文件目录名称相同。</p>
+
+
+<p>下边是关于patch参数的详细解释：</p>
+
+<pre class="example">
+	-pnum  or  --strip=num
+	   Strip the smallest  prefix containing num leading slashes
+	   from each file name found  in the patch file.  A sequence
+	   of one  or more adjacent  slashes is counted as  a single
+	   slash.  This  controls how file names found  in the patch
+	   file  are treated,  in  case  you keep  your  files in  a
+	   different  directory than  the  person who  sent out  the
+	   patch.  For example, supposing the file name in the patch
+	   file was
+
+	   	/u/howard/src/blurfl/blurfl.c
+
+	   setting -p0  gives the  entire file name  unmodified, -p1
+	   gives
+
+	   	u/howard/src/blurfl/blurfl.c
+
+	   without the leading slash, -p4 gives
+
+	   	blurfl/blurfl.c
+
+	   and  not specifying -p  at all  just gives  you blurfl.c.
+	   Whatever  you end  up with  is looked  for either  in the
+	   current directory,  or the directory specified  by the -d
+	   option.
+
+
+	-N  or  --forward
+	   Ignore  patches  that  seem  to be  reversed  or  already
+	   applied.  See also -R.
+
+
+	-R  or  --reverse
+	   Assume that this  patch was created with the  old and new
+	   files  swapped.   (Yes,   I'm  afraid  that  does  happen
+	   occasionally,  human  nature being  what  it is.)   patch
+	   attempts  to swap  each hunk  around before  applying it.
+	   Rejects come  out in the  swapped format.  The  -R option
+	   does not work  with ed diff scripts because  there is too
+	   little information to reconstruct the reverse operation.
+
+	   If the  first hunk of  a patch fails, patch  reverses the
+	   hunk to  see if it can  be applied that way.   If it can,
+	   you are asked if you want  to have the -R option set.  If
+	   it  can't, the  patch continues  to be  applied normally.
+	   (Note: this  method cannot detect a reversed  patch if it
+	   is a  normal diff and if  the first command  is an append
+	   (i.e. it should have  been a delete) since appends always
+	   succeed,  due to  the fact  that a  null  context matches
+	   anywhere.   Luckily,  most patches  add  or change  lines
+	   rather than  delete them,  so most reversed  normal diffs
+	   begin  with   a  delete,  which   fails,  triggering  the
+	   heuristic.)
+
+</pre>
+
+
+<h3><a name="sec4" id="sec4"></a>
+总结</h3>
+
+<ol>
+<li>patch文件是从old到new的增量，因此diff命令的格式是： <strong>diff -Naur FROM TO &gt; patch-file</strong>
+而patch命令的格式是： <strong>patch -pn &lt; patch-file</strong></li>
+<li>一般来说，执行diff时不需要只直接使用绝对路径, 相对路径可以使patch在使用时只需要加参数 -p1 或者 -p0即可使用。</li>
+<li>对于他人创建的外来patch文件，需要查看patch的前几行来确认参数-p的值。</li>
+<li>使用patch前，不要随意更改目标文件，否则会引起reject错误。</li>
+</ol>
+
+
+<p>参考资料:
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  老王的技术手册 － <a href="http://hi.baidu.com/thinkinginlamp/blog/item/e78f9c82a1a022b56d811930.html">http://hi.baidu.com/thinkinginlamp/blog/item/e78f9c82a1a022b56d811930.html</a></p>
+
+

@@ -1,0 +1,332 @@
+Configuration of CEDET for C/C++ Programming
+#tags cedet,emacs,c
+<p>本文介绍一个CEDET for c/c++ 的最简单配置,
+只有能够配置CEDET，才能脱离使用Emacs的初级阶段:)</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 CEDET安装</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 CEDET装载</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 CEDET配置</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec4">3.1 使用项目管理组件 － ede</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">3.2 Semantic Canned Configuration</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec6">3.3 Semantic的代码补全</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec7">3.3.1 Semantic-IA</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec8">3.3.2 Other Semantic Complete Functions</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec9">3.3.3 Senator</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec10">3.4 Semanticdb</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec11">3.4.1 配置Semanticdb</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec12">3.4.2 选择Backends</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec13">3.4.3 Use CTags Backend</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec14">3.4.4 Use GTags Backend</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- close subopen -->
+<dt>
+<a href="#sec15">3.5 Speed Bar</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+<br>
+
+<h3><a name="sec1" id="sec1"></a>
+CEDET安装</h3>
+
+<p class="first">在<a href="http://www.sourceforge.net/projects/cedet">CEDET的项目主页</a>上下载源代码，解压缩后运行 <code>make</code>命令编译，将代码拷贝到
+<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>的 <code>load-path</code> 中。</p>
+
+
+
+<h3><a name="sec2" id="sec2"></a>
+CEDET装载</h3>
+
+<pre class="example">
+(load-file &quot;~/path-to/cedet-1.0pre7/common/cedet.el&quot;)
+</pre>
+
+<p>通过这种方式装载的cedet不再需要单独装载各个组件。</p>
+
+
+<h3><a name="sec3" id="sec3"></a>
+CEDET配置</h3>
+
+<h4><a name="sec4" id="sec4"></a>
+使用项目管理组件 － ede</h4>
+
+<ul>
+<li>全局使用：</li>
+</ul>
+
+<pre class="example">
+(global-ede-mode t)
+</pre>
+
+<ul>
+<li>在c/c++ mode中使用：</li>
+</ul>
+
+<pre class="example">
+(add-hook 'c-mode-common-hook
+	  '(lambda()
+	     (ede-minor-mode t)))
+</pre>
+
+<p>关于其他<code>ede</code>项目配置，本文不详细介绍。</p>
+
+
+<h4><a name="sec5" id="sec5"></a>
+Semantic Canned Configuration</h4>
+
+<p class="first">为了方便使用，Semantic中提供了五种打包好的配置，
+在速度和功能方面有所差异，任选一个即可：</p>
+
+<pre class="example">
+;;(semantic-load-enable-minimum-features)
+(semantic-load-enable-code-helpers)
+;; (semantic-load-enable-guady-code-helpers)
+;; (semantic-load-enable-excessive-code-helpers)
+;; (semantic-load-enable-semantic-debugging-helpers)
+</pre>
+
+
+<h4><a name="sec6" id="sec6"></a>
+Semantic的代码补全</h4>
+
+<h5><a name="sec7" id="sec7"></a>
+Semantic-IA</h5>
+
+<p>CEDET提供了几种补全的UI，可供选用，但是既然使用了<code>auto-conplete</code>
+这些就变得可选了,不过后来发现在弹出的menu中竟然可以用 <code>Ctrl+n, p, f, b</code>
+进行导航，感觉还是比较爽的，所以把它们绑定到了 <code>Ctrl+ENTR</code>上了。</p>
+
+<pre class="example">
+;;(require 'semantic-ia)
+;; semantic-ia-complete-symbol : complete buffer
+;; semantic-ia-complete-symbol-menu: complete menu
+;; semantic-ia-complete-tip: complete tool tip
+;; maybe use PosTip ..
+
+(when (require 'semantic-ia nil t)
+  ;(global-set-key [(control return)] 'semantic-ia-complete-symbol)
+  ;(global-set-key [(control return)] 'semantic-ia-complete-tip)
+  (global-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
+  )
+</pre>
+
+
+<h5><a name="sec8" id="sec8"></a>
+Other Semantic Complete Functions</h5>
+
+<p>这里还有其他一些函数供使用，包括：</p>
+
+<ul>
+<li><code>semantic-complete-analyze-inline</code></li>
+<li><code>semantic-analyze-proto-impl-toggle</code></li>
+</ul>
+
+
+<h5><a name="sec9" id="sec9"></a>
+Senator</h5>
+
+<p>另一个选择就是Senator，这个Semantic组件提供了一些补全函数，可以用在
+<code>hippie expand</code> 或者 <code>auto complete</code>中：</p>
+
+
+<ul>
+<li>在<code>hippie expand</code>中使用：</li>
+</ul>
+
+<pre class="example">
+(setq hippie-expand-try-function-list
+      '(
+	jde-complete-generic
+	senator-try-expand-semantic	;semantic complete
+	try-expand-dabbrev-visible	;dynamic abbrevation - visible part
+	try-expand-dabbrev		;dynamic abbrevation - this buffer
+	try-expand-dabbrev-all-buffers	;dynamic abbrevation - all buffers
+	try-expand-dabbrev-from-kill    ;dynamic abbrevation - from kill buffers
+	try-complete-file-name-partially ;complete file name
+	try-complete-file-name		 ;complete full file name
+	try-expand-all-abbrevs		 ;expand abbrevations
+	try-expand-list			 ;list beginning
+	try-expand-line			 ;line in the buffer
+	try-complete-lisp-symbol-partially ; try emacs lisp symbols
+	try-complete-lisp-symbol))
+;;bind the key
+(global-set-key [(meta ?/)] 'hippie-expand)
+</pre>
+
+<ul>
+<li>在 <code>auto-complete</code>中使用：</li>
+</ul>
+
+<pre class="example">
+(defun ac-semantic-candidate (prefix)
+  (if (memq major-mode
+            '(c-mode c++-mode jde-mode java-mode))
+      (mapcar 'semantic-tag-name
+              (ignore-errors
+                (or (semantic-ia-get-completions
+                     (semantic-analyze-current-context) (point))
+                    (senator-find-tag-for-completion (regexp-quote prefix)))))))
+</pre>
+
+
+
+
+<h4><a name="sec10" id="sec10"></a>
+Semanticdb</h4>
+
+<h5><a name="sec11" id="sec11"></a>
+配置Semanticdb</h5>
+
+<p>主要是配置semantic数据库的缓存位置：</p>
+
+<pre class="example">
+(require 'semanticdb)
+(global-semanticdb-minor-mode 1)
+(setq semanticdb-default-save-directory
+      (expand-file-name &quot;/home/justin/.emacs.d/.semanticdb&quot;))
+</pre>
+
+<p>选择系统库的位置，如果你使用的是gcc，那么可以通过如下配置自动找到系统库：</p>
+
+<pre class="example">
+;; use gcc to locate system include
+(require 'semantic-gcc)
+</pre>
+
+<p>或者手动添加，例如：</p>
+
+<pre class="example">
+;; !important: enable for each mode
+(semantic-add-system-include &quot;/usr/include&quot; 'c-mode)
+(semantic-add-system-include &quot;/usr/include&quot; 'c++-mode)
+</pre>
+
+
+
+<h5><a name="sec12" id="sec12"></a>
+选择Backends</h5>
+
+<p>Semanticdb目前默认可以支持的后端是gtags和ctags，通过扩展库也可支持ebrowse和cscope(?)</p>
+
+<p>这里推荐使用ctags，因为对于c/c++代码的tag分析更精确。</p>
+
+
+<h5><a name="sec13" id="sec13"></a>
+Use CTags Backend</h5>
+
+<p>在Debian下，需要安装<code>ctags</code>：
+
+<code config="brush:bash; gutter:false; toolbar:false; ruler:false;">
+apt-get install excuberant-ctags
+</code>
+</p>
+
+<p>然后配置使用：</p>
+
+<pre class="example">
+(semantic-load-enable-all-exuberent-ctags-support)
+(semanticdb-enable-exuberent-ctags 'c-mode)
+(semanticdb-enable-exuberent-ctags 'c++-mode)
+</pre>
+
+
+
+<h5><a name="sec14" id="sec14"></a>
+Use GTags Backend</h5>
+
+<pre class="example">
+(require 'semanticdb-global)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+</pre>
+
+
+
+
+<h4><a name="sec15" id="sec15"></a>
+Speed Bar</h4>
+
+<p class="first">Speed Bar在emacs23中是一个标准组件，
+类似vi中的taglist，可以设置Speedbar
+的更新速度，显示方式和排序分组方式：</p>
+
+<pre class="example">
+;;(require 'semantic-sb nil t)
+(setq speedbar-update-speed 3)
+(setq speedbar-use-images t)
+(setq (speedbar-tag-hierarchy-method
+      (quote (speedbar-trim-words-tag-hierarchy
+              speedbar-simple-group-tag-hierarchy
+              speedbar-sort-tag-hierarchy))))
+</pre>
+
+
+<p>参考资料：</p>
+
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a> <a href="http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html">A Gentle Introduction of CEDET - Alexott</a></p>
+
+
+

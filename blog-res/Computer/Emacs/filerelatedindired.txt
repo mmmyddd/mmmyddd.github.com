@@ -1,0 +1,77 @@
+dired mode下的文件关联
+#tags emacs
+<p>通过定制可以使<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>的dired-mode中像文件浏览器，对特定的文件关联
+特定的应用程序：</p>
+
+<h3>装载dired-xn</h3>
+
+<p class="first">使用<code>dired-x.el</code>,这个扩展包是<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>自带的，
+因此只需要在dired启动的时候装载这个文件即可:</p>
+
+<p>在启动脚本中加入：</p>
+
+<pre class="example">
+(add-hook 'dired-load-hook
+          (function (lambda () (load &quot;dired-x&quot;))))
+</pre>
+
+
+
+
+<h3>定制文件关联列表</h3>
+
+<p class="first">可以修改的变量名称有两个：</p>
+
+
+<ul>
+<li>dired-guess-shell-alist-user</li>
+<li>dired-guess-shell-alist-default</li>
+</ul>
+
+<p>第一个设置会优先覆盖第二个。</p>
+
+
+<p>例如，如果希望以pdf结尾的文件用acrobat reader打开，并且异步于
+<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>运行，可以在启动脚本中增加：</p>
+
+<pre class="example">
+(setq dired-guess-shell-alist-user
+      (list
+       (list &quot;\\.pdf\\'&quot; &quot;acroread * &amp;&quot;) ;; fixed rule
+       ))
+</pre>
+
+
+<p>list中的每个关联规则有如下形式：</p>
+
+<pre class="example">
+(REGEXP COMMAND...)
+</pre>
+
+<p>其中COMMAND可以是字符串，也可以是返回字符串的lisp表达式。
+因此可以写出带有条件的文件名关联：</p>
+
+<pre class="example">
+(setq dired-guess-shell-alist-user
+       (list (list &quot;\\.foo\\'&quot; &quot;FOO-COMMAND&quot;);; fixed rule
+              ;; possibly more rules ...
+              (list &quot;\\.bar\'&quot;;; rule with condition test
+                    '(if condition
+                          &quot;BAR-COMMAND-1&quot;
+                        &quot;BAR-COMMAND-2&quot;))))
+</pre>
+
+<p>如果一个文件满足多条关联规则，则它们会被放到命令的历史记录中，并且第一个满足的
+关联规则的命令会作为default值显示在方括号中。</p>
+
+
+<h3>使用</h3>
+
+<p class="first">在dired-mode中,将光标移动至文件名，使用命令<code>! (dired-do-shell-command)
+</code>, 回出现文件关联规则所匹配的默认命令，可以使用<code>
+M-p (previous-history-element)
+</code>和<code>
+M-n (next-history-element)
+</code>, 在匹配命令中查找所需命令。</p>
+
+

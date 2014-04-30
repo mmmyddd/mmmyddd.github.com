@@ -1,0 +1,345 @@
+Planner Mode
+#tags emacs,planner
+<blockquote>
+<p class="quoted"><strong>Planning based on the Franklin-Covey Approach</strong> &mdash; planner-el</p>
+</blockquote>
+
+<p class="verse">
+What is planning?  It can be a nebulous thing to define.  In its<br>
+essence, however, it is very simple: it's how we achieve our dreams.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Our days are filled with time, and hence with actions, whether they<br>
+be of a mental or physical sort.  But there are two kinds of action:<br>
+reactive and creative.  Reactive action is a response to the<br>
+environment, a reaction to stimulus.  Had we enough instincts to ensure<br>
+survival, we could live according to this kind of action alone.  It is<br>
+a mode of behavior we share with every living species.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The opposite to reactivity is creativity, when we decide upon a<br>
+course of action that is a wholly a product of personal choice.  We<br>
+then make decisions as to the steps needed to make this wish a reality.<br>
+This is planning.  Planning is essentially a creative endeavor at<br>
+every step.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;First, create the idea, what you want to achieve.  Very short-term<br>
+ideas do not need much more than thinking about how to do it.  But<br>
+long-term ideas require planning, since the mind cannot contain all of<br>
+the details.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Second, decide how the idea maps into the circumstances you find<br>
+yourself in.  Some environments will assist your plan, others hinder<br>
+it.  But step by step, identify every barrier to the realization of<br>
+your idea, and devise a countermeasure to overcome it.  Once you've<br>
+mapped things out from beginning to end, accounting for unknowables as<br>
+best you can, you now have your plan.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Third is to break the stages of the plan into parts that are not<br>
+overwhelming in their complexity.  It is at during this phase that a<br>
+plan is turned into task items, each to be accomplished within the span<br>
+of one day's time.  If a task requires several days, break it up<br>
+further.  The smaller it is, the less your mind will recoil from<br>
+attempting it.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fourth is to monitor your progress, identifying problems and<br>
+correcting for them as you go.  Some plans start out unachievable, and<br>
+remain that way indefinitely, due to a simple lack of observation.  If<br>
+nothing is working for you, change it.  Otherwise, your plan is merely<br>
+a well-crafted wish.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fifth is just to do the work, and be patient.  All good plans take a<br>
+great deal of time, and <em>cannot</em> happen immediately.  The groundwork<br>
+must be laid for each step, or else it will rest on an insecure<br>
+foundation.  If you follow your plan doggedly, applying some time to it<br>
+each day or week, it <u>will</u> happen.  Remember the story of the tortoise<br>
+and the hare.<br>
+<br>
+I've even written a short essay on the necessity of<br>
+gradual accomplishment, which can be found at<br>
+`<a href="http://emacswiki.org/johnw/essays/node2.html">http://emacswiki.org/johnw/essays/node2.html</a>'.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;How can this software help?  Computers are ideal for manipulating<br>
+information, since they allow you to change things without erasing or<br>
+rewriting.  And since all plans change quite a bit during their<br>
+implementation, a planning program can be very helpful.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Start by installing Planner and Muse (*note Installation::).<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Now, conceive your idea.  I can't believe there's nothing you want<br>
+from life.  More peace, time to enjoy the world, an end to war?<br>
+Everyone wants something.  Search deeply, and you will find countless<br>
+unhoped wishes lurking therein.  Choose one for now, and think on it<br>
+for a while.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Then open a file (using `C-x C-f') within the directory you named in<br>
+your `muse-project-alist'. Make sure the file has a `.muse' extension<br>
+so that Emacs will automatically recognize it as a planner file. Name<br>
+the file after your plan, such as `<a href="BetterHealth">Better Health</a>.muse'.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Choose an idea you really want to accomplish.  Struggle to<br>
+differentiate between the things you want because others want them, and<br>
+the things you want for yourself.  It takes quite an effort, and may<br>
+require a long time before you notice the difference.  Many people want<br>
+to be more healthy to be more attractive, which is an externally driven<br>
+goal.  Unless _you_ really want to accomplish what you envision, the<br>
+odds are you will fail.  Only our own wishes and dreams possess enough<br>
+personal energy to see themselves to fruition.  What happens to many of<br>
+us is simply that we never become conscious of these dreams: what we<br>
+love, what we desire most.  When I talk to friends, so much of what I<br>
+hear is things they want because they feel they should want them.<br>
+There's just not enough energy there to pursue a good plan, because<br>
+nearly all of it is negative energy.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Do you know what you really want?  Don't worry, many people don't.<br>
+It's not a question anyone really wants us to pursue, because often we<br>
+don't want what others do; it doesn't contribute to the social welfare,<br>
+and all that nonsense.  Somehow we always forget that what's good for<br>
+the social welfare now, was someone else's crazy dream a hundred years<br>
+ago.  The human aversion to fundamental change is always one's greatest<br>
+enemy, so don't waste any time getting bitter about it.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;For the sake of argument I assume you really do want to be<br>
+healthier, because you've fallen in love with the ideal of purity, or<br>
+you understand the connection between your physical self and the world<br>
+around you, and how this can open up your spirit to desiring more.  I<br>
+assume.  :)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;So you're in a Wiki file called `<a href="BetterHealth">Better Health</a>'.  Start typing.  Type<br>
+anything related to your idea: what you think about it, your ideas on<br>
+it, _and especially what the end will look like_.  If you can't<br>
+visualize the end, you can't plan, since planning is about drawing a<br>
+line between now and then.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When you've typed enough to gain a vision of your goal, start<br>
+drafting what the possible intermediate steps might be.  Then stop, get<br>
+up, walk around, enjoy life, and come back to it.  Taking a long time<br>
+at the beginning is not a bad idea at all, as long as it's not forever.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As you chew on your idea, it will begin to become more and more<br>
+concrete.  You'll have ideas about the smallest pieces, and ideas about<br>
+the biggest pieces.  Keep going until it starts to take shape before<br>
+you, and you can see yourself in your mind's eye moving from the<br>
+present into the future.  Write down this progression, and the sorts of<br>
+things you might encounter along the way.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As you continue, you'll naturally discover discrete phases, or<br>
+&quot;milestones&quot; as managers love to call them.  These are very important,<br>
+because they let you know you're making progress.  I recommend having a<br>
+big party with friends every time you achieve a milestone.  A typical<br>
+plan might have between three and ten.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Between the milestones are the bigger pieces of your plan. You might<br>
+find it convenient to name these pieces using <a href="MixedCase">Mixed Case</a> words. Try<br>
+adding these lines to your `.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>' or `_<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>' file.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(require 'muse-<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq muse-<a href="http://mmmyddd.github.io/wiki/index.html">wiki</a>-allow-nonexistent-wikiword t)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;You'll notice that Emacs colors and underlines them for you. Like,<br>
+<a href="FindGoodGym">Find Good Gym</a>. Hit return on this highlighted word, and you'll find<br>
+yourself in another, blank file. In this file, start drafting your<br>
+sub-plan, just as you did with the larger plan. You should find it<br>
+easier now, since the scope is smaller.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As you break down further, you'll notice simple little things that<br>
+need to get done.  These are your tasks.  Every plan is a succession of<br>
+tasks.  The difference from reactivity is that each task is part of the<br>
+larger plan. This is what it means to be systematic: that everything<br>
+you do helps further your plan.  If you have tasks in your day that<br>
+contribute to no plan, they are reactive.  Of course, life is full of<br>
+these, but don't let them take up more than 20% of your day.  If you<br>
+allow yourself to be dominated by reactive tasks, you'll regret it at<br>
+the end of your life.  I don't know this personally, but I do know that<br>
+striving for one's dreams - and seeing them come to fruition - is the<br>
+greatest joy a man can possess.  It is the essence of freedom, of<br>
+living, of creation.  Reactivity is the opposite of this, and serves<br>
+only to drain our energy and slacken our spirits.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Now that you've thought of a simple task, type `C-c C-t'. This will<br>
+ask for a brief description of the task, and when you plan to do it. If<br>
+you hit &lt;RETURN&gt; at the question `When', it assumes you mean today. It<br>
+will also pop up a three-month calendar at this question, so you can<br>
+see where your free days are. Make sure you set the variable<br>
+`mark-diary-entries-in-calendar' to `t' in your `.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>' (or `_<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>')<br>
+file. This way, you can see which days your appointments fall on. (Read<br>
+about the Emacs Calendar and Diary in *Note Calendar/Diary:<br>
+(Emacs)Calendar/Diary.)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(setq mark-diary-entries-in-calendar t)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Once your task is in there, go back to your plan and keep generating<br>
+more tasks.  Generate them all!  Fully describe&mdash;as tasks&mdash;everything<br>
+necessary to bring your sub-plan to completion.  Don't create tasks for<br>
+the other sub-plans.  You may have good idea of what they'll look like,<br>
+but don't bother rendering them into tasks just yet.  Things will<br>
+change too much between now and then, for that to be a good use of your<br>
+time.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Is your sub-plan now rendered into all of the tasks necessary to<br>
+reach your first milestone?  Great!  That is the purpose of planner.el.<br>
+The rest is really up to you.  If you find that you keep putting<br>
+things off, and never do them, that's the surest sign you're planning<br>
+for someone else's dream, and not your own.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Here are some of the things planner.el can do, to help you manage<br>
+and track your tasks:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of every day, type `M-x plan'.  This will jump you<br>
+to the top of the most recent task list before today.  If you skipped a<br>
+bunch of days, you'll have to open up those files on your own.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Probably some of the tasks that day won't be finished - that's OK.<br>
+Learning to properly estimate time is a magical, mystical art that few<br>
+have mastered.  Put your cursor on those undone tasks, and type `C-c<br>
+C-c'.  This will move them into today's task page.  You can jump to<br>
+today's task page at any time by typing `C-c C-n' (from a Wiki or<br>
+planning page).  I heartily recommend binding `C-c n', to jump you to<br>
+this page from anywhere:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(define-key mode-specific-map [?n] 'planner-goto-today)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As you look at your task sheet each day, the first thing to do is to<br>
+&quot;clock in&quot; to one of them. This isn't necessary, and is only helpful if<br>
+you're around your computer a lot. But by typing `C-c C-i' (assuming<br>
+you have `timeclock.el' on your load-path), it will log the time you<br>
+spend working on your sub-plan (<em>note Time Intervals: (Emacs)Time<br>
+Intervals.). This is helpful for viewing your progress.  Type `C-c C-o'<br>
+to clock out.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`C-M-p' and `C-M-n' will move a task up and down in priority.<br>
+Priority is represented by a letter A through C.  'A' tasks mean they<br>
+must be done that day, or else your plan is compromised and you will<br>
+have to replan.  'B' means they should be done that day, to further the<br>
+plan, otherwise things will be delayed.  'C' means you can put off the<br>
+task if you need to, although ultimately it will have to be done.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;For reactive tasks, the letters mean something different: 'A' means<br>
+you must do it today, or somebody will roast your chestnuts over an<br>
+open fire.  'B' means you should do it today, or else someone will be<br>
+practicing patience at the day's end.  'C' means no one will notice if<br>
+you don't do it.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Again, reactive tasks are ENEMIES OF PLANNING.  Really, until you<br>
+see them that way, circumstances will push you around and steal your<br>
+life away.  We have only so many years to use, and everyone is greedy<br>
+to take them.  It's insidious, almost invisible.  A healthy dislike of<br>
+reactivity will do wonders for organizing your affairs according to<br>
+their true priority.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The last word that needs to be said concerns &quot;roles&quot;.  Every person<br>
+stands in several positions in his life: husband, employee, manager,<br>
+etc.  These roles will tend to generate tasks not associated with any<br>
+immediate plan, but necessary to maintain the health and functioning of<br>
+the role.  My suggestion is to keep this the smallest possible number,<br>
+and fulfill those that remain well.  How you decide to apportion your<br>
+time between pursuing grand designs, and fostering deep relationships,<br>
+is a personal matter.  If you choose well, each will feed the other.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I mention this to point that reactivity is something not exclusively<br>
+associated with tasks that have no master plan, because being a father,<br>
+for example, is something that rarely proceeds according to orderly<br>
+plans.  But the role of father itself is its own plan, whose goal is<br>
+&quot;to be the best one can&quot;, and whose component tasks are spending time<br>
+on whatever comes up.  It is, in a sense, an implicit plan.  But<br>
+reactive tasks follow no plan at all; they are parasites of time that<br>
+suck the spirit away, whereas properly chose roles actually help<br>
+fulfill one's own inner needs.  At least, this is what I believe.<br>
+</p>
+
+
+<blockquote>
+<p class="quoted"></em>*Why use planner-el**</p>
+</blockquote>
+
+<p class="verse">
+<br>
+You can skip this essay if you just want to get started, or read it for<br>
+some insights into why the previous maintainer is crazy about it.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Why I Use Planner, by Sacha Chua<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I thought about why I liked Planner. Planner as a TODO manager isn't<br>
+particularly special. Although I can assign tasks to categories and see<br>
+a breakdown of what projects are taking up my time, Evolution and<br>
+Microsoft Outlook provide more powerful task support. In other task<br>
+managers, you can e-mail tasks, assign multiple categories and fill in<br>
+all sorts of metadata. You can even synchronize your tasks with devices<br>
+like a phone or PDA. So why use Planner?<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I realized that integration into my way of life and automatic context<br>
+clues are what really make planner tasks worth it for me. I don't have<br>
+to switch to another application to create a task. I can just hit a<br>
+keyboard shortcut. Planner uses a minibuffer to get the task<br>
+description. My windows are not rearranged in any way, and I can look<br>
+at the data that's relevant to a task. Not only that, tasks<br>
+automatically pick up context clues, like whom I'm talking to on IRC or<br>
+the file I'm editing at the moment. This cuts down on the explicit<br>
+context I need to include and makes it easier for me to bring up the<br>
+task again.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As a scheduler, Planner is also not particularly distinguished.<br>
+Sure, it can display my `~/diary', but for that matter so can `M-x<br>
+diary'. Evolution and Outlook can give me a more graphical view of my<br>
+time, sync with my PDA, and coordinate my schedule with other people.<br>
+Those applications support detailed schedule entries with powerful<br>
+cyclic options. On the other hand, Planner gives me a personal, plain<br>
+text view and (at least the way I use it) requires me to edit a<br>
+separate file to add new appointments. (I've defined a few shortcut<br>
+keys to deal with this.) However, it does have one advantage&mdash;my<br>
+schedule is always loaded. I used to use Outlook on Windows, but having<br>
+my schedule in a separate application meant that I actually looked at<br>
+it very rarely, as I had turned off reminders because they got annoying.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Planner's notes, however, are what really convinced me. I can hit a<br>
+keyboard shortcut from anywhere and type my notes into a buffer which<br>
+automatically keeps context information. After typing the note, I can<br>
+then categorize it. I think that the critical thing here is that<br>
+interruptions&mdash;fleeting thoughts&mdash;don't break my flow. I can just pop<br>
+up a remember buffer, stow that thought away somewhere, and go back to<br>
+it whenever I want. In contrast, creating a note in Outlook means<br>
+switching out of my application, making a couple of keystrokes, typing<br>
+the note in, and then switching back. The context switches make it hard<br>
+to keep track of where I am and what I'm supposed to remember.  Not<br>
+only that, I need to enter context by hand. Even though I can color my<br>
+notes and reorganize them in Outlook, I find the context switch too<br>
+expensive. I used to keep notes in other knowledge management tools as<br>
+well. Some applications allowed me to drag-and-drop links into the<br>
+current note, and that was cool. But that required a manual action, and<br>
+those applications didn't feel integrated into my way of working.<br>
+(Note: You'll need remember.el for this.)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I guess that's why I like Planner. Unlike other organizers which<br>
+don't know anything about the applications I use, Planner tries its<br>
+best to integrate into the way I work, and it's easy to extend.<br>
+Fortunately I do almost all my work in Emacs, so I can think of my<br>
+organizer as integrated into my e-mail client, Internet Relay Chat<br>
+client, web browser, file editor and even games. It automatically picks<br>
+up context clues from these applications and allows me to easily jump<br>
+back to relevant files. It doesn't distract me. It allows me to key in<br>
+data and then it gets out of my way.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(That said, it's perfectly okay to use Planner even if you don't live<br>
+in Emacs.)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The processing that happens in the background is a bonus, and<br>
+publishing my task list and notes online has greatly helped me. It<br>
+gives other people a way to see what I'm working on and what I've<br>
+planned for the future. Occasionally people write in with additional<br>
+resources and helpful tips. (Again, this is purely optional. Many<br>
+people don't publish their planner pages. Other people use really<br>
+fine-grained access control.)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I think the greatest feature of Planner, though, is its user<br>
+community. Because Planner can be easily modified, we can experiment<br>
+with a lot of new ideas quickly, and we can tailor Planner to fit our<br>
+needs. I love checking my `planner-el-discuss' mail and finding out how<br>
+people have tweaked Planner or would like to tweak Planner, and I've<br>
+learned a lot by exchanging reflections on organizing one's life.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I really wasn't an organization freak before I started using Planner.<br>
+I often forgot to do my homework or answer important mail. I still<br>
+procrastinate now, but at least it's all being kept track of somewhere!<br>
+I also really like how Planner lets me to gradually improve how I'm<br>
+doing things, and I feel I've come a long way.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Please try it out! We'd love to hear how Planner can become <u>your</u><br>
+personal information manager.<br></p>

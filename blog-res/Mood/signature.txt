@@ -1,0 +1,2 @@
+无题
+<p class="image"><img src="./res/motto.gif" alt=""></p>

@@ -1,0 +1,77 @@
+Auto Delete Whitespace And Replace Tabs
+#tags emacs,debian
+<p>最近向Gerrit中提交代码，总是发现有一些无意中打入的行尾空格和
+Tab字符。其实设置Emacs，可以使得在编辑文件结束保存文件的时候
+自动将Tab转换为若干Space，并将行尾的空白（Tab和Space）去掉：</p>
+
+<ul>
+<li>首先，如果只需要去掉Tab，设置默认值：</li>
+</ul>
+
+<pre class="example">
+(setq-default indent-tabs-mode nil)
+</pre>
+
+<p>这样在输入Tab的时候，就可以自动将其转换为空格，如果确实需要
+Tab字符，使用 <code>C-q Tab</code></p>
+
+<p><span class="note">
+GNUMake模式自动会将此直设置为t
+</span></p>
+
+
+<ul>
+<li>如果需要将文件中已有Tab在保存时去掉：</li>
+</ul>
+
+<pre class="example">
+(add-hook 'write-file-hooks
+          (lambda () (if (not indent-tabs-mode)
+                         (untabify (point-min) (point-max)))))
+</pre>
+
+<ul>
+<li>最后，最强大的可配置包 <code>Whitespace.el</code>:</li>
+</ul>
+
+<p>如果需要显示Whitespace字符：</p>
+
+<pre class="example">
+M-x whitespace-mode
+</pre>
+
+<p>去掉多余文件头尾空行，行尾空白字符，多余Tabs转换尾空白（当indent-tabs-mode为nil）：</p>
+
+<pre class="example">
+(add-hook 'find-file-hook
+          (lambda () (if (not indent-tabs-mode)
+                         (set (make-local-variable 'whitespace-action) '(auto-cleanup)))))
+
+(add-hook 'before-save-hook
+          'whitespace-write-file-hook nil t)
+</pre>
+
+<p>或者</p>
+
+<pre class="example">
+(add-hook 'before-save-hook 'whitespace-cleanup)
+</pre>
+
+<p>当然，还可以手动执行这些命令：</p>
+
+<pre class="example">
+M-x whitespace-cleanup RET
+M-x whitespace-cleanup-region RET
+</pre>
+
+<hr>
+
+<p class="first">还有一些简单的交互命令：</p>
+
+<ul>
+<li>合并光标所在处的空行，只留一行空行 <code>C-x C-o (delete-blank-lines)</code></li>
+<li>合并光标所在处的空白，只留一格空格(命令不跨行） <code>ESC SPACE (just-one-space)</code></li>
+<li>删除光标所在处所有空白 (命令不跨行） <code>M-\ (delete-horizontal-space) </code></li>
+<li>删除文件结尾处空行和行尾空白  <code>nuke-trailing-whitesapce</code></li>
+<li>删除buffer中所有行尾空白 <code>delete-trailing-whitespace</code></li>
+</ul>

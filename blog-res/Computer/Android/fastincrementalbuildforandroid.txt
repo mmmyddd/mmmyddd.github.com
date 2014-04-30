@@ -1,0 +1,128 @@
+Android Fast Incremental Build
+#tags android,cp,linux
+<p>Android Fast Build Procedure.</p>
+
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 Preparation</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 Fast Incremental Build</a>
+</dt>
+<!-- print entries -->
+<dd>
+<dl>
+<!-- open subopen -->
+<dt>
+<a href="#sec3">2.1 Recover the former build</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">2.2 Build individual modules</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec5">2.3 Make System Image</a>
+</dt>
+<!-- print entries -->
+</dl>
+</dd>
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+<br>
+
+<h3><a name="sec1" id="sec1"></a>
+Preparation</h3>
+
+<ul>
+<li>Setup the environment</li>
+</ul>
+
+<pre class="example">
+cd ~/android/src
+. build/envsetup.sh
+</pre>
+
+<ul>
+<li>First,Make a Full Build</li>
+</ul>
+
+<pre class="example">
+make
+</pre>
+
+<ul>
+<li>Backup the Output</li>
+</ul>
+
+<pre class="example">
+croot
+mv out out-back
+</pre>
+
+
+<h3><a name="sec2" id="sec2"></a>
+Fast Incremental Build</h3>
+
+<h4><a name="sec3" id="sec3"></a>
+Recover the former build</h4>
+
+<pre class="example">
+cp -prf out-back out
+</pre>
+
+
+<h4><a name="sec4" id="sec4"></a>
+Build individual modules</h4>
+
+<ul>
+<li>Framework component</li>
+</ul>
+
+<pre class="example">
+#mm clean
+mm
+</pre>
+
+<p><span class="note">
+<strong>Note:</strong> Don't execute <code>mm clean </code> under framework,
+this will remove all the source tree.
+</span></p>
+
+<ul>
+<li>Policy component (phone or mid)</li>
+</ul>
+
+<p>First, modifiy <code>~/android/src_2_1/frameworks/policies/base/phone/Android.mk</code>,
+comment out the following line:</p>
+
+<pre class="example">
+#LOCAL_UNINSTALLABLE_MODULE := true
+</pre>
+
+<p>build the module:</p>
+
+<pre class="example">
+#mm clean
+mm
+croot
+mv out/target/product/generic/system/framework/android.policy_phone.jar \
+   out/target/product/generic/system/framework/android.policy.jar
+</pre>
+
+
+<h4><a name="sec5" id="sec5"></a>
+Make System Image</h4>
+
+<pre class="example">
+croot
+make snod
+</pre>
+
+
+

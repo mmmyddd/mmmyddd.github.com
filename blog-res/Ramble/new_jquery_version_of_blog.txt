@@ -1,0 +1,7 @@
+基于jQuery和Elisp的Blog发布
+#tags blog,jquery,elisp
+<p>由于SDF服务器不稳定，perl脚本cgi时常无法运行，导致blog系统无
+法正常访问。正值公司萧条，最近闲来无事，用jQuery重新写了blog
+的发布框架。采用<a href="http://mmmyddd.github.io/wiki/emacs/elisp/index.html">elisp</a>生成索引脚本，生成JSON数据，jQuery负责页
+面展现和AJAX调用blog数据，加深了对javascript和jQuery的认识，
+感觉不错。 ^_^*</p>

@@ -1,0 +1,392 @@
+Use Cscope in Emacs
+#tags emacs,debian
+<table><tr><td class="contents"><div><div class="toggle">Contents&nbsp;[<a id="hide" href="javascript:hideContents();">Hide</a><a id="show" href="javascript:showContents();" style="display:none">Show</a>]</div>
+<dl id="content-list">
+<dt>
+<a href="#sec1">1 安装</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec2">2 介绍</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec3">3 使用</a>
+</dt>
+<!-- print entries -->
+<dt>
+<a href="#sec4">4 参考</a>
+</dt>
+<!-- print entries -->
+<!-- before end -->
+</dl>
+</div></td></tr></table>
+<!-- after end -->
+
+
+<p>在Emacs中查看C/C++程序，代码浏览有几种工具, 从简单到复杂有<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>：</p>
+
+<ul>
+<li>etags</li>
+<li>cscope</li>
+<li>ecb/cedet</li>
+</ul>
+
+<p>这里介绍cscope的使用：</p>
+
+<h3><a name="sec1" id="sec1"></a>
+安装</h3>
+
+<p class="first">从cscope的主页下载：<a href="http://cscope.sourceforge.net/">http://cscope.sourceforge.net/</a> 并编译安装。</p>
+
+<p>Debian用户也可以安装相关apt包：</p>
+
+<pre class="example">
+sudo apt-get install cscope
+</pre>
+
+
+<h3><a name="sec2" id="sec2"></a>
+介绍</h3>
+
+
+<p>安装后可以查看该包的介绍：</p>
+
+<pre class="example">
+Package: cscope (Installed)
+Priority: optional
+Section: devel
+Installed-Size: 592
+Maintainer: Tobias Klauser &lt;tklauser@access.unizh.ch&gt;
+Architecture: i386
+Version: 15.6-6+lenny1
+Depends: libc6 (&gt;= 2.7-1), libncurses5 (&gt;= 5.6+20071006-3)
+Suggests: cbrowser
+Filename: pool/main/c/cscope/cscope_15.6-6+lenny1_i386.deb
+Size: 151112
+MD5sum: a5283fb2f802e17bafeed14cdd17e7b4
+SHA1: 0166cbce07e124f69b63cffbe6562bfc5cb1e508
+SHA256: f00719bc901529bcce9ddc68c9513f4bc1092d31bd563bbde97692c67642c6ba
+Description: Interactively examine a C program source
+ Cscope is an interactive text screen based source browsing tool.
+ Although it is primarily designed to search C code (including lex
+ and yacc files), it can also be used for C++ code.
+ .
+ Using cscope, you can easily search for where symbols are used and
+ defined.  Cscope is designed to answer questions like:
+ .
+ Where is this variable used?
+ What is the value of this preprocessor symbol?
+ Where is this function in the source files?
+ What functions call this function?
+ What functions are called by this function?
+ Where does the message &quot;out of space&quot; come from?
+ Where is this source file in the directory structure?
+ What files include this header file?
+Homepage: http://cscope.sourceforge.net
+Tag: devel::lang:c, implemented-in::c, interface::text-mode, role::program, scope::utility, uitoolkit::ncurses, use::browsing, works-with::software:source
+</pre>
+
+<p>这个工具主要有如下几个文件构成：</p>
+
+<pre class="example">
+  -rw-r--r-- 1 root root 89556 2009-05-24 /usr/share/emacs/site-lisp/xcscope.el
+  -rwxr-xr-x 1 root root 311132 2009-05-24 /usr/bin/cscope
+  -rwxr-xr-x 1 root root   3858 2001-06-28 /usr/bin/cscope-indexer
+  -rwxr-xr-x 1 root root   7290 2009-05-24 /usr/bin/ocs
+</pre>
+
+
+
+<h3><a name="sec3" id="sec3"></a>
+使用</h3>
+
+<p><strong>1. 在<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中配置cscope</strong><sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup></p>
+
+<p>首先确保在xcscope.el在<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>的load-path中</p>
+
+<p>如果想在全局使用cscope，可以在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中添加：</p>
+
+<pre class="example">
+(require 'xcscope)
+</pre>
+
+<p>如果想在打开c或者c++文件的时候使用cscope：</p>
+
+<pre class="example">
+(add-hook 'c-mode-common-hook
+	  '(lambda ()
+	    (require 'xcscope)))
+</pre>
+
+
+<p><strong>2.生成索引文件</strong></p>
+
+<p>如果源代码在一个目录下只需要执行<code>
+C-c s I (cscope-index-file)
+</code>就可以生成cscope的数据库</p>
+
+<p>否则，如果源代码有多层目录，则需要
+使用cscope-indexer脚本的递归搜索功能<code>
+cscope-indexer -r
+</code>：</p>
+
+<p>需要在<code>
+(require 'xcscope)
+</code>后设置变量：</p>
+
+<pre class="example">
+(setq cscope-index-recursively t)
+</pre>
+
+<p>然后执行上述操作。</p>
+
+<p>在生成过程中会询问需要生成的目录，cscope-indexer脚本会在指定的目录下
+生成文件索引和数据库文件，因此该目录一般应该和项目初始目录一致。</p>
+
+<p>当然，也可以仅仅生成索引文件, 使用命令：
+<code>
+C-c s L	(cscope-create-list-of-files-to-index)
+</code></p>
+
+<p>也可以编辑修改该文件，如果该文件不存在，则在所定位的目录中创建该文件，使用命令：
+<code>
+C-c s E (cscope-edit-list-of-files-to-index)
+</code></p>
+
+<p><strong>3.设置项目的初始目录</strong></p>
+
+<pre class="example">
+C-c s a		cscope-set-initial-directory
+C-c s A		cscope-unset-initial-directory
+</pre>
+
+<p>如果当前没有设置项目的初始目录， 那么就会从当前目录及上层目录查找，
+否则从设定的项目根目录开始向上查找，直到碰到一个包含索引文件（cscope-index-file）
+或者数据库文件(cscope-database-file)的目录，不妨称这个目录为
+<strong>数据库目录</strong>。</p>
+
+<p>使用命令<code>
+C-c s T (cscope-tell-user-about-directory)
+</code>
+或者<code>
+C-c s S
+</code>
+或者<code>
+C-c s W
+</code>
+可以显示根据当前的项目初始目录的设置，所找的含有索引文件或者数据库文件的数据库目录，如果
+直到根目录都找不到数据库目录，则显示当前设置的项目初始目录，如果未设置项目初始目录，则返回buffer的当前目录。</p>
+
+<p>如果在搜索符号的过程中，发现上述返回的目录中只有文件索引存在，则自动根据该索引在这个目录下更新数据库文件，
+如果没有发现文件索引或者数据库文件，则在项目的初始目录或者当前目录下生成一个数据库文件，
+默认包含这个目录下的所有文件，但是不做递归搜索。</p>
+
+<p>使用命令<code>
+C-c s D (cscope-dired-directory)
+</code>
+打开一个dired buffer， 直接定位到当前的数据库目录，如果其中存在数据库文件，还将定位数据库文件</p>
+
+
+<p><strong>4.搜索及导航</strong></p>
+
+<p>搜索和导航使用<code>
+C-c s
+</code>前缀的命令：</p>
+
+<p><strong>搜索命令(基于项目)</strong></p>
+
+<pre class="example">
+C-c s s         cscope-find-this-symbol
+
+C-c s d 或者 C-c s g
+                cscope-find-global-definition  (pop to input the symbol)
+C-c s G		cscope-find-global-definition-no-prompting (the symbol at the cursor)
+
+C-c s i		cscope-find-files-including-file (搜索用#include语句包含该符号的所有文件)
+C-c s f		cscope-find-this-file  (查找项目中的文件)
+
+C-c s e		cscope-find-egrep-pattern (Run egrep over the cscope database)
+
+C-c s t		cscope-find-this-text-string (字符串查找)
+
+C-c s c		cscope-find-functions-calling-this-function (调用该函数的所有函数)
+C-c s C		cscope-find-called-functions  (该函数调用的函数)
+</pre>
+
+
+
+<p><strong>搜索结果后的导航</strong></p>
+
+<pre class="example">
+C-c s n		cscope-next-symbol
+C-c s p		cscope-prev-symbol
+
+C-c s u		cscope-pop-mark (上次搜索时所处的buffer的书签)
+
+C-c s N		cscope-next-file
+C-c s P		cscope-prev-file
+
+C-c s B		cscope-display-buffer-toggle (toggle auto display *cscope* buffer)
+C-c s b		cscope-display-buffer  (display the *cscope* buffer)
+</pre>
+
+
+<p><strong>5.加速搜索<sup><a class="footref" name="fnr.3" href="#fn.3">3</a></sup></strong></p>
+
+<p>在浏览较少更改的项目时，如果项目规模过大，可以禁止每次查找操作时自动刷数据库文件：</p>
+
+<pre class="example">
+(setq cscope-do-not-update-database t)
+</pre>
+
+<p>可以通过cscope建立反向索引的方式加快搜索速度：</p>
+
+<p>在cscope-indexer文件中将：</p>
+
+<pre class="example">
+cscope -b -i $LIST_FILE -f $DATABASE_FILE
+</pre>
+
+<p>修改为</p>
+
+<pre class="example">
+cscope -q -b -i $LIST_FILE -f $DATABASE_FILE
+</pre>
+
+<p>并重新生成数据库文件，这时候目标目录下会多出两个额外的数据库文件：</p>
+
+<pre class="example">
+  -rw-r--r--  1 justin justin     74 12-02 00:42 cscope.files
+  -rw-r--r--  1 justin justin 346368 12-02 00:42 cscope.out
+  -rw-r--r--  1 justin justin 139264 12-02 00:42 cscope.out.in
+  -rw-r--r--  1 justin justin 238632 12-02 00:42 cscope.out.po
+</pre>
+
+<p><strong>6.高级数据库设置</strong></p>
+
+<p>如果项目散布在多个目录下面，可以通过<code>
+cscope-database-regexps
+</code>来设置，详细参考<code>
+xcscope.el
+</code>的头部注释</p>
+
+<p>也可以直接编辑索引文件来控制头文件的位置，详细设置可以参考cscope手册页：</p>
+
+<pre class="example">
+man cscope
+</pre>
+
+
+
+<h3><a name="sec4" id="sec4"></a>
+参考</h3>
+
+<h4>cscope-indexer的手册页：</h4>
+
+<pre class="example">
+cscope-indexer(1)                                                               cscope-indexer(1)
+
+NAME
+       cscope-indexer - Script to index files for cscope
+
+SYNOPSIS
+       cscope-indexer [-v] [-f database_file] [-i list_file] [-l] [-r]
+
+DESCRIPTION
+       This  script  generates  a list of files to index (cscope.out), which is then (optionally)
+       used to generate a cscope database.  You can use this script  to  just  build  a  list  of
+       files,  or  it  can be used to build a list and database.  This script is not used to just
+       files,  or  it  can be used to build a list and database.  This script is not used to just
+       build a database (skipping the list of files step), as this can be  simply  done  by  just
+       calling &quot;cscope -b&quot;.
+
+       Normally,  cscope will do its own indexing, but this script can be used to force indexing.
+       This is useful if you need to recurse into subdirectories, or have  many  files  to  index
+       (you  can run this script from a cron job, during the night).  It is especially useful for
+       large projects, which can contstantly have source files added and deleted; by  using  this
+       script, the changing sources files are automatically handled.
+
+       Currently, any paths containing &quot;/CVS/&quot; or &quot;/RCS/&quot; are stripped out (ignored).
+
+OPTIONS
+       -f database_file
+              Specifies the cscope database file (default: cscope.out).
+
+       -i list_file
+              Specifies  the  name  of  the  file into which the list of files to index is placed
+              (default: cscope.files).
+
+       -l     Suppress the generation/updating of the cscope database file.  Only a list of files
+              is generated.
+
+       -r     Recurse  into  subdirectories  to locate files to index.  Without this option, only
+              the current directory is searched.
+
+       -v     Be verbose.  Output simple progress messages.
+
+SEE ALSO
+       cscope(1)
+
+AUTHOR
+       This manual page was written for the Debian GNU/Linux  system  by  Robert  Lemmen  &lt;rober-
+       tle@semistable.com&gt; (but may be used by others, of course)
+
+Script to index files for cscope        30. December 2002                       cscope-indexer(1)
+</pre>
+
+
+<h4>xcscope.el 命令：</h4>
+
+<p class="first">更详细的解释参考xcscope.el头部的注释</p>
+
+<pre class="example">
+key             binding
+---             -------
+
+C-c s A		cscope-unset-initial-directory
+
+C-c s B		cscope-display-buffer-toggle
+C-c s C		cscope-find-called-functions
+
+C-c s D		cscope-dired-directory
+C-c s E		cscope-edit-list-of-files-to-index
+
+C-c s G		cscope-find-global-definition-no-prompting
+
+C-c s I		cscope-index-files
+C-c s L		cscope-create-list-of-files-to-index
+
+C-c s N		cscope-next-file
+C-c s P		cscope-prev-file
+
+C-c s S .. C-c s T		cscope-tell-user-about-directory
+C-c s W		cscope-tell-user-about-directory
+C-c s a		cscope-set-initial-directory
+
+C-c s b		cscope-display-buffer
+C-c s c		cscope-find-functions-calling-this-function
+C-c s d		cscope-find-global-definition
+C-c s e		cscope-find-egrep-pattern
+C-c s f		cscope-find-this-file
+C-c s g		cscope-find-global-definition
+C-c s i		cscope-find-files-including-file
+C-c s n		cscope-next-symbol
+C-c s p		cscope-prev-symbol
+C-c s s		cscope-find-this-symbol
+C-c s t		cscope-find-this-text-string
+
+C-c s u		cscope-pop-mark
+</pre>
+
+
+
+<hr>
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  <a href="http://www.caole.net/diary/emacs_write_cpp.html">http://www.caole.net/diary/emacs_write_cpp.html</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  <a href="http://lifegoo.pluskid.org/wiki/EmacsCscope.html">http://lifegoo.pluskid.org/wiki/EmacsCscope.html</a></p>
+
+<p class="footnote"><a class="footnum" name="fn.3" href="#fnr.3">3.</a>  <a href="http://blog.csdn.net/intrepyd/archive/2009/05/19/4202312.aspx">http://blog.csdn.net/intrepyd/archive/2009/05/19/4202312.aspx</a></p>
+
+
+

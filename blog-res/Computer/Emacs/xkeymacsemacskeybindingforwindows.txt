@@ -1,0 +1,10 @@
+XKeymacs: Emacs Key-Binding under Windows
+#tags emacs,windows
+<p>Just as Emacsplus for Eclipse, Xkeymacs is an utility for <a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>-like keybindings for all
+applications under windows.</p>
+
+
+<ul>
+<li><a href="http://www.emacswiki.org/cgi-bin/wiki/">Emacs Wiki</a>: <a href="http://www.emacswiki.org/emacs/XKeymacs">http://www.emacswiki.org/emacs/XKeymacs</a></li>
+<li><a href="HomePage">Home page</a>: <a href="http://www.cam.hi-ho.ne.jp/oishi/indexen.html">http://www.cam.hi-ho.ne.jp/oishi/indexen.html</a></li>
+</ul>

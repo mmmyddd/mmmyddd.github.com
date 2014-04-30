@@ -1,0 +1,24 @@
+Export Synfig Animation to Video
+#tags synfig,vlc,mplayer
+<h2>Export Video</h2>
+
+<p class="first">Go to <code>File-&gt;Render</code>, choose:</p>
+
+<pre class="example">
+Target Render: ffmpeg
+Parameter: (default)
+File Name: sample.mp4
+</pre>
+
+
+<h2>Play Video</h2>
+
+<pre class="example">
+mplayer -vo x11 sample.mp4
+</pre>
+
+<p><span class="note">
+<strong>Note:</strong> Vlcplayer also has option to choose the vidoe output driver.
+</span></p>
+
+

@@ -1,0 +1,45 @@
+Python 2D Drawing and Imaging
+<p>最近调查Python 2D的模块，最后采用以下几组来做公司的项目：</p>
+
+<h3>Python Image Library</h3>
+
+<p class="first">Python的图形库</p>
+
+<pre class="example">
+sudo apt-get install python-pil python-pil-doc
+</pre>
+
+<p>或者</p>
+
+<pre class="example">
+sudo apt-get install  python-imaging
+</pre>
+
+<p>教程在： <a href="http://www.pythonware.com/library/">http://www.pythonware.com/library/</a></p>
+
+
+
+<h3>Python Cairo</h3>
+
+<p class="first">Python的2D绘图库</p>
+
+<pre class="example">
+sudo apt-get install python-cairo
+</pre>
+
+<p>教程在：<a href="http://www.tortall.net/mu/wiki/CairoTutorial">http://www.tortall.net/mu/wiki/CairoTutorial</a></p>
+
+
+
+<h3>Python GUI TK/Tix</h3>
+
+<p class="first">Python标准GUI库和Tix扩展：</p>
+
+<pre class="example">
+sudo apt-get install python-tk python-tk-dbg tix
+</pre>
+
+<p>tix的主页在： <a href="http://tix.sourceforge.net">http://tix.sourceforge.net</a><br>
+<a href="http://mmmyddd.github.io/wiki/python/index.html">python</a>/tix tutorial: <a href="http://tix.sourceforge.net/docs/html/TixUser/TixUser.html">http://tix.sourceforge.net/docs/html/TixUser/TixUser.html</a></p>
+
+

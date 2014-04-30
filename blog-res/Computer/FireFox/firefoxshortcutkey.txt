@@ -1,0 +1,156 @@
+Fire Fox Shortcut Keys
+#tags firefox,shortcut key
+<p>转贴自<a href="http://www.upblog.net/2009/02/firefox-shortcuts-list.html">http://www.upblog.net/2009/02/firefox-shortcuts-list.html</a> 经过
+<code>keyconfig</code>这个附加组件定制和创建新的快捷键：</p>
+
+<p class="verse">
+<strong>历史导航：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;后退： Alt+左方向键 或者 Ctrl＋[<br>
+&nbsp;&nbsp;&nbsp;&nbsp;前进： Alt+右方向键 或者 Ctrl＋]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;首页： Alt+Home<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打开帮助页面： F1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打开文件： Ctrl+O<br>
+&nbsp;&nbsp;&nbsp;&nbsp;重新载入： F5 或 Ctrl+R<br>
+&nbsp;&nbsp;&nbsp;&nbsp;重新载入(忽略缓存)： Ctrl+F5 或 Ctrl+Shift+R<br>
+&nbsp;&nbsp;&nbsp;&nbsp;停止： Esc<br>
+<br>
+<strong>当前页导航：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;全屏： F11<br>
+&nbsp;&nbsp;&nbsp;&nbsp;到页面底部： End<br>
+&nbsp;&nbsp;&nbsp;&nbsp;到页面顶部： Home<br>
+&nbsp;&nbsp;&nbsp;&nbsp;查看页面源代码： Ctrl+U<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打印： Ctrl+P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;页面另存为： Ctrl+S<br>
+&nbsp;&nbsp;&nbsp;&nbsp;放大文字： Ctrl++<br>
+&nbsp;&nbsp;&nbsp;&nbsp;缩小文字： Ctrl+-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;恢复文本大小： Ctrl+0<br>
+<br>
+<strong>插入式浏览：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;切换插入式浏览和普通浏览，在页面内显示光标： F7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在文档中的上一个和下一个元素： Tab 和 Shift ＋ Tab<br>
+&nbsp;&nbsp;&nbsp;&nbsp;（也可以通过搜索快速找到目标）<br>
+&nbsp;&nbsp;&nbsp;&nbsp;选择内容： Shift＋ &lt;left&gt; &lt;right&gt; &lt;up&gt; &lt;down&gt;<br>
+<br>
+<strong>编辑：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;复制： Ctrl+C<br>
+&nbsp;&nbsp;&nbsp;&nbsp;剪切： Ctrl+X<br>
+&nbsp;&nbsp;&nbsp;&nbsp;粘贴： Ctrl+V<br>
+&nbsp;&nbsp;&nbsp;&nbsp;全选： Ctrl+A<br>
+&nbsp;&nbsp;&nbsp;&nbsp;删除： Del<br>
+&nbsp;&nbsp;&nbsp;&nbsp;撤消： Ctrl+Z<br>
+&nbsp;&nbsp;&nbsp;&nbsp;重做： Ctrl+Y 或者 Ctrl＋SHIFT＋Z<br>
+<br>
+<strong>页内搜索：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;快速输入查找文本：/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;快速输入查找链结：‘<br>
+&nbsp;&nbsp;&nbsp;&nbsp;本页全面查找： Ctrl+F<br>
+&nbsp;&nbsp;&nbsp;&nbsp;查找最近一次的搜索字符：F3 或者 Ctrl＋G, 或者在本页全面查找中Alt＋N<br>
+&nbsp;&nbsp;&nbsp;&nbsp;查找最近一次的搜索字符(反向)：Shift＋F3 或者 Shift+Ctrl+G，在本页全面查找中Alt＋P<br>
+<br>
+<strong>网页搜索：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;网页搜索： Ctrl+K<br>
+&nbsp;&nbsp;&nbsp;&nbsp;选择或管理搜索引擎： Alt+上方向键&amp;Alt+下方向键<br>
+<br>
+<strong>窗口和标签:</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;新建窗口： Ctrl+N<br>
+&nbsp;&nbsp;&nbsp;&nbsp;新建标签页： Ctrl+T<br>
+&nbsp;&nbsp;&nbsp;&nbsp;复制标签页： Ctrl＋ALT＋T<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;关闭标签： Ctrl+W 或 Ctrl+F4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;关闭窗口： Ctrl+Shift+W 或 Alt+F4<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;下一个标签页： Ctrl+Tab 或 Ctrl+Page Down<br>
+&nbsp;&nbsp;&nbsp;&nbsp;前一个标签页： Ctrl+Shift+Tab 或 Ctrl+Page Up<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;撤销关闭标签页： Ctrl+Shift+T 重定向为 Ctrl＋F12<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;选择标签页 [1 to 8]： Ctrl+[1 到 8]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;选择最后标签页： Ctrl+9<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;标签页移动到新窗口： Ctrl＋Alt＋N<br>
+&nbsp;&nbsp;&nbsp;&nbsp;合并所有窗口标签到当前窗口： Ctrl＋Alt＋M<br>
+<br>
+<strong>地址栏：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;选择地址条： Alt+D 或 Ctrl+L<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在地址栏和页面之间切换: F6<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;移到下一帧： F6<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;移到上一帧： Shift+F6<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;补全 .com 地址： Ctrl+Enter  e.g. sohu＝&gt;www.sohu.com<br>
+&nbsp;&nbsp;&nbsp;&nbsp;补全 .net 地址： Shift+Enter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;补全 .org 地址： Ctrl+Shift+Enter<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在新标签页打开网址： Alt+Enter<br>
+<br>
+<strong>鼠标快捷键：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;后退： Shift+Scroll down<br>
+&nbsp;&nbsp;&nbsp;&nbsp;前进： Shift+Scroll up<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;减小文字大小： Ctrl+Scroll up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;增大文字大小： Ctrl+Scroll down<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;新建标签页： 在标签页栏双击鼠标<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在后台打开标签页： Ctrl+Left-click<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在前台打开标签页： Shift+Ctrl+Left-click<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在新窗口打开： Shift+Left-click<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;逐行滚动： Alt+Scroll<br>
+<br>
+<strong>工具：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;添加当前为书签： Ctrl+D<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打开书签： Ctrl+B<br>
+&nbsp;&nbsp;&nbsp;&nbsp;页面信息： Ctrl+I<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;历史： Ctrl+H<br>
+&nbsp;&nbsp;&nbsp;&nbsp;管理我的足迹： Ctrl＋SHITF＋O<br>
+&nbsp;&nbsp;&nbsp;&nbsp;全部历史：Ctrl+SHIFT+H<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DOM Inspector： Ctrl＋SHIFT＋I<br>
+&nbsp;&nbsp;&nbsp;&nbsp;错误控制台： Ctrl＋SHIFT＋J<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fire Bug： F12<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Key Config：Ctrl+SHIFT+F12<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ALL-IN-ONE Sidebar: F4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;下载： Ctrl+SHIFT+Y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;组件： Ctrl+SHIFT+A (addons)<br>
+<br>
+<strong>Session管理：</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;进入隐私浏览模式：Ctrl+Shift+P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;清除私有数据： Ctrl+Shift+Del<br>
+&nbsp;&nbsp;&nbsp;&nbsp;保存当前进程，快速无确认退出：Ctrl＋Q<br>
+<br>
+<strong>Flash Got:</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + F1 - 下载此链结<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + F2 - 下载所选链结<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + F3 - 下载全部链结<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + F6 - 下载标签页组<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + F7 - Flash Got 此媒体<br>
+<br>
+<strong>Scrap Book:</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;快速抓取当前页面： Ctrl＋Shift+L<br>
+&nbsp;&nbsp;&nbsp;&nbsp;抓取当前页面： Ctrl＋Shift＋K<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Scrop Book： Alt＋K<br>
+<br>
+<strong>It's all text:</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;打开外部编辑器： Alt+Q<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a> client返回: C-x #<br>
+<br>
+<strong>Fire Bug:</strong><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;参考：<a href="http://getfirebug.com/wiki/index.php/Keyboard_and_Mouse_Shortcuts">http://getfirebug.com/wiki/index.php/Keyboard_and_Mouse_Shortcuts</a><br></p>

@@ -1,0 +1,47 @@
+Adjust Time Using NTP
+#tags ntp,debian,linux
+<p>最近在虚拟机中休眠以后总是时间不能自动更新到系统时间，
+可以用网络时间协议(NTP)来定时更新时间:</p>
+
+<ul>
+<li>安装协议包：</li>
+</ul>
+
+<pre class="example">
+sudo apt-get ntpdate
+</pre>
+
+
+<ul>
+<li>手动刷新系统时间：</li>
+</ul>
+
+<pre class="example">
+sudo ntpdate time.buaa.edu.cn
+</pre>
+
+<ul>
+<li>将系统时间写入硬件时钟：</li>
+</ul>
+
+<pre class="example">
+sudo hwclock -w
+</pre>
+
+<ul>
+<li>定时刷新时钟,例如每10分钟刷新一次：</li>
+</ul>
+
+<pre class="example">
+sudo crontab -e
+</pre>
+
+<p>在crontab末尾加入：</p>
+
+<pre class="example">
+# m h  dom mon dow   command
+0,10,20,30,40,50 * * * * /usr/sbin/ntpdate time.buaa.edu.cn;/sbin/hwclock -w
+</pre>
+
+
+<p>参考：<a href="http://time.buaa.edu.cn">http://time.buaa.edu.cn</a></p>

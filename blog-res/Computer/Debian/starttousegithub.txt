@@ -1,0 +1,150 @@
+Start To Use Github
+#tags github,git
+<blockquote>
+<p class="quoted">Github is the vCard of a programmer.  &mdash; Anonymous</p>
+</blockquote>
+
+<p>But I've been so late to have the vCard. Let's begin to
+create one.</p>
+
+<p>First to check the version of your git client to be no older
+than <code>1.7.1.10</code>, otherwise the push operation will
+fail with 403 Error:</p>
+
+ 
+
+<pre class="example">
+justin@Justin:~$ git --version
+git version 1.7.2.5
+</pre>
+
+<p>Then create a test git repository with name <code>test</code>, and get
+the address <code>https://github.com/mmmyddd/test.git</code>:</p>
+
+<p>Init a local repo and add a new file by:</p>
+
+<pre class="example">
+mkdir test &amp;&amp; cd test
+git init
+touch helloworld.txt
+git add helloworld.txt
+git commit -m &quot;first commit&quot;
+</pre>
+
+<p>Add the remote git repository &quot;test&quot; to local repo:</p>
+
+<pre class="example">
+git remote add origin https://github.com/mmmyddd/test.git
+</pre>
+
+<p>Use the following command to show all the local and remote branches:</p>
+
+<pre class="example">
+justin@Justin:~/projects/github/test2$ git branch -a
+ * master
+ remotes/origin/master
+</pre>
+
+<p>We can find the master branch of remote repository is added
+as <code>remotes/origin/master</code></p>
+
+<p>Try push the local change to remote server, the server will
+ask for your github username/password (you can set the ssh
+key on github if you want to connect via ssh):</p>
+
+<pre class="example">
+justin@Justin:~/projects/github/test$ git push -u origin master
+Username:
+Password:Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 283 bytes, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/mmmyddd/test.git
+   9ff9844..e7cd465  master -&gt; master
+Branch master set up to track remote branch master from origin.
+</pre>
+
+<p>Another issue is about collaborate with others, what to do
+if others changed the remote repository, here is an example:</p>
+
+<pre class="example">
+mkdir test2 &amp;&amp; cd test2
+git init
+touch helloworld2.txt
+git add helloworld2.txt
+git commit -m &quot;another commit&quot;
+git remote add origin https://github.com/mmmyddd/test.git
+git push -u origin master
+</pre>
+
+<p>when you execute the last command, errors will be reported:</p>
+
+<p class="verse">
+justin@Justin:~/projects/github/test2$ git push -u origin master<br>
+Username:<br>
+Password:<br>
+To <a href="https://github.com/mmmyddd/test.git">https://github.com/mmmyddd/test.git</a><br>
+&nbsp;&nbsp;! [rejected]        master -&gt; master (non-fast-forward)<br>
+error: failed to push some refs to '<a href="https://github.com/mmmyddd/test.git">https://github.com/mmmyddd/test.git</a>'<br>
+To prevent you from losing history, non-fast-forward updates were rejected<br>
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the<br>
+'Note about fast-forwards' section of 'git push &mdash;help' for details.<br>
+</p>
+
+<p>It is because the local branch doesn't have the latest
+commit from the remote repo, you need to update the branch
+first:</p>
+
+<pre class="example">
+justin@Justin:~/projects/github/test2$ git pull origin master
+warning: no common commits
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 1), reused 6 (delta 0)
+Unpacking objects: 100% (10/10), done.
+From https://github.com/mmmyddd/test
+ * branch            master     -&gt; FETCH_HEAD
+Merge made by recursive.
+ README.md  |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 helloworld
+</pre>
+
+<p><span class="note"> <strong>Note:</strong> <code>git pull</code> is
+equivalent to the combination of <code>git fetch</code> and
+<code>git merge</code>. So in the above command, <code>git
+pull</code> ask to pull the latest commits from
+<code>origin</code> remote branch and merge the change to
+local branch <code>master</code> </span></p>
+
+<p>now we can try push the local change again:</p>
+
+<pre class="example">
+justin@Justin:~/projects/github/test2$ git push -u origin master
+Username:
+Password:
+Counting objects: 5, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 492 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To https://github.com/mmmyddd/test.git
+   e7cd465..fbd6242  master -&gt; master
+Branch master set up to track remote branch master from origin.
+</pre>
+
+<p>It succeeds this time.</p>
+
+<p>At last, we are talking about the <code>-u</code> option in <code>git push</code> command:</p>
+
+<p class="verse">
+&nbsp;&nbsp;-u, &mdash;set-upstream<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For every branch that is up to date or successfully pushed, add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;upstream (tracking) reference, used by argument-less git-pull(1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and other commands. For more information, see branch.&lt;name&gt;.merge<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in git-config(1).<br>
+</p>
+
+<p>It set the default <strong>up-stream</strong> reference of the current
+branch, so that next time you can use <code>git pull</code>
+or <code>git push</code> without argument on the current branch.</p>

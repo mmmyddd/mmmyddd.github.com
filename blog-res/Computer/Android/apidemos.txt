@@ -1,0 +1,11 @@
+ApiDemos for Cupcake
+<p><a href="ApiDemos">Api Demos</a> is a very helpful application to demostrate the <a href="http://mmmyddd.github.io/wiki/android/index.html">android</a> platform api's.
+Problem found when install this sdk sample application <a href="ApiDemos">Api Demos</a>.apk into the cupcake emulator image, error message reported:</p>
+
+<p>INSTALL_FAILED_MISSING_SHARED_LIBRARY</p>
+
+<p>The error caused by using a future platform library. To fix the issue, you need to remove the following lines in <a href="AndroidManifest">Android Manifest</a>.xml under the root directory of <a href="ApiDemos">Api Demos</a>:</p>
+
+<pre class="example">
+&lt;uses-library android:name=&quot;com.google.android.maps&quot; /&gt;
+</pre>
