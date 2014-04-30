@@ -1,5 +1,0 @@
-#+TITLE: Contents of GitHub
-
-   + posts
-     + [[file:posts/second-github-pages-post.org][Second Github Pages Post (2013-08-24)]]
-     + [[file:posts/first-github-pages-post.org][First Github Pages Post (2013-08-24)]]
