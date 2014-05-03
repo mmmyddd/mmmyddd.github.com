@@ -2,11 +2,11 @@
 <rss version="2.0">
   <channel>
     <title>Justin&apos;s Blog</title>
-    <link>http://mmmyddd.github.io/blog-res/blog</link>
+    <link>http://mmmyddd.github.io/blog-res/blog?</link>
     <description></description>
     <language>en</language>
-    <pubDate>Sun, 04 May 2014 02:39:09 CST</pubDate>
-    <lastBuildDate>Sun, 04 May 2014 02:39:09 CST</lastBuildDate>
+    <pubDate>Sun, 04 May 2014 03:33:27 CST</pubDate>
+    <lastBuildDate>Sun, 04 May 2014 03:33:27 CST</lastBuildDate>
     <item>
       <title>Build Goldfish Kernel For Android 4.2</title>
       <link>http://mmmyddd.github.io/blog-res/blog/Computer/Android/buildgoldfishkernelforandroid42</link>
