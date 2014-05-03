@@ -4,10 +4,10 @@ Move From SDF to Github
 在以前的设置稍作修改就可以用了，倒是也没怎么浪费时间，从今天
 起我的主页就变更为：</p>
 
-<p><a href="http://mmmyddd.githut.io">http://mmmyddd.githut.io</a></p>
+<p><a href="http://mmmyddd.github.io">http://mmmyddd.github.io</a></p>
 
 <p>同时把老站点的内容搬过来，别了SDF：</p>
 
 <p><a href="http://mmmyddd.freeshell.net">http://mmmyddd.freeshell.net</a></p>
 
-<p>这个域名也曾进带给我很多快乐的时光～</p>
+<p>这个域名也曾进带给我很多快乐的时光～从</p>
