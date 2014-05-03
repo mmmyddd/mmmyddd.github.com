@@ -1095,7 +1095,7 @@ function genDisqus_comment_content(id, title){
         "var disqus_shortname = 'justinswebsite'; // required: replace example with your forum shortname\n" +
         "var disqus_identifier = '" + "blog:" + id + "';\n" +
         "var disqus_title = \"" + "Justin's Blog - " + title + "\";\n" +
-        "var disqus_url = '" + "http://mmmyddd.freeshell.net/blog/" + id + "';\n" +
+        "var disqus_url = '" + "http://mmmyddd.github.io/blog-res/blog?" + id + "';\n" +
         "/* * * DON'T EDIT BELOW THIS LINE * * */\n" +
         "(function() { \n" +
         "var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n" +
