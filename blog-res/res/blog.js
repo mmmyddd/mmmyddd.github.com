@@ -13,6 +13,9 @@ function gen_nav(location){
     //        search + '\n' +
     //        hash );
 
+    // Change pathname to search
+    pathname = search.replace(/^\?/g, "");
+
     //formalize the pathname
     //1. remove redundant slash
     //2. remove the prefix
@@ -167,7 +170,7 @@ function gen_nav_bar(nav_info){
     if(categories && categories.length >0 ) {
         $.each(categories, function(entryIndx, entry){
             category_str += '/' + entry;
-            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog' + category_str + '">';
+            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog?' + category_str + '">';
             html += get_category_name(category_str);
             html += '</a>';
         });
@@ -184,21 +187,21 @@ function gen_nav_bar(nav_info){
         //generate time
         if(year){
             time_str += '/' + year;
-            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog' + time_str + '">';
+            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog?' + time_str + '">';
             html += year;
             html += '</a>'
         }
 
         if(month){
             time_str += '/' + month;
-            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog' + time_str + '">';
+            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog?' + time_str + '">';
             html += month;
             html += '</a>'
         }
 
         if(date){
             time_str += '/' + date;
-            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog' + time_str + '">';
+            html += '&nbsp;&#187;&nbsp;' + '<a href="/blog-res/blog?' + time_str + '">';
             html += date;
             html += '</a>'
         }
@@ -212,7 +215,7 @@ function gen_nav_bar(nav_info){
         if(tag_op && tags && tags.length >0 ) {
             $.each(tags, function(entryIndex, entry){
                 var tag_str = '';
-                tag_str += '<a href="/blog-res/blog/tags/' + entry + '">';
+                tag_str += '<a href="/blog-res/blog?/tags/' + entry + '">';
                 tag_str += entry;
                 tag_str += '</a>';
                 tag_strs.push(tag_str);
@@ -259,7 +262,7 @@ function gen_categories(){
         }
         html += '<div>';
         html += gen_indent("category-indent", indent_count, false);
-        html += '<a href="/blog-res/blog'+ entry.key +'">' + get_category_name(entry.key) + '</a>';
+        html += '<a href="/blog-res/blog?'+ entry.key +'">' + get_category_name(entry.key) + '</a>';
         html += '&nbsp;(' + entry.count + ')';
         html += gen_indent("", indent_count, true);
         html += '</div>';
@@ -326,7 +329,7 @@ function gen_tags(){
         }
 
         html += '<span class="tag-class"> &nbsp;';
-        html += '<a href="/blog-res/blog/tags/'+ entry.key + '" ' +
+        html += '<a href="/blog-res/blog?/tags/'+ entry.key + '" ' +
                    'title="'+ entry.count + ' post(s)" ' +
                    'style="white-space: nowrap; font-size: '+ font_size + '%;">'
                    + entry.key + '</a>';
@@ -389,7 +392,7 @@ function gen_archives(){
         var entry_key_str = entry.key.replace(/-/g, "\/");
 
         html += gen_indent("archive-indent", indent_count, false);
-        html += '<a href="/blog-res/blog/'+ entry_key_str +'">' + get_archive_name(entry.key) + '</a>';
+        html += '<a href="/blog-res/blog?/'+ entry_key_str +'">' + get_archive_name(entry.key) + '</a>';
         html += '&nbsp;(' + entry.count + ')';
         html += gen_indent("", indent_count, true);
     });
@@ -625,7 +628,7 @@ function gen_list_html(list){
                     if(entryIndex != 0){
                         html += "&nbsp;&#187;&nbsp;";
                     }
-                    html += '<a href="/blog-res/blog' + cur_category_str + '" >';
+                    html += '<a href="/blog-res/blog?' + cur_category_str + '" >';
                     html += get_category_name(cur_category_str);
                     html += '</a>';
                 });
@@ -639,7 +642,7 @@ function gen_list_html(list){
                     if(entryIndex !=0) {
                         html += ", ";
                     }
-                    html += '<a href="/blog-res/blog/tags/' + entry + '" >';
+                    html += '<a href="/blog-res/blog?/tags/' + entry + '" >';
                     html += entry;
                     html += '</a>';
                 });
@@ -649,7 +652,7 @@ function gen_list_html(list){
 
             //permalink
             html += '<div>';
-            html += '<a href="/blog-res/blog/' + entry + '" >' + 'Permanent Link' + '</a>';
+            html += '<a href="/blog-res/blog?/' + entry + '" >' + 'Permanent Link' + '</a>';
             html += '</div>';
 
             html += '</div>';
@@ -730,7 +733,7 @@ function gen_unique_html_meta(blog_map, entry){
             if(entryIndex != 0){
                 html += "&nbsp;&#187;&nbsp;";
             }
-            html += '<a href="/blog-res/blog' + cur_category_str + '" >';
+            html += '<a href="/blog-res/blog?' + cur_category_str + '" >';
             html += get_category_name(cur_category_str);
             html += '</a>';
         });
@@ -744,7 +747,7 @@ function gen_unique_html_meta(blog_map, entry){
             if(entryIndex !=0) {
                 html += ", ";
             }
-            html += '<a href="/blog-res/blog/tags/' + entry + '" >';
+            html += '<a href="/blog-res/blog?/tags/' + entry + '" >';
             html += entry;
             html += '</a>';
         });
@@ -754,8 +757,8 @@ function gen_unique_html_meta(blog_map, entry){
 
     //permalink
     html += '<div>';
-    html += '<a href="/blog-res/blog/' + entry + '" >' + 'Permanent Link' + '</a>';
-    html += "&nbsp;" + WriteSNS("http://mmmyddd.freeshell.net/blog-res/blog/" + entry, title);
+    html += '<a href="/blog-res/blog?/' + entry + '" >' + 'Permanent Link' + '</a>';
+    html += "&nbsp;" + WriteSNS("http://mmmyddd.github.io/blog-res/blog?/" + entry, title);
 
     html += '</div>';
 
