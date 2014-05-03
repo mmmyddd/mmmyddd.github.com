@@ -28,6 +28,9 @@ function gen_nav(location){
     pathname = pathname.replace(/^\/blog$/, "");
     //alert(pathname);
 
+    // for ?/...
+    pathname = pathname.replace(/^\//, "");
+
     // first remove the date part, the time part should
     // always at the end of the pathname
     // Example:
