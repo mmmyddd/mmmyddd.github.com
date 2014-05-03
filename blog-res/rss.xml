@@ -5,8 +5,13 @@
     <link>http://mmmyddd.github.io/blog-res/blog?</link>
     <description></description>
     <language>en</language>
-    <pubDate>Sun, 04 May 2014 03:40:41 CST</pubDate>
-    <lastBuildDate>Sun, 04 May 2014 03:40:41 CST</lastBuildDate>
+    <pubDate>Sun, 04 May 2014 04:05:07 CST</pubDate>
+    <lastBuildDate>Sun, 04 May 2014 04:05:07 CST</lastBuildDate>
+    <item>
+      <title>Move From SDF to Github</title>
+      <link>http://mmmyddd.github.io/blog-res/blog?/Ramble/movefromsdftogithub</link>
+      <description></description>
+    </item>
     <item>
       <title>Build Goldfish Kernel For Android 4.2</title>
       <link>http://mmmyddd.github.io/blog-res/blog?/Computer/Android/buildgoldfishkernelforandroid42</link>
