@@ -103,6 +103,8 @@ body {
   margin-right: 8px;
   margin-bottom: 0pt;
   margin-left: 8px;
+  width: 900px;
+  margin: auto;
 }
 
 code {
@@ -1053,4 +1055,5 @@ pre {
 #content{
     width: 900px;
     margin: auto;
+    overflow: hidden;
 }
