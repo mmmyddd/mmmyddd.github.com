@@ -107,47 +107,7 @@ org_html_manager.setup();  // activate after the parameters are set
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
-<!--/*--><![CDATA[/*><!--*/
-    MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
-        displayAlign: "center",
-        displayIndent: "2em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
-             }
-        }
-    });
-/*]]>*///-->
-</script>
 </head>
 <body>
 
@@ -427,15 +387,18 @@ iimage-mode
 </p>
 
 
-\begin{equation}
+<p>
+<img src="ltxpng/test_341fe8c35e37844a5bc9f03ca0ce4e74b9281592.png" alt="\begin{equation}
 e=mc^2
 x=\sqrt{b}
-\end{equation}
+\end{equation}"/>
+</p>
+
 
 
 <p>
-     If \(a^2=b\) and \( b=2 \), then the solution must be
-     either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+     If <img src="ltxpng/test_537e983581ff148c72b8a1e5a0b6b722935eec16.png" alt="$a^2=b$"/> and <img src="ltxpng/test_ae3b3697af3921734039597582ed0ae302afa776.png" alt="\( b=2 \)"/>, then the solution must be
+     either <img src="ltxpng/test_adec553f67075031211b6fe3bed854c80cc048da.png" alt="$$ a=+\sqrt{2} $$"/> or <img src="ltxpng/test_acf385a8ad4e5b3325e34c05c4bed2dab96afcc5.png" alt="\[ a=-\sqrt{2} \]"/>.
 </p>
 </div>
 </div>

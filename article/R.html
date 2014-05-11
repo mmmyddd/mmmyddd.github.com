@@ -107,47 +107,7 @@ org_html_manager.setup();  // activate after the parameters are set
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
-<!--/*--><![CDATA[/*><!--*/
-    MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
-        displayAlign: "center",
-        displayIndent: "2em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
-             }
-        }
-    });
-/*]]>*///-->
-</script>
 </head>
 <body>
 
@@ -217,7 +177,7 @@ org_html_manager.setup();  // activate after the parameters are set
 
 
 <p>
-fdsfbff \(e=mc^2\) dfsfsdfs $$e=mc^2$$ dfsfd
+fdsfbff <img src="ltxpng/R_b172f76efcbaeb2ec17fd230ffe1445d8c6ab86a.png" alt="$e=mc^2$"/> dfsfsdfs <img src="ltxpng/R_1ba316589f4ee042d1e4d1e0652684023358d33c.png" alt="$$e=mc^2$$"/> dfsfd
 </p>
 
 
@@ -242,9 +202,14 @@ fdsfbff \(e=mc^2\) dfsfsdfs $$e=mc^2$$ dfsfd
 
 
 
-\begin{equation}
+<p>
+<img src="ltxpng/R_def0fd9a5468a64e3d86c9f4e47476d0f576337a.png" alt="\begin{equation}
 x=\sqrt{b}
-\end{equation}
+\end{equation}"/>
+</p>
+
+
+
 
 
 
@@ -252,10 +217,15 @@ x=\sqrt{b}
 </pre>
 
 
-\begin{equation}
+
+
+<p>
+<img src="ltxpng/R_f1c438d04f8049bd5784eaf9568228163ffe3a07.png" alt="\begin{equation}
 \setcounter{equation}{3}
 E=mc^2
-\end{equation}
+\end{equation}"/>
+</p>
+
 
 <p>
      The mass if the sun is M<sub>sun</sub> = 1.989 x 10<sup>30</sup> kg.  The radius of
@@ -263,8 +233,8 @@ E=mc^2
 </p>
 
 <p>
-If \(a^2=b\) and \( b=2 \), then the solution must be
-either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+If <img src="ltxpng/R_c73e4d66b75c23eae6a53f6186dd386214d4cf0c.png" alt="$a^2=b$"/> and <img src="ltxpng/R_7de5cd13e6da8648feb48c30452bf17985c82db0.png" alt="\( b=2 \)"/>, then the solution must be
+either <img src="ltxpng/R_32301a311a73d33a4f45c29da18a1a9e5dd7f6fc.png" alt="$$ a=+\sqrt{2} $$"/> or <img src="ltxpng/R_1a783e6c40a4f026293d16905f8ba9310e6a07c2.png" alt="\[ a=-\sqrt{2} \]"/>.
 </p>
 
 
