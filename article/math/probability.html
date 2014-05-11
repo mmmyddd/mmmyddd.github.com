@@ -107,47 +107,7 @@ org_html_manager.setup();  // activate after the parameters are set
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
-<!--/*--><![CDATA[/*><!--*/
-    MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
-        displayAlign: "center",
-        displayIndent: "2em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
-             }
-        }
-    });
-/*]]>*///-->
-</script>
 </head>
 <body>
 
@@ -202,8 +162,6 @@ org_html_manager.setup();  // activate after the parameters are set
 <h1 class="title">Probability Theory</h1>
 
 
-
-
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -229,12 +187,10 @@ org_html_manager.setup();  // activate after the parameters are set
 <ul>
 <li><a href="#sec-3-1">3.1 基本概念</a>
 <ul>
-<li><a href="#sec-3-1-1">3.1.1 样本空间\(\Omega\)</a></li>
-<li><a href="#sec-3-1-2">3.1.2 事件域\(\mathscr{F}\)</a></li>
+<li><a href="#sec-3-1-1">3.1.1 样本空间file:ltxpng/probability<sub>507055718cf36064d065d0cb1269a0e66f35d2b2</sub>.png</a></li>
+<li><a href="#sec-3-1-2">3.1.2 事件域file:ltxpng/probability<sub>d9e7af375026eccbb3b8bb5d4952273a6c432fc4</sub>.png</a></li>
 <li><a href="#sec-3-1-3">3.1.3 概率的形式定义</a></li>
-</ul>
-</li>
-<li><a href="#sec-3-2">3.2 </a></li>
+</ul></li>
 </ul>
 </li>
 <li><a href="#sec-4">4 随机变量</a>
@@ -281,9 +237,9 @@ org_html_manager.setup();  // activate after the parameters are set
 <b>决定性现象</b> ， 是概率论以外的数学分支研究的对象。
 
 <ul>
-<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用\(\Omega\) 来表示。
+<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用<img src="ltxpng/probability_bf75a1b044e180d010b5ea622c3b4d3a216707e5.png" alt="$\Omega$"/> 来表示。
 </li>
-<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用\(\varnothing\) 来表示。
+<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用<img src="ltxpng/probability_c227ab6a8bd65a96c3d4572626b2d79375609999.png" alt="$\varnothing$"/> 来表示。
 </li>
 </ul>
 
@@ -300,7 +256,7 @@ org_html_manager.setup();  // activate after the parameters are set
 
 <p>
 随机现象中可能出现的结果成为 <b>随机事件</b> ， 简称 <b>事件</b> ，一般
-用大写字母\(A,B,C,\ldots\) 来表示。
+用大写字母<img src="ltxpng/probability_abcd930602f5464338ff75da39ebe4db887d52d2.png" alt="$A,B,C,\ldots$"/> 来表示。
 </p>
 </li>
 </ul>
@@ -323,14 +279,13 @@ org_html_manager.setup();  // activate after the parameters are set
 <li id="sec-1-2-2-1">频率<br/>
 
 <p>
-对于随机事件\(A\) ，若在\(N\) 次试验中出现了\(n\) 次，则称：
+对于随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> ，若在<img src="ltxpng/probability_0dc87787d4090cb17d811c902cb8c223d943ecc8.png" alt="$N$"/> 次试验中出现了<img src="ltxpng/probability_83a656dff3a2423afd54fdd1baa9150426743988.png" alt="$n$"/> 次，则称：
 </p>
-
-
-$$F_N \left( A \right) = \frac{n}{N}$$
-
 <p>
-为随机事件\(A\) 在\(N\) 次试验中出现的 <b>频率</b>
+<img src="ltxpng/probability_c2c26a7c2dd95baf7b0bd798b41471062acb0fed.png" alt="$$F_N \left( A \right) = \frac{n}{N}$$"/>
+</p>
+<p>
+为随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> 在<img src="ltxpng/probability_0dc87787d4090cb17d811c902cb8c223d943ecc8.png" alt="$N$"/> 次试验中出现的 <b>频率</b>
 </p>
 </li>
 </ul>
@@ -344,20 +299,20 @@ $$F_N \left( A \right) = \frac{n}{N}$$
 <li><b>频率的非负性</b>
 
 <p>
-  \(F_N \left( A \right) \geqslant 0\)
+  <img src="ltxpng/probability_288dea12e367117439024ac3a1ea8307a03fc725.png" alt="$F_N \left( A \right) \geqslant 0$"/>
 </p>
 </li>
 <li><b>必然事件频率为1</b>
 
 <p>
-  \(F_N \left( \Omega \right) = 1\)
+  <img src="ltxpng/probability_c19bb810ff4a65c5aa3720c931b23e49330e040f.png" alt="$F_N \left( \Omega \right) = 1$"/>
 </p>
 </li>
-<li><b>频率的可加性</b>: 对于不可能同时发生的事件\(A\) 和 \(B\) 称为 <b>不相容事件</b>,用\(A+B\) 表
-  示\(A\) 或者 \(B\) 至少出现其中之一的事件，则有：
+<li><b>频率的可加性</b>: 对于不可能同时发生的事件<img src="ltxpng/probability_690d0c80de75bd1ce7df7a61498573af9c120978.png" alt="$A$"/> 和 <img src="ltxpng/probability_2c72f9942ddfaf11f1cce2a7b48a2e4d1f03572a.png" alt="$B$"/> 称为 <b>不相容事件</b>,用<img src="ltxpng/probability_c4539b609a55062cd806706540f23108005e5ef4.png" alt="$A+B$"/> 表
+  示<img src="ltxpng/probability_87b16b0de9e74c07932f8b0da66b4a558d10da14.png" alt="$A$"/> 或者 <img src="ltxpng/probability_d4df27d0d80100446d89f1c470225472c6cffb37.png" alt="$B$"/> 至少出现其中之一的事件，则有：
 
 <p>
-  \(F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)\)
+  <img src="ltxpng/probability_5f7d14acb826dce01e314c0ede8a816aded48b1b.png" alt="$F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)$"/>
 </p></li>
 </ul>
 
@@ -369,24 +324,25 @@ $$F_N \left( A \right) = \frac{n}{N}$$
 <li><b>不可能事件频率为0</b>
 
 <p>
-  \(F_N \left( \varnothing \right) = 0\)
+  <img src="ltxpng/probability_99dfc2e17956db7e723aa678561cb405c1adb3e0.png" alt="$F_N \left( \varnothing \right) = 0$"/>
 </p>
 </li>
 <li><b>频率不大于1</b>
 
 <p>
-  \(F_N \left( A \right) \leqslant 1\)
+  <img src="ltxpng/probability_6fe540259db5725ea95d9e87aee06a5847cf273c.png" alt="$F_N \left( A \right) \leqslant 1$"/>
 </p>
 </li>
 <li>有限两两不相容事件的 <b>频率的可加性</b>
 
 <p>
-  $$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N
-ORG-LIST-END-MARKER
-\left( A_i \right)$$
-
-
+  <img src="ltxpng/probability_5c1bfb9b7e5219a95eedd9396093e05f065383cd.png" alt="$$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N\left( A_i \right)$$"/>
 </p></li>
+</ul>
+
+
+
+</li>
 </ul>
 <ul>
 <li id="sec-1-2-2-3">频率的稳定性<br/>
@@ -406,19 +362,19 @@ ORG-LIST-END-MARKER
 <li id="sec-1-2-2-4">概率<br/>
 
 <p>
-对于一个随机事件\(A\) ,用一个数\(P(A)\) 来表示该事件发生的可能性
-大小，称为随机事件\(A\) 的 <b>概率</b>
+对于一个随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> ,用一个数<img src="ltxpng/probability_19c8520d5e38fdf5a3dc2dbd9d602f8181efe4e0.png" alt="$P(A)$"/> 来表示该事件发生的可能性
+大小，称为随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> 的 <b>概率</b>
 </p>
 <p>
 关于概率和频率的关系，现在有如下命题待证明：
 </p>
 
 <p>
-<b>命题1</b> （频率和概率）：$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
-\left( A \right)$$
+<b>命题1</b> （频率和概率）：<img src="ltxpng/probability_10aa7ba1e6d7f465a03a9a9c62a8639a7d7ed34a.png" alt="$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
+\left( A \right)$$"/>
+</p>
 
-
-</p></li>
+</li>
 </ul>
 </div>
 </div>
@@ -440,10 +396,10 @@ ORG-LIST-END-MARKER
 
 
 <p>
-随机试验中可能出现的结果称为 <b>样本点</b> ，用\(\omega\) 表示。
+随机试验中可能出现的结果称为 <b>样本点</b> ，用<img src="ltxpng/probability_50626661bda20c3de1febb50752dfdd5169e47be.png" alt="$\omega$"/> 表示。
 </p>
 <p>
-样本点的全体构成的集合叫作 <b>样本空间</b> 用\(\Omega\) 表示。
+样本点的全体构成的集合叫作 <b>样本空间</b> 用<img src="ltxpng/probability_6ec5247dcf0d81fcca2f079b490b4f7a9a152504.png" alt="$\Omega$"/> 表示。
 </p>
 <p>
 样本空间可能是有限集，离散可列集，不可列集，或者多维空间。
@@ -457,19 +413,20 @@ ORG-LIST-END-MARKER
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> 事件</h3>
 <div class="outline-text-3" id="text-2-2">
 
-<p>有了样本空间，我们用集合的观点来定义事件：如果 \(A \subseteq
-\Omega\) ，则称\(A\) 是样本空间\(\Omega\) 上的一个 <b>事件</b> 。样本空
-间上所有事件的集合可记作 \(2^{\Omega} = \left\{ A|A \subseteq
-\Omega \right\}\)
+<p>有了样本空间，我们用集合的观点来定义事件：如果 <img src="ltxpng/probability_eba09ca19e54a5dd5ba81afcda6d8c0fa22d36d1.png" alt="$A \subseteq
+\Omega$"/> ，则称<img src="ltxpng/probability_d66497172efe1397202694bbac9036f5455c1c3f.png" alt="$A$"/> 是样本空间<img src="ltxpng/probability_6ec5247dcf0d81fcca2f079b490b4f7a9a152504.png" alt="$\Omega$"/> 上的一个 <b>事件</b> 。样本空
+间上所有事件的集合可记作 <img src="ltxpng/probability_c1a2d357bd191682ab8504fe26d77f72e2c50f4f.png" alt="$2^{\Omega} = \left\{ A|A \subseteq
+\Omega \right\}$"/>
+</p>
 
-
+<p>
 一个事件 <b>发生</b> 当且仅当它所包含的某个样本点出现。
 </p>
 <ul>
-<li>样本空间\(\Omega\) 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
+<li>样本空间<img src="ltxpng/probability_8abc7b62ea913b721b449e03e1c39dc0a9c56f40.png" alt="$\Omega$"/> 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
 
 </li>
-<li>空集\(\varnothing\) 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
+<li>空集<img src="ltxpng/probability_3669a7e4e05628b7e5bd18743dfcc7b79a7f02b3.png" alt="$\varnothing$"/> 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
 </li>
 </ul>
 
@@ -487,19 +444,19 @@ ORG-LIST-END-MARKER
 和集合之间的关系类似，我们可以定义事件之间的关系：
 </p>
 <ol>
-<li>事件\(B\) <b>包含</b> 事件\(A\) , 记作\(A \subseteq B\) 或者 \(B \supseteq A\) 是指： \(\forall \omega \in A \Rightarrow \omega \in B\)
+<li>事件<img src="ltxpng/probability_6d1e9d9d41c8650236ed8dd16cfa0f400a17d334.png" alt="$B$"/> <b>包含</b> 事件<img src="ltxpng/probability_3450f423b758af7acd380b291298eda6b69ac9ad.png" alt="$A$"/> , 记作<img src="ltxpng/probability_12cc12ec4cc342f3028cfb80d3d1c0451e25def5.png" alt="$A \subseteq B$"/> 或者 <img src="ltxpng/probability_460d4715c8e14836877072de3298bd3e5231bfe2.png" alt="$B \supseteq A$"/> 是指： <img src="ltxpng/probability_f499d91c2c9d6ed5ad76c3f8f2ce173b0526f8ec.png" alt="$\forall \omega \in A \Rightarrow \omega \in B$"/>
 </li>
 </ol>
 
 
 <p>
-对于任何事件\(A\) 显然有: \(\varnothing \subseteq A \subseteq \Omega\)
+对于任何事件<img src="ltxpng/probability_d66497172efe1397202694bbac9036f5455c1c3f.png" alt="$A$"/> 显然有: <img src="ltxpng/probability_53eee0784322c035f99d00f46b1009732969352e.png" alt="$\varnothing \subseteq A \subseteq \Omega$"/>
 </p>
 <ol>
-<li>事件\(A\) 与事件\(B\) <b>相等</b> ， 记作\(A=B\) 是指: \(A \subseteq B\)  并且 \(B \subseteq A\)
+<li>事件<img src="ltxpng/probability_187b2cc586e535aee8166a9e9dc608b79fb812ca.png" alt="$A$"/> 与事件<img src="ltxpng/probability_23ac7904dfa0d3b2bee66b521282f62f3d76de0d.png" alt="$B$"/> <b>相等</b> ， 记作<img src="ltxpng/probability_949a49d8580b37606d32f589ec6e42df6cfb1504.png" alt="$A=B$"/> 是指: <img src="ltxpng/probability_69b5ce08156b7e5946a3eb0158e3e7023454932d.png" alt="$A \subseteq B$"/>  并且 <img src="ltxpng/probability_44d370f611eec7b990949322230512e46c193302.png" alt="$B \subseteq A$"/>
 
 </li>
-<li>事件\(A\) 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 \(\bar{A}\) : \(\bar{A} = \left\{ \omega | \omega \notin A \right\}\)
+<li>事件<img src="ltxpng/probability_ceaa97bc796171137b491da8386597b42ba2e215.png" alt="$A$"/> 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 <img src="ltxpng/probability_7648a6b79403eeb0f14bd2af0cf9bda3b9b6b533.png" alt="$\bar{A}$"/> : <img src="ltxpng/probability_8ab115806fd40c3e5128525673e6d4de5cf02b44.png" alt="$\bar{A} = \left\{ \omega | \omega \notin A \right\}$"/>
 </li>
 </ol>
 
@@ -507,11 +464,6 @@ ORG-LIST-END-MARKER
 <p>
 显然一个事件和其对立事件在同一次试验能只能发生其一。
 </p>
-<ol>
-<li>
-</li>
-</ol>
-
 
 
 </div>
@@ -536,7 +488,7 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-3-1-1" class="outline-4">
-<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间\(\Omega\)</h4>
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间<img src="ltxpng/probability_507055718cf36064d065d0cb1269a0e66f35d2b2.png" alt="$\Omega$"/></h4>
 <div class="outline-text-4" id="text-3-1-1">
 
 
@@ -545,7 +497,7 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-3-1-2" class="outline-4">
-<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域\(\mathscr{F}\)</h4>
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域<img src="ltxpng/probability_d9e7af375026eccbb3b8bb5d4952273a6c432fc4.png" alt="$\mathscr{F}$"/></h4>
 <div class="outline-text-4" id="text-3-1-2">
 
 </div>
@@ -558,26 +510,16 @@ ORG-LIST-END-MARKER
 
 
 <p>
-<b>定义:</b> 定义在事件域$\mathscr{f}$上的实值函数$P:\mathscr{F}
+<b>定义:</b> 定义在事件域 <img src="ltxpng/probability_8f2e72a5ce36f42738cbe2aaf585fcfca5839756.png" alt="$\mathscr{F}$"/> 上的实值函数 <img src="ltxpng/probability_103acd1c1fbd718527db205beee8619818b547d3.png" alt="$P:\mathscr{F}$"/>
 </p>
 
 
 <p>
-  \[ P : \mathscr{F} \rightarrow R^1 \]
+  <img src="ltxpng/probability_8c3354098e4e24cfa1bfeed05d36e41ee9c3348b.png" alt="\[ P : \mathscr{F} \rightarrow R^1 \]"/>
 </p>
 
 
 </div>
-</div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> </h3>
-<div class="outline-text-3" id="text-3-2">
-
-
-
 </div>
 </div>
 
@@ -596,13 +538,12 @@ ORG-LIST-END-MARKER
 <div class="outline-text-3" id="text-4-1">
 
 
-
-
-$$q_{_A} = \left\{ \begin{array}{cc}
-  1 & \tmop{if} A \tmop{occurs}\\
+<p>
+<img src="ltxpng/probability_2a90ed497b178ebef8334cd9b0d72432b576c5b5.png" alt="$$q_{_A} = \left\{ \begin{array}{cc}
+  1 & \tmop{if} A \tmop{occurs}<br/>
   0 & \tmop{if} A \tmop{does} \tmop{not} \tmop{occur}
-\end{array} \right.$$
-
+\end{array} \right.$$"/>
+</p>
 </div>
 
 </div>
@@ -612,10 +553,9 @@ $$q_{_A} = \left\{ \begin{array}{cc}
 <div class="outline-text-3" id="text-4-2">
 
 
-
-
-$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$
-</div>
+<p>
+<img src="ltxpng/probability_549129b0f3dd6838d8190c8216fd291323f5ed41.png" alt="$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$"/>
+</p></div>
 </div>
 </div>
 </div>
