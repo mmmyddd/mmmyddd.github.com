@@ -705,7 +705,7 @@ function gen_unique_html(nav){
                            return 1;
                        });
 
-    if(idx >= 0 && idx < list.length)
+    if(idx != null && idx >= 0 && idx < list.length)
         gen_unique_html_internal(idx, undefined);
     else
         gen_unique_html_internal(list.length, path);
