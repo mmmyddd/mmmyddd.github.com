@@ -778,6 +778,7 @@ function gen_unique_html_internal(idx, other_path){
     $('#entry-nav').hide();
     window.location.hash="";
     window.location.hash="#top";
+    window.scrollTo(0,0);
 
     var path = "";
 
