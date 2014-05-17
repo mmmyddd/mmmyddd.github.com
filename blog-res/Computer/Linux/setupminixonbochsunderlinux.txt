@@ -2,4 +2,4 @@ Setup Minix On Bochs Under Linux
 #tags minix,bochs,tuntap
 <p><strong>摘要：</strong> 在Linux系统中在Bochs模拟器上安装Minix系统。</p>
 
-<p>本文移至：<a href="http://mmmyddd.freeshell.net/wiki/debian/minixonbochs.html">http://mmmyddd.freeshell.net/wiki/debian/minixonbochs.html</a></p>
+<p>本文移至：<a href="http://mmmyddd.github.io/wiki/debian/minixonbochs.html">http://mmmyddd.github.io/wiki/debian/minixonbochs.html</a></p>
