@@ -1,21 +1,17 @@
 等额本金还是等额本息
-<p>在<a href="/blog/Math/loan-rate">贷款购房相关问题</a>中计算过，</p>
+<p>在<a href="贷款购房相关问题">贷款购房相关问题</a>中计算过，</p>
 
-<p><strong>1. 等额本金的还款总额是：</strong>
-<br>
+<p><strong>1. 等额本金的还款总额是：</strong></p>
 
-<math>
-P + P \times \frac{r\%}{12} \times \frac{12\times N +1}{2}
-</math>
-</p>
+<!-- $
+$$P + P \times \frac{r\%}{12} \times \frac{12\times N +1}{2}$$
+$--><img src="./latex/latex2png-whichloan__2942448555.png" alt="latex2png equation" class="latex-inline">
 
-<p><strong>2. 等额本息的还款总额是：</strong>
-<br>
+<p><strong>2. 等额本息的还款总额是：</strong></p>
 
-<math>
-12\times N \times P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}
-</math>
-</p>
+<!-- $
+$$12\times N \times P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}$$
+$--><img src="./latex/latex2png-whichloan__1559716183.png" alt="latex2png equation" class="latex-inline">
 
 
 <p>为了比较这两种还款方式的差别，我们将这两个式子做比值，即 <strong>等额本金/等额本息</strong>,

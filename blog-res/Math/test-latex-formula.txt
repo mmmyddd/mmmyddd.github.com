@@ -1,11 +1,4 @@
 Latex数学公式测试
-
-<math>
-e=mc^4
-m=e/c^2
-</math>
-
-
 <!-- 
-$e=mc^2$
---><img src="./latex/latex2png-test-latex-formula__294720786.png" alt="latex2png equation" class="latex-display">
+$$E=mc^2$$
+--><img src="./latex/latex2png-test-latex-formula__420613331.png" alt="latex2png equation" class="latex-display">

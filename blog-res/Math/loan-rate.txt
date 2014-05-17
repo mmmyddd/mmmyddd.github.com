@@ -1,60 +1,47 @@
 贷款购房相关问题
 <p>贷款实际上就是现金价值计算。</p>
 
-<h3>第一个问题，月供是如何偿还本金和利息的。</h3>
+<h2>第一个问题，月供是如何偿还本金和利息的。</h2>
 
 <p class="first">假如贷款P，N年后还清，按月计算利息，则这P万元在现有贷款年利率r%下，N年后的现金价值为：</p>
 
-<br>
-
-<math>
-P\times(1+\frac{r\%}{12})^{12 \times N}
-</math>
-
+<!-- $
+$$P\times(1+\frac{r\%}{12})^{12 \times N}$$
+$--><img src="./latex/latex2png-loan-rate__1804907415.png" alt="latex2png equation" class="latex-inline">
 
 
 <p>那么，假如从现在开始采用本息等额还款方式，每月月供为A，则这些月供在从现在开始的N年后的现金价值为一等比序列：</p>
 
-<br>
-<math>A\times(1+\frac{r\%}{12})^{12 \times N -1} </math>
-<br>
-<math>A\times(1+\frac{r\%}{12})^{12 \times N -2} </math>
-<br>
-<math>\cdots</math>
-<br>
-<math>A\times(1+\frac{r\%}{12})^{1} </math>
-<br>
-<math>A\times(1+\frac{r\%}{12})^{0}</math>
-<br>
+
+
+
+
+
+
+
+
+
 
 
 <p>该等比数列的和：</p>
 
-<br>
-
-<math>
-A\times\frac{1-(1+\frac{r\%}{12})^{12\times N}}{1-(1+\frac{r\%}{12})}
-</math>
+<!-- $
+$$A\times\frac{1-(1+\frac{r\%}{12})^{12\times N}}{1-(1+\frac{r\%}{12})}$$
+$--><img src="./latex/latex2png-loan-rate__3072003071.png" alt="latex2png equation" class="latex-inline">
 
 
 <p>应该等于贷款总额N年后的现金价值，也就是说：</p>
 
-<br>
-
-<math>
-A\times\frac{1-(1+\frac{r\%}{12})^{12\times N}}{1-(1+\frac{r\%}{12})}=P\times(1+\frac{r\%}{12})^{12 \times N}
-</math>
+<!-- $
+$$A\times\frac{1-(1+\frac{r\%}{12})^{12\times N}}{1-(1+\frac{r\%}{12})}=P\times(1+\frac{r\%}{12})^{12 \times N}$$
+$--><img src="./latex/latex2png-loan-rate__4260031186.png" alt="latex2png equation" class="latex-inline">
 
 
 <p>所以月供的计算公式为：</p>
 
-<br>
-
-<math>
-A = P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}
-</math>
-
-
+<!-- $
+$$A = P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}$$
+$--><img src="./latex/latex2png-loan-rate__2055289364.png" alt="latex2png equation" class="latex-inline">
 
 <p>上式右边前两项在还款初期约等于贷款本金在当月产生的利息，
 将现行利率， 例如公积金贷款利率3.87% 或者商业贷款打七折后的利率4.158%， 按30年按揭代入公式，第三项的值分别为1.457和1.404, 也就是说
@@ -62,60 +49,44 @@ A = P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\fr
 
 
 
-<h3>另外，还有一个问题： 采用等额本金和等额本息哪个更合算？</h3>
+<h2>另外，还有一个问题： 采用等额本金和等额本息哪个更合算？</h2>
 
 <p class="first">等额本金采用另外一种计息方式，假如采用同样的假设，贷款总额为P，N年后还清，按月计算利息，在现有贷款年利率r%下,
 每月所偿还的本金数额是一个定值：
+<!-- $
+$$\frac{P}{12\times N}$$
+$--><img src="./latex/latex2png-loan-rate__1016577818.png" alt="latex2png equation" class="latex-inline"></p>
 
-<math>
-\frac{P}{12\times N}
-</math>
-</p>
+<p>为保证贷款在N年后换清，每月必需偿还剩余本金所产生的所有利息，因此等额本金的月供是一个等差数列：</p>
 
-<p>为保证贷款在N年后换清，每月必需偿还剩余本金所产生的所有利息，因此等额本金的月供是一个等差数列：
-<br>
-
-<math>
-\frac{P}{12\times N} + (P - 0 \times \frac{P}{12\times N}) \times \frac{r\%}{12}
-</math>
-</p>
-
-<br>
-
-<math>
-\frac{P}{12\times N} + (P - 1 \times \frac{P}{12\times N}) \times \frac{r\%}{12}
-</math>
+<!-- $
+$$\frac{P}{12\times N} + (P - 0 \times \frac{P}{12\times N}) \times \frac{r\%}{12}$$
+$--><img src="./latex/latex2png-loan-rate__409882201.png" alt="latex2png equation" class="latex-inline">
 
 
-<br>
+<!-- $
+$$\frac{P}{12\times N} + (P - 1 \times \frac{P}{12\times N}) \times \frac{r\%}{12}$$
+$--><img src="./latex/latex2png-loan-rate__678317657.png" alt="latex2png equation" class="latex-inline">
 
-<math>
-\cdots
-</math>
+<!-- $
+$$\cdots$$
+$--><img src="./latex/latex2png-loan-rate__240766659.png" alt="latex2png equation" class="latex-inline">
 
+<!-- $
+$$\frac{P}{12\times N} + (P - (12\times N -1) \times \frac{P}{12\times N}) \times \frac{r\%}{12}$$
+$--><img src="./latex/latex2png-loan-rate__1023145527.png" alt="latex2png equation" class="latex-inline">
 
-<br>
+<p>于是还款总额为：</p>
 
-<math>
-\frac{P}{12\times N} + (P - (12\times N -1) \times \frac{P}{12\times N}) \times \frac{r\%}{12}
-</math>
+<!-- $
+$$P + P \times \frac{r\%}{12} \times \frac{12\times N +1}{2}$$
+$--><img src="./latex/latex2png-loan-rate__2942448555.png" alt="latex2png equation" class="latex-inline">
 
+<p>而等额本息的还款总额为：</p>
 
-<p>于是还款总额为：
-<br>
-
-<math>
-P + P \times \frac{r\%}{12} \times \frac{12\times N +1}{2}
-</math>
-</p>
-
-<p>而等额本息的还款总额为：
-<br>
-
-<math>
-12\times N \times P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}
-</math>
-</p>
+<!-- $
+$$12\times N \times P \times \frac{r\%}{12}\times \frac{ (1+\frac{r\%}{12})^{12\times N}}{(1+\frac{r\%}{12})^{12\times N}-1}$$
+$--><img src="./latex/latex2png-loan-rate__1559716183.png" alt="latex2png equation" class="latex-inline">
 
 <p>稍后找个绘图软件看看两条曲线的关系。:)</p>
 
