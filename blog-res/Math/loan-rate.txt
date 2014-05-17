@@ -52,21 +52,21 @@ $--><img src="./latex/latex2png-loan-rate__2055289364.png" alt="latex2png equati
 <h2>另外，还有一个问题： 采用等额本金和等额本息哪个更合算？</h2>
 
 <p class="first">等额本金采用另外一种计息方式，假如采用同样的假设，贷款总额为P，N年后还清，按月计算利息，在现有贷款年利率r%下,
-每月所偿还的本金数额是一个定值：
+每月所偿还的本金数额是一个定值：</p>
+
 <!-- $
 $$\frac{P}{12\times N}$$
-$--><img src="./latex/latex2png-loan-rate__1016577818.png" alt="latex2png equation" class="latex-inline"></p>
+$--><img src="./latex/latex2png-loan-rate__1016577818.png" alt="latex2png equation" class="latex-inline">
 
 <p>为保证贷款在N年后换清，每月必需偿还剩余本金所产生的所有利息，因此等额本金的月供是一个等差数列：</p>
 
-<!-- $
+<!-- 
 $$\frac{P}{12\times N} + (P - 0 \times \frac{P}{12\times N}) \times \frac{r\%}{12}$$
-$--><img src="./latex/latex2png-loan-rate__409882201.png" alt="latex2png equation" class="latex-inline">
+--><img src="./latex/latex2png-loan-rate__763815139.png" alt="latex2png equation" class="latex-display">
 
-
-<!-- $
+<!-- 
 $$\frac{P}{12\times N} + (P - 1 \times \frac{P}{12\times N}) \times \frac{r\%}{12}$$
-$--><img src="./latex/latex2png-loan-rate__678317657.png" alt="latex2png equation" class="latex-inline">
+--><img src="./latex/latex2png-loan-rate__780592355.png" alt="latex2png equation" class="latex-display">
 
 <!-- $
 $$\cdots$$
