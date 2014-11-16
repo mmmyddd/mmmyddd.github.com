@@ -7,6 +7,16 @@
 <description>Justin's Wiki: items sorted by date desc, latest updated first.</description>
 <language>zh_CN.UTF-8</language>
 <item>
+<title>Command Line Editing and History</title>
+<link>http://mmmyddd.github.io/wiki/linux/bash/history.html</link>
+</item>
+
+<item>
+<title>Bash</title>
+<link>http://mmmyddd.github.io/wiki/linux/bash/index.html</link>
+</item>
+
+<item>
 <title>RAR</title>
 <link>http://mmmyddd.github.io/wiki/debian/rar.html</link>
 </item>
@@ -49,16 +59,6 @@
 <item>
 <title>Overlay Mechanism</title>
 <link>http://mmmyddd.github.io/wiki/android/overlay.html</link>
-</item>
-
-<item>
-<title>Command Line Editing and History</title>
-<link>http://mmmyddd.github.io/wiki/linux/bash/history.html</link>
-</item>
-
-<item>
-<title>Bash</title>
-<link>http://mmmyddd.github.io/wiki/linux/bash/index.html</link>
 </item>
 
 <item>

@@ -1,0 +1,17 @@
+#+TITLE:    Inner Test Article
+#+AUTHOR:    Justin Jiang
+#+EMAIL:     mmmyddd@freeshell.org
+#+DATE:      2010-09-25
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t LaTeX:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:info toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+** fds
+   fsdfs

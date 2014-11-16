@@ -1,0 +1,118 @@
+# -*- org-attach-directory: "/home/justin/projects/Org/org/images" -*-
+#+TITLE:    Test Article
+#+AUTHOR:    Justin Jiang
+#+EMAIL:     mmmyddd@freeshell.org
+#+DATE:      2010-09-25
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t LaTeX:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:info toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+#+TODO: TODO(t) ASSIGN(a) | DONE(d) REPORT(r)
+
+* Test                                                          :test:ATTACH:
+  :PROPERTIES:
+  :ID:       sqafh501s4f0
+  :END:
+** Test                               :tags:test:abs:tags:testag:test:ATTACH:8 :ATTACH:
+   :PROPERTIES:
+   :ID:       er58dkz0s4f0
+   :Attachments: wallpaper.png gtd_process.gif
+   :END:
+  - dfs
+  - sffdsf
+
+    [[./images/er/58dkz0s4f0/wallpaper.jpg]]
+
+tex只认识png/jpg图片。
+
+need in the attachment folder, use relatvie path
+
+*** under test
+    :PROPERTIES:
+    :PTest:     1
+    :END:
+    fsf ta
+    fdsfs
+
+
+** special
+
+| test | teswt2 |
+|------+--------|
+| tes  |        |
+| test | test   |
+|------+--------|
+|------+--------|
+| test | [[id:test][t3st]]   |
+|      |        |
+|------+--------|
+
+[[http://www.sohu.com][test]]
+
+
+
+** TODO give a new test on the functions
+** [2010-09-24 五 09:56] test me too                                :ARCHIVE:
+
+
+   [[info:org:Top]]
+
+* test
+
+[[*special][special]]
+
+[[file:///home/justin/Blog/Computer/Emacs/res/2010-09-21-080942_389x461_scrot.png]]
+
+iimage-mode
+
+* REPORT
+  CLOSED: [2010-09-23 四 21:01]
+  :LOGBOOK:
+  - State "REPORT"     from "DONE"       [2010-09-23 四 21:02] \\
+    test report
+  - State "DONE"       from "ASSIGN"     [2010-09-23 四 21:01] \\
+    test done
+  - State "ASSIGN"     from "TODO"       [2010-09-23 四 21:01] \\
+    test assign
+  :END:
+
+* Organizaton [0%]
+ - [-] test1 [50%]
+   - [X] test1-1
+   - [ ] test1-2
+ - [ ] test
+ - [ ] test2
+
+* other
+
+** Department [2/2]
+*** DONE test1
+    CLOSED: [2010-09-23 四 21:07]
+*** DONE test2
+#+BEGIN_SRC emacs-lisp
+  (color-theme-eclipse)
+  (provide 'color-theme-eclipse)
+#+END_SRC
+
+\pi
+
+\begin{equation}
+e=mc^2
+x=\sqrt{b}
+\end{equation}
+
+
+     If $a^2=b$ and \( b=2 \), then the solution must be
+     either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+
+** atet
+
+#+CAPTION: This is the caption for the next figure link (or table)
+#+LABEL:   fig:SED-HR4049

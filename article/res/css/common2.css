@@ -96,6 +96,7 @@ body {
   background-color: #FFFFFF;    /* gainsboro */
   /* background-image: url(/image/calm-blue-striped-pattern.jpg); */
   background-image: url(/image/calm-blue.jpeg);
+  background-size: cover;
   color: black;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;

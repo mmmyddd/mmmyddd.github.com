@@ -1,0 +1,11 @@
+#+TITLE: Contents of Articles
+
+   + inner
+     + [[file:inner/test.org][Inner Test Article]]
+   + math
+     + [[file:math/probability.org][Probability Theory]]
+   + [[file:bash.org][Bash Cheet Notes]]
+   + [[file:elisp.org][Elisp Introduction]]
+   + [[file:orgmode.org][Emacs Org Mode]]
+   + [[file:R.org][R Language]]
+   + [[file:test.org][Test Article]]

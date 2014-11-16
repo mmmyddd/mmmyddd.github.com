@@ -127,6 +127,7 @@ body {
   color: black;
   font-family: Helvetica,Arial,sans-serif;
   background-image:url("/wiki/res/image/vingette.jpg");
+  background-size: cover;
   /* font-size: small; */
   font-size: 14px;
   margin-top: 0pt;
@@ -815,6 +816,7 @@ body {
     border-left-style: solid;
     border-right-color: rgb(255, 255, 255);
     border-left-color: rgb(255, 255, 255);
+    /* border-color: transparent; */
     border-top-width: medium;
     border-top-style: none;
     border-bottom-width: medium;
@@ -832,6 +834,7 @@ body {
     border-right-color: rgb(211, 217, 229);
     border-bottom-color: rgb(211, 217, 229);
     border-left-color: rgb(211, 217, 229);
+    /* border-color: transparent; */
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;

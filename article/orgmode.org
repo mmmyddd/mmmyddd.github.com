@@ -1,0 +1,164 @@
+# -*- org-attach-directory: "/home/justin/projects/Org/org/images" -*-
+#+TITLE: Emacs Org Mode
+#+AUTHOR:Justin Jiang
+#+EMAIL:mmmyddd@freeshell.org
+#+DATE:2011-07-04
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t LaTeX:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:info toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+STARTUP: indent
+
+* OrgMode Introduction
+
+开始学习最强大的Emacs应用： =Org-Mode= 。在Emacs下学习这种发布系
+统，最有效的办法就是用Org-Mode本身写一个教程。于是就有了本文。
+
+* OrgMode Installation and Activation
+
+** Installation
+
+ - 下载OrgMode-7.5:  http://orgmode.org/org-7.5.zip
+ - 解压文件：
+#+BEGIN_EXAMPLE
+   unzip org-7.5.zip
+#+END_EXAMPLE
+ - 运行命令：
+#+BEGIN_EXAMPLE
+   make
+   make install-info
+#+END_EXAMPLE
+
+** Activation
+
+ - 将org-mode的路径加入 =load-path=:
+#+BEGIN_EXAMPLE
+   (add-to-list 'load-path "~/.emacs.d/org-7.5/lisp")
+   (add-to-list 'load-path "~/.emacs.d/org-7.5/contrib/lisp")
+#+END_EXAMPLE
+
+ - 将下面代码加入 =.emacs=:
+#+BEGIN_EXAMPLE
+   (require 'org-install)
+   ;; The following lines are always needed.  Choose your own keys.
+   (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+   ;; (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+   (global-set-key "\C-cl" 'org-store-link)
+   (global-set-key "\C-ca" 'org-agenda)
+   (global-set-key "\C-ci" 'org-iswitchb)
+#+END_EXAMPLE
+
+* Document Structure
+
+Org Mode采用基于Outline Mode，提供了层次化的文档结构，并且定
+义了多导航的快捷方式。
+
+** Headlines
+
+Org Mode的Headlines格式和Outline Mode类似，用在行首的若干星号
+加一个空格开始一个标题行：
+
+#+BEGIN_EXAMPLE
+     * Top level headline
+     ** Second level
+     *** 3rd level
+     some text
+     *** 3rd level
+     more text
+
+     * Another top level headling
+#+END_EXAMPLE
+
+
+
+* Rich Text Mark
+** Inline Font Mark
+面向文本的标记，需要注意三点：
+- 以下文本标记是在一个段落内使用的，不能跨越段落使用
+- 标记前后需要和文本别的部份用whitespace分开
+- 不能嵌套使用，如果嵌套，最外层的起作用
+
+*** Bold
+
+粗体显示文字：
+#+BEGIN_EXAMPLE
+*bold*
+#+END_EXAMPLE
+效果如下：
+*bold*
+
+*** Italic
+
+斜体显示文字：
+#+BEGIN_EXAMPLE
+/italic/
+#+END_EXAMPLE
+
+效果如下：
+/italic/
+
+*** Underline
+
+下划线显示文字：
+#+BEGIN_EXAMPLE
+_underline_
+#+END_EXAMPLE
+
+效果如下：
+_underline_
+
+*** Strike-Through
+
+带删除线的文字：
+#+BEGIN_EXAMPLE
++strike-through+
+#+END_EXAMPLE
+
+效果如下：
++strike-through+
+
+*** Code
+
+等宽显示代码：
+#+BEGIN_EXAMPLE
+=code=
+#+END_EXAMPLE
+
+效果如下：
+=code=
+
+*** Verbatim
+
+如果需要输入上述特殊标记，则需要使用字面标记符：
+
+#+BEGIN_EXAMPLE
+~=test=~
+#+END_EXAMPLE
+
+效果如下：
+~=test=~
+
+** Span Font Mark
+面向段落的文本标记
+
+
+
+
+
+
+** Horizontal Ruler
+可以通过5个以上的 =-= 来表示水平分割线：
+
+#+BEGIN_EXAMPLE
+-----
+#+END_EXAMPLE
+
+效果如下：
+-----
+** Comment

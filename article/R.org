@@ -1,0 +1,82 @@
+# -*- org-attach-directory: "/home/justin/projects/Org/org/images" -*-
+#+TITLE:    R Language
+#+AUTHOR:    Justin Jiang
+#+EMAIL:     mmmyddd@freeshell.org
+#+DATE:      2012-03-01
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t LaTeX:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:info toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+* R Language                                                         :ATTACH:
+:PROPERTIES:
+:Attachments: .emacs
+:ID: ced4d2a0-2b07-4310-96e8-89935e5b429a
+:END:
+
+fdsfbff $e=mc^2$ dfsfsdfs $$e=mc^2$$ dfsfd
+
+
+# #+begin_src emacs-lisp :exports none
+# (setq org-export-last-code-line-counter-value 42)
+# #+end_src
+#+BEGIN_EXAMPLE +n
+fsdf  (ref:name)
+#+END_EXAMPLE
+
+[[(name)]]line
+
+*fsfsf* =fdsfsd=
+
+#+BEGIN_EXAMPLE
+fsfa
+#+END_EXAMPLE
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+
+
+#+source: factorial
+#+begin_src python
+print "hello"
+#+end_src
+
+\begin{equation}
+\setcounter{equation}{3}
+E=mc^2
+\end{equation}
+
+     The mass if the sun is M_sun = 1.989 x 10^30 kg.  The radius of
+     the sun is R_{sun}^{2^2} = 6.96 x 10^8 m.
+
+
+If $a^2=b$ and \( b=2 \), then the solution must be
+either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+
+     #+BEGIN_SRC emacs-lisp -n:20 -r
+     (save-excursion                  (ref:sc)
+        (goto-char (point-min))       (ref:jump)
+     (save-excursion                  (ref:sc)
+        (goto-char (point-min))       (ref:jump)
+     (save-excursion                  (ref:sc)
+        (goto-char (point-min))       (ref:jump)
+     (save-excursion                  (ref:sc)
+        (goto-char (point-min))       (ref:jump)
+
+     #+END_SRC
+In line [[(sc)]] we remember the current position.  [[(jump)][Line (jump)]]
+jumps to point-min.
+
+
+ #+begin_src haskell -t
+ fac 5
+ #+end_src
+
+fsdfsdf

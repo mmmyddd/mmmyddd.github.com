@@ -1,0 +1,176 @@
+# -*- org-attach-directory: "/home/justin/projects/Org/org/images" -*-
+#+TITLE:    Probability Theory
+#+AUTHOR:    Justin Jiang
+#+EMAIL:     mmmyddd@freeshell.org
+#+DATE:      2012-12-31
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t Latex:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:showall toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+LaTeX_HEADER: \newcommand{\cdummy}{\cdot}
+
+* 概率简介
+
+** 概率论问题
+** 概率的概念
+
+*** 现象和事件
+**** 决定性现象
+某些现象的结果必然会发生，或者必然不会发生,这种现象称为
+*决定性现象* ， 是概率论以外的数学分支研究的对象。
+
+- 在一定条件下必然会发生的事件称为 *必然事件* ，用$\Omega$ 来表示。
+- 在一定条件下必然不会发生的事件称为 *不可能事件* ，用$\varnothing$ 来表示。
+
+必然事件和不可能事件实质上是相同的，都属于 *决定性事件*
+
+**** 随机现象
+然而有些现象的结果呈现偶然性，称为 *随机现象* ，是概率论研究
+的对象。
+
+随机现象中可能出现的结果成为 *随机事件* ， 简称 *事件* ，一般
+用大写字母$A,B,C,\ldots$ 来表示。
+
+*** 频率和概率
+
+为了得到关于随机事件的规律，我们需要对随机现象进行观察和试验。
+随机事件在某次试验或观察中可能发生，但是在大量的试验中却呈现
+出明显的规律性，这说明随机事件有其偶然性的一面，也有其必然性
+的一面，因此也就有可能对其规律性展开研究。
+
+**** 频率
+
+对于随机事件$A$ ，若在$N$ 次试验中出现了$n$ 次，则称：
+
+$$F_N \left( A \right) = \frac{n}{N}$$
+
+为随机事件$A$ 在$N$ 次试验中出现的 *频率*
+
+**** 频率的性质
+
+由频率的定义不难得出：
+
+- *频率的非负性*
+
+  $F_N \left( A \right) \geqslant 0$
+
+- *必然事件频率为1*
+
+  $F_N \left( \Omega \right) = 1$
+
+- *频率的可加性*: 对于不可能同时发生的事件$A$ 和 $B$ 称为 *不相容事件*,用$A+B$ 表
+  示$A$ 或者 $B$ 至少出现其中之一的事件，则有：
+
+  $F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)$
+
+由上述基本性质有：
+
+- *不可能事件频率为0*
+
+  $F_N \left( \varnothing \right) = 0$
+
+- *频率不大于1*
+
+  $F_N \left( A \right) \leqslant 1$
+
+- 有限两两不相容事件的 *频率的可加性*
+
+  $$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N\left( A_i \right)$$
+
+
+**** 频率的稳定性
+
+随机事件的必然性表现为在大量的随机实验中，随机事件出现的频率
+的稳定性，即一个随机事件出现的频率常在某个固定的常熟附近摆
+动，这种规律性称为 *统计规律性* 。
+
+这种频率的稳定性说明随机事件发生的可能性是随机事件本身固有的
+客观属性，可以进行度量。
+
+**** 概率
+
+对于一个随机事件$A$ ,用一个数$P(A)$ 来表示该事件发生的可能性
+大小，称为随机事件$A$ 的 *概率*
+
+关于概率和频率的关系，现在有如下命题待证明：
+
+
+*命题1* （频率和概率）：$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
+\left( A \right)$$
+
+
+* 概率论的基本概念
+
+** 样本空间
+
+随机试验中可能出现的结果称为 *样本点* ，用$\omega$ 表示。
+
+样本点的全体构成的集合叫作 *样本空间* 用$\Omega$ 表示。
+
+样本空间可能是有限集，离散可列集，不可列集，或者多维空间。
+
+
+** 事件
+有了样本空间，我们用集合的观点来定义事件：如果 $A \subseteq
+\Omega$ ，则称$A$ 是样本空间$\Omega$ 上的一个 *事件* 。样本空
+间上所有事件的集合可记作 $2^{\Omega} = \left\{ A|A \subseteq
+\Omega \right\}$
+
+
+一个事件 *发生* 当且仅当它所包含的某个样本点出现。
+
+- 样本空间$\Omega$ 本身作为一个事件，每次试验必然发生，称为 *必然事件*
+
+- 空集$\varnothing$ 也可作为一个事件，每次试验都不会发生，称为 *不可能事件*
+
+** 事件的关系和运算
+
+和集合之间的关系类似，我们可以定义事件之间的关系：
+
+1. 事件$B$ *包含* 事件$A$ , 记作$A \subseteq B$ 或者 $B \supseteq A$ 是指： $\forall \omega \in A \Rightarrow \omega \in B$
+
+对于任何事件$A$ 显然有: $\varnothing \subseteq A \subseteq \Omega$
+
+2. 事件$A$ 与事件$B$ *相等* ， 记作$A=B$ 是指: $A \subseteq B$  并且 $B \subseteq A$
+
+3. 事件$A$ 的 *逆事件* 或者 *对立事件* 记作 $\bar{A}$ : $\bar{A} = \left\{ \omega | \omega \notin A \right\}$
+
+显然一个事件和其对立事件在同一次试验能只能发生其一。
+
+
+
+* 公理概率论和概率空间
+
+** 基本概念
+
+*** 样本空间
+
+*** 事件域
+*** 概率的形式定义
+
+*定义:* 定义在事件域 $\mathscr{F}$ 上的实值函数 $P:\mathscr{F}$
+
+
+
+  \[ P : \mathscr{F} \rightarrow R^1 \]
+
+
+
+* 随机变量
+
+** 离散型随机变量
+
+$$q_{_A} = \left\{ \begin{array}{cc}
+  1 & \tmop{if} A \tmop{occurs}\\
+  0 & \tmop{if} A \tmop{does} \tmop{not} \tmop{occur}
+\end{array} \right.$$
+
+** 连续型随机变量
+
+$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$

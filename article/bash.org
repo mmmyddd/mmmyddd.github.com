@@ -1,0 +1,57 @@
+# -*- org-attach-directory: "/home/justin/projects/Org/org/images" -*-
+#+TITLE: Bash Cheet Notes
+#+AUTHOR:Justin Jiang
+#+EMAIL:mmmyddd@freeshell.org
+#+DATE:2011-10-17
+#+DESCRIPTION: Bash notes
+#+KEYWORDS:
+#+LANGUAGE:  zh_CN
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t author:nil creator:nil timestamp:nil
+#+OPTIONS:   TeX:t LaTeX:dvipng skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:info toc:t ltoc:t mouse:nil buttons:0 path:/article/res/js/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+STARTUP: indent
+
+* Bash Interaction
+
+** History
+
+#+BEGIN_EXAMPLE
+history
+#+END_EXAMPLE
+
+
+
+* Bash Script Programming
+** Variable
+
+*** 全局变量
+
+*** 局部变量
+
+*** 函数内部变量
+
+** 引用 Qutation
+
+单引号
+
+
+
+** Input and Output
+
+** Statements
+
+** Expressions
+
+** Function
+
+** Builtins
+
+** Trap Signal
+
+** Command Line Options
+
+* Miscs
