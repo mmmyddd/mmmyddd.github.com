@@ -60,6 +60,16 @@
                                  font-weight:bold; }
   /*]]>*/-->
 </style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
 <script type="text/javascript" src="/article/res/js/org-info.js"></script>
 <script type="text/javascript" >
 <!--/*--><![CDATA[/*><!--*/
@@ -71,7 +81,7 @@ org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "0");
 org_html_manager.set("FIXED_TOC", "0");
 org_html_manager.set("TOC", "1");
-org_html_manager.set("VIEW", "showall");
+org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
 /*]]>*///-->
 </script>
@@ -103,12 +113,53 @@ org_html_manager.setup();  // activate after the parameters are set
 
 <div id="preamble">
 
+<div id="navhead">
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/article/index.html" style="text-decoration: none;">
+          <img src="/image/article-logo.png" alt="Justin's Articles" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+        </span>
+          <a href="/wiki/res/rss.xml">
+            <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+          </a>
+      </form>
+    </div>
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187;
+<a href="/article/index.html">Article</a>
+<a id="navbar-title"></a>
+      </div>
+      <ul>
+        <li><a href="/blog-res/blog?/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+    <br />
+    </div>
+
 </div>
 
 <div id="content">
 <h1 class="title">Probability Theory</h1>
-
-
 
 
 <div id="table-of-contents">
@@ -136,12 +187,10 @@ org_html_manager.setup();  // activate after the parameters are set
 <ul>
 <li><a href="#sec-3-1">3.1 基本概念</a>
 <ul>
-<li><a href="#sec-3-1-1">3.1.1 样本空间file:ltxpng/probability<sub>507055718cf36064d065d0cb1269a0e66f35d2b2</sub>.png</a></li>
-<li><a href="#sec-3-1-2">3.1.2 事件域file:ltxpng/probability<sub>d9e7af375026eccbb3b8bb5d4952273a6c432fc4</sub>.png</a></li>
+<li><a href="#sec-3-1-1">3.1.1 样本空间</a></li>
+<li><a href="#sec-3-1-2">3.1.2 事件域</a></li>
 <li><a href="#sec-3-1-3">3.1.3 概率的形式定义</a></li>
-</ul>
-</li>
-<li><a href="#sec-3-2">3.2 </a></li>
+</ul></li>
 </ul>
 </li>
 <li><a href="#sec-4">4 随机变量</a>
@@ -188,9 +237,9 @@ org_html_manager.setup();  // activate after the parameters are set
 <b>决定性现象</b> ， 是概率论以外的数学分支研究的对象。
 
 <ul>
-<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用<img src="ltxpng/probability_fd1f76628e88efb1f5b159066ffea817da620d2f.png" alt="$\Omega$"/> 来表示。
+<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用<img src="ltxpng/probability_11308d7cc2ececaf308acbe415e5d853064e4bdb.png" alt="$\Omega$"/> 来表示。
 </li>
-<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用<img src="ltxpng/probability_6d377a354d3fb82dce7ec75a0ccd9a4f692f4955.png" alt="$\varnothing$"/> 来表示。
+<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用<img src="ltxpng/probability_75cfc23310ea28b8e33ee931c49a82ceac669c1e.png" alt="$\varnothing$"/> 来表示。
 </li>
 </ul>
 
@@ -259,7 +308,7 @@ org_html_manager.setup();  // activate after the parameters are set
   <img src="ltxpng/probability_c19bb810ff4a65c5aa3720c931b23e49330e040f.png" alt="$F_N \left( \Omega \right) = 1$"/>
 </p>
 </li>
-<li><b>频率的可加性</b>: 对于不可能同时发生的事件<img src="ltxpng/probability_4715d9124c06ca5ca25879eb8e96bb642362f709.png" alt="$A$"/> 和 <img src="ltxpng/probability_91924675543b414b156a455608c425f08f7b370d.png" alt="$B$"/> 称为 <b>不相容事件</b>,用<img src="ltxpng/probability_bc2d886df6718289b18512050b2f64e2e2254436.png" alt="$A+B$"/> 表
+<li><b>频率的可加性</b>: 对于不可能同时发生的事件<img src="ltxpng/probability_c80f572d429b595ff0a1d1742559487d3914526e.png" alt="$A$"/> 和 <img src="ltxpng/probability_1c461db46eba7caf20baf92ec3ad8e38822bd378.png" alt="$B$"/> 称为 <b>不相容事件</b>,用<img src="ltxpng/probability_17a7a6a995403e5fad87e532eec54c922979ad24.png" alt="$A+B$"/> 表
   示<img src="ltxpng/probability_87b16b0de9e74c07932f8b0da66b4a558d10da14.png" alt="$A$"/> 或者 <img src="ltxpng/probability_d4df27d0d80100446d89f1c470225472c6cffb37.png" alt="$B$"/> 至少出现其中之一的事件，则有：
 
 <p>
@@ -287,10 +336,11 @@ org_html_manager.setup();  // activate after the parameters are set
 <li>有限两两不相容事件的 <b>频率的可加性</b>
 
 <p>
-  <img src="ltxpng/probability_ffc09a1591689fc927bd28541c99bfb80c148398.png" alt="$$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N
-ORG-LIST-END-MARKER
-\left( A_i \right)$$"/>
-</p>
+  <img src="ltxpng/probability_ddcdfa149cd3c02fd8247cb38356a0c58930b1bd.png" alt="$$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N\left( A_i \right)$$"/>
+</p></li>
+</ul>
+
+
 
 </li>
 </ul>
@@ -373,10 +423,10 @@ ORG-LIST-END-MARKER
 一个事件 <b>发生</b> 当且仅当它所包含的某个样本点出现。
 </p>
 <ul>
-<li>样本空间<img src="ltxpng/probability_1760c3e4654c8f798adfb4e9e523ed24ecd38b68.png" alt="$\Omega$"/> 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
+<li>样本空间<img src="ltxpng/probability_592c79fa9a0e67dc01027f21f445547dd89bb16f.png" alt="$\Omega$"/> 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
 
 </li>
-<li>空集<img src="ltxpng/probability_6dac4e28802ca786d6296c6d8d68d0a801275cfc.png" alt="$\varnothing$"/> 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
+<li>空集<img src="ltxpng/probability_efa4876830fcb67738c4a8e1100fcc237c026820.png" alt="$\varnothing$"/> 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
 </li>
 </ul>
 
@@ -394,7 +444,7 @@ ORG-LIST-END-MARKER
 和集合之间的关系类似，我们可以定义事件之间的关系：
 </p>
 <ol>
-<li>事件<img src="ltxpng/probability_f6b74958ecb32e079203e2630e5cad6de8d49b9c.png" alt="$B$"/> <b>包含</b> 事件<img src="ltxpng/probability_873c4aa888216f9db73f0947ac2b064a3a2cf498.png" alt="$A$"/> , 记作<img src="ltxpng/probability_59f1b68f998c0934b0ad39ac53b0690d32929c46.png" alt="$A \subseteq B$"/> 或者 <img src="ltxpng/probability_84c7de2c16f3712b15199017faa1ee56c6349131.png" alt="$B \supseteq A$"/> 是指： <img src="ltxpng/probability_fa5ed6d130b9dc93eba2fff17123fdfa44f058ac.png" alt="$\forall \omega \in A \Rightarrow \omega \in B$"/>
+<li>事件<img src="ltxpng/probability_b944eb22e71c4e92eb2e83b0a0b8506c69127b7d.png" alt="$B$"/> <b>包含</b> 事件<img src="ltxpng/probability_407b88638f10d3e90203ae9e6e811479d32f8d09.png" alt="$A$"/> , 记作<img src="ltxpng/probability_3853e250999ef128e364860cab666d1173854fce.png" alt="$A \subseteq B$"/> 或者 <img src="ltxpng/probability_7e280419997433db9e84ee022f544c33fadcdeb9.png" alt="$B \supseteq A$"/> 是指： <img src="ltxpng/probability_1a43e7c986ee08a28688fd29cce01b3ec05cd273.png" alt="$\forall \omega \in A \Rightarrow \omega \in B$"/>
 </li>
 </ol>
 
@@ -403,10 +453,10 @@ ORG-LIST-END-MARKER
 对于任何事件<img src="ltxpng/probability_d66497172efe1397202694bbac9036f5455c1c3f.png" alt="$A$"/> 显然有: <img src="ltxpng/probability_53eee0784322c035f99d00f46b1009732969352e.png" alt="$\varnothing \subseteq A \subseteq \Omega$"/>
 </p>
 <ol>
-<li>事件<img src="ltxpng/probability_3a9a5264361400ac223b519658f75e08362716e7.png" alt="$A$"/> 与事件<img src="ltxpng/probability_957026cee418899ec4c98f77c71c9903d98b53d5.png" alt="$B$"/> <b>相等</b> ， 记作<img src="ltxpng/probability_40c05b8d5d1dcb3c2e8baf18c06f238e3b1ea024.png" alt="$A=B$"/> 是指: <img src="ltxpng/probability_382e83e7d1d41db185cca519877bb6c4949e7ee4.png" alt="$A \subseteq B$"/>  并且 <img src="ltxpng/probability_89fab2bc08642f0a84a8db5491c4641c3f64b9ee.png" alt="$B \subseteq A$"/>
+<li>事件<img src="ltxpng/probability_0492cdb84e98623cade868659d12ce8eef40fa32.png" alt="$A$"/> 与事件<img src="ltxpng/probability_703edd49898a975a2e52c558aae9ed5aeec3d6aa.png" alt="$B$"/> <b>相等</b> ， 记作<img src="ltxpng/probability_87f567419a84d38b8116cfcf071479575c6c5760.png" alt="$A=B$"/> 是指: <img src="ltxpng/probability_0fbf346e106a29dc02fa13403733876c76aa320d.png" alt="$A \subseteq B$"/>  并且 <img src="ltxpng/probability_78dc4afcf22fce8d454ee27285d588e4d460a282.png" alt="$B \subseteq A$"/>
 
 </li>
-<li>事件<img src="ltxpng/probability_06583586b848e3d3389302e513df0f0f17b7fd7a.png" alt="$A$"/> 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 <img src="ltxpng/probability_ea12438f8d823745b4fe5519e750272b10f621c3.png" alt="$\bar{A}$"/> : <img src="ltxpng/probability_09a645f00015df442111b0f14557f6eceb23172a.png" alt="$\bar{A} = \left\{ \omega | \omega \notin A \right\}$"/>
+<li>事件<img src="ltxpng/probability_fe75941ee16a141b1c4c41930584a4375107cef1.png" alt="$A$"/> 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 <img src="ltxpng/probability_ede46a7868a57b9522f1a037d39688730e460286.png" alt="$\bar{A}$"/> : <img src="ltxpng/probability_31a9f8f0160c6160665704f2e942ac631d9f2220.png" alt="$\bar{A} = \left\{ \omega | \omega \notin A \right\}$"/>
 </li>
 </ol>
 
@@ -414,11 +464,6 @@ ORG-LIST-END-MARKER
 <p>
 显然一个事件和其对立事件在同一次试验能只能发生其一。
 </p>
-<ol>
-<li>
-</li>
-</ol>
-
 
 
 </div>
@@ -443,7 +488,7 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-3-1-1" class="outline-4">
-<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间<img src="ltxpng/probability_507055718cf36064d065d0cb1269a0e66f35d2b2.png" alt="$\Omega$"/></h4>
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间</h4>
 <div class="outline-text-4" id="text-3-1-1">
 
 
@@ -452,7 +497,7 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-3-1-2" class="outline-4">
-<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域<img src="ltxpng/probability_d9e7af375026eccbb3b8bb5d4952273a6c432fc4.png" alt="$\mathscr{F}$"/></h4>
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域</h4>
 <div class="outline-text-4" id="text-3-1-2">
 
 </div>
@@ -465,7 +510,7 @@ ORG-LIST-END-MARKER
 
 
 <p>
-<b>定义:</b> 定义在事件域$\mathscr{f}$上的实值函数$P:\mathscr{F}
+<b>定义:</b> 定义在事件域 <img src="ltxpng/probability_8f2e72a5ce36f42738cbe2aaf585fcfca5839756.png" alt="$\mathscr{F}$"/> 上的实值函数 <img src="ltxpng/probability_103acd1c1fbd718527db205beee8619818b547d3.png" alt="$P:\mathscr{F}$"/>
 </p>
 
 
@@ -475,16 +520,6 @@ ORG-LIST-END-MARKER
 
 
 </div>
-</div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> </h3>
-<div class="outline-text-3" id="text-3-2">
-
-
-
 </div>
 </div>
 
@@ -526,7 +561,50 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="postamble">
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+<div id="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="50%" />
+    <col width="50%" />
+    <tr>
+      <td align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]github.io">
+          mmmyddd[AT]github.io
+        </a>
+        <br />
+        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+      </td>
+
+      <td align="right" valign="top" style="line-height: 175%">
+        <!-- GoStats JavaScript Based Code -->
+        <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+        <script type="text/javascript">_gos='gostats.com';_goa=745573;
+          _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
+        <noscript>
+          <a target="_blank" title="web site analytics"
+             href="http://gostats.com">
+            <img alt="web site analytics"
+                 src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
+                 style="border-width:0" />
+          </a>
+        </noscript>
+        <!-- End GoStats JavaScript Based Code -->
+        <br />
+     </td>
+    </tr>
+  </table>
+</div>
+<script language="javascript">
+  getTitle();
+  fillsearch();
+</script>
 
 </div>
 </body>

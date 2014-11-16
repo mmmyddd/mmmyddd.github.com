@@ -1,10 +1,13 @@
-CaptureScreenToGif
+Capture Screen to GIF
 #tags byzanz,gif,screenshot
 <h2>Install</h2>
 
 <pre class="example">
 sudo apt-get install byzanz
 </pre>
+
+
+<h2>Example</h2>
 
 <p class="image"><img src="./res/byzanz.gif" alt=""></p>
 
