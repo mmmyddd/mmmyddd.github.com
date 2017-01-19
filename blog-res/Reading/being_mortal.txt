@@ -4,4 +4,4 @@ Being Mortal
 
 <p>Being Mortal - Medicine and What Matters in the End</p>
 
-<p class="image"><img with=600px src="./res/being-mortal.png" alt=""></p>
+<p class="image"><img width=600px src="./res/being-mortal.png" alt=""></p>
