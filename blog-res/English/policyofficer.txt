@@ -7,6 +7,6 @@ PolicyOfficer
 
 <p>lieutenant [lef'tenәnt] n. 中尉, 助理人员, 副官</p>
 
-<p>(b) (US) police officer with a rank below that of a captain or sometimes a lieutenant 警佐（级别低于队长或副队长）.</p>
+<p>(US) police officer with a rank below that of a captain or sometimes a lieutenant 警佐（级别低于队长或副队长）.</p>
 
 <p>captain 队长</p>

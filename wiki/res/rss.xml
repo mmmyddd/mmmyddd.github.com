@@ -7,6 +7,11 @@
 <description>Justin's Wiki: items sorted by date desc, latest updated first.</description>
 <language>zh_CN.UTF-8</language>
 <item>
+<title>Dexter Morgan</title>
+<link>http://mmmyddd.github.io/wiki/english/dexter.html</link>
+</item>
+
+<item>
 <title>Command Line Editing and History</title>
 <link>http://mmmyddd.github.io/wiki/linux/bash/history.html</link>
 </item>
