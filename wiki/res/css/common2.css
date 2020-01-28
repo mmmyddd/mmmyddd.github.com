@@ -123,11 +123,12 @@ blockquote {
 }
 
 body {
-  background-color: #FFFFFF;    /* gainsboro */
+  background-color: #F8F8F8;    /* gainsboro */
   color: black;
   font-family: Helvetica,Arial,sans-serif;
-  background-image:url("/wiki/res/image/vingette.jpg");
-  background-size: cover;
+  /* background-image:url("/wiki/res/image/vingette.jpg"); */
+  /* background-size: cover; */
+  background-size: contain;
   /* font-size: small; */
   font-size: 14px;
   margin-top: 0pt;
