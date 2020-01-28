@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="zh_CN" xml:lang="zh_CN">
 <head>
 <title>Probability Theory</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Probability Theory"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2012-12-31"/>
 <meta name="author" content="Justin Jiang"/>
@@ -26,10 +26,10 @@
   .center {margin-left:auto; margin-right:auto; text-align:center;}
   p.verse { margin-left: 3% }
   pre {
-        border: 1pt solid #AEBDCC;
-        background-color: #F3F5F7;
-        padding: 5pt;
-        font-family: courier, monospace;
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
         font-size: 90%;
         overflow:auto;
   }
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -60,6 +54,16 @@
                                  font-weight:bold; }
   /*]]>*/-->
 </style>
+<link rel="shortcut icon" href="/image/favicon.ico" />
+<link rel="stylesheet" href="/article/res/css/common2.css" type="text/css">
+<link rel="stylesheet" type="text/css"  charset="utf-8" media="screen" href="/article/res/css/screen.css"/>
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/article/res/css/print.css"/>
+<!--[if IE]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/iehacks.css"/>
+<![endif]-->
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" charset="utf-8" href="/article/res/css/ie6hacks.css"/>
+<![endif]-->
+<script type="text/javascript" src="/article/res/js/collapsible.js"></script>
+            
 <script type="text/javascript" src="/article/res/js/org-info.js"></script>
 <script type="text/javascript" >
 <!--/*--><![CDATA[/*><!--*/
@@ -71,7 +75,7 @@ org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "0");
 org_html_manager.set("FIXED_TOC", "0");
 org_html_manager.set("TOC", "1");
-org_html_manager.set("VIEW", "showall");
+org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
 /*]]>*///-->
 </script>
@@ -100,54 +104,89 @@ org_html_manager.setup();  // activate after the parameters are set
 
 </head>
 <body>
-
-<div id="preamble">
-
-</div>
-
 <div id="content">
-<h1 class="title">Probability Theory</h1>
 
 
+<div id="navhead">
+    <div class="banner" id="banner">
+      <div class="logo">
+        <a href="/article/index.html" style="text-decoration: none;">
+          <img src="/image/article-logo.png" alt="Justin's Articles" />
+        </a>
+      </div>
+      <form action="http://www.google.com/cse" id="cse-search-box">
+        <span id="gsearch">
+        </span>
+          <a href="/wiki/res/rss.xml">
+            <img src="/image/rss.png" style="border:0pt none;width:47px;height:17px;top:0px;" alt="rss" />
+          </a>
+      </form>
+    </div>
+    <div class="navbar" id="navbar">
+      <div>
+        &nbsp;
+        <a href="/">Home</a>
+        &#187;
+<a href="/article/index.html">Article</a>
+<a id="navbar-title"></a>
+      </div>
+      <ul>
+        <li><a href="/blog-res/blog?/about">About</a> </li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog">Blog</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/wiki/./index.html">Wiki</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/article/index.html">Article</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/bookmarks">Bookmarks</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/projects">Projects</a></li>
+        &nbsp; :: &nbsp;
+        <li><a href="/blog-res/blog?/Albums">Albums</a></li>
+        &nbsp;&nbsp;
+      </ul>
+    </div>
+    <br />
+    </div>
+    <h1 class="title">Probability Theory</h1>
 
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 概率简介</a>
+<li><a href="#sec-1">1 概率简介 </a>
 <ul>
-<li><a href="#sec-1-1">1.1 概率论问题</a></li>
-<li><a href="#sec-1-2">1.2 概率的概念</a>
+<li><a href="#sec-1_1">1.1 概率论问题 </a></li>
+<li><a href="#sec-1_2">1.2 概率的概念 </a>
 <ul>
-<li><a href="#sec-1-2-1">1.2.1 现象和事件</a></li>
-<li><a href="#sec-1-2-2">1.2.2 频率和概率</a></li>
+<li><a href="#sec-1_2_1">1.2.1 现象和事件 </a></li>
+<li><a href="#sec-1_2_2">1.2.2 频率和概率 </a></li>
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-2">2 概率论的基本概念</a>
+<li><a href="#sec-2">2 概率论的基本概念 </a>
 <ul>
-<li><a href="#sec-2-1">2.1 样本空间</a></li>
-<li><a href="#sec-2-2">2.2 事件</a></li>
-<li><a href="#sec-2-3">2.3 事件的关系和运算</a></li>
+<li><a href="#sec-2_1">2.1 样本空间 </a></li>
+<li><a href="#sec-2_2">2.2 事件 </a></li>
+<li><a href="#sec-2_3">2.3 事件的关系和运算 </a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 公理概率论和概率空间</a>
+<li><a href="#sec-3">3 公理概率论和概率空间 </a>
 <ul>
-<li><a href="#sec-3-1">3.1 基本概念</a>
+<li><a href="#sec-3_1">3.1 基本概念 </a>
 <ul>
-<li><a href="#sec-3-1-1">3.1.1 样本空间file:ltxpng/probability<sub>507055718cf36064d065d0cb1269a0e66f35d2b2</sub>.png</a></li>
-<li><a href="#sec-3-1-2">3.1.2 事件域file:ltxpng/probability<sub>d9e7af375026eccbb3b8bb5d4952273a6c432fc4</sub>.png</a></li>
-<li><a href="#sec-3-1-3">3.1.3 概率的形式定义</a></li>
+<li><a href="#sec-3_1_1">3.1.1 样本空间 </a></li>
+<li><a href="#sec-3_1_2">3.1.2 事件域 </a></li>
+<li><a href="#sec-3_1_3">3.1.3 概率的形式定义 </a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="#sec-3-2">3.2 </a></li>
-</ul>
-</li>
-<li><a href="#sec-4">4 随机变量</a>
+<li><a href="#sec-4">4 随机变量 </a>
 <ul>
-<li><a href="#sec-4-1">4.1 离散型随机变量</a></li>
-<li><a href="#sec-4-2">4.2 连续型随机变量</a></li>
+<li><a href="#sec-4_1">4.1 离散型随机变量 </a></li>
+<li><a href="#sec-4_2">4.2 连续型随机变量 </a></li>
 </ul>
 </li>
 </ul>
@@ -155,45 +194,44 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> 概率简介</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> 概率简介 </h2>
 <div class="outline-text-2" id="text-1">
 
 
 
 </div>
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 概率论问题</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-1_1" class="outline-3">
+<h3 id="sec-1_1"><span class="section-number-3">1.1</span> 概率论问题 </h3>
+<div class="outline-text-3" id="text-1_1">
 
 </div>
 
 </div>
 
-<div id="outline-container-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 概率的概念</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-1_2" class="outline-3">
+<h3 id="sec-1_2"><span class="section-number-3">1.2</span> 概率的概念 </h3>
+<div class="outline-text-3" id="text-1_2">
 
 
 
 </div>
 
-<div id="outline-container-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> 现象和事件</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-1_2_1" class="outline-4">
+<h4 id="sec-1_2_1"><span class="section-number-4">1.2.1</span> 现象和事件 </h4>
+<div class="outline-text-4" id="text-1_2_1">
 
 <ul>
-<li id="sec-1-2-1-1">决定性现象<br/>
+<li id="sec-1_2_1_1">决定性现象 <br/>
 某些现象的结果必然会发生，或者必然不会发生,这种现象称为
 <b>决定性现象</b> ， 是概率论以外的数学分支研究的对象。
 
 <ul>
-<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用<img src="ltxpng/probability_fd1f76628e88efb1f5b159066ffea817da620d2f.png" alt="$\Omega$"/> 来表示。
+<li>在一定条件下必然会发生的事件称为 <b>必然事件</b> ，用<img src="ltxpng/probability_f31823bd4fb66b6c8c965dfebe9bb37d3c18634d.png" alt="$\Omega$"/> 来表示。
 </li>
-<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用<img src="ltxpng/probability_6d377a354d3fb82dce7ec75a0ccd9a4f692f4955.png" alt="$\varnothing$"/> 来表示。
+<li>在一定条件下必然不会发生的事件称为 <b>不可能事件</b> ，用<img src="ltxpng/probability_5adea3e7578c64e5f793750ff68d15143dc0f34b.png" alt="$\varnothing$"/> 来表示。
 </li>
 </ul>
-
 
 <p>
 必然事件和不可能事件实质上是相同的，都属于 <b>决定性事件</b>
@@ -201,13 +239,13 @@ org_html_manager.setup();  // activate after the parameters are set
 </li>
 </ul>
 <ul>
-<li id="sec-1-2-1-2">随机现象<br/>
+<li id="sec-1_2_1_2">随机现象 <br/>
 然而有些现象的结果呈现偶然性，称为 <b>随机现象</b> ，是概率论研究
 的对象。
 
 <p>
 随机现象中可能出现的结果成为 <b>随机事件</b> ， 简称 <b>事件</b> ，一般
-用大写字母<img src="ltxpng/probability_abcd930602f5464338ff75da39ebe4db887d52d2.png" alt="$A,B,C,\ldots$"/> 来表示。
+用大写字母<img src="ltxpng/probability_c850e022bc8617b55090bacaa20a4b09277ef417.png" alt="$A,B,C,\ldots$"/> 来表示。
 </p>
 </li>
 </ul>
@@ -215,9 +253,9 @@ org_html_manager.setup();  // activate after the parameters are set
 
 </div>
 
-<div id="outline-container-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> 频率和概率</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-1_2_2" class="outline-4">
+<h4 id="sec-1_2_2"><span class="section-number-4">1.2.2</span> 频率和概率 </h4>
+<div class="outline-text-4" id="text-1_2_2">
 
 
 <p>
@@ -227,21 +265,21 @@ org_html_manager.setup();  // activate after the parameters are set
 的一面，因此也就有可能对其规律性展开研究。
 </p>
 <ul>
-<li id="sec-1-2-2-1">频率<br/>
+<li id="sec-1_2_2_1">频率 <br/>
 
 <p>
-对于随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> ，若在<img src="ltxpng/probability_0dc87787d4090cb17d811c902cb8c223d943ecc8.png" alt="$N$"/> 次试验中出现了<img src="ltxpng/probability_83a656dff3a2423afd54fdd1baa9150426743988.png" alt="$n$"/> 次，则称：
+对于随机事件<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> ，若在<img src="ltxpng/probability_0a2bc9d9bbfdb685d59573747ede5a3ead4669a7.png" alt="$N$"/> 次试验中出现了<img src="ltxpng/probability_9259087f7269b6d37ba716cfd7efaeefac65be0d.png" alt="$n$"/> 次，则称：
 </p>
 <p>
-<img src="ltxpng/probability_c2c26a7c2dd95baf7b0bd798b41471062acb0fed.png" alt="$$F_N \left( A \right) = \frac{n}{N}$$"/>
+<img src="ltxpng/probability_551388780985cb59517cfd761de5922a14d42ea3.png" alt="$$F_N \left( A \right) = \frac{n}{N}$$"/>
 </p>
 <p>
-为随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> 在<img src="ltxpng/probability_0dc87787d4090cb17d811c902cb8c223d943ecc8.png" alt="$N$"/> 次试验中出现的 <b>频率</b>
+为随机事件<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> 在<img src="ltxpng/probability_0a2bc9d9bbfdb685d59573747ede5a3ead4669a7.png" alt="$N$"/> 次试验中出现的 <b>频率</b>
 </p>
 </li>
 </ul>
 <ul>
-<li id="sec-1-2-2-2">频率的性质<br/>
+<li id="sec-1_2_2_2">频率的性质 <br/>
 
 <p>
 由频率的定义不难得出：
@@ -250,23 +288,22 @@ org_html_manager.setup();  // activate after the parameters are set
 <li><b>频率的非负性</b>
 
 <p>
-  <img src="ltxpng/probability_288dea12e367117439024ac3a1ea8307a03fc725.png" alt="$F_N \left( A \right) \geqslant 0$"/>
+  <img src="ltxpng/probability_5b5dc515d2dc123f72dd3aa0238b766abcd77309.png" alt="$F_N \left( A \right) \geqslant 0$"/>
 </p>
 </li>
 <li><b>必然事件频率为1</b>
 
 <p>
-  <img src="ltxpng/probability_c19bb810ff4a65c5aa3720c931b23e49330e040f.png" alt="$F_N \left( \Omega \right) = 1$"/>
+  <img src="ltxpng/probability_edfeca0752f84929d14a9565d873be136a552f00.png" alt="$F_N \left( \Omega \right) = 1$"/>
 </p>
 </li>
-<li><b>频率的可加性</b>: 对于不可能同时发生的事件<img src="ltxpng/probability_4715d9124c06ca5ca25879eb8e96bb642362f709.png" alt="$A$"/> 和 <img src="ltxpng/probability_91924675543b414b156a455608c425f08f7b370d.png" alt="$B$"/> 称为 <b>不相容事件</b>,用<img src="ltxpng/probability_bc2d886df6718289b18512050b2f64e2e2254436.png" alt="$A+B$"/> 表
-  示<img src="ltxpng/probability_87b16b0de9e74c07932f8b0da66b4a558d10da14.png" alt="$A$"/> 或者 <img src="ltxpng/probability_d4df27d0d80100446d89f1c470225472c6cffb37.png" alt="$B$"/> 至少出现其中之一的事件，则有：
+<li><b>频率的可加性</b>: 对于不可能同时发生的事件<img src="ltxpng/probability_89ce5a1c6dbb39c2e58953fb802781f4f544bb70.png" alt="$A$"/> 和 <img src="ltxpng/probability_a4d3241fcd6d20973372cdbda51e2194d54670ab.png" alt="$B$"/> 称为 <b>不相容事件</b>,用<img src="ltxpng/probability_99baaa729d9631784c0f74cebfe02bd6fcd93b6d.png" alt="$A+B$"/> 表
+  示<img src="ltxpng/probability_c41a199b3ccf0b91700379df76eef7d66bfb64ea.png" alt="$A$"/> 或者 <img src="ltxpng/probability_7bb5e50bbe09fb9796c4489691627c98bbcd61d6.png" alt="$B$"/> 至少出现其中之一的事件，则有：
 
 <p>
-  <img src="ltxpng/probability_5f7d14acb826dce01e314c0ede8a816aded48b1b.png" alt="$F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)$"/>
+  <img src="ltxpng/probability_d9241a333705f03cd190b3d7f797b24a6154d7c0.png" alt="$F_N \left( A + B \right) = F_N \left( A \right) + F_N \left( B \right)$"/>
 </p></li>
 </ul>
-
 
 <p>
 由上述基本性质有：
@@ -275,27 +312,25 @@ org_html_manager.setup();  // activate after the parameters are set
 <li><b>不可能事件频率为0</b>
 
 <p>
-  <img src="ltxpng/probability_99dfc2e17956db7e723aa678561cb405c1adb3e0.png" alt="$F_N \left( \varnothing \right) = 0$"/>
+  <img src="ltxpng/probability_f6d4a8b77b4df7c68ad5d5768caf45f7930951f5.png" alt="$F_N \left( \varnothing \right) = 0$"/>
 </p>
 </li>
 <li><b>频率不大于1</b>
 
 <p>
-  <img src="ltxpng/probability_6fe540259db5725ea95d9e87aee06a5847cf273c.png" alt="$F_N \left( A \right) \leqslant 1$"/>
+  <img src="ltxpng/probability_1676b80fc10295637751b85dfa61056bebe990f0.png" alt="$F_N \left( A \right) \leqslant 1$"/>
 </p>
 </li>
 <li>有限两两不相容事件的 <b>频率的可加性</b>
 
 <p>
-  <img src="ltxpng/probability_ffc09a1591689fc927bd28541c99bfb80c148398.png" alt="$$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N
-ORG-LIST-END-MARKER
-\left( A_i \right)$$"/>
-</p>
-
+  <img src="ltxpng/probability_81f6043dd95a0ded1272c16752e8c87ef2bd42ab.png" alt="$$F_N \left( \sum_{i = 1}^m A_i \right) = \sum_{i = 1}^m F_N\left( A_i \right)$$"/>
+</p></li>
+</ul>
 </li>
 </ul>
 <ul>
-<li id="sec-1-2-2-3">频率的稳定性<br/>
+<li id="sec-1_2_2_3">频率的稳定性 <br/>
 
 <p>
 随机事件的必然性表现为在大量的随机实验中，随机事件出现的频率
@@ -309,18 +344,18 @@ ORG-LIST-END-MARKER
 </li>
 </ul>
 <ul>
-<li id="sec-1-2-2-4">概率<br/>
+<li id="sec-1_2_2_4">概率 <br/>
 
 <p>
-对于一个随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> ,用一个数<img src="ltxpng/probability_19c8520d5e38fdf5a3dc2dbd9d602f8181efe4e0.png" alt="$P(A)$"/> 来表示该事件发生的可能性
-大小，称为随机事件<img src="ltxpng/probability_3cef20f346f05c771488a370be7986c772cd9a4d.png" alt="$A$"/> 的 <b>概率</b>
+对于一个随机事件<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> ,用一个数<img src="ltxpng/probability_1d79a08b9bedcb1cd5aea0fb487c42c6aa7ad22e.png" alt="$P(A)$"/> 来表示该事件发生的可能性
+大小，称为随机事件<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> 的 <b>概率</b>
 </p>
 <p>
 关于概率和频率的关系，现在有如下命题待证明：
 </p>
 
 <p>
-<b>命题1</b> （频率和概率）：<img src="ltxpng/probability_10aa7ba1e6d7f465a03a9a9c62a8639a7d7ed34a.png" alt="$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
+<b>命题1</b> （频率和概率）：<img src="ltxpng/probability_cef9e1138d20f854d0d811380c19d13be4ffb801.png" alt="$$\lim_{n \rightarrow \infty} F_N \left( A \right) = P
 \left( A \right)$$"/>
 </p>
 
@@ -333,23 +368,23 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> 概率论的基本概念</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> 概率论的基本概念 </h2>
 <div class="outline-text-2" id="text-2">
 
 
 
 </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 样本空间</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1"><span class="section-number-3">2.1</span> 样本空间 </h3>
+<div class="outline-text-3" id="text-2_1">
 
 
 <p>
-随机试验中可能出现的结果称为 <b>样本点</b> ，用<img src="ltxpng/probability_50626661bda20c3de1febb50752dfdd5169e47be.png" alt="$\omega$"/> 表示。
+随机试验中可能出现的结果称为 <b>样本点</b> ，用<img src="ltxpng/probability_c43b6c5c8bf67a5e56a67b8468d42618c0d6eaba.png" alt="$\omega$"/> 表示。
 </p>
 <p>
-样本点的全体构成的集合叫作 <b>样本空间</b> 用<img src="ltxpng/probability_6ec5247dcf0d81fcca2f079b490b4f7a9a152504.png" alt="$\Omega$"/> 表示。
+样本点的全体构成的集合叫作 <b>样本空间</b> 用<img src="ltxpng/probability_1be3d0b829e67bdc047544b30fa3bc6ba7cbeb7c.png" alt="$\Omega$"/> 表示。
 </p>
 <p>
 样本空间可能是有限集，离散可列集，不可列集，或者多维空间。
@@ -359,13 +394,13 @@ ORG-LIST-END-MARKER
 
 </div>
 
-<div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 事件</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2"><span class="section-number-3">2.2</span> 事件 </h3>
+<div class="outline-text-3" id="text-2_2">
 
-<p>有了样本空间，我们用集合的观点来定义事件：如果 <img src="ltxpng/probability_eba09ca19e54a5dd5ba81afcda6d8c0fa22d36d1.png" alt="$A \subseteq
-\Omega$"/> ，则称<img src="ltxpng/probability_d66497172efe1397202694bbac9036f5455c1c3f.png" alt="$A$"/> 是样本空间<img src="ltxpng/probability_6ec5247dcf0d81fcca2f079b490b4f7a9a152504.png" alt="$\Omega$"/> 上的一个 <b>事件</b> 。样本空
-间上所有事件的集合可记作 <img src="ltxpng/probability_c1a2d357bd191682ab8504fe26d77f72e2c50f4f.png" alt="$2^{\Omega} = \left\{ A|A \subseteq
+<p>有了样本空间，我们用集合的观点来定义事件：如果 <img src="ltxpng/probability_1b557ff6b9b7a85593f20a5d5a41ca4a46e6112d.png" alt="$A \subseteq
+\Omega$"/> ，则称<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> 是样本空间<img src="ltxpng/probability_1be3d0b829e67bdc047544b30fa3bc6ba7cbeb7c.png" alt="$\Omega$"/> 上的一个 <b>事件</b> 。样本空
+间上所有事件的集合可记作 <img src="ltxpng/probability_85a8574f00250c864c35bb0e7c89ea85e032d637.png" alt="$2^{\Omega} = \left\{ A|A \subseteq
 \Omega \right\}$"/>
 </p>
 
@@ -373,52 +408,44 @@ ORG-LIST-END-MARKER
 一个事件 <b>发生</b> 当且仅当它所包含的某个样本点出现。
 </p>
 <ul>
-<li>样本空间<img src="ltxpng/probability_1760c3e4654c8f798adfb4e9e523ed24ecd38b68.png" alt="$\Omega$"/> 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
+<li>样本空间<img src="ltxpng/probability_bc2cc881436ee9135dc73be19911594dead50a02.png" alt="$\Omega$"/> 本身作为一个事件，每次试验必然发生，称为 <b>必然事件</b>
 
 </li>
-<li>空集<img src="ltxpng/probability_6dac4e28802ca786d6296c6d8d68d0a801275cfc.png" alt="$\varnothing$"/> 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
+<li>空集<img src="ltxpng/probability_65fc9b45e653fc0ee855f864193ce3e8a4d3b73e.png" alt="$\varnothing$"/> 也可作为一个事件，每次试验都不会发生，称为 <b>不可能事件</b>
 </li>
 </ul>
 
-
 </div>
 
 </div>
 
-<div id="outline-container-2-3" class="outline-3">
-<h3 id="sec-2-3"><span class="section-number-3">2.3</span> 事件的关系和运算</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-2_3" class="outline-3">
+<h3 id="sec-2_3"><span class="section-number-3">2.3</span> 事件的关系和运算 </h3>
+<div class="outline-text-3" id="text-2_3">
 
 
 <p>
 和集合之间的关系类似，我们可以定义事件之间的关系：
 </p>
 <ol>
-<li>事件<img src="ltxpng/probability_f6b74958ecb32e079203e2630e5cad6de8d49b9c.png" alt="$B$"/> <b>包含</b> 事件<img src="ltxpng/probability_873c4aa888216f9db73f0947ac2b064a3a2cf498.png" alt="$A$"/> , 记作<img src="ltxpng/probability_59f1b68f998c0934b0ad39ac53b0690d32929c46.png" alt="$A \subseteq B$"/> 或者 <img src="ltxpng/probability_84c7de2c16f3712b15199017faa1ee56c6349131.png" alt="$B \supseteq A$"/> 是指： <img src="ltxpng/probability_fa5ed6d130b9dc93eba2fff17123fdfa44f058ac.png" alt="$\forall \omega \in A \Rightarrow \omega \in B$"/>
+<li>事件<img src="ltxpng/probability_fc740cd47c172e5f90a6cf0efaac12463fc2a85a.png" alt="$B$"/> <b>包含</b> 事件<img src="ltxpng/probability_be753e35948b4675fa1f831bc11967dd62b06c6a.png" alt="$A$"/> , 记作<img src="ltxpng/probability_ffb938367de36a66633833e4bf91c30404aa618a.png" alt="$A \subseteq B$"/> 或者 <img src="ltxpng/probability_c97fb4f923e168ba9ae6d1a45d676e118c5ed9f8.png" alt="$B \supseteq A$"/> 是指： <img src="ltxpng/probability_edf512415725d88eb80f4ea2107734a9b16d9195.png" alt="$\forall \omega \in A \Rightarrow \omega \in B$"/>
 </li>
 </ol>
-
 
 <p>
-对于任何事件<img src="ltxpng/probability_d66497172efe1397202694bbac9036f5455c1c3f.png" alt="$A$"/> 显然有: <img src="ltxpng/probability_53eee0784322c035f99d00f46b1009732969352e.png" alt="$\varnothing \subseteq A \subseteq \Omega$"/>
+对于任何事件<img src="ltxpng/probability_a88a1d3b1461ac12fdf823b3ee5ae2f025b92de2.png" alt="$A$"/> 显然有: <img src="ltxpng/probability_dbd35cf74ee6b679c14969fd03db562b01c76a1f.png" alt="$\varnothing \subseteq A \subseteq \Omega$"/>
 </p>
 <ol>
-<li>事件<img src="ltxpng/probability_3a9a5264361400ac223b519658f75e08362716e7.png" alt="$A$"/> 与事件<img src="ltxpng/probability_957026cee418899ec4c98f77c71c9903d98b53d5.png" alt="$B$"/> <b>相等</b> ， 记作<img src="ltxpng/probability_40c05b8d5d1dcb3c2e8baf18c06f238e3b1ea024.png" alt="$A=B$"/> 是指: <img src="ltxpng/probability_382e83e7d1d41db185cca519877bb6c4949e7ee4.png" alt="$A \subseteq B$"/>  并且 <img src="ltxpng/probability_89fab2bc08642f0a84a8db5491c4641c3f64b9ee.png" alt="$B \subseteq A$"/>
+<li>事件<img src="ltxpng/probability_f6026e1efc2d25ba991ebb3d7bb3490615270263.png" alt="$A$"/> 与事件<img src="ltxpng/probability_d53f1aa25b4f112a3bd413fc66ae410ddfbd043f.png" alt="$B$"/> <b>相等</b> ， 记作<img src="ltxpng/probability_b95130078078d41377fa5c9ba44945678a5b04bb.png" alt="$A=B$"/> 是指: <img src="ltxpng/probability_a4521cb53280e3be8ff9020cd8b5de37ee8cf426.png" alt="$A \subseteq B$"/>  并且 <img src="ltxpng/probability_eee92723639b37e28f391473f0eb69a254498105.png" alt="$B \subseteq A$"/>
 
 </li>
-<li>事件<img src="ltxpng/probability_06583586b848e3d3389302e513df0f0f17b7fd7a.png" alt="$A$"/> 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 <img src="ltxpng/probability_ea12438f8d823745b4fe5519e750272b10f621c3.png" alt="$\bar{A}$"/> : <img src="ltxpng/probability_09a645f00015df442111b0f14557f6eceb23172a.png" alt="$\bar{A} = \left\{ \omega | \omega \notin A \right\}$"/>
+<li>事件<img src="ltxpng/probability_d09fb8db5ce59f73ab1a2671344635d0e47940ec.png" alt="$A$"/> 的 <b>逆事件</b> 或者 <b>对立事件</b> 记作 <img src="ltxpng/probability_96e4a660ad304164802d6d0832312bcd104880ee.png" alt="$\bar{A}$"/> : <img src="ltxpng/probability_2317b33ccca36716675c0074b8090d646980bcf7.png" alt="$\bar{A} = \left\{ \omega | \omega \notin A \right\}$"/>
 </li>
 </ol>
-
 
 <p>
 显然一个事件和其对立事件在同一次试验能只能发生其一。
 </p>
-<ol>
-<li>
-</li>
-</ol>
-
 
 
 </div>
@@ -427,84 +454,74 @@ ORG-LIST-END-MARKER
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> 公理概率论和概率空间</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> 公理概率论和概率空间 </h2>
 <div class="outline-text-2" id="text-3">
 
 
 
 </div>
 
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 基本概念</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1"><span class="section-number-3">3.1</span> 基本概念 </h3>
+<div class="outline-text-3" id="text-3_1">
 
 
 
 </div>
 
-<div id="outline-container-3-1-1" class="outline-4">
-<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 样本空间<img src="ltxpng/probability_507055718cf36064d065d0cb1269a0e66f35d2b2.png" alt="$\Omega$"/></h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-3_1_1" class="outline-4">
+<h4 id="sec-3_1_1"><span class="section-number-4">3.1.1</span> 样本空间 </h4>
+<div class="outline-text-4" id="text-3_1_1">
 
 
 </div>
 
 </div>
 
-<div id="outline-container-3-1-2" class="outline-4">
-<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> 事件域<img src="ltxpng/probability_d9e7af375026eccbb3b8bb5d4952273a6c432fc4.png" alt="$\mathscr{F}$"/></h4>
-<div class="outline-text-4" id="text-3-1-2">
+<div id="outline-container-3_1_2" class="outline-4">
+<h4 id="sec-3_1_2"><span class="section-number-4">3.1.2</span> 事件域 </h4>
+<div class="outline-text-4" id="text-3_1_2">
 
 </div>
 
 </div>
 
-<div id="outline-container-3-1-3" class="outline-4">
-<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> 概率的形式定义</h4>
-<div class="outline-text-4" id="text-3-1-3">
+<div id="outline-container-3_1_3" class="outline-4">
+<h4 id="sec-3_1_3"><span class="section-number-4">3.1.3</span> 概率的形式定义 </h4>
+<div class="outline-text-4" id="text-3_1_3">
 
 
 <p>
-<b>定义:</b> 定义在事件域$\mathscr{f}$上的实值函数$P:\mathscr{F}
+<b>定义:</b> 定义在事件域 <img src="ltxpng/probability_7a9303bfe4c79da5cc31cd65ed5a24a60a4adb21.png" alt="$\mathscr{F}$"/> 上的实值函数 <img src="ltxpng/probability_0b8189eea445fa26f55076a0dc1392ac126745fd.png" alt="$P:\mathscr{F}$"/>
 </p>
 
 
 <p>
-  <img src="ltxpng/probability_8c3354098e4e24cfa1bfeed05d36e41ee9c3348b.png" alt="\[ P : \mathscr{F} \rightarrow R^1 \]"/>
+  <img src="ltxpng/probability_13f3ab0d7a3eb777c62e192e99f8feb8bd2ff504.png" alt="\[ P : \mathscr{F} \rightarrow R^1 \]"/>
 </p>
 
 
 </div>
-</div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> </h3>
-<div class="outline-text-3" id="text-3-2">
-
-
-
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> 随机变量</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> 随机变量 </h2>
 <div class="outline-text-2" id="text-4">
 
 
 
 </div>
 
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 离散型随机变量</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-4_1" class="outline-3">
+<h3 id="sec-4_1"><span class="section-number-3">4.1</span> 离散型随机变量 </h3>
+<div class="outline-text-3" id="text-4_1">
 
 
 <p>
-<img src="ltxpng/probability_2a90ed497b178ebef8334cd9b0d72432b576c5b5.png" alt="$$q_{_A} = \left\{ \begin{array}{cc}
+<img src="ltxpng/probability_40ea3e4dcd2498a45c5e60d07144fa49d498e0b6.png" alt="$$q_{_A} = \left\{ \begin{array}{cc}
   1 & \tmop{if} A \tmop{occurs}<br/>
   0 & \tmop{if} A \tmop{does} \tmop{not} \tmop{occur}
 \end{array} \right.$$"/>
@@ -513,21 +530,55 @@ ORG-LIST-END-MARKER
 
 </div>
 
-<div id="outline-container-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> 连续型随机变量</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-4_2" class="outline-3">
+<h3 id="sec-4_2"><span class="section-number-3">4.2</span> 连续型随机变量 </h3>
+<div class="outline-text-3" id="text-4_2">
 
 
 <p>
-<img src="ltxpng/probability_549129b0f3dd6838d8190c8216fd291323f5ed41.png" alt="$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$"/>
+<img src="ltxpng/probability_a372b0749c1bc2bdef4e09112ea68a35e43b6dec.png" alt="$$\frac{a}{b} = \int^2_1 x^{2 + 2}$$"/>
 </p></div>
 </div>
 </div>
-</div>
-
 <div id="postamble">
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
+<div id="navfoot">
+  <hr class="footer-splitter" />
+  <table width="100%" summary="Footer navigation">
+    <col width="50%" />
+    <col width="50%" />
+    <tr>
+      <td align="left" valign="top" style="line-height:175%">
+        <a href="/">
+          <img alt="Home" style="border:0;width:230px;height:50px;top:0px;"
+               src="/image/test.png" />
+        </a>
+        <br />
+        <span class="footdate">Contact:</span>
+        <a href="mailto:mmmyddd[AT]github.io">
+          mmmyddd[AT]github.io
+        </a>
+        <br />
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+        <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+        </script>
+      </td>
+
+      <td align="right" valign="top" style="line-height: 175%">
+        <br />
+     </td>
+    </tr>
+  </table>
+</div>
+<script language="javascript">
+  getTitle();
+  fillsearch();
+</script>
+</div>
 </div>
 </body>
 </html>
