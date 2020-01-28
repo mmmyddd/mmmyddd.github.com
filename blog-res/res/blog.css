@@ -773,3 +773,8 @@ div#entry-content h5{
     counter-increment: subsubsection;
     /* counter-reset: subsubsubsection; */
 }
+
+#cnzz_stat_icon_1278589705 {
+    position: relative;
+    top: 3px;
+}
