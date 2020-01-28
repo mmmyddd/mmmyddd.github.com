@@ -159,16 +159,8 @@ sudo apt-get install jde
 
 <p>在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>中添加一行：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .constant {
-        /* font-lock-constant-face */
-        color: #98fb98;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-    --></style>(<span class="keyword">require</span> '<span class="constant">jde</span>)
+<pre class="src">
+(require 'jde)
 </pre>
 
 <p>其他系统安装可以参考：<a href="http://jdee.sunsite.dk/install.html">JDEE Install Guide</a></p>
@@ -178,23 +170,17 @@ sudo apt-get install jde
 
 <p class="first">首先要建立本机器上可用的JRE/JDE的列表：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(setq jde-jdk-registry
+<pre class="src">
+(setq jde-jdk-registry
       '(
-        (<span class="string">"1.6.0.11"</span> . <span class="string">"/usr/local/jdk1.6.0_11"</span>)
-        (<span class="string">"1.5.0.17"</span> . <span class="string">"/usr/local/jdk1.5.0_17"</span>)))
+    (<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"1.6.0.11"</span> . <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"/usr/local/jdk1.6.0_11"</span>)
+    (<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"1.5.0.17"</span> . <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"/usr/local/jdk1.5.0_17"</span>)))
 </pre>
 
 <p>然后选择一个上述列表中已安装的JDK版本，作为全体项目的默认版本：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(setq jde-jdk '(<span class="string">"1.5.0.17"</span>))
+<pre class="src">
+(setq jde-jdk '(<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"1.5.0.17"</span>))
 </pre>
 
 <p><strong>Note:</strong><br></p>
@@ -213,11 +199,8 @@ sudo apt-get install jde
 
 <p class="first">可以显式指定Java Document的路径：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(setq jde-jdk-doc-url <span class="string">"file:///usr/local/jdk1.6.0_11/docs/index.html"</span>)
+<pre class="src">
+(setq jde-jdk-doc-url <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"file:///usr/local/jdk1.6.0_11/docs/index.html"</span>)
 </pre>
 
 <p>如果没有显示指定，则系统自动在当前的JDK路径下的 <code>docs</code> 目录下寻找。</p>
@@ -236,7 +219,8 @@ Edit Jave Source Code</h3>
 
 <p>如果需要打开缩写词和模版的功能，在<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>或者项目的配置文件中添加一行：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq jde-enable-abbrev-mode t)
+<pre class="src">
+(setq jde-enable-abbrev-mode t)
 </pre>
 
 <h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span>Keyword Abbreviation Mode</h4>
@@ -388,7 +372,13 @@ Edit Jave Source Code</h3>
         </a>
 
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+            <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+            </script>
       </td>
       <td width="34%" align="center" valign="top">
       </td>
@@ -429,7 +419,7 @@ Edit Jave Source Code</h3>
           </tr>
         </table>
         <span class="footdate">
-          Last updated Mar.  4, 2009
+          Last updated 1月. 27, 2020
         </span>
         <br />
         [ <a href="#top">Top</a> | <a href="/wiki/emacs/java/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]

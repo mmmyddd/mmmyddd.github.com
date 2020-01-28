@@ -166,18 +166,10 @@ an `if'.</p>
 
 <p>顺序执行所包含的form，返回最后一个form的返回值：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(<span class="keyword">progn</span> (print <span class="string">"The first form"</span>)
-       (print <span class="string">"The second form"</span>)
-       (print <span class="string">"The third form"</span>))
+<pre class="src">
+(progn (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The first form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The second form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The third form"</span>))
 </pre>
 
 <p>输出的结果为：</p>
@@ -191,18 +183,10 @@ an `if'.</p>
 
 <p><strong>变体1</strong>:</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(<span class="keyword">prog1</span> (print <span class="string">"The first form"</span>)
-       (print <span class="string">"The second form"</span>)
-       (print <span class="string">"The third form"</span>))
+<pre class="src">
+(prog1 (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The first form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The second form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The third form"</span>))
 </pre>
 
 <p>返回第一个form的返回值：</p>
@@ -216,18 +200,10 @@ an `if'.</p>
 
 <p><strong>变体2</strong>:</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(<span class="keyword">prog2</span> (print <span class="string">"The first form"</span>)
-       (print <span class="string">"The second form"</span>)
-       (print <span class="string">"The third form"</span>))
+<pre class="src">
+(prog2 (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The first form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The second form"</span>)
+       (print <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"The third form"</span>))
 </pre>
 
 <p>返回第二个form的返回值：</p>
@@ -289,7 +265,13 @@ an `if'.</p>
         </a>
 
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+            <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+            </script>
       </td>
       <td width="34%" align="center" valign="top">
       </td>
@@ -330,7 +312,7 @@ an `if'.</p>
           </tr>
         </table>
         <span class="footdate">
-          Last updated Jun. 21, 2011
+          Last updated 1月. 27, 2020
         </span>
         <br />
         [ <a href="#top">Top</a> | <a href="/wiki/emacs/elisp/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]

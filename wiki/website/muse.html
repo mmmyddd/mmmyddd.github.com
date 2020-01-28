@@ -510,7 +510,7 @@ Muse 注释行</h3>
 
 <p>以下应该看不到：</p>
 
-
+<!-- comment line (you won't see) -->
 
 <p>TIP: M-;可以用来给muse原代码加注释，注释行会在代码中首先被删除
 然后整个muse文件才会被处理，因此muse任何标记对注释行不起作用。</p>
@@ -755,21 +755,21 @@ Muse 文本居中设置</h3>
 <p>centered text</p>
 </center>
 
+<!-- 另外，也可以用使用<verbatim><center></verbatim> -->
+<!-- 来标记居中文本： -->
 
+<!-- <example> -->
+<!-- <center> her -->
+<!-- centered text -->
+<!-- </center> -->
+<!-- </example> -->
 
+<!-- 效果如下： -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- <center> -->
+<!-- centered text -->
+<!-- </center> -->
+<!-- （无效） -->
 
 
 
@@ -1063,7 +1063,8 @@ mailto:mmmyddd@freeshell.org
 也可以采用发布目录（muse-colors-use-publishing-directory)。
 （muse-mode编辑编辑模式貌似对这个变量不敏感,还是在用default-directory中寻找）。</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq muse-colors-inline-image-method
+<pre class="src">
+(setq muse-colors-inline-image-method
     'muse-colors-use-publishing-directory)
 </pre>
 
@@ -1137,13 +1138,8 @@ mailto:mmmyddd@freeshell.org
 因此上面链结将在muse-mode中显示为断开的链结，需要相应的给项目添加
 相应的文件：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .muse-bad-link {
-        /* muse-bad-link */
-        color: #ff0000;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    --></style><span class="muse-bad-link">w3m.html</span>
+<pre class="src">
+[[w3m.html][w3m.html]]
 </pre>
 
 
@@ -1225,7 +1221,7 @@ Muse 支持多级目录？</h4>
 
 <p>效果如下：</p>
 
-<p><a href="http://mmmyddd.github.io/blog/Computer/Debian/addnewresolutionundervmware.html">Blog: Computer/Debian/addnewresolutionundervmware</a></p>
+<p><a href="http://mmmyddd.github.io/blog-res/blog?/Computer/Debian/addnewresolutionundervmware.html">Blog: Computer/Debian/addnewresolutionundervmware</a></p>
 
 
 <h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec35" id="sec35"></a>
@@ -1426,41 +1422,14 @@ int main()
 
 <p>效果如下：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
-        /* font-lock-function-name-face */
-        color: #87cefa;
-        font-weight: bold;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-      .preprocessor {
-        /* font-lock-preprocessor-face */
-        color: #7fffd4;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-      .type {
-        /* font-lock-type-face */
-        color: #87ceeb;
-        font-weight: bold;
-      }
-      .variable-name {
-        /* font-lock-variable-name-face */
-        color: #40e0d0;
-        font-weight: bold;
-      }
-    --></style><span class="preprocessor">#include</span> <span class="string">&lt;stdio.h&gt;</span>
+<pre class="src">
+#include &lt;stdio.h&gt;
 
-<span class="type">int</span> <span class="function-name">main</span>()
+int main()
 {
-    <span class="type">int</span> <span class="variable-name">i</span>=1+2;
-    printf(<span class="string">"hello\n"</span>);
-    <span class="keyword">return</span> 0;
+    int i=1+2;
+    printf(<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"hello\n"</span>);
+    return 0;
 }
 </pre>
 
@@ -1468,26 +1437,9 @@ int main()
 这里给出一个比较好的处理函数，考虑到color-theme中的颜色。
 <a href="muse-color-code.el">muse-color-code</a></p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .comment {
-        /* font-lock-comment-face */
-        color: #d2b48c;
-      }
-      .comment-delimiter {
-        /* font-lock-comment-delimiter-face */
-        color: #d2b48c;
-      }
-      .function-name {
-        /* font-lock-function-name-face */
-        color: #87cefa;
-        font-weight: bold;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-    --></style><span class="comment-delimiter">;; </span><span class="comment">comments
-</span>(<span class="keyword">defun</span> <span class="function-name">test</span>()
+<pre class="src">
+;; comments
+(defun test()
     ())
 </pre>
 
@@ -1559,7 +1511,7 @@ $$e=mc^2$$
 <p>inline formula:before
 <!-- $
 e=mc^2
-$--><img src="./latex/latex2png-muse__294720786.png" alt="latex2png equation" class="latex-inline">
+$--><img src="./latex/latex2png-muse__3043810039413.png" alt="latex2png equation" class="latex-inline">
 after</p>
 
 <p>block formula:</p>
@@ -1568,12 +1520,12 @@ after</p>
 \begin{displaymath}
   e=mc^2
 \end{displaymath}
---><img src="./latex/latex2png-muse__2252540789.png" alt="latex2png equation" class="latex-display">
+--><img src="./latex/latex2png-muse__1167128900385551544.png" alt="latex2png equation" class="latex-display">
 
 <p>another block formula:
 <!-- 
 $$e=mc^2$$
---><img src="./latex/latex2png-muse__420613323.png" alt="latex2png equation" class="latex-display"></p>
+--><img src="./latex/latex2png-muse__271592583403480.png" alt="latex2png equation" class="latex-display"></p>
 
 
 <h4><span class="toplink"><a href="#top"><img src="/wiki/res/image/btn_top.png"></a></span><a name="sec39" id="sec39"></a>
@@ -1645,37 +1597,13 @@ Muse的头部指令</h3>
 
 <p class="first">在.<a href="http://mmmyddd.github.io/wiki/emacs/index.html">emacs</a>配置文件中增加如下行：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .builtin {
-        /* font-lock-builtin-face */
-        color: #7fffd4;
-      }
-      .comment {
-        /* font-lock-comment-face */
-        color: #d2b48c;
-      }
-      .comment-delimiter {
-        /* font-lock-comment-delimiter-face */
-        color: #d2b48c;
-      }
-      .constant {
-        /* font-lock-constant-face */
-        color: #98fb98;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #87cefa;
-      }
-    --></style>(<span class="keyword">require</span> '<span class="constant">muse-project</span>)
+<pre class="src">
+(require 'muse-project)
 (setq muse-project-alist
-      '((<span class="string">"website"</span>                 <span class="comment-delimiter">; </span><span class="comment">my various writings
-</span>         (<span class="string">"~/Pages"</span> <span class="builtin">:default</span> <span class="string">"index"</span>)
-         (<span class="builtin">:base</span> <span class="string">"html"</span> <span class="builtin">:path</span> <span class="string">"~/public_html"</span>)
-         (<span class="builtin">:base</span> <span class="string">"pdf"</span> <span class="builtin">:path</span> <span class="string">"~/public_html/pdf"</span>))))
+      '((<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"website"</span>                 ; my various writings
+         (<span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"~/Pages"</span> :default <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"index"</span>)
+         (:base <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"html"</span> :path <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"~/public_html"</span>)
+         (:base <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"pdf"</span> :path <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"~/public_html/pdf"</span>))))
 </pre>
 
 <p>其中~/Pages是muse文件的主项目目录，而每一中发布类型都有一个相应的发布目录，
@@ -1689,7 +1617,8 @@ Muse的头部指令</h3>
 如果想将所有文件都包含在muse项目中，并且根据项目文件的
 位置来决定是否关联muse-mode，可以采用以下配置代码：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--     --></style>(setq muse-file-extension nil
+<pre class="src">
+(setq muse-file-extension nil
       muse-mode-auto-p t)
 </pre>
 
@@ -1746,7 +1675,13 @@ Muse的头部指令</h3>
         </a>
 
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+            <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+            </script>
       </td>
       <td width="34%" align="center" valign="top">
       </td>

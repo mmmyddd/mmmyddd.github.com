@@ -128,17 +128,8 @@
 
 <p>让cperl-mode称为默认的perl编辑模式：</p>
 
-<pre class="src" style="background-color:#1a1a1a;color:#bebebe;"><style type="text/css"><!--       .function-name {
-        /* font-lock-function-name-face */
-        color: #87cefa;
-        font-weight: bold;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #afeeee;
-        font-weight: bold;
-      }
-    --></style>(<span class="keyword">defalias</span> '<span class="function-name">perl-mode</span> 'cperl-mode)
+<pre class="src">
+(defalias 'perl-mode 'cperl-mode)
 </pre>
 
 <p>在没有以.perl, .pl结尾,或者#!perl开始的文件中开启，
@@ -255,14 +246,14 @@ C-j		newline-and-indent
 ESC		Prefix Command
 (		cperl-electric-paren
 )		cperl-electric-rparen
-:		cperl-electric-terminator</p>
-
+:		cperl-electric-terminator
+<!-- cperl-electric-semi -->
 &lt;		cperl-electric-paren
 [		cperl-electric-paren
 ]		cperl-electric-rparen
 {		cperl-electric-lbrace
 }		cperl-electric-brace
-DEL		cperl-electric-backspace
+DEL		cperl-electric-backspace</p>
 
 <p>C-M-q		cperl-indent-exp
 C-M-\		cperl-indent-region
@@ -447,7 +438,13 @@ or as help on variables `cperl-tips', `cperl-problems',
         </a>
 
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+            <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+            </script>
       </td>
       <td width="34%" align="center" valign="top">
       </td>
@@ -488,7 +485,7 @@ or as help on variables `cperl-tips', `cperl-problems',
           </tr>
         </table>
         <span class="footdate">
-          Last updated Mar.  8, 2009
+          Last updated 1月. 27, 2020
         </span>
         <br />
         [ <a href="#top">Top</a> | <a href="/wiki/emacs/java/index.html">Up</a> | <a href="/wiki/./index.html">Dir</a> | <a href="/">Home</a> ]
