@@ -371,7 +371,10 @@ function gen_archives(){
             if(a.key.length < b.key.length) return -1;
             else if(a.key.length > b.key.length) return 1;
             else {
-                return a.key > b.key;
+                // return a.key > b.key;
+                if (a.key > b.key) return -1;
+                else if (a.key < b.key) return 1;
+                else return 0;
             }
         }
     });
