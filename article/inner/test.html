@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="zh_CN" xml:lang="zh_CN">
 <head>
 <title>Inner Test Article</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Inner Test Article"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2010-09-25"/>
 <meta name="author" content="Justin Jiang"/>
@@ -26,10 +26,10 @@
   .center {margin-left:auto; margin-right:auto; text-align:center;}
   p.verse { margin-left: 3% }
   pre {
-        border: 1pt solid #AEBDCC;
-        background-color: #F3F5F7;
-        padding: 5pt;
-        font-family: courier, monospace;
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
         font-size: 90%;
         overflow:auto;
   }
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -110,8 +104,8 @@ org_html_manager.setup();  // activate after the parameters are set
 
 </head>
 <body>
+<div id="content">
 
-<div id="preamble">
 
 <div id="navhead">
     <div class="banner" id="banner">
@@ -155,31 +149,25 @@ org_html_manager.setup();  // activate after the parameters are set
     </div>
     <br />
     </div>
-
-</div>
-
-<div id="content">
-<h1 class="title">Inner Test Article</h1>
+    <h1 class="title">Inner Test Article</h1>
 
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 fds</a></li>
+<li><a href="#sec-1">1 fds </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><span class="section-number-3">1</span> fds</h3>
+<h3 id="sec-1"><span class="section-number-3">1</span> fds </h3>
 <div class="outline-text-3" id="text-1">
 
 <p>   fsdfs
 </p></div>
 </div>
-</div>
-
 <div id="postamble">
 
 <div id="navfoot">
@@ -199,23 +187,16 @@ org_html_manager.setup();  // activate after the parameters are set
           mmmyddd[AT]github.io
         </a>
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+        <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+        </script>
       </td>
 
       <td align="right" valign="top" style="line-height: 175%">
-        <!-- GoStats JavaScript Based Code -->
-        <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
-        <script type="text/javascript">_gos='gostats.com';_goa=745573;
-          _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
-        <noscript>
-          <a target="_blank" title="web site analytics"
-             href="http://gostats.com">
-            <img alt="web site analytics"
-                 src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
-                 style="border-width:0" />
-          </a>
-        </noscript>
-        <!-- End GoStats JavaScript Based Code -->
         <br />
      </td>
     </tr>
@@ -225,7 +206,7 @@ org_html_manager.setup();  // activate after the parameters are set
   getTitle();
   fillsearch();
 </script>
-
+</div>
 </div>
 </body>
 </html>

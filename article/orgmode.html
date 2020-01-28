@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="zh_CN" xml:lang="zh_CN">
 <head>
 <title>Emacs Org Mode</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Emacs Org Mode"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2011-07-04"/>
 <meta name="author" content="Justin Jiang"/>
@@ -26,10 +26,10 @@
   .center {margin-left:auto; margin-right:auto; text-align:center;}
   p.verse { margin-left: 3% }
   pre {
-        border: 1pt solid #AEBDCC;
-        background-color: #F3F5F7;
-        padding: 5pt;
-        font-family: courier, monospace;
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
         font-size: 90%;
         overflow:auto;
   }
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -110,8 +104,8 @@ org_html_manager.setup();  // activate after the parameters are set
 
 </head>
 <body>
+<div id="content">
 
-<div id="preamble">
 
 <div id="navhead">
     <div class="banner" id="banner">
@@ -155,44 +149,40 @@ org_html_manager.setup();  // activate after the parameters are set
     </div>
     <br />
     </div>
-
-</div>
-
-<div id="content">
-<h1 class="title">Emacs Org Mode</h1>
+    <h1 class="title">Emacs Org Mode</h1>
 
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 OrgMode Introduction</a></li>
-<li><a href="#sec-2">2 OrgMode Installation and Activation</a>
+<li><a href="#sec-1">1 OrgMode Introduction </a></li>
+<li><a href="#sec-2">2 OrgMode Installation and Activation </a>
 <ul>
-<li><a href="#sec-2-1">2.1 Installation</a></li>
-<li><a href="#sec-2-2">2.2 Activation</a></li>
+<li><a href="#sec-2_1">2.1 Installation </a></li>
+<li><a href="#sec-2_2">2.2 Activation </a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 Document Structure</a>
+<li><a href="#sec-3">3 Document Structure </a>
 <ul>
-<li><a href="#sec-3-1">3.1 Headlines</a></li>
+<li><a href="#sec-3_1">3.1 Headlines </a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4 Rich Text Mark</a>
+<li><a href="#sec-4">4 Rich Text Mark </a>
 <ul>
-<li><a href="#sec-4-1">4.1 Inline Font Mark</a>
+<li><a href="#sec-4_1">4.1 Inline Font Mark </a>
 <ul>
-<li><a href="#sec-4-1-1">4.1.1 Bold</a></li>
-<li><a href="#sec-4-1-2">4.1.2 Italic</a></li>
-<li><a href="#sec-4-1-3">4.1.3 Underline</a></li>
-<li><a href="#sec-4-1-4">4.1.4 Strike-Through</a></li>
-<li><a href="#sec-4-1-5">4.1.5 Code</a></li>
-<li><a href="#sec-4-1-6">4.1.6 Verbatim</a></li>
+<li><a href="#sec-4_1_1">4.1.1 Bold </a></li>
+<li><a href="#sec-4_1_2">4.1.2 Italic </a></li>
+<li><a href="#sec-4_1_3">4.1.3 Underline </a></li>
+<li><a href="#sec-4_1_4">4.1.4 Strike-Through </a></li>
+<li><a href="#sec-4_1_5">4.1.5 Code </a></li>
+<li><a href="#sec-4_1_6">4.1.6 Verbatim </a></li>
 </ul>
 </li>
-<li><a href="#sec-4-2">4.2 Span Font Mark</a></li>
-<li><a href="#sec-4-3">4.3 Horizontal Ruler</a></li>
-<li><a href="#sec-4-4">4.4 Comment</a></li>
+<li><a href="#sec-4_2">4.2 Span Font Mark </a></li>
+<li><a href="#sec-4_3">4.3 Horizontal Ruler </a></li>
+<li><a href="#sec-4_4">4.4 Comment </a></li>
 </ul>
 </li>
 </ul>
@@ -200,7 +190,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> OrgMode Introduction</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> OrgMode Introduction </h2>
 <div class="outline-text-2" id="text-1">
 
 
@@ -213,36 +203,31 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> OrgMode Installation and Activation</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> OrgMode Installation and Activation </h2>
 <div class="outline-text-2" id="text-2">
 
 
 
 </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Installation</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1"><span class="section-number-3">2.1</span> Installation </h3>
+<div class="outline-text-3" id="text-2_1">
 
 
 <ul>
 <li>下载OrgMode-7.5:  <a href="http://orgmode.org/org-7.5.zip">http://orgmode.org/org-7.5.zip</a>
 </li>
 <li>解压文件：
-</li>
-</ul>
-
 
 
 
 <pre class="example">unzip org-7.5.zip
 </pre>
 
-<ul>
-<li>运行命令：
-</li>
-</ul>
 
+</li>
+<li>运行命令：
 
 
 
@@ -251,20 +236,20 @@ make install-info
 </pre>
 
 
-</div>
+</li>
+</ul>
 
 </div>
 
-<div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Activation</h3>
-<div class="outline-text-3" id="text-2-2">
+</div>
+
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2"><span class="section-number-3">2.2</span> Activation </h3>
+<div class="outline-text-3" id="text-2_2">
 
 
 <ul>
 <li>将org-mode的路径加入 <code>load-path</code>:
-</li>
-</ul>
-
 
 
 
@@ -273,11 +258,9 @@ make install-info
 </pre>
 
 
-<ul>
-<li>将下面代码加入 <code>.emacs</code>:
-</li>
-</ul>
 
+</li>
+<li>将下面代码加入 <code>.emacs</code>:
 
 
 
@@ -291,13 +274,16 @@ make install-info
 </pre>
 
 
+</li>
+</ul>
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Document Structure</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Document Structure </h2>
 <div class="outline-text-2" id="text-3">
 
 
@@ -308,9 +294,9 @@ Org Mode采用基于Outline Mode，提供了层次化的文档结构，并且定
 
 </div>
 
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Headlines</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1"><span class="section-number-3">3.1</span> Headlines </h3>
+<div class="outline-text-3" id="text-3_1">
 
 
 <p>
@@ -333,21 +319,22 @@ more text
 
 
 
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Rich Text Mark</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Rich Text Mark </h2>
 <div class="outline-text-2" id="text-4">
 
 
 </div>
 
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Inline Font Mark</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-4_1" class="outline-3">
+<h3 id="sec-4_1"><span class="section-number-3">4.1</span> Inline Font Mark </h3>
+<div class="outline-text-3" id="text-4_1">
 
 <p>面向文本的标记，需要注意三点：
 </p><ul>
@@ -360,12 +347,11 @@ more text
 </ul>
 
 
-
 </div>
 
-<div id="outline-container-4-1-1" class="outline-4">
-<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Bold</h4>
-<div class="outline-text-4" id="text-4-1-1">
+<div id="outline-container-4_1_1" class="outline-4">
+<h4 id="sec-4_1_1"><span class="section-number-4">4.1.1</span> Bold </h4>
+<div class="outline-text-4" id="text-4_1_1">
 
 
 <p>
@@ -376,6 +362,7 @@ more text
 <pre class="example">*bold*
 </pre>
 
+
 <p>
 效果如下：
 <b>bold</b>
@@ -384,9 +371,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-1-2" class="outline-4">
-<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Italic</h4>
-<div class="outline-text-4" id="text-4-1-2">
+<div id="outline-container-4_1_2" class="outline-4">
+<h4 id="sec-4_1_2"><span class="section-number-4">4.1.2</span> Italic </h4>
+<div class="outline-text-4" id="text-4_1_2">
 
 
 <p>
@@ -398,6 +385,7 @@ more text
 </pre>
 
 
+
 <p>
 效果如下：
 <i>italic</i>
@@ -406,9 +394,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-1-3" class="outline-4">
-<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> Underline</h4>
-<div class="outline-text-4" id="text-4-1-3">
+<div id="outline-container-4_1_3" class="outline-4">
+<h4 id="sec-4_1_3"><span class="section-number-4">4.1.3</span> Underline </h4>
+<div class="outline-text-4" id="text-4_1_3">
 
 
 <p>
@@ -420,6 +408,7 @@ more text
 </pre>
 
 
+
 <p>
 效果如下：
 <span style="text-decoration:underline;">underline</span>
@@ -428,9 +417,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-1-4" class="outline-4">
-<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Strike-Through</h4>
-<div class="outline-text-4" id="text-4-1-4">
+<div id="outline-container-4_1_4" class="outline-4">
+<h4 id="sec-4_1_4"><span class="section-number-4">4.1.4</span> Strike-Through </h4>
+<div class="outline-text-4" id="text-4_1_4">
 
 
 <p>
@@ -442,6 +431,7 @@ more text
 </pre>
 
 
+
 <p>
 效果如下：
 <del>strike-through</del>
@@ -450,9 +440,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-1-5" class="outline-4">
-<h4 id="sec-4-1-5"><span class="section-number-4">4.1.5</span> Code</h4>
-<div class="outline-text-4" id="text-4-1-5">
+<div id="outline-container-4_1_5" class="outline-4">
+<h4 id="sec-4_1_5"><span class="section-number-4">4.1.5</span> Code </h4>
+<div class="outline-text-4" id="text-4_1_5">
 
 
 <p>
@@ -464,6 +454,7 @@ more text
 </pre>
 
 
+
 <p>
 效果如下：
 <code>code</code>
@@ -472,9 +463,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-1-6" class="outline-4">
-<h4 id="sec-4-1-6"><span class="section-number-4">4.1.6</span> Verbatim</h4>
-<div class="outline-text-4" id="text-4-1-6">
+<div id="outline-container-4_1_6" class="outline-4">
+<h4 id="sec-4_1_6"><span class="section-number-4">4.1.6</span> Verbatim </h4>
+<div class="outline-text-4" id="text-4_1_6">
 
 
 <p>
@@ -487,6 +478,7 @@ more text
 </pre>
 
 
+
 <p>
 效果如下：
 <code>=test=</code>
@@ -496,9 +488,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Span Font Mark</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-4_2" class="outline-3">
+<h3 id="sec-4_2"><span class="section-number-3">4.2</span> Span Font Mark </h3>
+<div class="outline-text-3" id="text-4_2">
 
 <p>面向段落的文本标记
 </p>
@@ -511,9 +503,9 @@ more text
 
 </div>
 
-<div id="outline-container-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Horizontal Ruler</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-4_3" class="outline-3">
+<h3 id="sec-4_3"><span class="section-number-3">4.3</span> Horizontal Ruler </h3>
+<div class="outline-text-3" id="text-4_3">
 
 <p>可以通过5个以上的 <code>-</code> 来表示水平分割线：
 </p>
@@ -522,6 +514,7 @@ more text
 
 <pre class="example">-----
 </pre>
+
 
 
 <p>
@@ -533,15 +526,13 @@ more text
 
 </div>
 
-<div id="outline-container-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Comment</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-4_4" class="outline-3">
+<h3 id="sec-4_4"><span class="section-number-3">4.4</span> Comment </h3>
+<div class="outline-text-3" id="text-4_4">
 
 </div>
 </div>
 </div>
-</div>
-
 <div id="postamble">
 
 <div id="navfoot">
@@ -561,23 +552,16 @@ more text
           mmmyddd[AT]github.io
         </a>
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+        <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+        </script>
       </td>
 
       <td align="right" valign="top" style="line-height: 175%">
-        <!-- GoStats JavaScript Based Code -->
-        <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
-        <script type="text/javascript">_gos='gostats.com';_goa=745573;
-          _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
-        <noscript>
-          <a target="_blank" title="web site analytics"
-             href="http://gostats.com">
-            <img alt="web site analytics"
-                 src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
-                 style="border-width:0" />
-          </a>
-        </noscript>
-        <!-- End GoStats JavaScript Based Code -->
         <br />
      </td>
     </tr>
@@ -587,7 +571,7 @@ more text
   getTitle();
   fillsearch();
 </script>
-
+</div>
 </div>
 </body>
 </html>

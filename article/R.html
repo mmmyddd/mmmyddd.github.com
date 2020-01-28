@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="zh_CN" xml:lang="zh_CN">
 <head>
 <title>R Language</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="R Language"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2012-03-01"/>
 <meta name="author" content="Justin Jiang"/>
@@ -26,10 +26,10 @@
   .center {margin-left:auto; margin-right:auto; text-align:center;}
   p.verse { margin-left: 3% }
   pre {
-        border: 1pt solid #AEBDCC;
-        background-color: #F3F5F7;
-        padding: 5pt;
-        font-family: courier, monospace;
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
         font-size: 90%;
         overflow:auto;
   }
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -110,8 +104,8 @@ org_html_manager.setup();  // activate after the parameters are set
 
 </head>
 <body>
+<div id="content">
 
-<div id="preamble">
 
 <div id="navhead">
     <div class="banner" id="banner">
@@ -155,11 +149,7 @@ org_html_manager.setup();  // activate after the parameters are set
     </div>
     <br />
     </div>
-
-</div>
-
-<div id="content">
-<h1 class="title">R Language</h1>
+    <h1 class="title">R Language</h1>
 
 
 <div id="table-of-contents">
@@ -177,7 +167,7 @@ org_html_manager.setup();  // activate after the parameters are set
 
 
 <p>
-fdsfbff <img src="ltxpng/R_bded54b1f3c2d58c08d1c728895e8d348f11b800.png" alt="$e=mc^2$"/> dfsfsdfs <img src="ltxpng/R_90a62dabb738a9c5c962916dc901806853d6c084.png" alt="$$e=mc^2$$"/> dfsfd
+fdsfbff <img src="ltxpng/R_0098119da2e1263ad05b89d3064d0e43cbbad14c.png" alt="$e=mc^2$"/> dfsfsdfs <img src="ltxpng/R_c56a31da1281c6a8eefdfc5c2a66b22a621eefba.png" alt="$$e=mc^2$$"/> dfsfd
 </p>
 
 
@@ -187,8 +177,9 @@ fdsfbff <img src="ltxpng/R_bded54b1f3c2d58c08d1c728895e8d348f11b800.png" alt="$e
 </pre>
 
 
+
 <p>
-<a href="#coderef-name" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-name');" onmouseout="CodeHighlightOff(this, 'coderef-name');">(name)</a>line
+<a href="coderef:" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-name');" onmouseout="CodeHighlightOff(this, 'coderef-name');">(name)</a>line
 </p>
 <p>
 <b>fsfsf</b> <code>fdsfsd</code>
@@ -202,8 +193,9 @@ fdsfbff <img src="ltxpng/R_bded54b1f3c2d58c08d1c728895e8d348f11b800.png" alt="$e
 
 
 
+
 <p>
-<img src="ltxpng/R_ec8c63518c8ed15c194d7da320930cff25a3ec3a.png" alt="\begin{equation}
+<img src="ltxpng/R_3beccde9e3e3744d211b511551a821ef96d45d61.png" alt="\begin{equation}
 x=\sqrt{b}
 \end{equation}"/>
 </p>
@@ -213,14 +205,15 @@ x=\sqrt{b}
 
 
 
-<pre class="src src-python"><span style="color: #afeeee; font-weight: bold;">print</span> <span style="color: #87cefa;">"hello"</span>
+<pre class="src src-python"><span style="color: #9932cc; background-color: #f5deb3; font-weight: bold;">print</span> <span style="color: #b8860b; background-color: #f5deb3; font-weight: bold;">"hello"</span>
 </pre>
 
 
 
 
+
 <p>
-<img src="ltxpng/R_b7b92410f30019610e1e4fa4d02cbad8ead8dce0.png" alt="\begin{equation}
+<img src="ltxpng/R_e76650f0946fce651266449e8ac04fc67fdeae9f.png" alt="\begin{equation}
 \setcounter{equation}{3}
 E=mc^2
 \end{equation}"/>
@@ -233,25 +226,26 @@ E=mc^2
 </p>
 
 <p>
-If <img src="ltxpng/R_e98f3ef0ef836e6316ec26340eb3baf9a23680ad.png" alt="$a^2=b$"/> and <img src="ltxpng/R_298cafdb61dde3b466edb467b4f8d7fa1f5cf837.png" alt="\( b=2 \)"/>, then the solution must be
-either <img src="ltxpng/R_51b971cfd6c67750fa73d89caf028160736f4bbe.png" alt="$$ a=+\sqrt{2} $$"/> or <img src="ltxpng/R_f7e90c48a48f2285cb58cdadde908aa7d42f544e.png" alt="\[ a=-\sqrt{2} \]"/>.
+If <img src="ltxpng/R_f2c5709a543a17b61dd78c4d0724875b1eea3336.png" alt="$a^2=b$"/> and <img src="ltxpng/R_b0ed7100ceb6f213ae9f7bbcd0b4b746978e6100.png" alt="\( b=2 \)"/>, then the solution must be
+either <img src="ltxpng/R_034684b7b4933c5711a08d8781ee4616cb003163.png" alt="$$ a=+\sqrt{2} $$"/> or <img src="ltxpng/R_6248ff67833659f632484af1bb045a73db241fec.png" alt="\[ a=-\sqrt{2} \]"/>.
 </p>
 
 
 
-<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
-<span id="coderef-jump" class="coderef-off"><span class="linenr">2:  </span>   (goto-char (point-min))       (jump)</span>
-<span id="coderef-sc" class="coderef-off"><span class="linenr">3:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
-<span id="coderef-jump" class="coderef-off"><span class="linenr">4:  </span>   (goto-char (point-min))       (jump)</span>
-<span id="coderef-sc" class="coderef-off"><span class="linenr">5:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
-<span id="coderef-jump" class="coderef-off"><span class="linenr">6:  </span>   (goto-char (point-min))       (jump)</span>
-<span id="coderef-sc" class="coderef-off"><span class="linenr">7:  </span>(<span style="color: #afeeee; font-weight: bold;">save-excursion</span>                  (sc)</span>
-<span id="coderef-jump" class="coderef-off"><span class="linenr">8:  </span>   (goto-char (point-min))       (jump)</span>
+<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1:  </span>(<span style="color: #9932cc; background-color: #f5deb3; font-weight: bold;">save-excursion</span></span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">2:  </span>   (goto-char (point-min))</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">3:  </span>(<span style="color: #9932cc; background-color: #f5deb3; font-weight: bold;">save-excursion</span></span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">4:  </span>   (goto-char (point-min))</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">5:  </span>(<span style="color: #9932cc; background-color: #f5deb3; font-weight: bold;">save-excursion</span></span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">6:  </span>   (goto-char (point-min))</span>
+<span id="coderef-sc" class="coderef-off"><span class="linenr">7:  </span>(<span style="color: #9932cc; background-color: #f5deb3; font-weight: bold;">save-excursion</span></span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">8:  </span>   (goto-char (point-min))</span>
 <span class="linenr">9:  </span>
 </pre>
 
+
 <p>
-In line <a href="#coderef-sc" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-sc');" onmouseout="CodeHighlightOff(this, 'coderef-sc');">(sc)</a> we remember the current position.  <a href="#coderef-jump" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-jump');" onmouseout="CodeHighlightOff(this, 'coderef-jump');">Line (jump)</a>
+In line <a href="coderef:" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-sc');" onmouseout="CodeHighlightOff(this, 'coderef-sc');">7</a> we remember the current position.  <a href="coderef:" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-jump');" onmouseout="CodeHighlightOff(this, 'coderef-jump');">Line 8</a>
 jumps to point-min.
 </p>
 
@@ -263,12 +257,11 @@ jumps to point-min.
 </p>
 
 
+
 <p>
 fsdfsdf
 </p></div>
 </div>
-</div>
-
 <div id="postamble">
 
 <div id="navfoot">
@@ -288,23 +281,16 @@ fsdfsdf
           mmmyddd[AT]github.io
         </a>
         <br />
-        <span class="footdate">2009-2014 © CopyLeft Contributed</span>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278589705'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278589705%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <span class="footdate">2009-<span class="thisyear">2019</span> © CopyLeft Contributed</span>
+        <script type="text/javascript">
+              var date = new Date();
+              var year = date.getFullYear();
+              document.getElementsByClassName("thisyear")[0].innerHTML=year;
+        </script>
       </td>
 
       <td align="right" valign="top" style="line-height: 175%">
-        <!-- GoStats JavaScript Based Code -->
-        <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
-        <script type="text/javascript">_gos='gostats.com';_goa=745573;
-          _got=6;_goi=42;_gol='web site analytics';_GoStatsRun();</script>
-        <noscript>
-          <a target="_blank" title="web site analytics"
-             href="http://gostats.com">
-            <img alt="web site analytics"
-                 src="http://gostats.com/bin/count/a_745573/t_6/i_42/counter.png"
-                 style="border-width:0" />
-          </a>
-        </noscript>
-        <!-- End GoStats JavaScript Based Code -->
         <br />
      </td>
     </tr>
@@ -314,7 +300,7 @@ fsdfsdf
   getTitle();
   fillsearch();
 </script>
-
+</div>
 </div>
 </body>
 </html>
