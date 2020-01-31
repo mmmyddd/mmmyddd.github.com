@@ -778,3 +778,7 @@ div#entry-content h5{
     position: relative;
     top: 3px;
 }
+
+#footer {
+    margin-bottom: 100px;
+}

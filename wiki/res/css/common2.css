@@ -961,3 +961,7 @@ pre {
     position: relative;
     top: 3px;
 }
+
+div.navfoot {
+    margin-bottom: 100px;
+}

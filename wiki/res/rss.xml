@@ -57,6 +57,31 @@
 </item>
 
 <item>
+<title>Uptime</title>
+<link>http://mmmyddd.github.io/wiki/linux/util/uptime.html</link>
+</item>
+
+<item>
+<title>vmstate</title>
+<link>http://mmmyddd.github.io/wiki/linux/util/vmstat.html</link>
+</item>
+
+<item>
+<title>xsel</title>
+<link>http://mmmyddd.github.io/wiki/linux/util/xsel.html</link>
+</item>
+
+<item>
+<title>Python编程</title>
+<link>http://mmmyddd.github.io/wiki/python/index.html</link>
+</item>
+
+<item>
+<title>pygtk</title>
+<link>http://mmmyddd.github.io/wiki/python/pygtk.html</link>
+</item>
+
+<item>
 <title>Linux C Programming Power Tools</title>
 <link>http://mmmyddd.github.io/wiki/linux/cprogtools.html</link>
 </item>
@@ -187,21 +212,6 @@
 </item>
 
 <item>
-<title>Uptime</title>
-<link>http://mmmyddd.github.io/wiki/linux/util/uptime.html</link>
-</item>
-
-<item>
-<title>vmstate</title>
-<link>http://mmmyddd.github.io/wiki/linux/util/vmstat.html</link>
-</item>
-
-<item>
-<title>xsel</title>
-<link>http://mmmyddd.github.io/wiki/linux/util/xsel.html</link>
-</item>
-
-<item>
 <title>Command Line Editing and History</title>
 <link>http://mmmyddd.github.io/wiki/linux/bash/history.html</link>
 </item>
@@ -209,26 +219,6 @@
 <item>
 <title>Bash</title>
 <link>http://mmmyddd.github.io/wiki/linux/bash/index.html</link>
-</item>
-
-<item>
-<title>嵌入式系统入门</title>
-<link>http://mmmyddd.github.io/wiki/embed/tutorial.html</link>
-</item>
-
-<item>
-<title>Python编程</title>
-<link>http://mmmyddd.github.io/wiki/python/index.html</link>
-</item>
-
-<item>
-<title>pygtk</title>
-<link>http://mmmyddd.github.io/wiki/python/pygtk.html</link>
-</item>
-
-<item>
-<title>Dexter Morgan</title>
-<link>http://mmmyddd.github.io/wiki/english/dexter.html</link>
 </item>
 
 <item>
@@ -262,28 +252,13 @@
 </item>
 
 <item>
-<title>代码折叠</title>
-<link>http://mmmyddd.github.io/wiki/emacs/folding.html</link>
+<title>嵌入式系统入门</title>
+<link>http://mmmyddd.github.io/wiki/embed/tutorial.html</link>
 </item>
 
 <item>
-<title>Emacs帮助系统</title>
-<link>http://mmmyddd.github.io/wiki/emacs/help.html</link>
-</item>
-
-<item>
-<title>EMACS环境</title>
-<link>http://mmmyddd.github.io/wiki/emacs/index.html</link>
-</item>
-
-<item>
-<title>Installation</title>
-<link>http://mmmyddd.github.io/wiki/emacs/install.html</link>
-</item>
-
-<item>
-<title>Emacs光标的移动 </title>
-<link>http://mmmyddd.github.io/wiki/emacs/moving-cursor.html</link>
+<title>Dexter Morgan</title>
+<link>http://mmmyddd.github.io/wiki/english/dexter.html</link>
 </item>
 
 <item>
@@ -294,56 +269,6 @@
 <item>
 <title>Emacs Picture Mode</title>
 <link>http://mmmyddd.github.io/wiki/emacs/picture.html</link>
-</item>
-
-<item>
-<title>Java开发环境配置</title>
-<link>http://mmmyddd.github.io/wiki/emacs/java/basic.html</link>
-</item>
-
-<item>
-<title>Java开发环境</title>
-<link>http://mmmyddd.github.io/wiki/emacs/java/index.html</link>
-</item>
-
-<item>
-<title>Perl Programming</title>
-<link>http://mmmyddd.github.io/wiki/emacs/java/perl.html</link>
-</item>
-
-<item>
-<title>Read and Print</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/ReadAndPrint.html</link>
-</item>
-
-<item>
-<title>Elisp中的控制结构</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/controlstructure.html</link>
-</item>
-
-<item>
-<title>Data Type of Elisp</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/datatype.html</link>
-</item>
-
-<item>
-<title>Debug Elisp in Emacs</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/debug.html</link>
-</item>
-
-<item>
-<title>Elisp</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/index.html</link>
-</item>
-
-<item>
-<title>Elips Introduction 中文还是</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/introduction.html</link>
-</item>
-
-<item>
-<title>Regular Expression in Elisp</title>
-<link>http://mmmyddd.github.io/wiki/emacs/elisp/re.html</link>
 </item>
 
 <item>
@@ -432,6 +357,86 @@
 </item>
 
 <item>
+<title>代码折叠</title>
+<link>http://mmmyddd.github.io/wiki/emacs/folding.html</link>
+</item>
+
+<item>
+<title>Emacs帮助系统</title>
+<link>http://mmmyddd.github.io/wiki/emacs/help.html</link>
+</item>
+
+<item>
+<title>EMACS环境</title>
+<link>http://mmmyddd.github.io/wiki/emacs/index.html</link>
+</item>
+
+<item>
+<title>Installation</title>
+<link>http://mmmyddd.github.io/wiki/emacs/install.html</link>
+</item>
+
+<item>
+<title>Emacs光标的移动 </title>
+<link>http://mmmyddd.github.io/wiki/emacs/moving-cursor.html</link>
+</item>
+
+<item>
+<title>Java开发环境配置</title>
+<link>http://mmmyddd.github.io/wiki/emacs/java/basic.html</link>
+</item>
+
+<item>
+<title>Java开发环境</title>
+<link>http://mmmyddd.github.io/wiki/emacs/java/index.html</link>
+</item>
+
+<item>
+<title>Perl Programming</title>
+<link>http://mmmyddd.github.io/wiki/emacs/java/perl.html</link>
+</item>
+
+<item>
+<title>Read and Print</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/ReadAndPrint.html</link>
+</item>
+
+<item>
+<title>Elisp中的控制结构</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/controlstructure.html</link>
+</item>
+
+<item>
+<title>Data Type of Elisp</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/datatype.html</link>
+</item>
+
+<item>
+<title>Debug Elisp in Emacs</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/debug.html</link>
+</item>
+
+<item>
+<title>Elisp</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/index.html</link>
+</item>
+
+<item>
+<title>Elips Introduction 中文还是</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/introduction.html</link>
+</item>
+
+<item>
+<title>Regular Expression in Elisp</title>
+<link>http://mmmyddd.github.io/wiki/emacs/elisp/re.html</link>
+</item>
+
+<item>
+<title>Contribute and Review on Android Code</title>
+<link>http://mmmyddd.github.io/wiki/android/review.html</link>
+</item>
+
+<item>
 <title>Theme Structure</title>
 <link>http://mmmyddd.github.io/wiki/android/theme.html</link>
 </item>
@@ -464,11 +469,6 @@
 <item>
 <title>Overlay Mechanism</title>
 <link>http://mmmyddd.github.io/wiki/android/overlay.html</link>
-</item>
-
-<item>
-<title>Contribute and Review on Android Code</title>
-<link>http://mmmyddd.github.io/wiki/android/review.html</link>
 </item>
 </channel>
 </rss>
