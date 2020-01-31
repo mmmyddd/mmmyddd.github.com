@@ -1,41 +1,18 @@
 给Blog增加 Audio-Media Player
-<p>Reference: <a href="http://wpaudioplayer.com/standalone">http://wpaudioplayer.com/standalone</a></p>
-
 <p>测试一下Audio Player：
 
-<p id="audioplayer_1">Another Test</p>
-<script type="text/javascript">
-AudioPlayer.embed("audioplayer_1", {
-      soundFile: "/blog-res/Ramble/res/test.mp3",
-      titles: "题目",
-      artists: "音乐家",
-      autostart: "no"
-});
-</script>
+<div class="audio-container">
+<audio src="/blog-res/Ramble/res/test.mp3" controls="controls" autoplay="autoplay">
+audio tag is not supported by your browser.
+</audio>
+</p>
+
+<p>测试一下Video Player:
 
 
-
-<p>Reference: <a href="http://www.longtailvideo.com/players/jw-flv-player/">http://www.longtailvideo.com/players/jw-flv-player/</a></p>
-
-<p>支持FLV, mp3, H264, MPEG-4, You Tube Video, 能播放swf,但是不能控制进度。</p>
-
-<blockquote>
-<p class="quoted"></p>
-<p class="quoted">About JW Player™</p>
-<p class="quoted">The JW Player™ is the Internet's most popular and flexible media player. It supports playback of any format the Adobe Flash Player can handle (FLV, H.264, MP4, MP3, AAC, JPG, PNG and GIF). It also supports various streaming and playlist formats (including RMTP, HTTP, live streaming and more), a wide range of flashvar settings and an extensive <a href="JavaScript">Java Script</a> API.</p>
-<p class="quoted">The XML-based skinning functionality allows you to completely customize its look and its plugin architecture allows you to easily extend the player with features such as sharing, recommendations, searching, analytics and ad serving</p>
-
-
-</blockquote>
-
-<p>测试一下Media Player:
-
-
-<p id='mediaplayer_2'>The player will show in this paragraph</p>
-<script type='text/javascript'>
-	var s1 = new SWFObject(media_player,'player','400','300','9');
-	s1.addParam('allowfullscreen','true');
-	s1.addParam('allowscriptaccess','always');
-	s1.addParam('flashvars','file=/blog-res/Ramble/res/video.flv');
-	s1.write('mediaplayer_2');
-</script>
+<div class="video-container">
+<video src="/blog-res/Ramble/res/video.flv" controls="controls" autoplay="autoplay">
+Video tag is not supported by your browser.
+</video>
+</div>
+</p>
