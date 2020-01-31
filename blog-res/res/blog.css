@@ -782,3 +782,18 @@ div#entry-content h5{
 #footer {
     margin-bottom: 100px;
 }
+
+div.video-container {
+    width: 80%;
+    margin: 0 0 0 25px;
+}
+
+div.audio-container {
+    width: 80%;
+    margin: 0 0 0 25px;
+}
+
+video, audio {
+    width: 100%;
+}
+
