@@ -1,11 +1,14 @@
 给Blog增加 Audio-Media Player
 <p>测试一下Audio Player：
 
+
 <div class="audio-container">
 <audio src="/blog-res/Ramble/res/test.mp3" controls="controls" autoplay="autoplay">
 audio tag is not supported by your browser.
 </audio>
+</div>
 </p>
+
 
 <p>测试一下Video Player:
 
